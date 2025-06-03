@@ -3,6 +3,7 @@ import AboutSection from "@/components/home/AboutSection";
 import ArticlesSlider from "@/components/home/ArticlesSlider";
 import HeroSection from "@/components/home/HeroSection";
 import HungerSection from "@/components/home/HungerSection";
+import KeyBenefitsSection from "@/components/home/KeyBenefitsSection";
 import PressSection from "@/components/home/PressSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import SuccessRateSection from "@/components/home/SuccessRateSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <HungerSection />
       <SuccessRateSection />
       <TestimonialsSection />
+      <KeyBenefitsSection />
       <ExtraSpace />
     </main>
   );
