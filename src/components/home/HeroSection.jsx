@@ -15,8 +15,8 @@ const HeroSection = () => {
 
             {/* Content Container */}
             <div className="relative z-10 mx-auto max-w-[1540px] h-full px-4 flex flex-col justify-center">
-                <div className="max-w-2xl ms-20">
-                    <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <div className="ms-20">
+                    <h1 className="text-white text-5xl max-w-2xl  md:text-6xl lg:text-[80px] font-medium leading-14 md:leading-[70px]">
                         Reach your
                         <br />
                         Biggest goals
@@ -27,7 +27,7 @@ const HeroSection = () => {
                         <br />
                         strategies
                     </h1>
-                    <p className="text-white/80 mt-6 text-lg md:text-4xl max-w-7xl">
+                    <p className="text-white font-medium mt-6 max-w-5xl text-lg md:text-4xl leading-8 md:leading-12">
                         Pirate ipsum arrgh bounty warp jack. Line nest tails belaying nipper. Boatswain just overhaul gangplank
                         bounty mutiny
                     </p>
