@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link"; // Import Link
 import Header from "@/components/layout/Header";
 import "./font.css"
+import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           <Link href="/work-with-me" style={{ marginRight: '1rem' }}>Workwithme</Link>
         </nav> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

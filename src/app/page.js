@@ -1,4 +1,3 @@
-import ExtraSpace from "@/components/ExtraSpace";
 import AboutSection from "@/components/home/AboutSection";
 import ArticlesSlider from "@/components/home/ArticlesSlider";
 import HeroCTASection from "@/components/home/HeroCTASection";
@@ -24,7 +23,6 @@ export default function Home() {
       <TestimonialsSection />
       <KeyBenefitsSection />
       <HeroCTASection />
-      <ExtraSpace />
     </main>
   );
 }
