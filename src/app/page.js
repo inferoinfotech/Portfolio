@@ -2,8 +2,10 @@ import ExtraSpace from "@/components/ExtraSpace";
 import AboutSection from "@/components/home/AboutSection";
 import ArticlesSlider from "@/components/home/ArticlesSlider";
 import HeroSection from "@/components/home/HeroSection";
+import HungerSection from "@/components/home/HungerSection";
 import PressSection from "@/components/home/PressSection";
 import ServicesSection from "@/components/home/ServicesSection";
+import SuccessRateSection from "@/components/home/SuccessRateSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <ArticlesSlider />
       <PressSection />
       <ServicesSection />
+      <HungerSection />
+      <SuccessRateSection />
       <ExtraSpace />
     </main>
   );
