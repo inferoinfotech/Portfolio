@@ -166,7 +166,7 @@ export default function ArticlesSlider() {
                         }}
                         className="articles-swiper !pb-16 !pt-12"
                     >
-                        {articles.map((article) => (
+                        {articles.map((article) => ( 
                             <SwiperSlide key={article.id}>
                                 <div className="group cursor-grab">
                                     <div className="relative h-[446px] rounded-[30px] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700 transform transition-all duration-300 hover:shadow-2xl hover:scale-105">
