@@ -1,11 +1,12 @@
+import ExtraSpace from "@/components/ExtraSpace";
+import HeroSection from "@/components/home/HeroSection";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to My Portfolio!</h1>
-      <p>This is the home page.</p>
-      {/* Add content for your home page */}
+      <HeroSection />
+      <ExtraSpace />
     </main>
   );
 }
