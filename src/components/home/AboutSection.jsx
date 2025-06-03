@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutSection() {
     return (
-        <section className="py-16 px-4 bg-white border">
+        <section className="py-16 px-4 bg-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
