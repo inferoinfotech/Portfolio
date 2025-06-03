@@ -1,6 +1,7 @@
 import ExtraSpace from "@/components/ExtraSpace";
 import AboutSection from "@/components/home/AboutSection";
 import ArticlesSlider from "@/components/home/ArticlesSlider";
+import HeroCTASection from "@/components/home/HeroCTASection";
 import HeroSection from "@/components/home/HeroSection";
 import HungerSection from "@/components/home/HungerSection";
 import KeyBenefitsSection from "@/components/home/KeyBenefitsSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <SuccessRateSection />
       <TestimonialsSection />
       <KeyBenefitsSection />
+      <HeroCTASection />
       <ExtraSpace />
     </main>
   );
