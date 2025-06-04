@@ -52,7 +52,7 @@ export default function TopArticlesSection() {
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl lg:text-5xl font-bold mb-4">Top Articles</h2>
+                    <h2 className="text-3xl lg:text-5xl font-bold mb-4">Top blogs</h2>
                     <p className="text-white text-sm lg:text-xl max-w-sm mx-auto">
                         Read by over 200+ readers globally as I help them for a successful career
                     </p>

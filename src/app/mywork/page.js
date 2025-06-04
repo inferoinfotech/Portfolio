@@ -1,3 +1,6 @@
+import TopArticlesSection from '@/components/blog/TopArticlesSection';
+import HeroCTASection from '@/components/home/HeroCTASection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 import MyProjects from '@/components/mywork/MyPorojects';
 import MyWorkBanner from '@/components/mywork/MyWorkBanner';
 import React from 'react'
@@ -12,6 +15,10 @@ const Work = () => {
         <>
             <MyWorkBanner />
             <MyProjects />
+            <TopArticlesSection />
+            {/* one more */}
+            <TestimonialsSection />
+            <HeroCTASection />
         </>
     )
 }

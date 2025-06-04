@@ -33,7 +33,7 @@ export default function HeroCTASection() {
                 </h1>
 
                 {/* CTA Button */}
-                <button className="bg-[#FDC0C5] hover:bg-[#f8a8b0] text-black font-medium px-8 py-4 lg:px-20 lg:py-5 rounded-full text-base lg:text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                <button className="bg-[#FDC0C5] hover:cursor-pointer hover:bg-[#f8a8b0] text-black font-medium px-8 py-4 lg:px-20 lg:py-5 rounded-full text-base lg:text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                     Schedule a Free Consultation
                 </button>
             </div>
