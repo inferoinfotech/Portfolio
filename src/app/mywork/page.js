@@ -1,3 +1,4 @@
+import MyProjects from '@/components/mywork/MyPorojects';
 import MyWorkBanner from '@/components/mywork/MyWorkBanner';
 import React from 'react'
 
@@ -10,6 +11,7 @@ const Work = () => {
     return (
         <>
             <MyWorkBanner />
+            <MyProjects />
         </>
     )
 }
