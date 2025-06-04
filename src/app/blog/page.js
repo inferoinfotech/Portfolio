@@ -1,4 +1,5 @@
 import BlogBannerSection from '@/components/blog/BlogBannerSection'
+import BlogGridSection from '@/components/blog/BlogGridSection'
 import LatestBlogsSection from '@/components/blog/LatestBlogsSection'
 import React from 'react'
 
@@ -12,6 +13,7 @@ const Blog = () => {
         <>
             <BlogBannerSection />
             <LatestBlogsSection />
+            <BlogGridSection />
         </>
     )
 }
