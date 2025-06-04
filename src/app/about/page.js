@@ -1,5 +1,6 @@
 import AboutSection from "@/components/about-me/about-section";
 import ExperienceSectionAbout from "@/components/about-me/experience-section-about";
+import HeroCTASectionAbout from "@/components/about-me/HeroCTASectionAbout";
 import TestimonialSectionAbout from "@/components/about-me/testimonial-section-about";
 import TopReadsSectionAbout from "@/components/about-me/top-reads-section-about";
 import VisionSection from "@/components/about-me/vision-section";
@@ -13,11 +14,12 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      {/* <AboutSection /> */}
+      <AboutSection />
       <VisionSection />
       <ExperienceSectionAbout />
       <TestimonialSectionAbout />
       <TopReadsSectionAbout />
+      <HeroCTASectionAbout />
     </>
   );
 };
