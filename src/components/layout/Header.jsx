@@ -12,7 +12,7 @@ export default function Header({ className }) {
           <Link href="/about" className="hover:text-[#FDC0C5] text-base transition-colors">
             About
           </Link>
-          <Link href="/my-work" className="hover:text-[#FDC0C5] text-base transition-colors">
+          <Link href="/mywork" className="hover:text-[#FDC0C5] text-base transition-colors">
             My Work
           </Link>
           <Link href="/blog" className="hover:text-[#FDC0C5] text-base transition-colors">
