@@ -1,4 +1,9 @@
-import React from 'react'
+import AboutSection from "@/components/about-me/about-section";
+import ExperienceSectionAbout from "@/components/about-me/experience-section-about";
+import TestimonialSectionAbout from "@/components/about-me/testimonial-section-about";
+import TopReadsSectionAbout from "@/components/about-me/top-reads-section-about";
+import VisionSection from "@/components/about-me/vision-section";
+import React from "react";
 
 export const metadata = {
   title: "About Us",
@@ -7,9 +12,14 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      {/* <AboutSection /> */}
+      <VisionSection />
+      <ExperienceSectionAbout />
+      <TestimonialSectionAbout />
+      <TopReadsSectionAbout />
+    </>
+  );
+};
 
-export default About
-
+export default About;
