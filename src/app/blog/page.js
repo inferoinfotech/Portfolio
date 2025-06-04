@@ -1,4 +1,5 @@
 import BlogBannerSection from '@/components/blog/BlogBannerSection'
+import LatestBlogsSection from '@/components/blog/LatestBlogsSection'
 import React from 'react'
 
 export const metadata = {
@@ -10,6 +11,7 @@ const Blog = () => {
     return (
         <>
             <BlogBannerSection />
+            <LatestBlogsSection />
         </>
     )
 }
