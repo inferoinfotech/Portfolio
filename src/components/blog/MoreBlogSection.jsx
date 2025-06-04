@@ -18,7 +18,7 @@ const topArticles = [
         id: 2,
         title: "Be someone that everyone just thinks to be. Not someone who doesn't know himself",
         category: "Social media",
-        categoryColor: "bg-[#DD8100]",
+        categoryColor: "bg-[# B76B00]",
         image: "/images/article7.jpg",
         date: "February 24, 2025",
         featured: false,
@@ -27,7 +27,7 @@ const topArticles = [
         id: 3,
         title: "Pirate ipsum arrgh bounty warp jack.",
         category: "Self Growth",
-        categoryColor: "bg-[#DBD700] ",
+        categoryColor: "bg-[#004B88] ",
         image: "/images/article8.jpg",
         date: "5h 5min ago",
         featured: false,
@@ -36,14 +36,14 @@ const topArticles = [
         id: 4,
         title: "Pirate ipsum arrgh bounty warp jack.",
         category: "Social media",
-        categoryColor: "bg-[#2954FF]",
+        categoryColor: "bg-[#580043]",
         image: "/images/article9.jpg",
         date: "5h 5min ago",
         featured: false,
     },
 ]
 
-export default function TopArticlesSection() {
+export default function MoreBlogSection() {
     const featuredArticle = topArticles.find((article) => article.featured)
     const regularArticles = topArticles.filter((article) => !article.featured)
 
@@ -51,48 +51,13 @@ export default function TopArticlesSection() {
         <section className="py-16 px-4 lg:px-8 bg-black text-white">
             <div className="container mx-auto">
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl lg:text-5xl font-bold mb-4">Top Articles</h2>
-                    <p className="text-white text-sm lg:text-xl max-w-sm mx-auto">
-                        Read by over 200+ readers globally as I help them for a successful career
-                    </p>
+                <div className="flex justify-center pt-10 pb-24">
+                    <div className="flex items-center gap-6">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                        <h2 className="text-xl font-medium tracking-[7] uppercase">More Blogs</h2>
+                    </div>
                 </div>
-
                 {/* Featured Article */}
-                <div className="mb-8 lg:mb-12">
-                    {featuredArticle && ( // Ensure featuredArticle exists before rendering
-                        <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block"> {/* Added Link */}
-                            <div className="relative h-64 lg:h-[790px] rounded-[30px] overflow-hidden">
-                                <video
-                                    src={featuredArticle?.image || "/placeholder.mp4"}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                                {/* Content Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-20">
-                                    <div className="mb-4">
-                                        <span
-                                            className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-2xl font-normal`}
-                                        >
-                                            {featuredArticle?.category}
-                                        </span>
-                                    </div>
-                                    <h3 className="text-2xl lg:text-5xl font-bold text-white mb-4 leading-12">
-                                        {featuredArticle?.title}
-                                    </h3>
-                                    <p className="text-[#DFDFDF] text-md lg:text-xl">{featuredArticle?.date}</p>
-                                </div>
-                            </div>
-                        </Link>
-                    )}
-                </div>
-
-                {/* Desktop Layout - 3 articles in a row */}
                 <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:mb-12">
                     {regularArticles.map((article) => (
                         <Link key={article.id} href={`/blog/${article.id}`} className="group cursor-pointer block"> {/* Added Link */}
@@ -147,13 +112,6 @@ export default function TopArticlesSection() {
                             </div>
                         </Link>
                     ))}
-                </div>
-
-                {/* View All Button */}
-                <div className="text-center">
-                    <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
-                        View all
-                    </button>
                 </div>
             </div>
         </section>
