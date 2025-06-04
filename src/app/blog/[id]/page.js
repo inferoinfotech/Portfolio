@@ -1,3 +1,4 @@
+import MoreBlogSection from '@/components/blog/MoreBlogSection';
 import React from 'react';
 
 // For demonstration purposes, we'll use a simplified data fetching
@@ -110,61 +111,64 @@ const BlogDetailsPage = ({ params }) => {
         );
     }
     return (
-        <section className="py-16 px-4 lg:px-8">
-            <div className="mx-auto max-w-7xl">
-                <div className="mb-6">
-                    <span
-                        className={`${article.categoryColor} text-[#333333] px-4 py-1 rounded-full text-2xl font-normal`}
-                    >
-                        {article.category}
-                    </span>
-                </div>
-                <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-slug">
-                    {article.title}
-                </h1>
-                <p className="text-[#7C7C7C] text-md lg:text-xl mb-8">{article.date}</p>
-                <div className="mb-8">
-                    {article.image.endsWith('.mp4') ? (
-                        <video
-                            src={article.image}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
-                        />
-                    ) : (
-                        <img
-                            src={article.image}
-                            alt={article.title}
-                            className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
-                        />
-                    )}
-                </div>
-
-                <div className="prose prose-invert text-lg ps-8 pt-8">
-                    {Array.isArray(article.content) ? (
-                        article.content.map((paragraph, index) => (
-                            <p key={index} className='text-black text-4xl my-8 leading-tight font-normal'>{paragraph}</p>
-                        ))
-                    ) : (
-                        <p className='text-black text-4xl font-normal'>{article.content}</p>
-                    )}
-                </div>
-                <div className="flex items-center justify-center mt-24 mb-10 gap-6">
-                    {/* Profile Image */}
-                    <div className="w-12 h-12 lg:w-20 lg:h-20 rounded-full overflow-hidden flex-shrink-0">
-                        <img src="/images/Profileimage.jpg" alt="Saleh Bilal" className="w-full h-full object-cover" />
+        <>
+            <section className="py-16 px-4 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <div className="mb-6">
+                        <span
+                            className={`${article.categoryColor} text-[#333333] px-4 py-1 rounded-full text-2xl font-normal`}
+                        >
+                            {article.category}
+                        </span>
+                    </div>
+                    <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-slug">
+                        {article.title}
+                    </h1>
+                    <p className="text-[#7C7C7C] text-md lg:text-xl mb-8">{article.date}</p>
+                    <div className="mb-8">
+                        {article.image.endsWith('.mp4') ? (
+                            <video
+                                src={article.image}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
+                            />
+                        ) : (
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
+                            />
+                        )}
                     </div>
 
-                    {/* Profile Info */}
-                    <div className="flex flex-col">
-                        <h1 className="text-3xl lg:text-4xl font-medium text-black">Saleh Bilal</h1>
-                        <p className="text-lg lg:text-base font-normal text-[#7A7A7AB2]">Founder @ DGTL Network</p>
+                    <div className="prose prose-invert text-lg ps-8 pt-8">
+                        {Array.isArray(article.content) ? (
+                            article.content.map((paragraph, index) => (
+                                <p key={index} className='text-black text-4xl my-8 leading-tight font-normal'>{paragraph}</p>
+                            ))
+                        ) : (
+                            <p className='text-black text-4xl font-normal'>{article.content}</p>
+                        )}
+                    </div>
+                    <div className="flex items-center justify-center mt-24 mb-10 gap-6">
+                        {/* Profile Image */}
+                        <div className="w-12 h-12 lg:w-20 lg:h-20 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="/images/Profileimage.jpg" alt="Saleh Bilal" className="w-full h-full object-cover" />
+                        </div>
+
+                        {/* Profile Info */}
+                        <div className="flex flex-col">
+                            <h1 className="text-3xl lg:text-4xl font-medium text-black">Saleh Bilal</h1>
+                            <p className="text-lg lg:text-base font-normal text-[#7A7A7AB2]">Founder @ DGTL Network</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <MoreBlogSection />
+        </>
     );
 };
 
