@@ -5,8 +5,8 @@ const experiences = [
     alt: "Working on laptop",
     paragraphs: [
       "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits parrel ballast. On cup gold tales execution ketch her. Hogshead hail-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot piracy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen."
-    ]
+      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot piracy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+    ],
   },
   {
     title: "Secret to success",
@@ -14,8 +14,8 @@ const experiences = [
     alt: "Reading a book",
     paragraphs: [
       "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits panel ballast. On cup gold tales execution ketch her. Hogshead haul-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen."
-    ]
+      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+    ],
   },
   {
     title: "My journey as a freelancer",
@@ -23,44 +23,48 @@ const experiences = [
     alt: "Working at desk",
     paragraphs: [
       "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits panel ballast. On cup gold tales execution ketch her. Hogshead haul-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen."
-    ]
-  }
-];
+      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+    ],
+  },
+]
 
 export default function ExperienceSectionAbout() {
   return (
     <section className="w-full bg-white py-16 border-t border-gray-100">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         {/* Section title */}
         <div className="flex justify-center mb-16">
           <div className="flex items-center space-x-2">
-            <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
-            <p className="text-black text-sm font-medium tracking-widest">MY EXPERIENCE</p>
+            <div className="w-3 h-3 bg-black rounded-full"></div>
+            <p className="text-[20px] leading-[118px] font-medium tracking-[0.4em] text-center">MY EXPERIENCE</p>
           </div>
         </div>
 
         {/* Dynamic Experience Items */}
         <div className="space-y-24">
           {experiences.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
-            >
-              <div className="w-full lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl lg:text-[64px] leading-[90px] font-medium mb-6">{item.title}</h2>
+            <div key={index} className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+              {/* Text Content */}
+              <div className="w-full lg:w-1/2 lg:pr-8">
+                <h2 className="text-6xl md:text-4xl lg:text-[64px] lg:leading-[70px] font-medium mb-[62px]">{item.title}</h2>
                 <div className="space-y-4">
                   {item.paragraphs.map((para, idx) => (
-                    <p className="font-normal text-2xl leading-11 tracking-[-0.03em] text-[#000000]" key={idx}>{para}</p>
+                    <p
+                      className="font-normal text-lg lg:text-2xl my-9 leading-relaxed tracking-[-0.01em] text-black text-opacity-70 text-justify"
+                      key={idx}
+                    >
+                      {para}
+                    </p>
                   ))}
                 </div>
               </div>
-              <div className="w-full lg:w-1/2">
-                <div className="rounded-2xl overflow-hidden">
+              {/* Image Content */}
+              <div className="w-full flex justify-end items-center lg:w-1/2">
+                <div className="rounded-[32px] overflow-hidden max-w-[480px] h-[480px]">
                   <img
-                    src={item.image}
+                    src={item.image || "/placeholder.svg"}
                     alt={item.alt}
-                    className=""
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -69,5 +73,5 @@ export default function ExperienceSectionAbout() {
         </div>
       </div>
     </section>
-  );
+  )
 }
