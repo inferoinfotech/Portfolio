@@ -1,6 +1,7 @@
 "use client"
 
 import { Clock } from "lucide-react"
+import Link from "next/link" // Import Link
 
 // Sample articles data
 const topArticles = [
@@ -59,40 +60,42 @@ export default function TopArticlesSection() {
 
                 {/* Featured Article */}
                 <div className="mb-8 lg:mb-12">
-                    <div className="group cursor-pointer">
-                        <div className="relative h-64 lg:h-[790px] rounded-[30px] overflow-hidden">
-                            <video
-                                src={featuredArticle?.image || "/placeholder.mp4"}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    {featuredArticle && ( // Ensure featuredArticle exists before rendering
+                        <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block"> {/* Added Link */}
+                            <div className="relative h-64 lg:h-[790px] rounded-[30px] overflow-hidden">
+                                <video
+                                    src={featuredArticle?.image || "/placeholder.mp4"}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-                            {/* Content Overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-20">
-                                <div className="mb-4">
-                                    <span
-                                        className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-2xl font-normal`}
-                                    >
-                                        {featuredArticle?.category}
-                                    </span>
+                                {/* Content Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-20">
+                                    <div className="mb-4">
+                                        <span
+                                            className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-2xl font-normal`}
+                                        >
+                                            {featuredArticle?.category}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-2xl lg:text-5xl font-bold text-white mb-4 leading-12">
+                                        {featuredArticle?.title}
+                                    </h3>
+                                    <p className="text-[#DFDFDF] text-md lg:text-xl">{featuredArticle?.date}</p>
                                 </div>
-                                <h3 className="text-2xl lg:text-5xl font-bold text-white mb-4 leading-12">
-                                    {featuredArticle?.title}
-                                </h3>
-                                <p className="text-[#DFDFDF] text-md lg:text-xl">{featuredArticle?.date}</p>
                             </div>
-                        </div>
-                    </div>
+                        </Link>
+                    )}
                 </div>
 
                 {/* Desktop Layout - 3 articles in a row */}
                 <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:mb-12">
                     {regularArticles.map((article) => (
-                        <div key={article.id} className="group cursor-pointer">
+                        <Link key={article.id} href={`/blog/${article.id}`} className="group cursor-pointer block"> {/* Added Link */}
                             <div className="relative h-[425px] rounded-[30px] overflow-hidden">
                                 <img
                                     src={article.image || "/placeholder.svg"}
@@ -115,14 +118,14 @@ export default function TopArticlesSection() {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
                 {/* Mobile Layout - 3 articles stacked vertically */}
                 <div className="lg:hidden space-y-6 mb-8">
                     {regularArticles.map((article) => (
-                        <div key={article.id} className="group cursor-pointer">
+                        <Link key={article.id} href={`/blog/${article.id}`} className="group cursor-pointer block"> {/* Added Link */}
                             <div className="relative h-64 rounded-[30px] overflow-hidden">
                                 <img
                                     src={article.image || "/placeholder.svg"}
@@ -142,7 +145,7 @@ export default function TopArticlesSection() {
                                     <p className="text-gray-300 text-sm">{article.date}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
