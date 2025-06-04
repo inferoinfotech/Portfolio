@@ -18,7 +18,7 @@ export default function Header({ className }) {
           <Link href="/blog" className="hover:text-[#FDC0C5] text-base transition-colors">
             Blog
           </Link>
-          <Link href="/hire-me" className="hover:text-[#FDC0C5] text-basetransition-colors">
+          <Link href="/workwithme" className="hover:text-[#FDC0C5] text-base transition-colors">
             Hire Me
           </Link>
         </nav>

@@ -1,3 +1,4 @@
+import HeroBusinessSection from '@/components/work-with-me/hero-business-section';
 import React from 'react'
 
 export const metadata = {
@@ -7,7 +8,9 @@ export const metadata = {
 
 const WorkWithMePage = () => {
     return (
-        <div>WorkWithMePage</div>
+        <>
+        <HeroBusinessSection />
+        </>
     )
 }
 export default WorkWithMePage
