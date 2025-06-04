@@ -1,3 +1,4 @@
+import BlogBannerSection from '@/components/blog/BlogBannerSection'
 import React from 'react'
 
 export const metadata = {
@@ -7,7 +8,9 @@ export const metadata = {
 
 const Blog = () => {
     return (
-        <div>Blog</div>
+        <>
+            <BlogBannerSection />
+        </>
     )
 }
 
