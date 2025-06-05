@@ -5,7 +5,7 @@ import { Instagram, Twitter, Linkedin, Facebook } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="bg-black text-white border-t border-[#292929]">
-      <div className="container mx-auto px-4 py-12 lg:py-16">
+      <div className="container mx-auto py-12 lg:py-16">
         {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Brand & Social */}
@@ -81,7 +81,7 @@ export default function Footer() {
               </button>
             </form>
 
-            <p className="text-white font-bold text-xl mt-8 leading-10">
+            <p className="text-white font-bold text-xl mt-8 tracking-widest leading-10">
               By entering your info, you'll become an SB Insider – with{" "}
               <span className="text-white font-semibold">FREE</span> access to exclusive insights, private Q+As
               delivered with heart to your inbox.
