@@ -169,13 +169,12 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
         <section className="w-full py-6">
             <div className="w-full">
                 {/* Title and Navigation */}
-                <div className="flex container mx-auto items-center justify-between mb-8">
+                <div className="flex container mx-auto items-center justify-center lg:justify-between mb-4 lg:mb-8">
                     <div className="flex">
-                        <h2 className="text-[40px] font-medium text-black">{title}</h2>
+                        <h2 className="text-2xl lg:text-[40px] font-medium text-black">{title}</h2>
                     </div>
-
                     {/* Navigation arrows */}
-                    <div className="flex gap-3">
+                    <div className="hidden lg:flex gap-3">
                         <button
                             onClick={() => swiperRef.current?.slidePrev()}
                             className="w-12 h-12 rounded-full bg-black hover:cursor-pointer text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
@@ -193,12 +192,12 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
 
                 {/* Filter Buttons */}
                 <div className="container mx-auto mb-0">
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                         {filterCategories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setActiveFilter(category)}
-                                className={`px-6 py-2 rounded-full text-sm hover:cursor-pointer font-medium transition-all duration-300 ${activeFilter === category
+                                className={`px-6 py-2 rounded-full text-[10px] lg:text-sm hover:cursor-pointer font-medium transition-all duration-300 ${activeFilter === category
                                     ? "bg-[#FDC0C5] text-black"
                                     : "bg-white text-gray-600 hover:bg-gray-100 border border-[#00000033]"
                                     }`}
@@ -231,7 +230,7 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         breakpoints={{
                             640: {
                                 slidesPerView: 1.5,
-                                spaceBetween: 20,
+                                spaceBetween: 0,
                             },
                             768: {
                                 slidesPerView: 2,
@@ -258,14 +257,14 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                                 <div className="group cursor-grab">
                                     <div className="rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
                                         {/* Image Section */}
-                                        <div className="relative h-[340px] bg-gradient-to-br from-gray-900 to-gray-700 rounded-[30px]">
+                                        <div className="relative h-[230px] lg:h-[340px] w-[230px] lg:w-auto rounded-[30px]">
                                             <img
                                                 src={article.image || "/placeholder.svg"}
                                                 alt={article.title}
                                                 className="w-full h-full rounded-[30px] object-cover"
                                             />
                                             {/* Arrow Icon - Only element on the image */}
-                                            <div className="absolute bottom-3 right-3 w-10 h-[46px] bg-black rounded-br-4xl flex items-center justify-center backdrop-blur-sm">
+                                            <div className="absolute bottom-2 right-2 w-10 h-[46px] bg-black rounded-tr-lg rounded-bl-lg rounded-tl-lg rounded-br-3xl flex items-center justify-center backdrop-blur-sm">
                                                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path
                                                         strokeLinecap="round"
@@ -297,10 +296,10 @@ export default function MyProjects() {
     return (
         <div className="w-full">
             {/* Header - Only shown once at the top */}
-            <div className="text-center mb-8 pt-16">
-                <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="w-3 h-3 bg-black rounded-full"></div>
-                    <span className="text-xl font-medium tracking-[0.4em] uppercase text-black">My Projects</span>
+            <div className="text-center lg:mb-8 pt-10 lg:pt-16">
+                <div className="flex items-center justify-center gap-3 lg:mb-6">
+                    <div className="w-1.5 lg:w-3 h-1.5 lg:h-3 bg-black rounded-full"></div>
+                    <span className="text-[10px] md:text-base lg:text-xl font-medium tracking-[0.4em] uppercase text-black">My Projects</span>
                 </div>
             </div>
 

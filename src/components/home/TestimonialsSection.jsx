@@ -71,12 +71,12 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <section className="bg-black text-white py-20 px-4 lg:px-8 h-screen flex flex-col justify-between">
+        <section className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:h-screen flex flex-col justify-between">
             {/* Header */}
             <div className="flex justify-center mb-16">
                 <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                    <h2 className="text-xl font-medium tracking-[8] uppercase">Testimonials</h2>
+                    <div className="h-1.5 lg:w-3 w-1.5 lg:h-3 bg-white rounded-full"></div>
+                    <h2 className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[8] uppercase">Testimonials</h2>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
 
                 {/* Client Avatars */}
             </div>
-            <div className="flex justify-evenly items-center gap-8 lg:gap-12">
+            <div className="hidden lg:flex justify-evenly items-center gap-8 lg:gap-12">
                 {testimonials.map((testimonial, index) => (
                     <div key={testimonial.id} className="text-center">
                         <div className="w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700">
@@ -125,7 +125,7 @@ export default function TestimonialsSection() {
                             <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                                 <div className="text-center">
                                     {/* Testimonial Text */}
-                                    <blockquote className="text-xl leading-relaxed mb-12 max-w-sm mx-auto">
+                                    <blockquote className="text-2xl leading-8 mb-12 max-w-sm mx-auto">
                                         {testimonial.text}
                                     </blockquote>
 
@@ -148,7 +148,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Slide Indicators */}
-                <div className="flex justify-center mt-8 gap-2">
+                {/* <div className="flex justify-center mt-8 gap-2">
                     {testimonials.map((_, index) => (
                         <button
                             key={index}
@@ -157,10 +157,10 @@ export default function TestimonialsSection() {
                                 }`}
                         />
                     ))}
-                </div>
+                </div> */}
 
                 {/* Navigation Arrows (Optional) */}
-                <div className="flex justify-between items-center mt-8 px-4">
+                {/* <div className="flex justify-between items-center mt-8 px-4">
                     <button
                         onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
                         disabled={currentSlide === 0}
@@ -186,7 +186,7 @@ export default function TestimonialsSection() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     )
