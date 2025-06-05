@@ -309,7 +309,7 @@ export default function MyProjects() {
                 title="Direct Response Copywriting"
                 articles={articles}
                 filterCategories={filterCategories}
-                defaultFilter="Pitch decks"
+                defaultFilter="All"
                 sectionId="copywriting"
             />
 
@@ -318,13 +318,13 @@ export default function MyProjects() {
                 title="Social Media Content"
                 articles={socialMediaContent}
                 filterCategories={socialMediaCategories}
-                defaultFilter="Instagram"
+                defaultFilter="All"
                 sectionId="social-media"
             />
 
             {/* Copywriting Section */}
             <ProjectSlider
-                title="Copywriting"
+                title="Marketing Copywriting"
                 articles={copywritingContent}
                 filterCategories={copywritingCategories}
                 defaultFilter="All"

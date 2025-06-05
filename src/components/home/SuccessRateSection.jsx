@@ -61,10 +61,8 @@ export default function SuccessRateSection() {
                         <div className="text-center">
                             <div className="text-5xl font-bold text-black mb-3">98%</div>
                             <div className="flex items-center justify-center gap-2">
-                                <div className="w-5 h-5 bg-green-500 rounded flex items-center justify-center">
-                                    <span className="text-white text-xs font-bold">up</span>
-                                </div>
-                                <span className="text-gray-400">Upwork</span>
+                                <img src="/images/upworkicon.png" alt="Upwork Icon" className="w-7 h-7" />
+                                <span className="text-[#969696] text-3xl">Upwork</span>
                             </div>
                         </div>
 
@@ -72,10 +70,8 @@ export default function SuccessRateSection() {
                         <div className="text-center">
                             <div className="text-5xl font-bold text-black mb-3">99.7%</div>
                             <div className="flex items-center justify-center gap-2">
-                                <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                    <div className="w-2.5 h-2.5 bg-white rounded-sm transform rotate-45"></div>
-                                </div>
-                                <span className="text-gray-400">Freelancer</span>
+                                <img src="/images/freelancericon.png" alt="Freelancer Icon" className="w-10 h-10" />
+                                <span className="text-[#969696] text-3xl">Freelancer</span>
                             </div>
                         </div>
                     </div>
