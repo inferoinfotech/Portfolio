@@ -33,13 +33,13 @@ export default function OneOnOneCallSection() {
   ]
 
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-black py-40">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-white font-bold text-[64px] leading-[100%] tracking-[-2%]">What you get on 1-on-1 call?</h2>
         </div>
 
-        <div className="space-y-28">
+        <div className="space-y-44">
           {callItems.map((item, index) => (
             <div
               key={index}
