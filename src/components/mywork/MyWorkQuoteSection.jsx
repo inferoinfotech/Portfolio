@@ -1,6 +1,6 @@
 export default function MyWorkQuoteSection() {
     return (
-        <section className="bg-black text-white py-20 px-4">
+        <section className="hidden lg:block bg-black text-white py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
                 {/* Quote */}
                 <blockquote className="mb-16">

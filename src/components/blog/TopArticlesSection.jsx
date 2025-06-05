@@ -62,7 +62,7 @@ export default function TopArticlesSection() {
                 <div className="mb-8 lg:mb-12">
                     {featuredArticle && ( // Ensure featuredArticle exists before rendering
                         <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block"> {/* Added Link */}
-                            <div className="relative h-64 lg:h-[790px] rounded-[30px] overflow-hidden">
+                            <div className="relative h-[660px] lg:h-[790px] rounded-[30px] overflow-hidden">
                                 <video
                                     src={featuredArticle?.image || "/placeholder.mp4"}
                                     autoPlay
@@ -77,12 +77,12 @@ export default function TopArticlesSection() {
                                 <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-20">
                                     <div className="mb-4">
                                         <span
-                                            className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-2xl font-normal`}
+                                            className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-xs lg:text-2xl font-normal`}
                                         >
                                             {featuredArticle?.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-2xl lg:text-5xl font-bold text-white mb-4 leading-12">
+                                    <h3 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-12">
                                         {featuredArticle?.title}
                                     </h3>
                                     <p className="text-[#DFDFDF] text-md lg:text-xl">{featuredArticle?.date}</p>
@@ -126,7 +126,7 @@ export default function TopArticlesSection() {
                 <div className="lg:hidden space-y-6 mb-8">
                     {regularArticles.map((article) => (
                         <Link key={article.id} href={`/blog/${article.id}`} className="group cursor-pointer block"> {/* Added Link */}
-                            <div className="relative h-64 rounded-[30px] overflow-hidden">
+                            <div className="relative h-[660px] rounded-[30px] overflow-hidden">
                                 <img
                                     src={article.image || "/placeholder.svg"}
                                     alt={article.title}
@@ -137,11 +137,11 @@ export default function TopArticlesSection() {
                                 {/* Content Overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
                                     <div className="mb-3">
-                                        <span className={`${article.categoryColor} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                                        <span className={`${article.categoryColor} text-white px-3 py-1 rounded-full text-xs lg:text-sm font-medium`}>
                                             {article.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-lg font-bold text-white mb-2 leading-tight">{article.title}</h3>
+                                    <h3 className="text-3xl font-bold text-white mb-2 leading-tight">{article.title}</h3>
                                     <p className="text-gray-300 text-sm">{article.date}</p>
                                 </div>
                             </div>
@@ -151,11 +151,11 @@ export default function TopArticlesSection() {
 
                 {/* View All Button */}
                 <div className="text-center">
-                    <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
+                    <button className="bg-white text-black lg:px-8 lg:py-3 px-20 py-6 text-[22px] lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
                         View all
                     </button>
                 </div>
-            </div>
+            </div> 
         </section>
     )
 }
