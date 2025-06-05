@@ -220,8 +220,8 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         slidesPerView={typeof window !== "undefined" && window.innerWidth >= 1024 ? 1 : 1.8}
                         pagination={{
                             clickable: true,
-                            bulletClass: "swiper-pagination-bullet !w-3 !h-3 !bg-gray-300 !opacity-100",
-                            bulletActiveClass: "swiper-pagination-bullet-active !w-3 !h-3 !bg-[#FDC0C5] !opacity-100",
+                            bulletClass: "swiper-pagination-bullet custom-bullet",
+                            bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
                         }}
                         autoplay={{
                             delay: 5000,
@@ -229,15 +229,19 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         }}
                         breakpoints={{
                             0: {
-                                slidesPerView: 1,
+                                slidesPerView: 1.8,
+                                spaceBetween: 12,
+                            },
+                            280: {
+                                slidesPerView: 1.5,
                                 spaceBetween: 12,
                             },
                             640: {
-                                slidesPerView: 1.5,
+                                slidesPerView: 3,
                                 spaceBetween: 12, // Reduced from 0 to 12 for better mobile spacing
                             },
                             768: {
-                                slidesPerView: 2,
+                                slidesPerView: 3,
                                 spaceBetween: 16, // Reduced from 24 to 16 for tablet
                             },
                             1024: {
