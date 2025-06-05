@@ -22,8 +22,8 @@ export default function ServicesSection() {
             {/* Header */}
             <div className="flex justify-center pt-12 pb-8">
                 <div className="flex items-center gap-6">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                    <h2 className="text-xl font-medium tracking-[7] uppercase">Services</h2>
+                    <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-white rounded-full"></div>
+                    <h2 className="text-xs lg:text-xl font-medium tracking-[7] uppercase">Services</h2>
                 </div>
             </div>
 
