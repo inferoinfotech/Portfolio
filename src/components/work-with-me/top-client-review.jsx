@@ -27,7 +27,7 @@ export default function TopClientReview() {
               <img
                 src="../images/work-client.jpg"
                 alt="Austin Belcak"
-                className="w-14 h-14 rounded-full mr-4"
+                className="w-16 h-16 rounded-full mr-4"
               />
               <div>
                 <h4 className="text-4xl font-medium">Austin Belcak</h4>

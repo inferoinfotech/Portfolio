@@ -3,42 +3,42 @@ export default function MoreHappyCustomers() {
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-1.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-2.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-3.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-4.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-5.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "../images/work-customers-6.jpg",
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
       rating: 5,
     },
@@ -58,7 +58,7 @@ export default function MoreHappyCustomers() {
 
   return (
     <section className="w-full bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">More happy customers</h2>
         </div>
@@ -70,24 +70,24 @@ export default function MoreHappyCustomers() {
                 <img
                   src={customer.image || "/placeholder.svg"}
                   alt={customer.name}
-                  className="w-12 h-12 rounded-full mr-3"
+                  className="w-20 h-20 rounded-full mr-3"
                 />
                 <div>
-                  <h4 className="font-semibold">{customer.name}</h4>
-                  <p className="text-gray-600 text-sm">{customer.title}</p>
+                  <h4 className="font-medium text-[32px] leading-[100%] tracking-[-0.02em]">{customer.name}</h4>
+                  <p className="text-black/50 font-medium text-[24px] leading-[100%] tracking-[-0.02em]">{customer.title}</p>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">{customer.text}</p>
+              <p className="text-black mb-4 text-[20px] font-medium text-justify">{customer.text}</p>
               <StarRating rating={customer.rating} />
             </div>
           ))}
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors">
+          <button className="bg-black text-white px-10 py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040]">
             Hire me now
           </button>
-          <button className="border-2 border-black text-black px-8 py-4 rounded-full font-medium hover:bg-black hover:text-white transition-colors">
+          <button className="border-2 border-black text-black px-8 py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] hover:bg-black hover:text-white transition-colors">
             Let's have a free call
           </button>
         </div>
