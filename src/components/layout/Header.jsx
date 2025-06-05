@@ -45,7 +45,7 @@ export default function Header({ className }) {
             <span className="text-base font-medium ">Services</span>
           </div>
           <Link
-            href="/free-audit"
+            href="/freeaudit"
             className="bg-[#FDC0C5] font-medium hover:bg-[#FDC0C5]/90 text-black px-4 py-2 rounded-full transition-colors"
           >
             Free Audit

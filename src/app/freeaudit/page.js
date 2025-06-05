@@ -1,3 +1,6 @@
+import BookCallSection from '@/components/free-audit/book-call-section';
+import HeroCallSection from '@/components/free-audit/hero-call-section';
+import ScaleBusinessSection from '@/components/free-audit/scale-business-section';
 import React from 'react'
 
 export const metadata = {
@@ -7,7 +10,11 @@ export const metadata = {
 
 const FreeAuditPage = () => {
     return (
-        <div>FreeAuditPage</div>
+        <>
+        <ScaleBusinessSection />
+        <BookCallSection />
+        <HeroCallSection />
+        </>
     )
 }
 
