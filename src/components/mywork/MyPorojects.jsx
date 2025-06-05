@@ -214,10 +214,10 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper
                         }}
-                        slidesOffsetBefore={175}
+                        slidesOffsetBefore={typeof window !== "undefined" && window.innerWidth >= 1024 ? 175 : 20}
                         modules={[Navigation, Pagination, Autoplay]}
-                        spaceBetween={24}
-                        slidesPerView={1}
+                        spaceBetween={12}
+                        slidesPerView={typeof window !== "undefined" && window.innerWidth >= 1024 ? 1 : 1.8}
                         pagination={{
                             clickable: true,
                             bulletClass: "swiper-pagination-bullet !w-3 !h-3 !bg-gray-300 !opacity-100",
@@ -228,13 +228,17 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                             disableOnInteraction: false,
                         }}
                         breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 12,
+                            },
                             640: {
                                 slidesPerView: 1.5,
-                                spaceBetween: 0,
+                                spaceBetween: 12, // Reduced from 0 to 12 for better mobile spacing
                             },
                             768: {
                                 slidesPerView: 2,
-                                spaceBetween: 24,
+                                spaceBetween: 16, // Reduced from 24 to 16 for tablet
                             },
                             1024: {
                                 slidesPerView: 3,
@@ -299,7 +303,9 @@ export default function MyProjects() {
             <div className="text-center lg:mb-8 pt-10 lg:pt-16">
                 <div className="flex items-center justify-center gap-3 lg:mb-6">
                     <div className="w-1.5 lg:w-3 h-1.5 lg:h-3 bg-black rounded-full"></div>
-                    <span className="text-[10px] md:text-base lg:text-xl font-medium tracking-[0.4em] uppercase text-black">My Projects</span>
+                    <span className="text-[10px] md:text-base lg:text-xl font-medium tracking-[0.4em] uppercase text-black">
+                        My Projects
+                    </span>
                 </div>
             </div>
 
