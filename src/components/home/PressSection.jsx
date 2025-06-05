@@ -8,7 +8,7 @@ export default function PressSection() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center">
                     {/* Title */}
-                    <h3 className="text-[40px] font-medium text-black mb-6">
+                    <h3 className="text-base md:text-2xl lg:text-[40px] font-medium text-black mb-6">
                         YOU MIGHT HAVE SEEN ME ON
                     </h3>
 

@@ -5,17 +5,17 @@ export default function AboutSection() {
         <section className="py-16 px-4 bg-white">
             <div className="container mx-auto">
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <div className="flex items-center justify-center mb-6">
-                        <div className="w-3 h-3 bg-black rounded-full mr-4"></div>
-                        <h2 className="text-xl font-medium tracking-[10] uppercase text-black">ABOUT ME</h2>
+                <div className="text-center mb-8 lg:mb-16">
+                    <div className="flex items-center justify-center mb-3 lg:mb-6">
+                        <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-black rounded-full mr-4"></div>
+                        <h2 className="text-xs lg:text-xl font-medium tracking-[5] uppercase text-black">ABOUT ME</h2>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-[70px] font-bold text-black mb-4 lg:mt-20">
+                    <h1 className="text-2xl md:text-5xl lg:text-[70px] font-bold text-black mb-4 lg:mt-20">
                         Who Is <span className="text-[#FDC0C5]">Saleh Bilal?</span>
                     </h1>
 
-                    <p className="text-[#1E1E1E] font-normal text-2xl -mt-2">Words That Drive Success.</p>
+                    <p className="text-[#1E1E1E] font-normal text-xs lg:text-2xl -mt-2">Words That Drive Success.</p>
                 </div>
 
                 {/* Main Content */}
@@ -23,7 +23,7 @@ export default function AboutSection() {
                     {/* First Column - Image and Social Icons (occupies 1 column) */}
                     <div className="flex flex-col items-center lg:items-center">
                         {/* Profile Image Placeholder */}
-                        <div className="w-80 h-80 md:w-[480px] md:h-[480px] rounded-full mb-8 flex items-center justify-center">
+                        <div className="w-40 lg:w-80 h-40 lg:h-80 md:w-[480px] md:h-[480px] rounded-full mb-8 flex items-center justify-center">
                             <img
                                 src="/images/Profileimage.jpg"
                                 alt="Saleh Bilal"
@@ -63,7 +63,7 @@ export default function AboutSection() {
                     <div className="text-center lg:text-left lg:col-span-2">
                         <h3 className="text-3xl md:text-[40px] font-bold text-black mb-8">Hey, I'm Saleh</h3>
 
-                        <div className="space-y-6 text-black text-base md:text-2xl font-medium leading-relaxed">
+                        <div className="space-y-6 text-black px-14 lg:px-0 tracking-normal text-base md:text-2xl font-medium leading-5 lg:leading-relaxed">
                             <p>
                                 I'm a dynamic content writer and digital marketer, passionate about crafting compelling narratives that
                                 resonate deeply with audiences.
@@ -74,7 +74,7 @@ export default function AboutSection() {
                                 visibility and enhancing engagement across digital platforms, from websites to social media.
                             </p>
 
-                            <p>
+                            <p className='hidden lg:block'>
                                 My expertise spans from creating high-converting copy to managing comprehensive marketing campaigns,
                                 combining creativity with precision in every project. I bring a strategic approach, innovation, and a
                                 flair for storytelling, ensuring impactful results aligned with your business goals. Whether crafting a

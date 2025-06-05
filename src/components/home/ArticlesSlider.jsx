@@ -92,10 +92,10 @@ export default function ArticlesSlider() {
         <section className="w-full py-6 lg:py-16">
             <div className="w-full">
                 {/* Header */}
-                <div className="flex container mx-auto items-center justify-center lg:justify-between mb-4 lg:mb-8">
+                <div className="flex container mx-auto items-center justify-between ps-5 lg:mb-8">
                     <div className="flex">
                         <h2 className="text-2xl lg:text-[40px] font-medium text-black">My Top Articles</h2>
-                        <button className="hidden lg:flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors">
+                        <button className="flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors">
                             <span className="text-sm font-medium hover:border-b border-b-black transition-all">See all</span>
                             <ChevronRight className="w-3 h-3" />
                         </button>
