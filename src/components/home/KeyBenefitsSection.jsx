@@ -54,11 +54,11 @@ export default function KeyBenefitsSection() {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <div className="flex justify-center items-center gap-3 mb-8">
-                        <div className="w-3 h-3 bg-black rounded-full"></div>
-                        <h2 className="text-xl font-medium tracking-[10] uppercase">Key Benefits</h2>
+                        <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-black rounded-full"></div>
+                        <h2 className="text-[10px] lg:text-xl font-medium tracking-[10] uppercase">Key Benefits</h2>
                     </div>
 
-                    <h1 className="text-4xl lg:text-5xl xl:text-8xl font-medium text-black leading-tight">
+                    <h1 className="text-[40px] lg:text-5xl xl:text-8xl font-medium text-black leading-tight">
                         Create a competitive edge
                     </h1>
                 </div>
@@ -77,10 +77,10 @@ export default function KeyBenefitsSection() {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-xl lg:text-[28px] font-medium text-black mb-4 leading-tight">{benefit.title}</h3>
+                                <h3 className="text-2xl lg:text-[28px] font-medium text-black mb-4 leading-tight">{benefit.title}</h3>
 
                                 {/* Description */}
-                                <p className="text-black/70 text-sm font-normal leading-7 lg:text-[26px] lg:max-w-10/12">{benefit.description}</p>
+                                <p className="text-black/70 text-base leading-5 px-14 lg:px-0 font-normal lg:leading-7 lg:text-[26px] lg:max-w-10/12">{benefit.description}</p>
                             </div>
                         )
                     })}
