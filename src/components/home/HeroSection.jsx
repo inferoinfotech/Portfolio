@@ -4,12 +4,39 @@ const HeroSection = () => {
     return (
         <section className="relative w-full h-screen bg-black overflow-hidden">
             {/* Video Background */}
-            <div className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl overflow-hidden">
+            {/* <div className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl overflow-hidden">
                 <video className="w-full h-full object-cover opacity-60" autoPlay muted loop playsInline>
-                    <source src="/videos/video-background.mp4" type="video/mp4" />
+                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent"></div>
+            </div> */}
+            {/* <div
+                className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl overflow-hidden"
+                style={{ clipPath: "/images/banner-bg-shape-mask.jpg" }}
+            >
+                <video autoPlay loop muted className="min-w-full min-h-full absolute object-cover">
+                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div> */}
+            <div
+                className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl "
+                style={{
+                    mask: "url(/images/banner-bg-shape-mask.jpg)",
+                    WebkitMask: "url(/images/banner-bg-shape-mask.jpg)",
+                    maskSize: "cover",
+                    WebkitMaskSize: "cover",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                }}
+            >
+                <video className="w-full h-full object-cover opacity-100" autoPlay muted loop playsInline>
+                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
                 <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent"></div>
             </div>
 
