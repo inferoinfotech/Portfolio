@@ -24,13 +24,13 @@ export default function ScaleBusinessSection() {
 
   return (
     <div className="w-full overflow-hidden">
-      {/* Stack on mobile, grid on larger screens */}
-      <div className="flex flex-col lg:grid lg:grid-cols-2 min-h-[80vh]">
-        {/* Left Content */}
-        <div className="flex items-center justify-center bg-white py-16 lg:py-0">
+      {/* Stack on mobile and laptop, grid only on extra large screens */}
+      <div className="flex flex-col xl:grid xl:grid-cols-2 md:h-[50vh] lg:h-[60vh] xl:h-[80vh]">
+        {/* Left Content - Full width on mobile and laptop */}
+        <div className="flex items-center justify-center bg-white py-16 xl:py-0">
           <div className="w-full max-w-3xl mx-auto px-6">
             {/* Responsive heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight mb-6 lg:mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold leading-tight mb-6 xl:mb-8">
               Can't figure out How to scale your business{" "}
               <span className="hidden sm:inline">
                 <br />
@@ -39,7 +39,7 @@ export default function ScaleBusinessSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-black/50 text-xl md:text-2xl font-normal mb-8 lg:mb-12">Let me sort it out for you</p>
+            <p className="text-black/50 text-xl md:text-2xl font-normal mb-8 xl:mb-12">Let me sort it out for you</p>
 
             {/* CTA Button */}
             <button className="bg-black text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition">
@@ -48,10 +48,9 @@ export default function ScaleBusinessSection() {
           </div>
         </div>
 
-        {/* Right Images - Grid */}
-        <div className="bg-black min-h-[60vh] lg:h-full overflow-hidden">
-          {/* Hide on small screens, show on medium+ */}
-          <div className="hidden md:grid grid-cols-6 gap-4 p-4">
+        {/* Right Images - Grid - Hidden on mobile, tablet, and laptop (up to 1279px) */}
+        <div className="hidden xl:block bg-black min-h-[60vh] xl:h-full overflow-hidden">
+          <div className="grid grid-cols-6 gap-4">
             {images.map((img, index) => {
               // Create rows of exactly 3 images each
               const rowIndex = Math.floor(index / 3)
@@ -68,20 +67,11 @@ export default function ScaleBusinessSection() {
                   <img
                     src={img.src || "/placeholder.svg"}
                     alt={img.alt}
-                    className="w-full h-[150px] md:h-[180px] lg:h-[200px] object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-[150px] md:h-[180px] xl:h-[200px] object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               )
             })}
-          </div>
-
-          {/* Mobile version - simplified grid */}
-          <div className="grid grid-cols-2 gap-3 p-4 md:hidden">
-            {images.slice(0, 6).map((img, index) => (
-              <div key={index} className="rounded-xl overflow-hidden">
-                <img src={img.src || "/placeholder.svg"} alt={img.alt} className="w-full h-[120px] object-cover" />
-              </div>
-            ))}
           </div>
         </div>
       </div>
