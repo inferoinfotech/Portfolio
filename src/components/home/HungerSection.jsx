@@ -1,146 +1,130 @@
-"use client"
+import { Play } from "lucide-react"
+
 
 export default function HungerSection() {
     return (
-        <section className="min-h-screen bg-gray-50 py-12 px-4 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                {/* Desktop Layout */}
-                <div className="hidden lg:block relative">
-                    <div className="grid grid-cols-2 gap-16 items-start">
-                        {/* Left Column */}
-                        <div className="space-y-8">
-                            {/* Main Heading */}
-                            <h1 className="text-4xl xl:text-5xl font-bold text-black leading-tight">
-                                Do you have a hunger to increase the quality of your life?
-                            </h1>
-
-                            {/* Portrait Image with Text */}
-                            <div className="relative">
-                                <div className="bg-pink-300 rounded-3xl p-8 pb-0 overflow-hidden">
+        <section className="w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6 mx-auto">
+                {/* Top Section */}
+                <h1 className="text-black text-2xl md:text-4xl lg:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl tracking-[0.025em] leading-tight text-start font-bold">Do you have a hunger
+                    to increase the
+                    quality of your life?</h1>
+                <div className="relative">
+                    <div className="grid lg:grid-cols-3 gap-8 mb-3 lg:mb-2">
+                        <div className="lg:col-span-2 order-2 lg:order-1">
+                            <div className="flex justify-center lg:justify-start">
+                                <div className="relative w-full max-h-[686px] rounded-3xl overflow-hidden">
                                     <img
-                                        src="/placeholder.svg?height=400&width=300"
-                                        alt="Portrait"
-                                        className="w-full h-80 object-cover object-top"
+                                        src="/images/Profileimage.jpg"
+                                        alt="Portrait of Saleh Bilal"
+                                        width={320}
+                                        height={400}
+                                        className="w-full h-full object-cover rounded-3xl"
                                     />
-                                </div>
-
-                                {/* Text Card */}
-                                <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 bg-white rounded-2xl p-6 shadow-lg max-w-xs z-10">
-                                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                        We believe progress equals happiness. And no matter where you're looking to excel, we're here to
-                                        help you forge your pathway to power. Meet the man who's spent over 45 years creating breakthroughs
-                                        and transforming lives.
-                                    </p>
-                                    <button className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                                        Meet Saleh Bilal
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Worked With Section */}
-                            <div className="bg-white rounded-2xl p-6 shadow-sm">
-                                <p className="text-gray-600 text-sm mb-4">Worked with</p>
-                                <div className="flex items-center gap-6">
-                                    {/* Company Logos - Using placeholder circles and shapes */}
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 bg-black rounded-full"></div>
-                                        <div className="w-4 h-8 bg-black rounded-full"></div>
-                                    </div>
-                                    <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                                        <div className="w-6 h-6 bg-orange-600 rounded-sm"></div>
-                                    </div>
-                                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                                        A
-                                    </div>
-                                    <div className="flex gap-1">
-                                        <div className="w-3 h-3 bg-blue-400 rounded-sm"></div>
-                                        <div className="w-3 h-3 bg-green-400 rounded-sm"></div>
-                                        <div className="w-3 h-3 bg-red-400 rounded-sm"></div>
-                                        <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+                                    <div className="absolute md:hidden inset-0"
+                                        style={{ background: "linear-gradient(0deg, #E87E89 10.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        {/* Right Column */}
-                        <div className="relative">
-                            <div className="bg-gray-200 rounded-3xl overflow-hidden relative">
-                                <img src="/placeholder.svg?height=400&width=500" alt="Workspace" className="w-full h-80 object-cover" />
-                                <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all">
-                                    <div className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full px-6 py-3 flex items-center gap-2 transition-all">
-                                        <div className="w-0 h-0 border-l-[8px] border-l-gray-800 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent ml-1"></div>
-                                        <span className="text-gray-800 font-medium">Watch Video</span>
-                                    </div>
+                        <div className="lg:col-span-1 order-1 lg:order-2">
+                            {/* Right - Content */}
+                            <div className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6 lg:ms-10  lg:p-5">
+                                <p className="text-[#969696] text-base lg:text-[28px] font-medium leading-tight lg:leading-relaxed mb-5 lg:mb-10 pr-20">
+                                    We believe progress equals happiness. And no matter where you're looking to excel, we're here to help you
+                                    forge your pathway to power. Meet the man who's spent over 45 years creating breakthroughs and
+                                    transforming lives.
+                                </p>
+                                <button className="bg-[#F5F5F5] w-max lg:w-2xs hover:cursor-pointer hover:bg-[#F5F5F5]/80 text-black font-bold px-5 py-4 lg:px-5 lg:py-8 rounded-full text-[10px] lg:text-[25px] transition-colors">
+                                    Meet Saleh Bilal
                                 </button>
                             </div>
                         </div>
                     </div>
+                    <div className="absolute hidden 2xl:block right-[26%] bottom-[26%] z-20 ">
+                        <img src="/images/Joiner.png" alt="vector" />
+                    </div>
 
-                    {/* Connecting Bridge Element */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div className="relative">
-                            {/* Main Bridge Shape */}
-                            <svg width="120" height="80" viewBox="0 0 120 80" className="text-pink-200">
-                                <path
-                                    d="M10 40 Q35 10, 60 40 Q85 70, 110 40"
-                                    stroke="currentColor"
-                                    strokeWidth="3"
-                                    fill="none"
-                                    className="opacity-60"
-                                />
-                                <path
-                                    d="M10 40 Q35 70, 60 40 Q85 10, 110 40"
-                                    stroke="currentColor"
-                                    strokeWidth="3"
-                                    fill="none"
-                                    className="opacity-60"
-                                />
-                            </svg>
+                    {/* Bottom Section */}
+                    <div className="grid lg:grid-cols-3 gap-5 items-center">
+                        {/* Left - Worked With */}
+                        <div className="lg:col-span-2 hidden lg:block">
+                            <div className="rounded-3xl">
+                                <h3 className="text-xl lg:text-[35px] font-normal text-[#383838] mb-6">Worked with</h3>
+                                <div className="grid grid-cols-4 gap-10 items-center">
+                                    {/* Company Logo 1 */}
+                                    <div className="flex justify-center">
+                                        <img
+                                            src="/images/mediumlogo.png"
+                                            alt="Company logo"
+                                            className="w-40 h-40 object-cover"
+                                        />
+                                    </div>
 
-                            {/* Center Connection Point */}
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                <div className="w-6 h-6 bg-pink-300 rounded-full border-2 border-white shadow-lg"></div>
+                                    {/* Company Logo 2 */}
+                                    <div className="flex justify-center">
+                                        <img
+                                            src="/images/firebaselogo.png"
+                                            alt="Company logo"
+                                            className="w-40 h-40 object-cover"
+                                        />
+                                    </div>
+
+                                    {/* Company Logo 3 */}
+                                    <div className="flex justify-center">
+                                        <img
+                                            src="/images/adobelogo.png"
+                                            alt="Adobe logo"
+                                            className="w-32 h-32 object-cover"
+                                        />
+                                    </div>
+
+                                    {/* Company Logo 4 */}
+                                    <div className="flex justify-center">
+                                        <img
+                                            src="/images/stacklogo.png"
+                                            alt="Figma logo"
+                                            className="w-40 h-40 object-cover"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div className="lg:col-span-1">
+                            <div className="flex justify-center lg:justify-end">
+                                <div className="relative min-h-[200px] lg:w-[555px] lg:h-[371px] rounded-[40px] overflow-hidden cursor-pointer group">
+                                    {/* Video Element */}
+                                    <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                                        <source src="/videos/Work-Home-Video.mp4" type="video/mp4" />
+                                    </video>
 
-                {/* Mobile Layout */}
-                <div className="lg:hidden space-y-8">
-                    {/* Heading */}
-                    <h1 className="text-3xl font-bold text-black leading-tight">
-                        Do you have a hunger to increase the quality of your life?
-                    </h1>
+                                    {/* Gradient Overlay */}
+                                    <div className="absolute hidden 2xl:block inset-0"
+                                        style={{ background: "linear-gradient(124.89deg, #FDC0C5 18.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
+                                    </div>
 
-                    {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">
-                        We believe progress equals happiness. And no matter where you're looking to excel, we're here to help you
-                        forge your pathway to power.
-                    </p>
+                                    <div className="absolute md:hidden inset-0"
+                                        style={{ background: "linear-gradient(180deg, #E87E89 18.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
+                                    </div>
+                                    {/* Button Overlay Container */}
+                                    <div className="absolute inset-0 flex items-center justify-center transition-all duration-300">
+                                        {/* Glassmorphism Button */}
+                                        <button className="relative flex items-center space-x-3 bg-white/20 backdrop-blur-[40px] rounded-full px-8 py-4 group-hover:bg-white/30 transition-all duration-300 border border-white/20 shadow-lg">
+                                            {/* Play Icon */}
+                                            <div className="flex items-center justify-center">
+                                                <Play className="lg:w-5 w-3 lg:h-5 h-3  text-white fill-white drop-shadow-sm" />
+                                            </div>
 
-                    {/* Meet Button */}
-                    <button className="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-lg font-medium transition-colors">
-                        Meet Saleh Bilal
-                    </button>
+                                            {/* Text */}
+                                            <span className="text-white font-medium text-[10px] lg:text-base tracking-wide drop-shadow-sm">Watch Video</span>
 
-                    {/* Portrait Image */}
-                    <div className="bg-pink-300 rounded-3xl p-6 pb-0 overflow-hidden">
-                        <img
-                            src="/placeholder.svg?height=400&width=300"
-                            alt="Portrait"
-                            className="w-full h-80 object-cover object-top rounded-t-2xl"
-                        />
-                    </div>
-
-                    {/* Video Image */}
-                    <div className="bg-gray-200 rounded-3xl overflow-hidden relative">
-                        <img src="/placeholder.svg?height=300&width=400" alt="Workspace" className="w-full h-60 object-cover" />
-                        <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
-                            <div className="bg-white bg-opacity-90 rounded-full px-4 py-2 flex items-center gap-2">
-                                <div className="w-0 h-0 border-l-[6px] border-l-gray-800 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent ml-1"></div>
-                                <span className="text-gray-800 text-sm font-medium">Watch Video</span>
+                                            {/* Additional blur background for enhanced effect */}
+                                            <div className="absolute inset-0 bg-white/10 backdrop-blur-[40px] rounded-full -z-10"></div>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
