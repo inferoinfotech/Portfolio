@@ -1,148 +1,198 @@
 "use client"
 
 // Sample images for the grid
-const workImages = [
-    { id: 1, src: "/images/work1.jpg", alt: "Work image 1" },
-    { id: 2, src: "/images/work2.jpg", alt: "Work image 2" },
-    { id: 3, src: "/images/work3.jpg", alt: "Work image 3" },
-    { id: 4, src: "/images/work4.jpg", alt: "Work image 4" },
-    { id: 5, src: "/images/work5.jpg", alt: "Work image 5" },
-    { id: 6, src: "/images/work6.jpg", alt: "Work image 6" },
-    { id: 7, src: "/images/work7.jpg", alt: "Work image 7" },
-    { id: 8, src: "/images/work8.jpg", alt: "Work image 8" },
-    { id: 9, src: "/images/work9.jpg", alt: "Work image 9" },
-    { id: 10, src: "/images/work10.jpg", alt: "Work image 10" },
-    { id: 11, src: "/images/work11.jpg", alt: "Work image 11" },
-    { id: 12, src: "/images/work12.jpg", alt: "Work image 12" },
-    { id: 13, src: "/images/work13.jpg", alt: "Work image 13" },
-    { id: 14, src: "/images/work14.jpg", alt: "Work image 14" },
-    { id: 15, src: "/images/work15.jpg", alt: "Work image 15" },
-    { id: 16, src: "/images/work16.jpg", alt: "Work image 16" },
+const images = [
+    { src: "/images/work1.jpg", alt: "People laughing" },
+    { src: "/images/work2.jpg", alt: "Sunset reflection" },
+    { src: "/images/work3.jpg", alt: "Couple in nature" },
+    { src: "/images/work4.jpg", alt: "Bubble crowd" },
+    { src: "/images/work5.jpg", alt: "Campfire group" },
+    { src: "/images/work6.jpg", alt: "Beach side" },
+    { src: "/images/work7.jpg", alt: "Father and daughter" },
+    { src: "/images/work8.jpg", alt: "Studying together" },
+    { src: "/images/work9.jpg", alt: "People on pier" },
+    { src: "/images/work10.jpg", alt: "Stairs and shadow" },
+    { src: "/images/work11.jpg", alt: "Building light" },
+    { src: "/images/work12.jpg", alt: "Wall & stairs" },
+    { src: "/images/work13.jpg", alt: "Creative workspace" },
+    { src: "/images/work14.jpg", alt: "Team collaboration" },
+    { src: "/images/work15.jpg", alt: "Modern office" },
+    { src: "/images/work16.jpg", alt: "Digital innovation" },
 ]
 
 export default function MyWorkBanner() {
     return (
-        <section className="min-h-screen bg-black text-white flex">
-            {/* Left Content */}
-            <div className="flex-1 flex flex-col justify-center px-8 lg:px-16">
-                {/* Header */}
-                <div className="flex items-center gap-3 mb-8">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-2xl font-medium tracking-wider uppercase">My work</span>
+        <div className="w-full overflow-hidden">
+            {/* Stack on mobile, grid on larger screens */}
+            <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-screen">
+                {/* Left Content */}
+                <div className="flex items-center justify-center bg-black text-white py-16 lg:py-0">
+                    <div className="w-full max-w-2xl mx-auto text-center lg:text-start px-8 lg:px-12">
+                        {/* Header with dot */}
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
+                            <div className="lg:w-3 lg:h-3  w-1.5 h-1.5 bg-white rounded-full"></div>
+                            <span className="text-2xl font-medium tracking-wider">My work</span>
+                        </div>
+
+                        {/* Main heading */}
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold text-center lg:text-start leading-tight mb-12">
+                            Have worked for a community of tech
+                            giants with global
+                            <span className="text-[#FDC0C5]"> influence</span>
+                        </h1>
+
+                        {/* CTA Button */}
+                        <button className="bg-white text-black px-12 py-6 tracking-tight rounded-full font-medium text-[22px] hover:bg-gray-100 transition-colors">
+                            Meet Saleh Bilal
+                        </button>
+                    </div>
                 </div>
 
-                {/* Main Heading */}
-                <h1 className="text-4xl lg:text-5xl xl:text-[64px] font-bold leading-tight mb-12">
-                    Have worked for
-                    <br />a community of tech
-                    <br />
-                    giants with global
-                    <br />
-                    <span className="text-[#FDC0C5]">influence</span>
-                </h1>
+                {/* Right Images - Masonry Grid */}
+                <div className="bg-white min-h-[60vh] hidden lg:block lg:h-[114vh] overflow-hidden relative">
+                    {/* Hide on small screens, show on medium+ */}
+                    <div className="hidden md:block h-full p-6 overflow-hidden">
+                        {/* Masonry-style layout with staggered columns */}
+                        <div className="grid grid-cols-4 gap-48 h-full">
+                            {/* Column 1 - Normal alignment */}
+                            <div className="space-y-6 -mt-20">
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[0]?.src || "/placeholder.svg"}
+                                        alt={images[0]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[1]?.src || "/placeholder.svg"}
+                                        alt={images[1]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[2]?.src || "/placeholder.svg"}
+                                        alt={images[2]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[3]?.src || "/placeholder.svg"}
+                                        alt={images[3]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
 
-                {/* CTA Button */}
-                <button className="bg-white text-black px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-200 transition-colors w-fit">
-                    Meet Saleh Bilal
-                </button>
-            </div>
+                            {/* Column 2 - Offset up (first image cut from top) */}
+                            <div className="space-y-6 -mt-44">
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[4]?.src || "/placeholder.svg"}
+                                        alt={images[4]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[5]?.src || "/placeholder.svg"}
+                                        alt={images[5]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[6]?.src || "/placeholder.svg"}
+                                        alt={images[6]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[7]?.src || "/placeholder.svg"}
+                                        alt={images[7]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
 
-            {/* Right Image Grid - Hidden on mobile, visible from md up */}
-            <div className="hidden md:flex flex-1 items-center justify-center p-8">
-                <div className="grid grid-cols-4 gap-4 max-w-2xl">
-                    {/* Row 1 */}
-                    <div className="col-span-2 h-32">
-                        <img
-                            src={workImages[0].src || "/placeholder.svg"}
-                            alt={workImages[0].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-32">
-                        <img
-                            src={workImages[1].src || "/placeholder.svg"}
-                            alt={workImages[1].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-32">
-                        <img
-                            src={workImages[2].src || "/placeholder.svg"}
-                            alt={workImages[2].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
+                            {/* Column 3 - Normal alignment (same as column 1) */}
+                            <div className="space-y-6 -mt-28">
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[8]?.src || "/placeholder.svg"}
+                                        alt={images[8]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[9]?.src || "/placeholder.svg"}
+                                        alt={images[9]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[10]?.src || "/placeholder.svg"}
+                                        alt={images[10]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[11]?.src || "/placeholder.svg"}
+                                        alt={images[11]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
 
-                    {/* Row 2 */}
-                    <div className="h-28">
-                        <img
-                            src={workImages[3].src || "/placeholder.svg"}
-                            alt={workImages[3].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
+                            {/* Column 4 - Offset down (cut from bottom) */}
+                            <div className="space-y-6 -mt-12">
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[12]?.src || "/placeholder.svg"}
+                                        alt={images[12]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[13]?.src || "/placeholder.svg"}
+                                        alt={images[13]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[14]?.src || "/placeholder.svg"}
+                                        alt={images[14]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
+                                    <img
+                                        src={images[15]?.src || "/placeholder.svg"}
+                                        alt={images[15]?.alt}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-span-2 h-28">
-                        <img
-                            src={workImages[4].src || "/placeholder.svg"}
-                            alt={workImages[4].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-28">
-                        <img
-                            src={workImages[5].src || "/placeholder.svg"}
-                            alt={workImages[5].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-
-                    {/* Row 3 */}
-                    <div className="h-36">
-                        <img
-                            src={workImages[6].src || "/placeholder.svg"}
-                            alt={workImages[6].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-36">
-                        <img
-                            src={workImages[7].src || "/placeholder.svg"}
-                            alt={workImages[7].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="col-span-2 h-36">
-                        <img
-                            src={workImages[8].src || "/placeholder.svg"}
-                            alt={workImages[8].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-
-                    {/* Row 4 */}
-                    <div className="col-span-2 h-32">
-                        <img
-                            src={workImages[9].src || "/placeholder.svg"}
-                            alt={workImages[9].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-32">
-                        <img
-                            src={workImages[10].src || "/placeholder.svg"}
-                            alt={workImages[10].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
-                    </div>
-                    <div className="h-32">
-                        <img
-                            src={workImages[11].src || "/placeholder.svg"}
-                            alt={workImages[11].alt}
-                            className="w-full h-full object-cover rounded-2xl"
-                        />
+                    {/* Mobile version - simplified grid */}
+                    <div className="grid grid-cols-2 gap-3 p-4 md:hidden">
+                        {images.slice(0, 6).map((img, index) => (
+                            <div key={index} className="rounded-xl overflow-hidden">
+                                <img src={img.src || "/placeholder.svg"} alt={img.alt} className="w-full h-[120px] object-cover" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
