@@ -52,35 +52,39 @@ export default function TopReadsSectionAbout() {
   ]
 
   return (
-    <section className="w-full bg-white py-16">
-      <div className="container mx-auto px-6">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Section title */}
-        <div className="text-center mb-4">
-          <h2 className="font-bold text-[48px] leading-[118px] tracking-[-3%]">My Top Reads</h2>
+        <div className="text-center mb-3 md:mb-4">
+          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px] leading-[118px] tracking-[-3%]">
+            My Top Reads
+          </h2>
         </div>
 
         {/* Section subtitle */}
-        <div className="text-center mb-12">
-          <p className="tfont-medium text-[20px] leading-[100%] tracking-[0] text-center">
+        <div className="text-center mb-8 md:mb-12">
+          <p className="font-medium text-base md:text-lg lg:text-[20px] leading-[100%] tracking-[0] text-center">
             Reading books has always given me a competitive edge as my creativity gets nourished and focused
           </p>
         </div>
 
         {/* Reading image */}
-        <div className="rounded-[40px] overflow-hidden mb-28">
+        <div className="rounded-2xl md:rounded-[40px] overflow-hidden mb-12 md:mb-16 lg:mb-28">
           <img
             src="../images/Top-read-Banner.png"
             alt="Saleh reading a book"
-            className="w-full h-[789px] object-cover"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[789px] object-cover"
           />
         </div>
 
         {/* Book grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
           {books.map((book, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className={`overflow-hidden w-[221px] h-[340px] mb-3 ${book.color}`}>
-                <img src={book.cover || "/placeholder.svg"}  className="w-full h-full object-cover" />
+              <div
+                className={`overflow-hidden w-full max-w-[150px] h-[230px] sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color} rounded-lg`}
+              >
+                <img src={book.cover || "/placeholder.svg"} alt={book.title} className="w-full h-full object-cover" />
               </div>
             </div>
           ))}

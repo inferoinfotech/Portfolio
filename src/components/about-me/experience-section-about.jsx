@@ -30,27 +30,31 @@ const experiences = [
 
 export default function ExperienceSectionAbout() {
   return (
-    <section className="w-full bg-white py-16 border-t border-gray-100">
-      <div className="container mx-auto">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16 border-t border-gray-100">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Section title */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-black rounded-full"></div>
-            <p className="text-[20px] leading-[118px] font-medium tracking-[0.4em] text-center">MY EXPERIENCE</p>
+            <p className="text-sm md:text-base lg:text-[20px] leading-[118px] font-medium tracking-[0.4em] text-center uppercase">
+              MY EXPERIENCE
+            </p>
           </div>
         </div>
 
         {/* Dynamic Experience Items */}
-        <div className="space-y-24">
+        <div className="space-y-12 md:space-y-16 lg:space-y-24">
           {experiences.map((item, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+            <div key={index} className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
               {/* Text Content */}
-              <div className="w-full lg:w-1/2 lg:pr-8">
-                <h2 className="text-6xl md:text-4xl lg:text-[64px] lg:leading-[70px] font-medium mb-[62px]">{item.title}</h2>
-                <div className="space-y-4">
+              <div className="w-full lg:w-1/2 lg:pr-8 order-2 lg:order-1">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-tight lg:leading-[70px] font-medium mb-6 md:mb-8 lg:mb-[62px]">
+                  {item.title}
+                </h2>
+                <div className="space-y-4 md:space-y-6">
                   {item.paragraphs.map((para, idx) => (
                     <p
-                      className="font-normal text-lg lg:text-2xl my-9 leading-relaxed tracking-[-0.01em] text-black text-opacity-70 text-justify"
+                      className="font-normal text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed tracking-[-0.01em] text-black text-opacity-70 text-justify"
                       key={idx}
                     >
                       {para}
@@ -58,14 +62,11 @@ export default function ExperienceSectionAbout() {
                   ))}
                 </div>
               </div>
+
               {/* Image Content */}
-              <div className="w-full flex justify-end items-center lg:w-1/2">
-                <div className="rounded-[32px] overflow-hidden max-w-[480px] h-[480px]">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.alt}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex">
+                <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] md:max-w-[480px] h-[300px] md:h-[400px] lg:h-[480px]">
+                  <img src={item.image || "/placeholder.svg"} alt={item.alt} className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
