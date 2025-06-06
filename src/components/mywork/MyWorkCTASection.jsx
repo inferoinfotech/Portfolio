@@ -5,11 +5,9 @@ const MyWorkCTASection = () => {
         <section className="relative w-full h-[50vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image - Placed at lower z-index */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src="/images/HeroCTAimage.png"
-                    alt="Professional consultation background"
-                    className="w-full h-full object-cover"  // Changed from object-contain to object-cover
-                />
+                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/videos/home-cta-video.mp4" type="video/mp4" />
+                </video>
             </div>
 
             {/* Linear Gradient Overlay - Higher z-index */}
