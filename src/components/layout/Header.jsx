@@ -1,19 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Search } from "lucide-react"
 import Link from "next/link"
 
 export default function Header() {
+  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState("My Work")
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-
-  const handleNavClick = (itemName) => {
-    setActiveItem(itemName)
-    setIsMenuOpen(false)
-  }
+  const [activeItem, setActiveItem] = useState("")
 
   const navigationItems = [
     { name: "About", href: "/about" },
@@ -21,6 +16,29 @@ export default function Header() {
     { name: "Blog", href: "/blog" },
     { name: "Hire Me", href: "/workwithme" },
   ]
+
+  // Set active item on route change
+  useEffect(() => {
+    if (pathname === "/") {
+      setActiveItem("Home")
+    } else if (pathname === "/freeaudit") {
+      setActiveItem("Free Audit")
+    } else {
+      const matched = navigationItems.find((item) => item.href === pathname)
+      if (matched) {
+        setActiveItem(matched.name)
+      } else {
+        setActiveItem("")
+      }
+    }
+  }, [pathname])
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  const handleNavClick = (itemName) => {
+    setActiveItem(itemName)
+    setIsMenuOpen(false)
+  }
 
   return (
     <>
@@ -117,7 +135,6 @@ export default function Header() {
               className={`transform transition-all duration-500 ease-out ${
                 isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
               }`}
-              style={{ transitionDelay: `0ms` }}
             >
               <Link
                 href="/"
