@@ -1,6 +1,7 @@
 import BookCallSection from '@/components/free-audit/book-call-section';
 import HeroCallSection from '@/components/free-audit/hero-call-section';
 import ScaleBusinessSection from '@/components/free-audit/scale-business-section';
+import UnderstandingSection from '@/components/free-audit/UnderstandingSection';
 import React from 'react'
 
 export const metadata = {
@@ -11,9 +12,10 @@ export const metadata = {
 const FreeAuditPage = () => {
     return (
         <>
-        <ScaleBusinessSection />
-        <BookCallSection />
-        <HeroCallSection />
+            <ScaleBusinessSection />
+            <BookCallSection />
+            <HeroCallSection />
+            <UnderstandingSection />
         </>
     )
 }
