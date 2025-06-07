@@ -1,79 +1,72 @@
+"use client"
+
 import { Play } from "lucide-react"
 
-const HeroSection = () => {
+export default function HeroSection() {
     return (
-        <section className="relative w-full h-screen bg-black overflow-hidden">
-            {/* Video Background */}
-            {/* <div className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl overflow-hidden">
-                <video className="w-full h-full object-cover opacity-60" autoPlay muted loop playsInline>
-                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent"></div>
-            </div> */}
-            {/* <div
-                className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl overflow-hidden"
-                style={{ clipPath: "/images/banner-bg-shape-mask.jpg" }}
-            >
-                <video autoPlay loop muted className="min-w-full min-h-full absolute object-cover">
-                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div> */}
-            <div
-                className="absolute inset-0 z-0 container mx-auto h-full rounded-4xl "
-                style={{
-                    mask: "url(/images/banner-bg-shape-mask.jpg)",
-                    WebkitMask: "url(/images/banner-bg-shape-mask.jpg)",
-                    maskSize: "cover",
-                    WebkitMaskSize: "cover",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                }}
-            >
-                <video className="w-full h-full object-cover opacity-100" autoPlay muted loop playsInline>
-                    <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent"></div>
-            </div>
+        <div className="h-fit w-full bg-black flex items-center justify-center p-4">
+            <div className="relative container h-[600px] md:h-[700px] lg:h-[800px]">
+                {/* Background Video with Custom Clip Path */}
+                <div
+                    className="absolute inset-0 w-auto h-full overflow-hidden"
+                    style={{
+                        clipPath: "path('M0,40 Q0,0 40,0 H1570 Q1600,0 1600,30 V738 Q1600,768 1570,768 H700 Q675,768 662.5,758 T650,728 V700 Q650,670 625,660 T575,648 H50 Q0,648 0,608 Z')",
+                    }}
+                >
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    >
+                        <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
+                    </video>
 
-            {/* Content Container */}
-            <div className="relative z-10 mx-auto max-w-[1540px] h-full px-4 flex flex-col justify-center">
-                <div className="ms-20">
-                    <h1 className="text-white text-5xl max-w-2xl  md:text-6xl lg:text-[80px] font-medium leading-14 md:leading-[70px]">
-                        Reach your
-                        <br />
-                        Biggest goals
-                        <br />
-                        faster with
-                        <br />
-                        my winning
-                        <br />
-                        strategies
-                    </h1>
-                    <p className="text-white font-medium mt-6 max-w-5xl text-lg md:text-4xl leading-8 md:leading-12">
-                        Pirate ipsum arrgh bounty warp jack. Line nest tails belaying nipper. Boatswain just overhaul gangplank
-                        bounty mutiny
-                    </p>
+                    {/* Overlay for better text readability */}
+                    <div className="absolute inset-0 bg-black/30" />
+                </div>
 
-                    <div className="absolute mt-12 flex items-center bg-black space-x-6">
-                        <button className="border border-white text-white px-8 py-4 text-sm font-medium tracking-wider hover:bg-white hover:text-black transition-colors duration-300">
-                            HIRE AN EXPERT
-                        </button>
-                        <button className="flex items-center space-x-3 group">
-                            <div className="bg-pink-300 rounded-full p-3 flex items-center justify-center group-hover:bg-pink-400 transition-colors duration-300">
-                                <Play className="w-5 h-5 text-black fill-black" />
-                            </div>
-                            <span className="text-white font-medium">WATCH VIDEO</span>
-                        </button>
+                {/* Content */}
+                <div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 lg:px-24">
+                    <div className="container">
+                        {/* Main Heading */}
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+                            Reach your
+                            <br />
+                            Biggest goals
+                            <br />
+                            faster with
+                            <br />
+                            my winning
+                            <br />
+                            strategies
+                        </h1>
+
+                        {/* Description Text */}
+                        <p className="text-white/90 text-base md:text-lg lg:text-xl mb-8 max-w-xl leading-relaxed">
+                            Pirate ipsum arrgh bounty warp jack. Line nest tails belaying nipper. Boatswain just overhaul gangplank
+                            bounty mutiny
+                        </p>
+
+                        {/* Action Buttons */}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                            {/* Hire Expert Button */}
+                            <button className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm font-semibold tracking-wider hover:bg-white hover:text-black transition-all duration-300">
+                                HIRE AN EXPERT
+                            </button>
+
+                            {/* Watch Video Button */}
+                            <button className="flex items-center gap-3 md:gap-4 text-white hover:opacity-80 transition-opacity duration-300">
+                                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDC0C5] rounded-full flex items-center justify-center">
+                                    <Play className="w-4 h-4 md:w-6 md:h-6 text-white ml-1" fill="white" />
+                                </div>
+                                <span className="text-xs md:text-sm font-semibold tracking-wider">WATCH VIDEO</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
-
-export default HeroSection
