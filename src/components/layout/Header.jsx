@@ -55,18 +55,17 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Section (Services + Button) */}
+          {/* Right Section */}
           <div className="flex items-center space-x-4">
-            {/* Services */}
             <div className="flex items-center space-x-2 hover:text-[#FDC0C5] transition-colors duration-300 cursor-pointer">
               <Search className="w-5 h-5" />
               <span className="text-base font-medium">Services</span>
             </div>
 
-            {/* Free Audit Button */}
+            {/* Desktop only Free Audit button */}
             <Link
               href="/freeaudit"
-              className="bg-[#FDC0C5] font-medium hover:bg-[#FDC0C5]/90 text-black px-4 py-2 rounded-full transition-colors"
+              className="hidden md:block bg-[#FDC0C5] font-medium hover:bg-[#FDC0C5]/90 text-black px-4 py-2 rounded-full transition-colors"
             >
               Free Audit
             </Link>
@@ -99,27 +98,56 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Overlay Menu */}
+      {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-black text-white z-40 md:hidden transition-all duration-500 ease-in-out ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
         <div
-          className={`absolute inset-0  transform transition-transform duration-700 ease-out ${
+          className={`absolute inset-0 transform transition-transform duration-700 ease-out ${
             isMenuOpen ? "scale-100" : "scale-95"
           }`}
         />
 
         <div className="relative pt-20 px-6">
           <nav className="space-y-6">
+            {/* Home (mobile only) */}
+            <div
+              className={`transform transition-all duration-500 ease-out ${
+                isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+              }`}
+              style={{ transitionDelay: `0ms` }}
+            >
+              <Link
+                href="/"
+                onClick={() => handleNavClick("Home")}
+                className={`block text-4xl font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
+                  activeItem === "Home" ? "text-[#FDC0C5]" : ""
+                }`}
+              >
+                Home
+                <span
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#FDC0C5] transform transition-all duration-300 ${
+                    activeItem === "Home" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
+                  }`}
+                />
+                <span
+                  className={`absolute inset-0 bg-[#FDC0C5]/10 rounded-lg transform transition-all duration-300 ${
+                    activeItem === "Home" ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                  }`}
+                />
+              </Link>
+            </div>
+
+            {/* Other nav items */}
             {navigationItems.map((item, index) => (
               <div
                 key={item.name}
                 className={`transform transition-all duration-500 ease-out ${
                   isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
                 }`}
-                style={{ transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms" }}
+                style={{ transitionDelay: `${(index + 1) * 100}ms` }}
               >
                 <Link
                   href={item.href}
@@ -142,29 +170,35 @@ export default function Header() {
                 </Link>
               </div>
             ))}
+
+            {/* Free Audit in mobile menu */}
+            <div
+              className={`transform transition-all duration-500 ease-out ${
+                isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+              }`}
+              style={{ transitionDelay: `${(navigationItems.length + 1) * 100}ms` }}
+            >
+              <Link
+                href="/freeaudit"
+                onClick={() => handleNavClick("Free Audit")}
+                className={`block text-4xl font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
+                  activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
+                }`}
+              >
+                Free Audit
+                <span
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#FDC0C5] transform transition-all duration-300 ${
+                    activeItem === "Free Audit" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
+                  }`}
+                />
+                <span
+                  className={`absolute inset-0 bg-[#FDC0C5]/10 rounded-lg transform transition-all duration-300 ${
+                    activeItem === "Free Audit" ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                  }`}
+                />
+              </Link>
+            </div>
           </nav>
-
-          {/* Current Active Item Indicator */}
-          <div
-            className={`absolute bottom-20 left-6 transform transition-all duration-500 ${
-              isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-            style={{ transitionDelay: "600ms" }}
-          >
-          </div>
-
-          {/* Animated Shapes */}
-          <div
-            className={`absolute top-16 right-6 w-20 h-20 transform transition-all duration-1000 ease-out ${
-              isMenuOpen ? "scale-100 rotate-180 opacity-100" : "scale-0 rotate-0 opacity-0"
-            }`}
-          />
-          <div
-            className={`absolute bottom-32 left-6 w-12 h-12 bg-[#FDC0C5]/10 rounded-full transform transition-all duration-1000 ease-out ${
-              isMenuOpen ? "scale-100 rotate-45 opacity-100" : "scale-0 rotate-0 opacity-0"
-            }`}
-            style={{ transitionDelay: "300ms" }}
-          />
         </div>
       </div>
     </>
