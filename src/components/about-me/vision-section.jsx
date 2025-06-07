@@ -1,6 +1,13 @@
+"use client"
+
+import { useState } from "react"
+import PortfolioModal from "../model/portfolio-modal"
+
 export default function VisionSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16 xl:py-16">
       <div className="mx-auto px-4 md:px-6">
         {/* Vision pill */}
         <div className="flex justify-center mb-6 md:mb-9">
@@ -32,12 +39,18 @@ export default function VisionSection() {
 
           {/* Portfolio button */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <button className="bg-gradient-to-r from-[#FDC0C5] via-white/40 to-white/40 backdrop-blur-2xl text-white font-medium text-lg md:text-xl lg:text-2xl tracking-[-0.03em] capitalize px-6 md:px-8 py-3 rounded-full shadow-lg hover:opacity-90 transition">
+            <button
+              className="bg-gradient-to-r from-[#FDC0C5] via-white/40 to-white/40 backdrop-blur-2xl text-white font-medium text-lg md:text-xl lg:text-2xl tracking-[-0.03em] capitalize px-6 md:px-8 py-3 rounded-full shadow-lg hover:opacity-90 transition"
+              onClick={() => setIsModalOpen(true)}
+            >
               Visit my portfolio
             </button>
           </div>
         </div>
       </div>
+
+      {/* Portfolio Modal */}
+      <PortfolioModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   )
 }
