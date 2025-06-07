@@ -65,8 +65,8 @@ export default function Header() {
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-[#FDC0C5] w-full transform transition-all duration-300 ${
-                    activeItem === item.name ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  className={` w-full transform transition-all duration-300 ${
+                    activeItem === item.name ? "scale-x-100" : "scale-x-0 "
                   }`}
                 />
               </Link>
