@@ -30,10 +30,10 @@ export default function PortfolioModal({ isOpen, onClose }) {
     ]
 
     const skills = [
-        { name: "Marketing", color: "bg-pink-100 text-pink-800" },
-        { name: "Copywriting", color: "bg-pink-100 text-pink-800" },
-        { name: "Pdf conversion", color: "bg-pink-100 text-pink-800" },
-        { name: "UX writer", color: "bg-pink-100 text-pink-800" },
+        { name: "Marketing", color: "bg-[#FDC0C5] text-black" },
+        { name: "Copywriting", color: "bg-[#FDC0C5] text-black" },
+        { name: "Pdf conversion", color: "bg-[#FDC0C5] text-black" },
+        { name: "UX writer", color: "bg-[#FDC0C5] text-black" },
     ]
 
     const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length)
