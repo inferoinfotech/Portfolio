@@ -29,8 +29,8 @@ export default function HungerSection() {
                         </div>
                         <div className="lg:col-span-1 order-1 lg:order-2">
                             {/* Right - Content */}
-                            <div className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6 lg:ms-10  lg:p-5">
-                                <p className="text-[#969696] text-base lg:text-[28px] font-medium leading-tight lg:leading-relaxed mb-5 lg:mb-10 pr-20">
+                            <div className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6 lg:ms-10 lg:p-5">
+                                <p className="text-[#969696] text-base lg:text-[28px] font-medium leading-tight lg:leading-relaxed mb-5 lg:mb-10">
                                     We believe progress equals happiness. And no matter where you're looking to excel, we're here to help you
                                     forge your pathway to power. Meet the man who's spent over 45 years creating breakthroughs and
                                     transforming lives.

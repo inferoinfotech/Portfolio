@@ -9,7 +9,7 @@ export default function PressSection() {
                 <div className="flex flex-col items-center">
                     {/* Title */}
                     <h3 className="text-base md:text-2xl lg:text-[40px] font-medium text-black mb-6">
-                        YOU MIGHT HAVE SEEN ME ON
+                        You Might Have Seen Me On
                     </h3>
 
                     {/* Logos Grid */}
