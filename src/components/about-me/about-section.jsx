@@ -26,11 +26,11 @@ export default function AboutSection() {
           <div className="relative w-full max-w-sm mx-auto">
             {/* Pink Background */}
             <div className="bg-[#FDC0C5] rounded-t-3xl md:rounded-[40px] md:p-6 h-[350px] sm:h-[500px] md:h-[550px] -z-10">
-              <div className="relative w-full h-[500px] sm:h-[550px] md:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden -mb-8 md:-mb-12">
+              <div className="relative w-full h-[350px] sm:h-[500px] md:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden -mb-8 md:-mb-12">
                 <img
                   src="../images/About-banner-img.png"
                   alt="Saleh Bilal"
-                  className="w-full h-[400px] object-cover object-center absolute bottom-36 z-10"
+                  className="w-full h-full object-cover  absolute -bottom- z-10"
                 />
               </div>
             </div>
@@ -42,15 +42,15 @@ export default function AboutSection() {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pr-4 xl:pr-8">
             <div className="mb-6 lg:mb-8 xl:mb-12">
-              <div className="flex items-center space-x-2 mb-3 lg:mb-4">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="flex items-center space-x-2 mb-3 lg:mb-10">
+                <div className="w-3 h-3 bg-white rounded-full"></div>
                 <p className="font-medium text-lg lg:text-xl xl:text-[24px] leading-[100%] tracking-[0]">Who is</p>
               </div>
-              <h1 className="font-bold text-5xl lg:text-6xl xl:text-7xl 2xl:text-[128px] leading-[100%] tracking-[0]">
-                <span className="text-[#FDC0C5]">Saleh</span> Bilal?
+              <h1 className="font-bold text-5xl lg:text-6xl xl:text-7xl 2xl:text-[120px] tracking-[0]">
+                <span className="text-[#FDC0C5]">Saleh </span>Bilal?
               </h1>
             </div>
-            <p className="font-normal text-lg lg:text-xl xl:text-2xl 2xl:text-[32px] leading-relaxed lg:leading-[1.4] xl:leading-[45px] tracking-[0] text-white">
+            <p className="font-normal text-lg lg:text-xl xl:text-2xl 2xl:text-[32px] lg:pr-16 leading-relaxed lg:leading-[1.4] xl:leading-[45px] tracking-[0] text-white/80">
               Pirate ipsum arrgh bounty warp jack. Sails ensign cup ballast spyglass execution lateen nipperkin
               american. Man spot line prey schooner no shiver brace weigh. Fer fleet yard chandler roger coxswain swab
               rig boatswain yarr.

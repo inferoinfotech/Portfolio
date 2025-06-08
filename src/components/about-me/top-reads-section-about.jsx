@@ -82,7 +82,7 @@ export default function TopReadsSectionAbout() {
           {books.map((book, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
-                className={`overflow-hidden w-full max-w-[150px] h-[230px] sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color} rounded-lg`}
+                className={`overflow-hidden w-full max-w-[150px] h-[230px] sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color}`}
               >
                 <img src={book.cover || "/placeholder.svg"} alt={book.title} className="w-full h-full object-cover" />
               </div>

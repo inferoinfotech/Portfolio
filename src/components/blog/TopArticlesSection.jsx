@@ -65,7 +65,6 @@ export default function TopArticlesSection() {
                             <div className="relative h-[660px] lg:h-[790px] rounded-[30px] overflow-hidden">
                                 <video
                                     src={featuredArticle?.image || "/placeholder.mp4"}
-                                    autoPlay
                                     loop
                                     muted
                                     playsInline

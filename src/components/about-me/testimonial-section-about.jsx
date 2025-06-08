@@ -27,7 +27,7 @@ export default function TestimonialSectionAbout() {
       <div className="w-full px-4 md:px-6">
         {/* Quote */}
         <div className="mb-8 md:mb-12 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[96px] leading-tight md:leading-[90px] font-medium tracking-[-0.03em] text-center text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[96px] leading-tight md:leading-[90px] font-medium tracking-[-0.03em] text-center text-white container mx-auto">
             " Pirate ipsum arrgh bounty warp jack. Shrouds grog{" "}
             <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red gabion sloop black crow's"
           </h2>

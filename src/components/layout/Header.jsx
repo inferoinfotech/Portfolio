@@ -46,7 +46,7 @@ export default function Header() {
         <div className="container mx-auto flex items-center justify-between">
           <Link
             href="/"
-            className="text-2xl font-bold hover:text-pink-400 transition-colors"
+            className="text-base lg:text-4xl font-bold transition-colors"
             onClick={() => handleNavClick("Home")}
           >
             Saleh Bilal
@@ -59,8 +59,8 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => handleNavClick(item.name)}
-                className={`hover:text-[#FDC0C5] text-base transition-colors relative group ${
-                  activeItem === item.name ? "text-[#FDC0C5]" : ""
+                className={`hover:text-[#FDC0C5] text-base font-medium transition-colors relative group ${
+                  activeItem === item.name ? "text-[#FDC0C5]" : "text-white/70"
                 }`}
               >
                 {item.name}
@@ -76,8 +76,8 @@ export default function Header() {
           {/* Right Section */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2 hover:text-[#FDC0C5] transition-colors duration-300 cursor-pointer">
-              <Search className="w-5 h-5" />
-              <span className="text-base font-medium">Services</span>
+              <Search className="lg:w-5 lg:h-5 w-3 h-3" />
+              <span className="text-[14px] lg:text-base font-medium">Services</span>
             </div>
 
             {/* Desktop only Free Audit button */}
@@ -139,7 +139,7 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={() => handleNavClick("Home")}
-                className={`block text-4xl font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
+                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
                   activeItem === "Home" ? "text-[#FDC0C5]" : ""
                 }`}
               >
@@ -169,7 +169,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => handleNavClick(item.name)}
-                  className={`block text-4xl font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
+                  className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
                     activeItem === item.name ? "text-[#FDC0C5]" : ""
                   }`}
                 >
@@ -180,7 +180,7 @@ export default function Header() {
                     }`}
                   />
                   <span
-                    className={`absolute inset-0 bg-[#FDC0C5]/10 rounded-lg transform transition-all duration-300 ${
+                    className={`absolute inset-0 rounded-lg transform transition-all duration-300 ${
                       activeItem === item.name ? "scale-100 opacity-100" : "scale-95 opacity-0"
                     }`}
                   />
@@ -198,7 +198,7 @@ export default function Header() {
               <Link
                 href="/freeaudit"
                 onClick={() => handleNavClick("Free Audit")}
-                className={`block text-4xl font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
+                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
                   activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
                 }`}
               >

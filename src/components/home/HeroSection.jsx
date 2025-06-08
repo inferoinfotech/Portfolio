@@ -4,13 +4,13 @@ import { Play } from "lucide-react"
 
 export default function HeroSection() {
     return (
-        <div className="h-fit w-full bg-black flex items-center justify-center p-4">
+        <div className="h-screen w-full bg-black flex items-center justify-center p-4">
             <div className="relative container h-[600px] md:h-[700px] lg:h-[800px]">
                 {/* Background Video with Custom Clip Path */}
                 <div
-                    className="absolute inset-0 w-auto h-full overflow-hidden"
+                    className="absolute inset-0 w-auto h-full rounded-4xl overflow-hidden"
                     style={{
-                        clipPath: "path('M0,40 Q0,0 40,0 H1570 Q1600,0 1600,30 V738 Q1600,768 1570,768 H700 Q675,768 662.5,758 T650,728 V700 Q650,670 625,660 T575,648 H50 Q0,648 0,608 Z')",
+                        clipPath: "path('M0,40 Q0,0 40,0 H1570 Q1600,0 1600,30 V738 Q1600,768 1570,800 H658 Q655,739 652.5,699 T654,606 V755 Q656,676 641,661 T575,648 H50 Q0,648 0,600 Z')",
                     }}
                 >
                     <video
@@ -18,7 +18,7 @@ export default function HeroSection() {
                         muted
                         loop
                         playsInline
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full rounded-4xl object-cover"
                     >
                         <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
                     </video>

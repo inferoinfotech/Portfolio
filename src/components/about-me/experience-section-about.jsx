@@ -30,7 +30,7 @@ const experiences = [
 
 export default function ExperienceSectionAbout() {
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-16 border-t border-gray-100">
+    <section className="w-full bg-white">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section title */}
         <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">

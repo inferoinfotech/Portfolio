@@ -129,7 +129,6 @@ const BlogDetailsPage = ({ params }) => {
                         {article.image.endsWith('.mp4') ? (
                             <video
                                 src={article.image}
-                                autoPlay
                                 loop
                                 muted
                                 playsInline
