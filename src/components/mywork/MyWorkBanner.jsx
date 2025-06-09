@@ -42,7 +42,7 @@ export default function MyWorkBanner() {
                         </h1>
 
                         {/* CTA Button */}
-                        <button className="bg-white text-black px-12 py-6 tracking-tight rounded-full font-medium text-[22px] hover:bg-gray-100 transition-colors">
+                        <button className="bg-white hover:cursor-pointer text-black px-12 py-6 tracking-tight rounded-full font-medium text-[22px] hover:bg-gray-100 transition-colors">
                             Meet Saleh Bilal
                         </button>
                     </div>

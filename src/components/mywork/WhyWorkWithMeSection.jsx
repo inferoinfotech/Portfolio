@@ -1,6 +1,6 @@
 export default function WhyWorkWithMeSection() {
     return (
-        <section className="py-16 lg:py-24 px-4 lg:px-8 bg-white">
+        <section className="py-10 lg:py-24 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
                     {/* Left Content */}
