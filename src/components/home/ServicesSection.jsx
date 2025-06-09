@@ -37,7 +37,7 @@ export default function ServicesSection() {
                 <div className="flex justify-center pt-12 lg:pb-8">
                     <div className="flex items-center gap-6">
                         <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-white rounded-full"></div>
-                        <h2 className="text-xs lg:text-xl font-medium tracking-[7] uppercase">Services</h2>
+                        <h2 className="text-xs lg:text-xl font-medium tracking-[7] lg:tracking-[10] uppercase">Services</h2>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@ export default function ServicesSection() {
                                     onMouseLeave={() => setHoveredService(null)}
                                 >
                                     <h3
-                                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold transition-colors duration-300 ${hoveredService === index
+                                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-[60px] md:ps-5 2xl:ps-2 font-bold transition-colors duration-300 ${hoveredService === index
                                             ? "text-[#FDC0C5]"
                                             : hoveredService !== null
                                                 ? "text-[#B2B2B2]/50"
@@ -66,7 +66,7 @@ export default function ServicesSection() {
                                     </h3>
                                     <button
                                         onClick={() => handleSeeMore(service)}
-                                        className={`bg-[#FDC0C5] hidden lg:flex items-center text-black px-4 py-1 lg:px-6 lg:py-2 rounded-full text-sm lg:text-base font-normal transition-all duration-300 ${hoveredService === index
+                                        className={`bg-[#FDC0C5] hover:cursor-pointer hidden xl:flex items-center text-black px-4 py-1 lg:px-6 lg:py-2 rounded-full text-sm lg:text-base font-normal transition-all duration-300 ${hoveredService === index
                                             ? "opacity-100 translate-x-0 ml-2 lg:ml-4"
                                             : "opacity-0 -translate-x-4 pointer-events-none absolute right-1/6"
                                             }`}

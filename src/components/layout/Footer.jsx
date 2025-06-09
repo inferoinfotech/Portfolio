@@ -2,8 +2,8 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white lg:border-t border-[#292929]">
-      <div className="container mx-auto py-12 lg:py-16">
+    <footer className="bg-black text-white px-3 md:px-5 lg:border-t border-[#292929]">
+      <div className="container mx-auto py-12 lg:py-10">
         {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Brand & Social */}
@@ -12,9 +12,9 @@ export default function Footer() {
             <div className="mb-8">
               <h2 className="text-4xl font-bold">SB</h2>
             </div>
-            <h3 className="text-[32px] font-bold mb-5 text-[#FDC0C5]">Work Less. Earn More. Enjoy Life</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold mb-5 text-[#FDC0C5]">Work Less. Earn More. Enjoy Life</h3>
             {/* Description */}
-            <p className="text-[32px] text-[#979797] mb-8 leading-9">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] text-[#979797] mb-8 leading-9">
               I dive deep into human potential, lifestyle design, and one person businesses to give you a unique,
               digestible way of improving your life.
             </p>
@@ -58,8 +58,8 @@ export default function Footer() {
 
           {/* Right Column - Newsletter */}
           <div className="max-w-2xl">
-            <h3 className="text-[32px] font-bold mb-4">Become an Expert now</h3>
-            <p className="text-white text-2xl font-medium mb-6">
+            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-4">Become an Expert now</h3>
+            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-6">
               Sign up for exclusive content, emails & things Saleh doesn't share anywhere else
             </p>
 
@@ -79,7 +79,7 @@ export default function Footer() {
               </button>
             </form>
 
-            <p className="text-white font-bold text-xl mt-8 tracking-widest leading-10">
+            <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl mt-8 tracking-widest leading-10">
               By entering your info, you'll become an SB Insider – with{" "}
               <span className="text-white font-semibold">FREE</span> access to exclusive insights, private Q+As
               delivered with heart to your inbox.

@@ -6,7 +6,7 @@ export default function HungerSection() {
         <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6 mx-auto">
                 {/* Top Section */}
-                <h1 className="text-black text-2xl md:text-4xl lg:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl tracking-[0.025em] leading-tight text-start font-bold">Do you have a hunger
+                <h1 className="text-black text-2xl md:text-4xl xl:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl tracking-[0.025em] leading-tight text-start font-bold">Do you have a hunger
                     to increase the
                     quality of your life?</h1>
                 <div className="relative">
@@ -35,7 +35,7 @@ export default function HungerSection() {
                                     forge your pathway to power. Meet the man who's spent over 45 years creating breakthroughs and
                                     transforming lives.
                                 </p>
-                                <button className="bg-[#F5F5F5] w-max lg:w-2xs hover:cursor-pointer hover:bg-[#F5F5F5]/80 text-black font-bold px-5 py-4 lg:px-5 lg:py-8 rounded-full text-[10px] lg:text-[25px] transition-colors">
+                                <button className="bg-[#F5F5F5] w-max xl:w-2xs hover:cursor-pointer hover:bg-[#F5F5F5]/80 text-black font-bold px-5 py-3 md:py-5 xl:px-5 xl:py-8 rounded-full text-[10px] md:text-base xl:text-[25px] transition-colors">
                                     Meet Saleh Bilal
                                 </button>
                             </div>
@@ -57,7 +57,7 @@ export default function HungerSection() {
                                         <img
                                             src="/images/mediumlogo.png"
                                             alt="Company logo"
-                                            className="w-40 h-40 object-cover"
+                                            className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
                                         />
                                     </div>
 
@@ -66,7 +66,7 @@ export default function HungerSection() {
                                         <img
                                             src="/images/firebaselogo.png"
                                             alt="Company logo"
-                                            className="w-40 h-40 object-cover"
+                                            className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
                                         />
                                     </div>
 
@@ -75,7 +75,7 @@ export default function HungerSection() {
                                         <img
                                             src="/images/adobelogo.png"
                                             alt="Adobe logo"
-                                            className="w-32 h-32 object-cover"
+                                            className="lg:w-32 w-24 lg:h-32 h-24 object-cover"
                                         />
                                     </div>
 
@@ -84,7 +84,7 @@ export default function HungerSection() {
                                         <img
                                             src="/images/stacklogo.png"
                                             alt="Figma logo"
-                                            className="w-40 h-40 object-cover"
+                                            className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
                                         />
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@ export default function HungerSection() {
                                             </div>
 
                                             {/* Text */}
-                                            <span className="text-white font-medium text-[10px] lg:text-base tracking-wide drop-shadow-sm">Watch Video</span>
+                                            <span className="text-white font-medium text-[10px] lg:text-base tracking-wide hover:cursor-pointer drop-shadow-sm">Watch Video</span>
 
                                             {/* Additional blur background for enhanced effect */}
                                             <div className="absolute inset-0 bg-white/10 backdrop-blur-[40px] rounded-full -z-10"></div>

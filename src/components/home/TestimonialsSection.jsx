@@ -71,12 +71,12 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <section className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:h-screen flex flex-col justify-between">
+        <section className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:min-h-screen flex flex-col justify-between">
             {/* Header */}
             <div className="flex justify-center mb-16">
                 <div className="flex items-center gap-3">
                     <div className="h-1.5 lg:w-3 w-1.5 lg:h-3 bg-white rounded-full"></div>
-                    <h2 className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[8] uppercase">Testimonials</h2>
+                    <h2 className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase">Testimonials</h2>
                 </div>
             </div>
 
@@ -84,10 +84,10 @@ export default function TestimonialsSection() {
             <div className="hidden container mx-auto lg:block">
                 {/* Main Quote */}
                 <div className="container mx-auto text-center mb-20">
-                    <blockquote className="text-4xl xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto ">
-                        <span className="text-8xl">"</span>
+                    <blockquote className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto ">
+                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">"</span>
                         {testimonials[0].text}
-                        <span className="text-8xl">"</span>
+                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">"</span>
                     </blockquote>
                 </div>
 
@@ -146,47 +146,6 @@ export default function TestimonialsSection() {
                         ))}
                     </div>
                 </div>
-
-                {/* Slide Indicators */}
-                {/* <div className="flex justify-center mt-8 gap-2">
-                    {testimonials.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={`w-2 h-2 rounded-full transition-colors ${index === currentSlide ? "bg-white" : "bg-gray-600"
-                                }`}
-                        />
-                    ))}
-                </div> */}
-
-                {/* Navigation Arrows (Optional) */}
-                {/* <div className="flex justify-between items-center mt-8 px-4">
-                    <button
-                        onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
-                        disabled={currentSlide === 0}
-                        className={`p-2 rounded-full ${currentSlide === 0 ? "text-gray-600" : "text-white hover:bg-gray-800"
-                            } transition-colors`}
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-
-                    <span className="text-gray-400 text-sm">
-                        {currentSlide + 1} / {testimonials.length}
-                    </span>
-
-                    <button
-                        onClick={() => setCurrentSlide(Math.min(testimonials.length - 1, currentSlide + 1))}
-                        disabled={currentSlide === testimonials.length - 1}
-                        className={`p-2 rounded-full ${currentSlide === testimonials.length - 1 ? "text-gray-600" : "text-white hover:bg-gray-800"
-                            } transition-colors`}
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div> */}
             </div>
         </section>
     )
