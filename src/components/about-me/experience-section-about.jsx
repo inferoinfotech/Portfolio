@@ -64,7 +64,7 @@ export default function ExperienceSectionAbout() {
               </div>
 
               {/* Image Content */}
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex">
+              <div className="w-full lg:w-1/2 justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex">
                 <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] md:max-w-[480px] h-[300px] md:h-[400px] lg:h-[480px]">
                   <img src={item.image || "/placeholder.svg"} alt={item.alt} className="w-full h-full object-cover" />
                 </div>
