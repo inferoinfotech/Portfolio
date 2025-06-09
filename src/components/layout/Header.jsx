@@ -182,7 +182,7 @@ export default function Header() {
               <Link
                 href="/freeaudit"
                 onClick={() => handleNavClick("Free Audit")}
-                className={`block lg:text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
+                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
                   }`}
               >
                 Free Audit
