@@ -150,7 +150,7 @@ export default function TopArticlesSection() {
 
                 {/* View All Button */}
                 <div className="text-center">
-                    <button className="bg-white text-black lg:px-8 lg:py-3 px-20 py-6 text-[22px] lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
+                    <button className="bg-white text-black px-6 py-3 lg:px-8 lg:py-3 text-base  lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
                         View all
                     </button>
                 </div>

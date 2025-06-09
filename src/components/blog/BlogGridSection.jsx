@@ -50,7 +50,7 @@ const gridBlogs = [
 
 export default function BlogGridSection() {
     return (
-        <section className="py-16 px-4 lg:px-8 bg-gray-50">
+        <section className="py-10 lg:py-16 px-4 lg:px-8">
             <div className="container mx-auto">
                 {/* Desktop Layout - 6 blogs in 3x2 grid */}
                 <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8">

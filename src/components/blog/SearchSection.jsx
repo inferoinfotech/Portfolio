@@ -72,18 +72,18 @@ export default function SearchSection() {
                 {/* Header and Search */}
                 <div className="mb-12">
                     {/* Title */}
-                    <h2 className="text-3xl lg:text-[64px] font-normal text-black mb-8 lg:mb-12 leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-normal text-black mb-8 lg:mb-12 leading-tight">
                         Looking for something in particular?
                     </h2>
 
                     {/* Search Input */}
-                    <div className="relative">
+                    <div className="relative z-10">
                         <input
                             type="text"
                             placeholder="Start typing..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full py-4 px-0 text-3xl bg-transparent border-0 border-b-4 border-black focus:outline-none focus:border-black placeholder-[#8A8A8A]"
+                            className="w-full py-3 lg:py-4 px-0 text-base md:text-xl lg:text-3xl bg-transparent border-0 border-b-4 border-black focus:outline-none focus:border-black placeholder-[#8A8A8A]"
                         />
                         <button className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2">
                             <Search className="w-6 h-6 text-black" />
