@@ -171,7 +171,7 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                 {/* Title and Navigation */}
                 <div className="flex container mx-auto items-center justify-center lg:justify-between mb-4 lg:mb-8">
                     <div className="flex">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium text-black">{title}</h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium md:ps-5 2xl:ps-0 text-black">{title}</h2>
                     </div>
                     {/* Navigation arrows */}
                     <div className="hidden px-5 lg:flex gap-3">
@@ -191,7 +191,7 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                 </div>
 
                 {/* Filter Buttons */}
-                <div className="container mx-auto mb-0">
+                <div className="container mx-auto md:px-5 2xl:px-0 mb-0">
                     <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                         {filterCategories.map((category) => (
                             <button
@@ -259,13 +259,13 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         {filteredArticles.map((article) => (
                             <SwiperSlide key={article.id}>
                                 <div className="group cursor-grab">
-                                    <div className="rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
+                                    <div className="rounded-[20px] lg:rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
                                         {/* Image Section */}
-                                        <div className="relative h-[230px] lg:h-[340px] w-[230px] lg:w-auto rounded-[30px]">
+                                        <div className="relative h-[230px] lg:h-[340px] w-[230px] lg:w-auto rounded-[20px] lg:rounded-[30px]">
                                             <img
                                                 src={article.image || "/placeholder.svg"}
                                                 alt={article.title}
-                                                className="w-full h-full rounded-[30px] object-cover"
+                                                className="w-full h-full rounded-[20px] lg:rounded-[30px] object-cover"
                                             />
                                             {/* Arrow Icon - Only element on the image */}
                                             <div className="absolute bottom-2 right-2 w-10 h-[46px] bg-black rounded-tr-lg rounded-bl-lg rounded-tl-lg rounded-br-3xl flex items-center justify-center backdrop-blur-sm">

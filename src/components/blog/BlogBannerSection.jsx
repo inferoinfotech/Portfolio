@@ -118,7 +118,7 @@ export default function BlogBannerSection() {
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8 lg:mb-12">
                         {/* Title */}
                         <div className="mb-6 lg:mb-0">
-                            <h1 className="text-4xl lg:text-5xl xl:text-[100px] font-medium leading-none">
+                            <h1 className="text-4xl lg:text-5xl xl:text-[100px] text-center lg:text-start font-medium leading-none">
                                 Creativity at
                                 <br />
                                 your <span className="text-[#FDC0C5]">disposal</span>
@@ -126,7 +126,7 @@ export default function BlogBannerSection() {
                         </div>
 
                         {/* Topic Filters */}
-                        <div className="flex flex-wrap gap-3 lg:gap-4 max-w-xs justify-end">
+                        <div className="flex flex-wrap gap-3 lg:gap-4 lg:max-w-xs justify-center lg:justify-end">
                             {topics.map((topic) => (
                                 <button
                                     key={topic}
@@ -143,9 +143,9 @@ export default function BlogBannerSection() {
                     </div>
 
                     {/* Blog Grid */}
-                    <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
                         {/* Featured Blog - Large */}
-                        <div className="lg:col-span-2 relative group cursor-pointer">
+                        <div className="xl:col-span-2 relative group cursor-pointer">
                             <div className="relative h-64 lg:h-[550px] rounded-[30px] overflow-hidden">
                                 <img
                                     src={featured.image || "/placeholder.svg"}
