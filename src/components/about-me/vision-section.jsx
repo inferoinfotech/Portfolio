@@ -8,7 +8,7 @@ export default function VisionSection() {
 
   return (
     <section className="w-full bg-white py-8 md:py-12 lg:py-16 xl:py-16">
-      <div className="mx-auto px-4 md:px-6">
+      <div className="mx-auto md:px-6">
         {/* Vision pill */}
         <div className="flex justify-center mb-6 md:mb-9">
           <div className="bg-[#FDC0C5] rounded-[30px] px-4 md:px-6 py-2">
@@ -29,7 +29,7 @@ export default function VisionSection() {
         </div>
 
         {/* Image with button */}
-        <div className="relative rounded-2xl md:rounded-3xl lg:rounded-tl-3xl lg:rounded-tr-3xl overflow-hidden">
+        <div className="relative rounded-t-[30px] md:rounded-3xl lg:rounded-tl-3xl lg:rounded-t-3xl overflow-hidden">
           <img
             src="../images/MyVision-About.png"
             alt="Saleh reading"

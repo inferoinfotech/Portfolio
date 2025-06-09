@@ -25,7 +25,7 @@ export default function ScaleBusinessSection() {
   return (
     <div className="w-full overflow-hidden">
       {/* Stack on mobile and laptop, grid only on extra large screens */}
-      <div className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl:h-[80vh]">
+      <div className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl1440:h-[70vh] xl1920:h-[64vh]">
         {/* Left Content - Full width on mobile and laptop */}
         <div className="flex items-center justify-center bg-white py-16 xl:py-0">
           <div className="w-full max-w-3xl mx-auto px-6">
