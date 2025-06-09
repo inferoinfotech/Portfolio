@@ -55,7 +55,7 @@ export default function KeyBenefitsSection() {
                 <div className="text-center mb-16">
                     <div className="flex justify-center items-center gap-3 mb-8">
                         <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-black rounded-full"></div>
-                        <h2 className="text-[10px] lg:text-xl font-medium tracking-[10] uppercase">Key Benefits</h2>
+                        <h2 className="text-[10px] lg:text-xl font-medium  tracking-[5] lg:tracking-[10] uppercase">Key Benefits</h2>
                     </div>
 
                     <h1 className="text-[40px] lg:text-5xl xl:text-8xl font-medium text-black leading-tight">
@@ -64,7 +64,7 @@ export default function KeyBenefitsSection() {
                 </div>
 
                 {/* Benefits Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                     {benefits.map((benefit) => {
                         const IconComponent = benefit.icon
                         return (
