@@ -23,7 +23,7 @@ export default function AboutSection() {
                     {/* First Column - Image and Social Icons (occupies 1 column) */}
                     <div className="flex flex-col items-center xl:items-center">
                         {/* Profile Image Placeholder */}
-                        <div className="w-40 h-40 md:w-80 md:h-80 lg:w-80 lg:h-80 2xl:w-[440px] 2xl:h-[440px]  rounded-full mb-8 flex items-center justify-center shrink-0">
+                        <div className="w-40 h-40 md:w-80 md:h-80 lg:w-80 lg:h-80 2xl:w-[420px] 2xl:h-[420px]  rounded-full mb-8 flex items-center justify-center shrink-0">
                             <img
                                 src="/images/Profileimage.jpg"
                                 alt="Saleh Bilal"

@@ -171,10 +171,10 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                 {/* Title and Navigation */}
                 <div className="flex container mx-auto items-center justify-center lg:justify-between mb-4 lg:mb-8">
                     <div className="flex">
-                        <h2 className="text-2xl lg:text-[40px] font-medium text-black">{title}</h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium text-black">{title}</h2>
                     </div>
                     {/* Navigation arrows */}
-                    <div className="hidden lg:flex gap-3">
+                    <div className="hidden px-5 lg:flex gap-3">
                         <button
                             onClick={() => swiperRef.current?.slidePrev()}
                             className="w-12 h-12 rounded-full bg-black hover:cursor-pointer text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
@@ -222,10 +222,6 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                             clickable: true,
                             bulletClass: "swiper-pagination-bullet custom-bullet",
                             bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
-                        }}
-                        autoplay={{
-                            delay: 5000,
-                            disableOnInteraction: false,
                         }}
                         breakpoints={{
                             0: {
@@ -286,8 +282,8 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
 
                                         {/* Content Section - Below the image */}
                                         <div className="p-4">
-                                            <h3 className="text-black font-medium text-xl mb-2 leading-tight">{article.title}</h3>
-                                            <p className="text-[#00000080] text-[15px] leading-4">{article.description}</p>
+                                            <h3 className="text-black font-medium text-base sm:text-lg md:text-xl mb-2 leading-tight">{article.title}</h3>
+                                            <p className="text-[#00000080] text-sm sm:text-base md:text-[15px] leading-4">{article.description}</p>
                                         </div>
                                     </div>
                                 </div>
