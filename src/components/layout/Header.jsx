@@ -46,7 +46,7 @@ export default function Header() {
         <div className="container mx-auto flex items-center justify-between">
           <Link
             href="/"
-            className="text-base lg:text-4xl font-bold transition-colors"
+            className="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-4xl font-bold transition-colors"
             onClick={() => handleNavClick("Home")}
           >
             Saleh Bilal
@@ -59,15 +59,13 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => handleNavClick(item.name)}
-                className={`hover:text-[#FDC0C5] text-base font-medium transition-colors relative group ${
-                  activeItem === item.name ? "text-[#FDC0C5]" : "text-white/70"
-                }`}
+                className={`hover:text-[#FDC0C5] text-base font-medium transition-colors relative group ${activeItem === item.name ? "text-[#FDC0C5]" : "text-white/70"
+                  }`}
               >
                 {item.name}
                 <span
-                  className={` w-full transform transition-all duration-300 ${
-                    activeItem === item.name ? "scale-x-100" : "scale-x-0 "
-                  }`}
+                  className={` w-full transform transition-all duration-300 ${activeItem === item.name ? "scale-x-100" : "scale-x-0 "
+                    }`}
                 />
               </Link>
             ))}
@@ -94,21 +92,18 @@ export default function Header() {
               className="relative w-8 h-8 flex flex-col justify-center items-center md:hidden"
               aria-label="Toggle Menu"
             >
-              <div className="relative w-6 h-6">
+              <div className="relative w-5 h-5">
                 <span
-                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "rotate-45 translate-y-2.5" : "translate-y-1"
-                  }`}
+                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-45 translate-y-2.5" : "translate-y-1"
+                    }`}
                 />
                 <span
-                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out translate-y-2.5 ${
-                    isMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-                  }`}
+                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out translate-y-2.5 ${isMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+                    }`}
                 />
                 <span
-                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "-rotate-45 translate-y-2.5" : "translate-y-4"
-                  }`}
+                  className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out ${isMenuOpen ? "-rotate-45 translate-y-2.5" : "translate-y-4"
+                    }`}
                 />
               </div>
             </button>
@@ -118,41 +113,35 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black text-white z-40 md:hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 bg-black text-white z-40 md:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         <div
-          className={`absolute inset-0 transform transition-transform duration-700 ease-out ${
-            isMenuOpen ? "scale-100" : "scale-95"
-          }`}
+          className={`absolute inset-0 transform transition-transform duration-700 ease-out ${isMenuOpen ? "scale-100" : "scale-95"
+            }`}
         />
 
         <div className="relative pt-20 px-6">
           <nav className="space-y-6">
             {/* Home (mobile only) */}
             <div
-              className={`transform transition-all duration-500 ease-out ${
-                isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-              }`}
+              className={`transform transition-all duration-500 ease-out ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+                }`}
             >
               <Link
                 href="/"
                 onClick={() => handleNavClick("Home")}
-                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
-                  activeItem === "Home" ? "text-[#FDC0C5]" : ""
-                }`}
+                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${activeItem === "Home" ? "text-[#FDC0C5]" : ""
+                  }`}
               >
                 Home
                 <span
-                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#FDC0C5] transform transition-all duration-300 ${
-                    activeItem === "Home" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
-                  }`}
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 transform transition-all duration-300 ${activeItem === "Home" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
+                    }`}
                 />
                 <span
-                  className={`absolute inset-0 bg-[#FDC0C5]/10 rounded-lg transform transition-all duration-300 ${
-                    activeItem === "Home" ? "scale-100 opacity-100" : "scale-95 opacity-0"
-                  }`}
+                  className={`absolute inset-0 rounded-lg transform transition-all duration-300 ${activeItem === "Home" ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                    }`}
                 />
               </Link>
             </div>
@@ -161,28 +150,24 @@ export default function Header() {
             {navigationItems.map((item, index) => (
               <div
                 key={item.name}
-                className={`transform transition-all duration-500 ease-out ${
-                  isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-                }`}
+                className={`transform transition-all duration-500 ease-out ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+                  }`}
                 style={{ transitionDelay: `${(index + 1) * 100}ms` }}
               >
                 <Link
                   href={item.href}
                   onClick={() => handleNavClick(item.name)}
-                  className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
-                    activeItem === item.name ? "text-[#FDC0C5]" : ""
-                  }`}
+                  className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${activeItem === item.name ? "text-[#FDC0C5]" : ""
+                    }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#FDC0C5] transform transition-all duration-300 ${
-                      activeItem === item.name ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
-                    }`}
+                    className={`absolute left-0 top-1/2 -translate-y-1/2 transform transition-all duration-300 ${activeItem === item.name ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
+                      }`}
                   />
                   <span
-                    className={`absolute inset-0 rounded-lg transform transition-all duration-300 ${
-                      activeItem === item.name ? "scale-100 opacity-100" : "scale-95 opacity-0"
-                    }`}
+                    className={`absolute inset-0 rounded-lg transform transition-all duration-300 ${activeItem === item.name ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                      }`}
                   />
                 </Link>
               </div>
@@ -190,28 +175,24 @@ export default function Header() {
 
             {/* Free Audit in mobile menu */}
             <div
-              className={`transform transition-all duration-500 ease-out ${
-                isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-              }`}
+              className={`transform transition-all duration-500 ease-out ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+                }`}
               style={{ transitionDelay: `${(navigationItems.length + 1) * 100}ms` }}
             >
               <Link
                 href="/freeaudit"
                 onClick={() => handleNavClick("Free Audit")}
-                className={`block text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${
-                  activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
-                }`}
+                className={`block lg:text-[32px] font-light hover:text-[#FDC0C5] transition-all duration-300 hover:translate-x-2 hover:scale-105 relative group w-full text-left ${activeItem === "Free Audit" ? "text-[#FDC0C5]" : ""
+                  }`}
               >
                 Free Audit
                 <span
-                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-[#FDC0C5] transform transition-all duration-300 ${
-                    activeItem === "Free Audit" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
-                  }`}
+                  className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8  transform transition-all duration-300 ${activeItem === "Free Audit" ? "scale-y-100 -translate-x-6" : "scale-y-0 -translate-x-6"
+                    }`}
                 />
                 <span
-                  className={`absolute inset-0 bg-[#FDC0C5]/10 rounded-lg transform transition-all duration-300 ${
-                    activeItem === "Free Audit" ? "scale-100 opacity-100" : "scale-95 opacity-0"
-                  }`}
+                  className={`absolute inset-0 rounded-lg transform transition-all duration-300 ${activeItem === "Free Audit" ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                    }`}
                 />
               </Link>
             </div>
