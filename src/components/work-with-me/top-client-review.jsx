@@ -53,10 +53,10 @@ export default function TopClientReview() {
               </div>
 
               <div className="space-y-3">
-                <button className="w-full bg-[#272727] text-white py-3 text-lg md:text-xl lg:text-2xl rounded-[20px] font-normal hover:bg-[#333] transition-colors">
+                <button className="w-full cursor-pointer bg-[#272727] text-white py-3 text-lg md:text-xl lg:text-2xl rounded-[20px] font-normal hover:bg-[#333] transition-colors">
                   Book a consultation call
                 </button>
-                <button className="w-full text-center text-white hover:text-gray-300 transition-colors text-base md:text-lg font-normal">
+                <button className="w-full cursor-pointer text-center text-white hover:text-gray-300 transition-colors text-base md:text-lg font-normal">
                   Hire me
                 </button>
               </div>

@@ -27,10 +27,10 @@ export default function HeroBusinessSection() {
             </p>
 
             <div className="flex flex-row gap-3 md:gap-4">
-              <button className="bg-white text-black px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[18px] lg:text-[22px] tracking-[-1%] md:tracking-[-3%] hover:cursor-pointer text-center hover:bg-gray-100 transition-colors w-full md:w-auto">
+              <button className="bg-white cursor-pointer text-black px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[18px] lg:text-[22px] tracking-[-1%] md:tracking-[-3%] hover:cursor-pointer text-center hover:bg-gray-100 transition-colors w-full md:w-auto">
                 Let's work together
               </button>
-              <button className="border-2 border-white text-white px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[22px] hover:bg-white hover:text-black hover:cursor-pointer transition-colors w-full md:w-auto">
+              <button className="border-2 cursor-pointer border-white text-white px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[22px] hover:bg-white hover:text-black hover:cursor-pointer transition-colors w-full md:w-auto">
                 Schedule a free call
               </button>
             </div>

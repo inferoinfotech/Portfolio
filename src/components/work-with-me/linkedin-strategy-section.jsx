@@ -101,7 +101,7 @@ export default function LinkedInStrategySection() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
+                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
                     index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
                   }`}
                 />
@@ -136,7 +136,7 @@ export default function LinkedInStrategySection() {
         )}
 
         <div className="text-center">
-          <button className="bg-black text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-gray-800 transition-colors w-full md:w-auto">
+          <button className="bg-black cursor-pointer text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium  w-full md:w-auto">
             Book a free call
           </button>
         </div>

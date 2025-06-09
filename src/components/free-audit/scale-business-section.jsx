@@ -42,7 +42,7 @@ export default function ScaleBusinessSection() {
             <p className="text-black/50 text-xl md:text-2xl font-normal mb-8 xl:mb-12">Let me sort it out for you</p>
 
             {/* CTA Button */}
-            <button className="bg-black text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition">
+            <button className="bg-black cursor-pointer text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition">
               Let's have a free call
             </button>
           </div>

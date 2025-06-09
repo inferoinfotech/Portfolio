@@ -17,10 +17,10 @@ export default function FinalCTASection() {
 
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="text-center z-10 px-4">
-                <h2 className="text-white text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8">
+                <h2 className="text-white text-2xl cursor-pointer md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8">
                   Let's build something together
                 </h2>
-                <button className="backdrop-blur-[40px] bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
+                <button className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
                   Let's have a Free call
                 </button>
               </div>
@@ -41,7 +41,7 @@ export default function FinalCTASection() {
                 <p className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal">
                   Giving best services across the globe
                 </p>
-                <button className="backdrop-blur-[40px] bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
+                <button className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
                   Meet Saleh Bilal
                 </button>
               </div>
@@ -59,7 +59,7 @@ export default function FinalCTASection() {
                 <p className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal">
                   Giving best services across the globe
                 </p>
-                <button className="backdrop-blur-[40px] bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
+                <button className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-9 py-3 rounded-full font-normal text-sm md:text-base hover:opacity-90 transition-opacity">
                   Visit portfolio
                 </button>
               </div>

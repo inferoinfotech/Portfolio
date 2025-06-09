@@ -113,7 +113,7 @@ export default function FreelancerTestimonials() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
+                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
                     index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
                   }`}
                 />
@@ -150,7 +150,7 @@ export default function FreelancerTestimonials() {
         )}
 
         <div className="text-center mt-8 md:mt-12">
-          <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium shadow-md shadow-black/25 hover:bg-gray-800 transition-colors text-sm sm:text-base w-full md:w-auto">
+          <button className="bg-black cursor-pointer text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium shadow-md shadow-black/25  text-sm sm:text-base w-full md:w-auto">
             Hire me now
           </button>
         </div>

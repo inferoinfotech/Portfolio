@@ -81,7 +81,7 @@ export default function OneOnOneCallSection() {
                 </ul>
 
                 {/* CTA Button */}
-                <button className="bg-[#FDC0C5] text-black px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-full font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] tracking-tight hover:bg-[#f8a8b0] transition-colors duration-300 w-full sm:w-auto">
+                <button className="bg-[#FDC0C5] cursor-pointer text-black px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-full font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] tracking-tight hover:bg-[#f8a8b0] transition-colors duration-300 w-full sm:w-auto">
                   Book a free call
                 </button>
               </div>
