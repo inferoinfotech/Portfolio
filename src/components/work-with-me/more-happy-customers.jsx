@@ -51,6 +51,8 @@ export default function MoreHappyCustomers() {
     },
   ]
 
+
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
@@ -61,11 +63,25 @@ export default function MoreHappyCustomers() {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
+  useEffect(() => {
+    if (!isMobile) return
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % customers.length)
+    }, 5000) // Auto-slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [isMobile, customers.length])
+
+
   const StarRating = ({ rating }) => {
     return (
       <div className="flex gap-1">
         {[1, 2, 3, 4, 5].map((star) => (
-          <span key={star} className={`text-sm md:text-lg ${star <= rating ? "text-orange-400" : "text-gray-300"}`}>
+          <span
+            key={star}
+            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
+          >
             ★
           </span>
         ))}
@@ -85,15 +101,15 @@ export default function MoreHappyCustomers() {
 
         {/* Mobile Slider */}
         {isMobile ? (
-          <div className="relative mb-8">
+          <div className="relative mb-8  ">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {customers.map((customer, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <div key={index} className="w-full flex-shrink-0 px-2 rounded-lg bg-[#F8F8F8]">
+                    <div className=" p-4  ">
                       <div className="flex items-center mb-4">
                         <img
                           src={customer.image || "/placeholder.svg"}
@@ -121,9 +137,8 @@ export default function MoreHappyCustomers() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
-                    index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
-                  }`}
+                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
+                    }`}
                 />
               ))}
             </div>
@@ -132,7 +147,7 @@ export default function MoreHappyCustomers() {
           /* Desktop Grid */
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             {customers.map((customer, index) => (
-              <div key={index} className="bg-white p-4 md:p-6 rounded-lg border border-gray-100">
+              <div key={index} className="bg-white p-4 md:p-6 rounded-lg ">
                 <div className="flex items-center mb-4">
                   <img
                     src={customer.image || "/placeholder.svg"}

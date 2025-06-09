@@ -31,6 +31,16 @@ export default function FreelancerTestimonials() {
   ]
 
   useEffect(() => {
+    if (!isMobile) return
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+    }, 5000) // Auto-slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [isMobile, testimonials.length])
+
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
@@ -54,7 +64,7 @@ export default function FreelancerTestimonials() {
         {[1, 2, 3, 4, 5].map((star) => (
           <span
             key={star}
-            className={`text-sm sm:text-base lg:text-lg ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
+            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
           >
             ★
           </span>
@@ -86,8 +96,8 @@ export default function FreelancerTestimonials() {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <div key={index} className="w-full flex-shrink-0 px-2 rounded-lg bg-[#F8F8F8]">
+                    <div className=" p-4  ">
                       <div className="flex items-center mb-4">
                         <img
                           src={testimonial.image || "/placeholder.svg"}
@@ -100,7 +110,7 @@ export default function FreelancerTestimonials() {
                         </div>
                       </div>
                       <p className="text-gray-700 font-medium text-sm leading-relaxed mb-4">{testimonial.text}</p>
-                      <StarRating rating={testimonial.rating} />
+                      <StarRating rating={testimonial.rating} className="text-2xl" />
                     </div>
                   </div>
                 ))}
@@ -113,9 +123,8 @@ export default function FreelancerTestimonials() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
-                    index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
-                  }`}
+                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
+                    }`}
                 />
               ))}
             </div>
@@ -124,7 +133,7 @@ export default function FreelancerTestimonials() {
           /* Desktop Grid */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-4 sm:p-6 rounded-lg border border-gray-100">
+              <div key={index} className="bg-white p-4 sm:p-6 rounded-lg  ">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <img
                     src={testimonial.image || "/placeholder.svg"}

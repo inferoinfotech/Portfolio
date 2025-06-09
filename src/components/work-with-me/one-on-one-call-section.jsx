@@ -34,7 +34,7 @@ export default function OneOnOneCallSection() {
 
   return (
     <section className="w-full bg-black py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] 2xl:text-[64px] leading-tight sm:leading-tight md:leading-[110%] lg:leading-[100%] tracking-tight md:tracking-[-1%] lg:tracking-[-2%]">
@@ -87,7 +87,7 @@ export default function OneOnOneCallSection() {
               </div>
 
               {/* Image Section */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-none">
+              <div className="w-full lg:w-1/2 order-1 lg:order-none hidden md:block">
                 <div className="rounded-xl sm:rounded-2xl overflow-hidden w-full max-w-[500px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-none mx-auto">
                   <div className="aspect-square w-full">
                     <img

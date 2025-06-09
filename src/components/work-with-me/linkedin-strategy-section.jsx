@@ -40,11 +40,24 @@ export default function LinkedInStrategySection() {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
+  useEffect(() => {
+    if (!isMobile) return
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+    }, 5000) // Auto-slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [isMobile, testimonials.length])
+
   const StarRating = ({ rating }) => {
     return (
       <div className="flex gap-1">
         {[1, 2, 3, 4, 5].map((star) => (
-          <span key={star} className={`text-sm md:text-lg ${star <= rating ? "text-orange-400" : "text-gray-300"}`}>
+          <span
+            key={star}
+            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
+          >
             ★
           </span>
         ))}
@@ -74,8 +87,8 @@ export default function LinkedInStrategySection() {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <div key={index} className="w-full flex-shrink-0 px-2 rounded-lg bg-[#F8F8F8]">
+                    <div className=" p-4 rounded-lg ">
                       <div className="flex items-center mb-4">
                         <img
                           src={testimonial.image || "/placeholder.svg"}
@@ -101,9 +114,8 @@ export default function LinkedInStrategySection() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
-                    index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
-                  }`}
+                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
+                    }`}
                 />
               ))}
             </div>
@@ -112,7 +124,7 @@ export default function LinkedInStrategySection() {
           /* Desktop Grid */
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-100">
+              <div key={index} className="bg-white p-6 rounded-lg ">
                 <div className="flex items-center mb-[40px]">
                   <img
                     src={testimonial.image || "/placeholder.svg"}
