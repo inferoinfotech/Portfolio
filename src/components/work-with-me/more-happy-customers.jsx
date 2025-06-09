@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 export default function MoreHappyCustomers() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+  const [activeButton, setActiveButton] = useState("hire");
 
   const customers = [
     {
@@ -173,10 +174,23 @@ export default function MoreHappyCustomers() {
         )}
 
         <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
-          <button className="bg-black cursor-pointer text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040]  w-full md:w-auto">
+          {/* Hire Me Button */}
+          <button
+            onClick={() => setActiveButton("hire")}
+            className={`px-8 md:px-10 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer transition-colors
+          ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
+        `}
+          >
             Hire me now
           </button>
-          <button className="border-2 border-black cursor-pointer text-black px-6 md:px-8 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040]   w-full md:w-auto">
+
+          {/* Free Call Button */}
+          <button
+            onClick={() => setActiveButton("call")}
+            className={`px-6 md:px-8 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer transition-colors
+          ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
+        `}
+          >
             Let's have a free call
           </button>
         </div>

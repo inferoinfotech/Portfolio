@@ -1,9 +1,9 @@
 export default function HeroCallSection() {
   return (
-    <section className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] overflow-hidden bg-black">
+    <section className="relative w-auto h-[364px] xs:w-[390px] xs:h-[364px] sm:w-full sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] overflow-hidden bg-black mx-auto">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-t-[15px] sm:rounded-t-[20px] md:rounded-t-[30px] lg:rounded-t-[40px]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-t-[30px] sm:rounded-t-[30px] md:rounded-t-[30px] lg:rounded-t-[40px]"
         style={{
           backgroundImage: "url('../images/MyVision-About.png')",
         }}

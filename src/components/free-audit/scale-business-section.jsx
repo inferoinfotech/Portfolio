@@ -30,7 +30,7 @@ export default function ScaleBusinessSection() {
         <div className="flex items-center justify-center bg-white py-16 xl:py-0">
           <div className="w-full max-w-3xl mx-auto px-6">
             {/* Responsive heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold leading-tight mb-6 xl:mb-8">
+            <h1 className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-tight mb-6 xl:mb-8">
               Can't figure out How to scale your business{" "}
               <span className="hidden sm:inline">
                 <br />
@@ -39,12 +39,14 @@ export default function ScaleBusinessSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-black/50 text-xl md:text-2xl font-normal mb-8 xl:mb-12">Let me sort it out for you</p>
+            <p className="text-black/50 text-[24px] text-center md:text-2xl md:text-left font-normal mb-8 xl:mb-12">Let me sort it out for you</p>
 
             {/* CTA Button */}
-            <button className="bg-black cursor-pointer text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition">
-              Let's have a free call
-            </button>
+            <div className="flex justify-center md:justify-start">
+              <button className="md:bg-black cursor-pointer md:text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition text-black text-center">
+                Let's have a free call
+              </button>
+            </div>
           </div>
         </div>
 
