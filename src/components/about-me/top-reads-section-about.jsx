@@ -69,7 +69,7 @@ export default function TopReadsSectionAbout() {
         </div>
 
         {/* Reading image */}
-        <div className="rounded-[40px] md:rounded-[40px] overflow-hidden mb-12 md:mb-16 lg:mb-28">
+        <div className="rounded-[40px] hidden md:block overflow-hidden mb-12 md:mb-16 lg:mb-28">
           <img
             src="../images/Top-read-Banner.png"
             alt="Saleh reading a book"
