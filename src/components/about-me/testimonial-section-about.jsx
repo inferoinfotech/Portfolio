@@ -70,8 +70,7 @@ export default function TestimonialSectionAbout() {
                   alt="Person working with laptop in modern workspace"
                   width={400}
                   height={600}
-                  className="w-full h-[500px] rounded-[35px] object-cover "
-                  priority/>
+                  className="w-full h-[500px] rounded-[35px] object-cover "/>
               </div>
             </div>
           </div>
