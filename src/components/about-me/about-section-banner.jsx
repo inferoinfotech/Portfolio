@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-black text-white relative min-h-screen py-0 md:py-[75px] lg:py-0 xl:py-0">
+    <section className="w-full bg-black text-white relative max-h-screen py-0 md:py-[75px] lg:py-0 xl:py-0">
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center text-center">
