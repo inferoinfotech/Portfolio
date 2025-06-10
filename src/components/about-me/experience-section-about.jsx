@@ -45,16 +45,16 @@ export default function ExperienceSectionAbout() {
         {/* Dynamic Experience Items */}
         <div className="space-y-12 md:space-y-16 lg:space-y-24">
           {experiences.map((item, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center ">
+            <div key={index} className="flex flex-col lg:flex-row items-center mb-8">
               {/* Text Content */}
               <div className="w-full lg:w-1/2  order-2 lg:order-1">
-                <h2 className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-tight lg:leading-[70px] font-medium mb-6 md:mb-8 lg:mb-[70px]">
+                <h2 className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-tight lg:leading-[70px] font-medium mb-6 md:mb-8 lg:mb-[78px]">
                   {item.title}
                 </h2> 
                 <div className="space-y-4 md:space-y-6 px-10 md:px-0">
                   {item.paragraphs.map((para, idx) => (
                     <p
-                      className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-relaxed tracking-[-0.01em] text-black/70 text-opacity-70 text-center md:text-justify mb-12"
+                      className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-[45px] tracking-[-0.01em] text-black/70 text-opacity-70 text-center md:text-justify mb-12"
                       key={idx}
                     >
                       {para}
@@ -65,7 +65,7 @@ export default function ExperienceSectionAbout() {
 
               {/* Image Content */}
               <div className="w-full lg:w-1/2 justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex">
-                <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] md:max-w-[450px] h-[300px] md:h-[400px] lg:h-[480px]">
+                <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] md:max-w-[480px] h-[300px] md:h-[400px] lg:h-[480px]">
                   <img src={item.image || "/placeholder.svg"} alt={item.alt} className="w-full h-full object-cover" />
                 </div>
               </div>
