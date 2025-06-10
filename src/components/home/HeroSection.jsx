@@ -87,12 +87,17 @@ export default function HeroSection() {
                             <button className="border border-white text-white px-4 py-4 md:px-16 md:py-8 text-[10px] lg:text-[15px] tracking-[2] hover:bg-white hover:cursor-pointer hover:text-black transition-all duration-300">
                                 HIRE AN EXPERT
                             </button>
-                            <button className="flex items-center gap-3 md:gap-4 hover:cursor-pointer text-white hover:opacity-80 transition-opacity duration-300">
+                            <a
+                                href="https://www.youtube.com/shorts/GuNAShUVSz4"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 md:gap-4 hover:cursor-pointer text-white hover:opacity-80 transition-opacity duration-300"
+                            >
                                 <div className="w-9 h-9 md:w-[76px] md:h-[76px] bg-[#FDC0C5] rounded-full flex items-center justify-center">
                                     <Play className="w-4 h-4 text-white ml-1" fill="white" />
                                 </div>
                                 <span className="text-[10px] md:text-base font-semibold tracking-[2]">WATCH VIDEO</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
