@@ -18,10 +18,12 @@ export default function HeroCTASectionAbout() {
         <div
           className="absolute inset-0 z-10"
           style={{
-            background: `linear-gradient(360deg, #000000 16.18%, rgba(11, 11, 11, 0.86) 54.41%, rgba(39, 37, 37, 0.521417) 76.21%, rgba(82, 77, 77, 0) 92.65%)`,
+            background: `linear-gradient(180deg, 
+                        rgba(82, 77, 77, 0.3) 10%, 
+                        rgba(11, 11, 11, 0.9) 75.14%, 
+                        rgba(0, 0, 0, 1) 86%)`,
           }}
         ></div>
-
         {/* Content */}
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
           {/* Main Heading */}

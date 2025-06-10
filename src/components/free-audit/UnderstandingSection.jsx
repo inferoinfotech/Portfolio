@@ -4,9 +4,9 @@ export default function UnderstandingSection() {
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="relative">
                     <div className="grid lg:grid-cols-3 gap-8">
-                        <div className="2xl:col-span-2 order-2 2xl:order-1">
+                        <div className="lg:col-span-2 order-2 lg:order-1">
                             <div className="flex justify-center lg:justify-start">
-                                <div className="relative max-w-[850px] max-h-[550px] rounded-3xl overflow-hidden">
+                                <div className="relative max-w-[640px] max-h-[450px] lg:max-w-[600px] lg:max-h-[450px] xl:max-w-[750px] xl:max-h-[450px] 2xl:max-w-[850px] 2xl:max-h-[550px] rounded-[40px] overflow-hidden">
                                     <img
                                         src="/images/work-call-1.jpg"
                                         alt="Portrait of Saleh Bilal"
@@ -14,33 +14,33 @@ export default function UnderstandingSection() {
                                         height={400}
                                         className="w-full h-full object-cover rounded-[40px]"
                                     />
-                                    <div className="absolute md:hidden inset-0"
+                                    <div className="absolute lg:hidden inset-0"
                                         style={{ background: "linear-gradient(0deg, #E87E89 10.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
                                     </div>
-                                    <div className="absolute hidden 2xl:block inset-0"
+                                    <div className="absolute hidden lg:block inset-0"
                                         style={{ background: "linear-gradient(320.89deg, #FDC0C5 18.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="2xl:col-span-1 order-1 2xl:order-2">
+                        <div className="lg:col-span-1 order-1 lg:order-2">
                             {/* Right - Content */}
                             <div className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6">
-                                <h1 className="text-black text-2xl md:text-2xl lg:text-[64px] mb-5 lg:mb-10 pr-20 tracking-[0.025em] lg:leading-[70px] text-start text-wrap font-bold ">
+                                <h1 className="text-black text-2xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-[64px] mb-2 2xl:mb-5 lg:mb-10 pr-20 tracking-[0.025em] leading-12 xl:leading-14 2xl:leading-[70px] text-start text-wrap font-bold">
                                     Do you have
                                     complete <span className="text-[#FDC0C5]">understanding</span> of what you need?</h1>
-                                <p className="text-[#969696] text-base lg:text-[28px] font-medium lg:text-justify leading-tight lg:leading-relaxed mb-5 text-start pr-10">
+                                <p className="text-[#969696] text-base lg:text-2xl 2xl:text-[28px] font-medium lg:text-justify leading-tight lg:leading-relaxed mb-5 text-start pr-10">
                                     We believe progress equals happiness.And no matter where you’re looking to excel,
                                 </p>
 
                             </div>
                         </div>
                     </div>
-                    <div className="absolute hidden 2xl:block right-[38.4%] bottom-[31%] z-20 ">
+                    <div className="absolute hidden lg:block lg:right-[33.4%] lg:bottom-[27.5%] xl:right-[34.4%] xl:bottom-[27.5%] 2xl:right-[38.4%] 2xl:bottom-[31%] z-20 ">
                         <img src="/images/Vector.png" alt="vector" />
                     </div>
                     {/* Bottom Section */}
-                    <div className="grid lg:grid-cols-2 gap-5 mt-2.5 items-center">
+                    <div className="grid lg:grid-cols-2 gap-5 mt-2.5 lg:mt-0  2xl:mt-2.5 items-center">
                         {/* Left - Worked With */}
                         <div className="lg:col-span-1 hidden lg:block">
                             <div className="flex">
@@ -56,17 +56,17 @@ export default function UnderstandingSection() {
                         </div>
                         <div className="lg:col-span-1">
                             <div className="flex justify-center lg:justify-end">
-                                <div className="relative min-h-[200px] lg:w-[642px] lg:h-[373px] rounded-[40px] overflow-hidden cursor-pointer group">
+                                <div className="relative min-h-[200px] max-h-[450px] max-w-[640px] lg:w-[390px] lg:h-[280px] xl:w-[490px] xl:h-[280px] 2xl:w-[642px] 2xl:h-[373px] rounded-[40px] overflow-hidden cursor-pointer group">
                                     {/* Video Element */}
                                     <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                                         <source src="/videos/Work-Home-Video.mp4" type="video/mp4" />
                                     </video>
 
                                     {/* Gradient Overlay */}
-                                    <div className="absolute hidden 2xl:block inset-0"
+                                    <div className="absolute hidden lg:block inset-0"
                                         style={{ background: "linear-gradient(124.89deg, #FDC0C5 18.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
                                     </div>
-                                    <div className="absolute md:hidden inset-0"
+                                    <div className="absolute lg:hidden inset-0"
                                         style={{ background: "linear-gradient(180deg, #E87E89 18.35%, rgba(255, 255, 255, 0) 39.08%)" }}>
                                     </div>
                                 </div>

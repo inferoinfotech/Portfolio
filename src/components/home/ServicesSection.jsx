@@ -32,7 +32,7 @@ export default function ServicesSection() {
 
     return (
         <>
-            <section className="lg:min-h-screen bg-black text-white flex flex-col">
+            <section className="lg:min-h-screen lg:py-10 xl:py-14 bg-black text-white flex flex-col">
                 {/* Header */}
                 <div className="flex justify-center pt-12 lg:pb-8">
                     <div className="flex items-center gap-6">
@@ -42,7 +42,7 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Main Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto lg:mt-20 py-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto xl:mt-20 py-10">
                     {/* Left Side - Services List */}
                     <div className="flex flex-col justify-center px-6 lg:px-0">
                         <div className="space-y-4 lg:space-y-4">
@@ -80,7 +80,7 @@ export default function ServicesSection() {
 
                     {/* Right Side - Static Image (hidden on mobile) */}
                     <div className="hidden lg:flex items-center justify-center">
-                        <div className="relative">
+                        <div className="relative p-3">
                             <img
                                 src="./images/professional-man.png"
                                 alt="Professional working on laptop"

@@ -111,7 +111,7 @@ export default function BlogBannerSection() {
     const { featured, regular } = getFilteredBlogs()
 
     return (
-        <section className="min-h-screen bg-black text-white flex flex-col">
+        <section className="lg:min-h-screen 2xl:max-h-screen bg-black text-white flex flex-col">
             <div className="flex-1 px-4 lg:px-8 py-8 lg:py-12 lg:pt-20">
                 <div className="container mx-auto h-full flex flex-col">
                     {/* Header Section */}

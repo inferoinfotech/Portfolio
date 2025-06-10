@@ -1,13 +1,31 @@
 "use client"
 
 import { Play } from 'lucide-react'
+import { motion } from 'framer-motion'
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    scaleUp,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations';
 
 export default function HeroSection() {
     return (
-        <div className="min-h-screen w-full bg-black flex items-center justify-center pb-16 xl:py-4 p-4">
-            <div className="relative flex items-center container min-h-[920px]">
+        <div className="min-h-screen w-full bg-black flex items-center justify-center pb-16 xl:py-4 p-3">
+            <motion.div
+                className="relative flex items-center container xl:mb-20 min-h-[920px]"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={staggerContainer}
+            >
                 {/* Background with exact SVG Clip Path for XL+ screens, simple video for smaller screens */}
-                <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <motion.div
+                    className="absolute inset-0 w-full h-full overflow-hidden"
+                    variants={fadeIn}
+                >
                     {/* XL+ version with clipPath */}
                     <svg
                         viewBox="0 0 1280 767"
@@ -66,42 +84,63 @@ export default function HeroSection() {
                         </video>
                         <div className="absolute inset-0 bg-black/30" />
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col justify-center h-full md:px-16 lg:px-20">
                     <div className="container">
-                        <h1 className="text-5xl mt-20 xl:mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-11 xl:leading-[70px] mb-6 text-center md:text-left">
+                        <motion.h1
+                            className="text-5xl mt-20 xl:mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-16 xl:leading-[70px] mb-6 text-center md:text-left"
+                            variants={fadeUp}
+                        >
                             Reach your
                             Biggest goals
                             faster with
                             my winning
                             strategies
-                        </h1>
-                        <p className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-5xl leading-8 xl:leading-12 text-center md:text-left">
+                        </motion.h1>
+                        <motion.p
+                            className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-5xl leading-8 xl:leading-12 text-center md:text-left"
+                            variants={fadeUp}
+                            transition={{ delay: 0.1 }}
+                        >
                             Pirate ipsum arrgh bounty warp jack. Line nest tails belaying nipper. Boatswain just overhaul gangplank
                             bounty mutiny
-                        </p>
+                        </motion.p>
 
-                        <div className="flex flex-row items-center xl:items-start sm:items-center mt-20 xl:mt-56 2xl:mt-44 gap-4 sm:gap-12 justify-center xl:justify-start mb-0">
-                            <button className="border border-white text-white px-4 py-4 md:px-16 md:py-8 text-[10px] lg:text-[15px] tracking-[2] hover:bg-white hover:cursor-pointer hover:text-black transition-all duration-300">
+                        <motion.div
+                            className="flex flex-row items-center xl:items-start sm:items-center mt-20 xl:mt-56 2xl:mt-44 gap-4 sm:gap-12 justify-center xl:justify-start mb-0"
+                            variants={fadeUp}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <motion.button
+                                className="border border-white text-white px-4 py-4 md:px-16 md:py-8 text-[10px] lg:text-[15px] tracking-[2] hover:bg-white hover:cursor-pointer hover:text-black transition-all duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 HIRE AN EXPERT
-                            </button>
-                            <a
+                            </motion.button>
+                            <motion.a
                                 href="https://www.youtube.com/shorts/GuNAShUVSz4"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 md:gap-4 hover:cursor-pointer text-white hover:opacity-80 transition-opacity duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
-                                <div className="w-9 h-9 md:w-[76px] md:h-[76px] bg-[#FDC0C5] rounded-full flex items-center justify-center">
+                                <motion.div
+                                    className="w-9 h-9 md:w-[76px] md:h-[76px] bg-[#FDC0C5] rounded-full flex items-center justify-center"
+                                    variants={scaleUp}
+                                    transition={{ delay: 0.3 }}
+                                >
                                     <Play className="w-4 h-4 text-white ml-1" fill="white" />
-                                </div>
+                                </motion.div>
                                 <span className="text-[10px] md:text-base font-semibold tracking-[2]">WATCH VIDEO</span>
-                            </a>
-                        </div>
+                            </motion.a>
+                        </motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }
