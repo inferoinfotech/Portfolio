@@ -139,3 +139,12 @@ body {
   background: #FDC0C5 !important;
   opacity: 1 !important;
 }
+
+/* Add this in your global CSS (e.g. globals.css) */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}

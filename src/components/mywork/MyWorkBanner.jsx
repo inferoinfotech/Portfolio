@@ -49,149 +49,41 @@ export default function MyWorkBanner() {
                 </div>
 
                 {/* Right Images - Masonry Grid */}
-                <div className="bg-white min-h-[60vh] hidden lg:block lg:h-[114vh] overflow-hidden relative">
-                    {/* Hide on small screens, show on medium+ */}
-                    <div className="hidden md:block h-full p-6 overflow-hidden">
-                        {/* Masonry-style layout with staggered columns */}
-                        <div className="grid grid-cols-4 gap-48 h-full">
-                            {/* Column 1 - Normal alignment */}
-                            <div className="space-y-6 -mt-20">
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[0]?.src || "/placeholder.svg"}
-                                        alt={images[0]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
+                <div className="bg-white min-h-[60vh] hidden lg:block lg:h-[114vh] overflow-x-auto scrollbar-hide overflow-y-hidden relative">
+                    <div className="h-full p-6 overflow-visible">
+                        <div className="grid grid-cols-4 gap-12 xl:gap-5 h-full min-w-[1024px]">
+                            {[0, 1, 2, 3].map((colIndex) => (
+                                <div
+                                    key={colIndex}
+                                    className={`space-y-6 ${colIndex === 0
+                                            ? "lg:-mt-20"
+                                            : colIndex === 1
+                                                ? "lg:-mt-44"
+                                                : colIndex === 2
+                                                    ? "lg:-mt-28"
+                                                    : "lg:-mt-12"
+                                        }`}
+                                >
+                                    {images
+                                        .slice(colIndex * 4, colIndex * 4 + 4)
+                                        .map((img, i) => (
+                                            <div
+                                                key={i}
+                                                className="rounded-2xl w-full max-w-[248px] h-[270px] overflow-hidden"
+                                            >
+                                                <img
+                                                    src={img.src || "/placeholder.svg"}
+                                                    alt={img.alt}
+                                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                                />
+                                            </div>
+                                        ))}
                                 </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[1]?.src || "/placeholder.svg"}
-                                        alt={images[1]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[2]?.src || "/placeholder.svg"}
-                                        alt={images[2]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[3]?.src || "/placeholder.svg"}
-                                        alt={images[3]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Column 2 - Offset up (first image cut from top) */}
-                            <div className="space-y-6 -mt-44">
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[4]?.src || "/placeholder.svg"}
-                                        alt={images[4]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[5]?.src || "/placeholder.svg"}
-                                        alt={images[5]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[6]?.src || "/placeholder.svg"}
-                                        alt={images[6]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[7]?.src || "/placeholder.svg"}
-                                        alt={images[7]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Column 3 - Normal alignment (same as column 1) */}
-                            <div className="space-y-6 -mt-28">
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[8]?.src || "/placeholder.svg"}
-                                        alt={images[8]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[9]?.src || "/placeholder.svg"}
-                                        alt={images[9]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[10]?.src || "/placeholder.svg"}
-                                        alt={images[10]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[11]?.src || "/placeholder.svg"}
-                                        alt={images[11]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Column 4 - Offset down (cut from bottom) */}
-                            <div className="space-y-6 -mt-12">
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[12]?.src || "/placeholder.svg"}
-                                        alt={images[12]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[13]?.src || "/placeholder.svg"}
-                                        alt={images[13]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[14]?.src || "/placeholder.svg"}
-                                        alt={images[14]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="rounded-2xl w-[248px] h-[270px] overflow-hidden">
-                                    <img
-                                        src={images[15]?.src || "/placeholder.svg"}
-                                        alt={images[15]?.alt}
-                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
-                    {/* Mobile version - simplified grid */}
-                    <div className="grid grid-cols-2 gap-3 p-4 md:hidden">
-                        {images.slice(0, 6).map((img, index) => (
-                            <div key={index} className="rounded-xl overflow-hidden">
-                                <img src={img.src || "/placeholder.svg"} alt={img.alt} className="w-full h-[120px] object-cover" />
-                            </div>
-                        ))}
-                    </div>
                 </div>
+
             </div>
         </div>
     )
