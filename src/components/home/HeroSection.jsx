@@ -55,7 +55,6 @@ export default function HeroSection() {
                             <button className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm font-semibold tracking-wider hover:bg-white hover:text-black transition-all duration-300">
                                 HIRE AN EXPERT
                             </button>
-
                             {/* Watch Video Button */}
                             <button className="flex items-center gap-3 md:gap-4 text-white hover:opacity-80 transition-opacity duration-300">
                                 <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDC0C5] rounded-full flex items-center justify-center">

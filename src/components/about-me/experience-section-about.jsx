@@ -31,7 +31,7 @@ const experiences = [
 export default function ExperienceSectionAbout() {
   return (
     <section className="w-full bg-white">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 py-8">
         {/* Section title */}
         <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">
           <div className="flex items-center space-x-2">
@@ -48,13 +48,13 @@ export default function ExperienceSectionAbout() {
             <div key={index} className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
               {/* Text Content */}
               <div className="w-full lg:w-1/2 lg:pr-8 order-2 lg:order-1">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-tight lg:leading-[70px] font-medium mb-6 md:mb-8 lg:mb-[62px]">
+                <h2 className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-tight lg:leading-[70px] font-medium mb-6 md:mb-8 lg:mb-[62px]">
                   {item.title}
-                </h2>
-                <div className="space-y-4 md:space-y-6">
+                </h2> 
+                <div className="space-y-4 md:space-y-6 px-10 md:px-0 text-center">
                   {item.paragraphs.map((para, idx) => (
                     <p
-                      className="font-normal text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed tracking-[-0.01em] text-black text-opacity-70 text-justify"
+                      className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-relaxed tracking-[-0.01em] text-black/70 text-opacity-70"
                       key={idx}
                     >
                       {para}

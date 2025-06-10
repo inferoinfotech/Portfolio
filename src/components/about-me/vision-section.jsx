@@ -8,7 +8,7 @@ export default function VisionSection() {
 
   return (
     <section className="w-full bg-white py-8 md:py-12 lg:py-16 xl:py-16">
-      <div className="mx-auto md:px-6">
+      <div className="mx-auto">
         {/* Vision pill */}
         <div className="flex justify-center mb-6 md:mb-9">
           <div className="bg-[#FDC0C5] rounded-[30px] px-4 md:px-6 py-2">
@@ -20,8 +20,8 @@ export default function VisionSection() {
 
         {/* Vision text */}
         <div className="container mx-auto mb-8 md:mb-12 lg:mb-16">
-          <div className="max-w-6xl text-center mx-auto">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight md:leading-[70px] font-medium tracking-[-0.03em] text-center">
+          <div className="max-w-7xl text-center mx-auto">
+            <p className="text-4xl  md:text-5xl lg:text-6xl xl:text-[64px] leading-tight md:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0">
               Pirate ipsum arrgh bounty warp jack. Or lass landlubbr spanker dead league coast. Pirate ipsum arrgh
               bounty warp jack. Or lass landlubbr spanker dead league coast.
             </p>
@@ -29,7 +29,7 @@ export default function VisionSection() {
         </div>
 
         {/* Image with button */}
-        <div className="relative rounded-t-[30px] md:rounded-3xl lg:rounded-tl-3xl lg:rounded-t-3xl overflow-hidden">
+        <div className="relative rounded-t-[30px] md:rounded-t-[30px] lg:rounded-t-[30px] overflow-hidden">
           <img
             src="../images/MyVision-About.png"
             alt="Saleh reading"
