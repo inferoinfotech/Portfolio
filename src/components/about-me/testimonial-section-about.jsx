@@ -66,8 +66,7 @@ export default function TestimonialSectionAbout() {
           <div className="md:hidden">
             <div className="flex items-center justify-center">
               <div className="w-full max-w-sm">
-                <img
-                  src="../images/MY EXPERIENCE About-1.jpg"
+                <img  src="../images/MY EXPERIENCE About-1.jpg"
                   alt="Person working with laptop in modern workspace"
                   width={400}
                   height={600}

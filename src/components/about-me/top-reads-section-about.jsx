@@ -55,14 +55,14 @@ export default function TopReadsSectionAbout() {
     <section className="w-full bg-white py-8 md:py-12 lg:py-16">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section title */}
-        <div className="text-center mb-3 md:mb-4">
-          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px] leading-[118px] tracking-[-3%]">
+        <div className="text-center md:mb-4 mb-2">
+          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px]  ">
             My Top Reads
           </h2>
         </div>
 
         {/* Section subtitle */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-left md:text-center mb-8 md:mb-12">
           <p className="font-medium text-base md:text-lg lg:text-[20px] leading-[100%] tracking-[0] text-center">
             Reading books has always given me a competitive edge as my creativity gets nourished and focused
           </p>
