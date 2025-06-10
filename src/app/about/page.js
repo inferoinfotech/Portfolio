@@ -1,4 +1,4 @@
-import AboutSection from "@/components/about-me/about-section";
+import AboutSection from "@/components/about-me/about-section-banner";
 import ExperienceSectionAbout from "@/components/about-me/experience-section-about";
 import HeroCTASectionAbout from "@/components/about-me/HeroCTASectionAbout";
 import TestimonialSectionAbout from "@/components/about-me/testimonial-section-about";
