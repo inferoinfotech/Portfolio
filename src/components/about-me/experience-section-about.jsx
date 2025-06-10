@@ -31,7 +31,7 @@ const experiences = [
 export default function ExperienceSectionAbout() {
   return (
     <section className="w-full bg-white">
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto md:px-6 lg:px-0 py-4">
         {/* Section title */}
         <div className="flex justify-center mb-8 md:mb-12 lg:mb-20">
           <div className="flex items-center space-x-5">

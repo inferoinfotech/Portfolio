@@ -78,7 +78,7 @@ export default function TopReadsSectionAbout() {
         </div>
 
         {/* Book grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8 md:px-4 lg:px-0">
           {books.map((book, index) => (
             <div key={index} className="flex flex-col items-center">
               <div

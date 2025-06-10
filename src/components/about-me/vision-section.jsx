@@ -7,24 +7,26 @@ export default function VisionSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-16 xl:py-16">
+    <section className="w-full bg-white py-8 md:py-12  lg:py-16 xl:py-16">
       <div className="mx-auto">
         {/* Vision pill */}
-        <div className="flex justify-center mb-6 md:mb-12 lg:mt-12 md:mt-0">
-          <div className="bg-[#FDC0C5] rounded-[30px] px-4 md:px-6 py-2">
-            <span className="text-[#242424] text-2xl md:text-xl lg:text-[24px] leading-[25px] font-medium tracking-[-0.03em] capitalize">
-              My Vision
-            </span>
+        <div className="md:px-4 lg:px-0">
+          <div className="flex justify-center mb-6 md:mb-12 lg:mt-12 md:mt-0">
+            <div className="bg-[#FDC0C5] rounded-[30px] px-4 md:px-6 py-2">
+              <span className="text-[#242424] text-2xl md:text-xl lg:text-[24px] leading-[25px] font-medium tracking-[-0.03em] capitalize">
+                My Vision
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Vision text */}
-        <div className="container mx-auto mb-8 md:mb-12 lg:mb-16">
-          <div className="max-w-7xl text-center mx-auto">
-            <p className="text-4xl  md:text-5xl lg:text-6xl xl:text-[64px] leading-tight md:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0">
-              Pirate ipsum arrgh bounty warp jack. Or lass landlubbr spanker dead league coast. Pirate ipsum arrgh
-              bounty warp jack. Or lass landlubbr spanker dead league coast.
-            </p>
+          {/* Vision text */}
+          <div className="container mx-auto mb-8 md:mb-12 lg:mb-16">
+            <div className="max-w-7xl text-center mx-auto">
+              <p className="text-4xl  md:text-5xl lg:text-6xl xl:text-[64px] leading-tight md:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0">
+                Pirate ipsum arrgh bounty warp jack. Or lass landlubbr spanker dead league coast. Pirate ipsum arrgh
+                bounty warp jack. Or lass landlubbr spanker dead league coast.
+              </p>
+            </div>
           </div>
         </div>
 
