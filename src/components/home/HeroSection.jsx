@@ -4,68 +4,81 @@ import { Play } from "lucide-react"
 
 export default function HeroSection() {
     return (
-        <div className="h-screen w-full bg-black flex items-center justify-center p-4">
-            <div className="relative container h-[600px] md:h-[700px] lg:h-[800px]">
-                {/* Background Video with Custom Clip Path */}
-                <div
-                    className="absolute inset-0 w-auto h-full rounded-4xl overflow-hidden"
-                    style={{
-                        clipPath: "path('M0,40 Q0,0 40,0 H1570 Q1600,0 1600,30 V738 Q1600,768 1570,800 H658 Q655,739 652.5,699 T654,606 V755 Q656,676 641,661 T575,648 H50 Q0,648 0,600 Z')",
-                    }}
+        <div className="min-h-screen w-full bg-black flex items-center justify-center pb-16 py-4 p-4">
+            <div className="relative flex items-center container min-h-[920px]">
+                {/* Background with exact SVG Clip Path */}
+                <svg
+                    viewBox="0 0 1280 767"
+                    preserveAspectRatio="none"
+                    className="absolute inset-0 w-full h-full overflow-hidden"
                 >
-                    <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="absolute inset-0 w-full h-full rounded-4xl object-cover"
+                    <defs>
+                        <clipPath id="heroClip">
+                            <path d="
+                M30,0
+                H1250
+                Q1280,0 1280,30
+                V737
+                Q1280,767 1250,767
+                H660
+                Q630,767 630,737
+                V640
+                Q630,610 600,610
+                H30
+                Q0,610 0,580
+                V30
+                Q0,0 30,0
+                Z" />
+                        </clipPath>
+                    </defs>
+
+                    <foreignObject
+                        width="1280"
+                        height="767"
+                        clipPath="url(#heroClip)"
+                        className="w-full h-full"
                     >
-                        <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
-                    </video>
-
-                    {/* Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-black/30" />
-                </div>
-
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-full h-full object-cover"
+                        >
+                            <source src="/videos/Home-banner-video.mp4" type="video/mp4" />
+                        </video>
+                        <div className="absolute inset-0 bg-black/30" />
+                    </foreignObject>
+                </svg>
                 {/* Content */}
-                <div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 lg:px-24">
+                <div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 lg:px-20">
                     <div className="container">
-                        {/* Main Heading */}
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+                        <h1 className="text-4xl mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-[70px] mb-6">
                             Reach your
-                            <br />
                             Biggest goals
-                            <br />
                             faster with
-                            <br />
                             my winning
-                            <br />
                             strategies
                         </h1>
-
-                        {/* Description Text */}
-                        <p className="text-white/90 text-base md:text-lg lg:text-xl mb-8 max-w-xl leading-relaxed">
+                        <p className="text-[#FFFFFFCC] text-base md:text-lg lg:text-xl xl:text-4xl font-medium mb-8 max-w-5xl leading-12">
                             Pirate ipsum arrgh bounty warp jack. Line nest tails belaying nipper. Boatswain just overhaul gangplank
                             bounty mutiny
                         </p>
 
-                        {/* Action Buttons */}
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                            {/* Hire Expert Button */}
-                            <button className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 text-xs md:text-sm font-semibold tracking-wider hover:bg-white hover:text-black transition-all duration-300">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center mt-44 gap-4 sm:gap-12">
+                            <button className="border border-white text-white px-6 py-3 md:px-16 md:py-8 text-xs lg:text-[15px] tracking-[2] hover:bg-white hover:cursor-pointer hover:text-black transition-all duration-300">
                                 HIRE AN EXPERT
                             </button>
-                            {/* Watch Video Button */}
-                            <button className="flex items-center gap-3 md:gap-4 text-white hover:opacity-80 transition-opacity duration-300">
-                                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDC0C5] rounded-full flex items-center justify-center">
-                                    <Play className="w-4 h-4 md:w-6 md:h-6 text-white ml-1" fill="white" />
+                            <button className="flex items-center gap-3 md:gap-4 hover:cursor-pointer text-white hover:opacity-80 transition-opacity duration-300">
+                                <div className="w-12 h-12 md:w-[76px] md:h-[76px] bg-[#FDC0C5] rounded-full flex items-center justify-center">
+                                    <Play className="w-4 h-4 text-white ml-1" fill="white" />
                                 </div>
-                                <span className="text-xs md:text-sm font-semibold tracking-wider">WATCH VIDEO</span>
+                                <span className="text-xs md:text-base font-semibold tracking-">WATCH VIDEO</span>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
