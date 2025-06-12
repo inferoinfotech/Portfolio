@@ -111,8 +111,8 @@ export default function BlogBannerSection() {
     const { featured, regular } = getFilteredBlogs()
 
     return (
-        <section className="lg:min-h-screen 2xl:max-h-screen bg-black text-white flex flex-col">
-            <div className="flex-1 px-4 lg:px-8 py-8 lg:py-12 lg:pt-20">
+        <section className="lg:min-h-screen 2xl:min-h-screen bg-black text-white flex flex-col">
+            <div className="flex-1 px-4 lg:px-8 py-8 lg:py-12 lg:pt-28">
                 <div className="container mx-auto h-full flex flex-col">
                     {/* Header Section */}
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8 lg:mb-12">
@@ -126,7 +126,7 @@ export default function BlogBannerSection() {
                         </div>
 
                         {/* Topic Filters */}
-                        <div className="flex flex-wrap gap-3 lg:gap-4 lg:max-w-xs justify-center lg:justify-end">
+                        <div className="flex flex-wrap gap-3 lg:gap-3 lg:max-w-sm justify-center lg:justify-end">
                             {topics.map((topic) => (
                                 <button
                                     key={topic}
@@ -143,7 +143,7 @@ export default function BlogBannerSection() {
                     </div>
 
                     {/* Blog Grid */}
-                    <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8 xl:pt-8 xl:pb-7">
                         {/* Featured Blog - Large */}
                         <div className="xl:col-span-2 relative group cursor-pointer">
                             <div className="relative h-64 lg:h-[550px] rounded-[30px] overflow-hidden">
@@ -175,7 +175,7 @@ export default function BlogBannerSection() {
                         </div>
 
                         {/* Small Blog Cards */}
-                        <div className="space-y-4 lg:space-y-6">
+                        <div className="space-y-4 lg:space-y-8">
                             {regular.map((blog) => (
                                 <div key={blog.id} className="group cursor-pointer">
                                     <div className="flex gap-4 h-32 lg:h-36">
