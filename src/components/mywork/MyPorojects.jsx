@@ -214,7 +214,9 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper
                         }}
-                        slidesOffsetBefore={typeof window !== "undefined" && window.innerWidth >= 1024 ? 175 : 20}
+                        slidesOffsetBefore={
+                            typeof window !== "undefined" ? window.innerWidth > 1440 ? 190 : window.innerWidth >= 1024 ? 70 : window.innerWidth >= 768 ? 70 : 20 : 20
+                        }
                         modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={12}
                         slidesPerView={typeof window !== "undefined" && window.innerWidth >= 1024 ? 1 : 1.8}
@@ -225,10 +227,14 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                         }}
                         breakpoints={{
                             0: {
-                                slidesPerView: 1.8,
+                                slidesPerView: 1.5,
                                 spaceBetween: 12,
                             },
                             280: {
+                                slidesPerView: 1.3,
+                                spaceBetween: 12,
+                            },
+                            374: {
                                 slidesPerView: 1.5,
                                 spaceBetween: 12,
                             },
@@ -300,7 +306,7 @@ export default function MyProjects() {
     return (
         <div className="w-full">
             {/* Header - Only shown once at the top */}
-            <div className="text-center lg:mb-8 pt-10 lg:pt-16">
+            <div className="text-center lg:mb-8 pt-10 lg:pt-20">
                 <div className="flex items-center justify-center gap-3 lg:mb-6">
                     <div className="w-1.5 lg:w-3 h-1.5 lg:h-3 bg-black rounded-full"></div>
                     <span className="text-[10px] md:text-base lg:text-xl font-medium tracking-[0.4em] uppercase text-black">

@@ -22,14 +22,14 @@ const MyWorkCTASection = () => {
             ></div>
             <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
                 {/* Main Heading */}
-                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold mb-8 lg:mb-12">
+                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-[80px] tracking-tighter font-bold mb-8 lg:mb-12">
                     Let’s make something<br />
                     <span className='text-[#FDC0C5]'> “converting” </span>
                     together
                 </h1>
 
                 {/* CTA Button */}
-                <button className="bg-white hover:cursor-pointer hover:bg-[#f8a8b0] text-black text-[10px] lg:text-[22px]  font-medium px-8 py-4 lg:px-20 lg:py-5 rounded-full text-base lg:text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                <button className="bg-white hover:cursor-pointer hover:bg-[#f8a8b0] text-black text-[10px] lg:text-[22px]  font-medium px-8 py-4 lg:px-24 lg:py-6 rounded-full text-base lg:text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                     Schedule a Free Consultation
                 </button>
             </div>
