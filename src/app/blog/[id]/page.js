@@ -132,13 +132,13 @@ const BlogDetailsPage = ({ params }) => {
                                 loop
                                 muted
                                 playsInline
-                                className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
+                                className="w-full h-auto max-h-[690px] object-cover rounded-[40px]"
                             />
                         ) : (
                             <img
                                 src={article.image}
                                 alt={article.title}
-                                className="w-full h-auto max-h-[690px] object-cover rounded-[30px]"
+                                className="w-full h-auto max-h-[690px] object-cover rounded-[40px]"
                             />
                         )}
                     </div>

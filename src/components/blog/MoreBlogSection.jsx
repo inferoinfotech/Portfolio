@@ -48,7 +48,7 @@ export default function MoreBlogSection() {
     const regularArticles = topArticles.filter((article) => !article.featured)
 
     return (
-        <section className="py-16 px-4 lg:px-8 bg-black text-white">
+        <section className="pt-12 pb-5 xl:pt-16 xl:pb-48 px-4 lg:px-8 bg-black text-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="flex justify-center pt-10 pb-24">
