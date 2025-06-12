@@ -35,10 +35,10 @@ export default function LatestBlogsSection() {
     const regularBlogs = latestBlogs.filter((blog) => !blog.featured)
 
     return (
-        <section className="py-10 lg:py-16 px-4 lg:px-8">
+        <section className="pt-14 pb-0 lg:pt-24 lg:pb-5 px-4 lg:px-8">
             <div className="container mx-auto">
                 {/* Header */}
-                <div className="flex justify-center mb-12">
+                <div className="flex justify-center mb-12 xl:mb-20">
                     <div className="flex items-center gap-3">
                         <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-black rounded-full"></div>
                         <h2 className="text-[10px] md:text-base lg:text-xl font-medium tracking-[5] xl:tracking-[10] uppercase text-black">Latest Blogs</h2>
@@ -56,7 +56,7 @@ export default function LatestBlogsSection() {
                                 <div className="flex">
                                     {/* Image */}
                                     <div className="w-1/2">
-                                        <div className="relative h-full rounded-[30px] overflow-hidden">
+                                        <div className="relative h-[480px] rounded-[30px] overflow-hidden">
                                             <img
                                                 src={featuredBlog?.image || "/placeholder.svg"}
                                                 alt={featuredBlog?.title}
@@ -66,7 +66,7 @@ export default function LatestBlogsSection() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="w-1/2 p-16 flex flex-col gap-6 justify-center">
+                                    <div className="w-1/2 p-16 h-[480px] flex flex-col gap-6 justify-center">
                                         <span className="text-xl font-normal text-[#656565] ibmPlexMono uppercase  mb-4 block">
                                             {featuredBlog?.category}
                                         </span>
@@ -82,7 +82,7 @@ export default function LatestBlogsSection() {
                     </div>
 
                     {/* Small Blog Cards */}
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-2 gap-12">
                         {regularBlogs.map((blog, index) => (
                             <div key={blog.id} className="group cursor-pointer">
                                 {index === 0 ? (

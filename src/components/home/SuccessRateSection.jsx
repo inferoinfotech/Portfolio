@@ -2,7 +2,7 @@
 
 export default function SuccessRateSection() {
     return (
-        <section className="py-16 2xl:pb-40 px-4 lg:px-8 bg-white">
+        <section className="py-10 lg:py-16 2xl:pb-40 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 {/* Desktop Layout */}
                 <div className="hidden lg:flex lg:items-start lg:justify-between lg:gap-16">

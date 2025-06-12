@@ -48,12 +48,12 @@ export default function TopArticlesSection() {
     const regularArticles = topArticles.filter((article) => !article.featured)
 
     return (
-        <section className="py-16 px-4 lg:px-8 bg-black text-white">
+        <section className="py:16 pt-16 pb-32 px-4 lg:px-8 bg-black text-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl lg:text-5xl font-bold mb-4">Top blogs</h2>
-                    <p className="text-white text-sm lg:text-xl max-w-sm mx-auto">
+                    <p className="text-white/80 text-sm lg:text-xl max-w-sm mx-auto">
                         Read by over 200+ readers globally as I help them for a successful career
                     </p>
                 </div>
@@ -150,7 +150,7 @@ export default function TopArticlesSection() {
 
                 {/* View All Button */}
                 <div className="text-center">
-                    <button className="bg-white text-black px-6 py-3 lg:px-8 lg:py-3 text-base  lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
+                    <button className="bg-white text-black px-6 py-3 lg:px-7 lg:py-2 text-base  lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
                         View all
                     </button>
                 </div>
