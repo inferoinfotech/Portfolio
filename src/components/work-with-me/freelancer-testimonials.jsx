@@ -102,7 +102,7 @@ export default function FreelancerTestimonials() {
                         <img
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-3"
+                          className="w-12 h-12 rounded-full mr-3 object-cover"
                         />
                         <div className="min-w-0">
                           <h4 className="text-black font-medium text-[20px] leading-[100%] 
@@ -140,7 +140,7 @@ export default function FreelancerTestimonials() {
                   <img
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
-                    className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full mr-3 sm:mr-4 flex-shrink-0"
+                    className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full mr-3 sm:mr-4 flex-shrink-0 object-cover"
                   />
                   <div className="min-w-0">
                     <h4 className="font-medium text-lg sm:text-xl md:text-3xl leading-tight truncate">

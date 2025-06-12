@@ -77,11 +77,11 @@ export default function MoreHappyCustomers() {
 
   const StarRating = ({ rating }) => {
     return (
-      <div className="flex gap-1">
+      <div className="flex gap-1 ml-2 lg:ml-6">
         {[1, 2, 3, 4, 5].map((star) => (
           <span
             key={star}
-            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
+            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-[#ecb476]" : "text-gray-300"}`}
           >
             ★
           </span>
@@ -92,17 +92,14 @@ export default function MoreHappyCustomers() {
 
   return (
     <section className="w-full bg-white py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-8 xl:px-0">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">More Happy Customers</h2>
-          <p className="text-black/70 font-medium text-base md:text-lg">
-            See what my clients from upwork and freelancer have to say
-          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-[64px] font-bold mb-4">More Happy Customers</h2>
         </div>
 
         {/* Mobile Slider */}
         {isMobile ? (
-          <div className="relative mb-8  ">
+          <div className="relative mb-8">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-300 ease-in-out"
@@ -146,25 +143,26 @@ export default function MoreHappyCustomers() {
           </div>
         ) : (
           /* Desktop Grid */
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+          <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-12 md:gap-y-12 mb-8 md:mb-0">
             {customers.map((customer, index) => (
-              <div key={index} className="bg-white p-4 md:p-6 rounded-lg ">
+              <div key={index} className="bg-white  p-4 rounded-lg">
                 <div className="flex items-center mb-4">
                   <img
                     src={customer.image || "/placeholder.svg"}
                     alt={customer.name}
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full mr-3"
+                    className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full mr-3"
                   />
                   <div>
-                    <h4 className="font-medium text-xl md:text-2xl lg:text-[32px] leading-[100%] tracking-[-0.02em]">
+                    <h4 className="font-medium text-lg sm:text-xl md:text-3xl leading-tight truncate">
                       {customer.name}
                     </h4>
-                    <p className="text-black/50 font-medium text-lg md:text-xl lg:text-[24px] leading-[100%] tracking-[-0.02em]">
+                    <p className="text-black/70 font-medium text-sm sm:text-base md:text-[16px] leading-tight truncate">
                       {customer.title}
                     </p>
                   </div>
                 </div>
-                <p className="text-black mb-4 text-base md:text-lg lg:text-[20px] font-medium text-justify">
+                <p className="text-black font-medium text-base md:text-[20px] leading-6 
+                tracking-[-0.01em] mb-3 ml-2 lg:ml-6 max-w-xs">
                   {customer.text}
                 </p>
                 <StarRating rating={customer.rating} />
@@ -177,7 +175,7 @@ export default function MoreHappyCustomers() {
           {/* Hire Me Button */}
           <button
             onClick={() => setActiveButton("hire")}
-            className={`px-8 md:px-10 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer transition-colors
+            className={`px-8 md:px-16 py-3 md:py-5 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px]transition-colors
           ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
         `}
           >
@@ -187,7 +185,7 @@ export default function MoreHappyCustomers() {
           {/* Free Call Button */}
           <button
             onClick={() => setActiveButton("call")}
-            className={`px-6 md:px-8 py-3 md:py-4 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer transition-colors
+            className={`px-6 md:px-16 py-3 md:py-5 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px]transition-colors
           ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
         `}
           >

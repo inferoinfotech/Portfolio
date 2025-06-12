@@ -36,7 +36,7 @@ export default function OneOnOneCallSection() {
 
   return (
     <section className="w-full bg-black py-12 md:py-16 lg:py-20 xl:py-24">
-      <div className="container mx-auto px-4 md:px-0">
+      <div className="container mx-auto px-4 md:px-8 xl:px-0">
         {/* Section Title */}
         <div className="text-center mb-2 sm:mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-white font-bold text-4xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight sm:leading-tight md:leading-[110%] lg:leading-[100%] tracking-tight md:tracking-[-1%] lg:tracking-[-2%] text-center ">
@@ -49,17 +49,17 @@ export default function OneOnOneCallSection() {
           {callItems.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-20 
+              className={`flex flex-col text-center lg:text-left gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-20 
         ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} lg:items-center`}
             >
               {/* Content Section */}
               <div className="w-full lg:w-1/2 order-2 lg:order-none lg:p-0">
                 {/* Number and Label */}
                 <div className="mb-4 sm:mb-5 md:mb-6">
-                  <span className="text-[64px] font-bold text-white/50 block mb-1 md:mb-4 text-center md:text-left">
+                  <span className="text-[64px]  font-bold text-white/50 block mb-1 md:mb-4 text-center lg:text-left">
                     {item.number}
                   </span>
-                  <p className="text-white/50 text-[24px] leading-[100%] tracking-[-0.02em] text-center md:text-left">
+                  <p className="text-white/50 text-[24px] md:text-3xl leading-[100%] tracking-[-0.02em] text-center lg:text-left">
                     {item.label}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export default function OneOnOneCallSection() {
                 {/* Title */}
 
                 <div className="p-4 md:p-0">
-                  <h3 className="text-white text-[24px] xl:text-5xl font-bold mb-6 md:mb-6 leading-9 md:leading-16 tracking-[-0.02em] text-center md:text-left">
+                  <h3 className="text-white text-[24px] md:text-3xl xl:text-5xl font-bold mb-6 md:mb-6 leading-9 md:leading-16 tracking-[-0.02em] text-center lg:text-left">
                     {item.title}
                   </h3>
 
@@ -76,7 +76,7 @@ export default function OneOnOneCallSection() {
                     {item.points.map((point, pointIndex) => (
                       <li
                         key={pointIndex}
-                        className="text-[20px] md:text-lg lg:text-xl xl:text-[22px] font-medium leading-relaxed"
+                        className="text-[20px] md:text-3xl lg:text-xl xl:text-[22px] font-medium leading-relaxed"
                       >
                         {point}
                       </li>
@@ -84,7 +84,7 @@ export default function OneOnOneCallSection() {
                   </ul>
                 </div>
                 {/* CTA Button */}
-                <button className="bg-white text-black sm:bg-[#FDC0C5] sm:hover:bg-[#f8a8b0] sm:text-black cursor-pointer px-7 py-4  md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-[20px] md:rounded-[50px] font-medium text-[20px] md:text-lg lg:text-xl xl:text-[22px] tracking-tight transition-colors duration-300 w-full sm:w-auto mt-2 lg:mt-10">
+                <button className="bg-white text-black sm:bg-[#FDC0C5] sm:hover:bg-[#f8a8b0] sm:text-black cursor-pointer px-7 py-4  md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-[20px] md:rounded-[50px] font-medium text-[20px] md:text-lg lg:text-xl xl:text-[22px] tracking-tight transition-colors duration-300 mt-2 lg:mt-10">
                   Book a free call
                 </button>
               </div>

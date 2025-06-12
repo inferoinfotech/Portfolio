@@ -93,7 +93,7 @@ export default function LinkedInStrategySection() {
                         <img
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-3"
+                          className="w-12 h-12 rounded-full mr-3 object-cover"
                         />
                         <div>
                           <h4 className="text-black font-medium text-[20px] leading-[100%] 
@@ -131,7 +131,7 @@ export default function LinkedInStrategySection() {
                   <img
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
-                    className="w-20 h-20 rounded-full mr-3"
+                    className="w-20 h-20 rounded-full mr-3 object-cover"
                   />
                   <div>
                     <h4 className="font-medium text-lg sm:text-xl md:text-3xl leading-tight truncate">

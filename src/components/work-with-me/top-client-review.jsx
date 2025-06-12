@@ -3,7 +3,7 @@ import { SquareCheckBig } from "lucide-react"
 export default function TopClientReview() {
   return (
     <section className="w-full bg-white py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-0">
+      <div className="container mx-auto px-4 md:px-8 xl:px-0">
         <div className="flex items-center justify-center mb-8 md:mb-32">
           <div className="flex items-center space-x-3">
             <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 bg-black rounded-full"></div>
@@ -14,11 +14,11 @@ export default function TopClientReview() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left side - Quote section */}
           <div className="lg:col-span-7 mt-7 p-5">
-            <blockquote className="text-xl md:text-5xl font-bold mb-6 md:mb-8 lg:mb-12 leading-tight">
+            <blockquote className="text-xl md:text-5xl font-bold mb-6 md:mb-8 lg:mb-12 leading-14 tracking-tight">
               "It's one thing to have 650,000 followers, it's another to have 650,000 loyal fans."
             </blockquote>
 
-            <blockquote className="text-xl md:text-5xl font-bold mb-8 md:mb-12 lg:mb-20 leading-tight">
+            <blockquote className="text-xl md:text-5xl font-bold mb-8 md:mb-12 lg:mb-20 leading-14">
               "If my LinkedIn profile was deleted today and I had to start over from scratch, Justin is the first person
               I would call."
             </blockquote>
@@ -30,8 +30,8 @@ export default function TopClientReview() {
                 className="w-12 h-12 md:w-16 md:h-16 rounded-full mr-3 md:mr-4"
               />
               <div>
-                <h4 className="text-[16px] lg:text-5xl font-medium">Austin Belcak</h4>
-                <p className="text-black/50 text-[13px] lg:text-4xl font-bold leading-3">Founder of Cultivated Culture
+                <h4 className="text-[16px] lg:text-4xl font-medium">Austin Belcak</h4>
+                <p className="text-black/50 text-[13px] lg:text-xl font-bold leading-3">Founder of Cultivated Culture
                 </p>
               </div>
             </div>
