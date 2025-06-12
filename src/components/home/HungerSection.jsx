@@ -3,7 +3,7 @@ import { Play } from "lucide-react"
 
 export default function HungerSection() {
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-5 sm:py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-2 xl:px-0 mx-auto">
                 {/* Top Section */}
                 <h1 className="text-black text-2xl md:text-4xl xl:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl leading-tight text-start font-bold">Do you have a hunger
@@ -107,15 +107,25 @@ export default function HungerSection() {
                                     {/* Button Overlay Container */}
                                     <div className="absolute inset-0 flex items-center justify-center transition-all duration-300">
                                         {/* Glassmorphism Button */}
-                                        <button className="relative flex items-center hover:cursor-pointer space-x-3 bg-white/10 backdrop-blur-3xl rounded-full px-8 py-6 xl:px-12 xl:py-9 group-hover:bg-white/30 transition-all duration-300 border border-white/20 shadow-lg">
+                                        <button
+                                            className="relative flex items-center space-x-3 rounded-full hover:cursor-pointer hover:scale-[1.025] px-8 py-6 xl:px-12 xl:py-9 transition-all duration-300 overflow-hidden group"
+                                        >
+                                            {/* Gradient & Blur Background */}
+                                            <div
+                                                className="absolute inset-0 rounded-full z-0 backdrop-blur-[80px]"
+                                                style={{
+                                                    background: `linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%)`,
+                                                }}
+                                            ></div>
+
                                             {/* Play Icon */}
                                             <div className="flex items-center justify-center">
                                                 <Play className="lg:w-5 w-3 lg:h-5 h-3 text-white fill-white drop-shadow-sm" />
                                             </div>
                                             {/* Text */}
-                                            <span className="text-white font-medium text-[10px] lg:text-[25px] tracking-wide  drop-shadow-sm">Watch Video</span>
-                                            {/* Additional blur background for enhanced effect */}
-                                            <div className="absolute inset-0 bg-white/10 backdrop-blur-[40px] rounded-full -z-10"></div>
+                                            <span className="text-white font-medium text-[10px] lg:text-[25px] tracking-wide drop-shadow-sm">
+                                                Watch Video
+                                            </span>
                                         </button>
                                     </div>
                                 </div>
