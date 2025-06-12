@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import Swiper styles
 import "swiper/css"
@@ -142,11 +142,15 @@ export default function ArticlesSlider() {
                         }}
                         breakpoints={{
                             0: {
-                                slidesPerView: 1.8,
+                                slidesPerView: 1.5,
                                 spaceBetween: 12,
                             },
                             280: {
-                                slidesPerView: 1.5,
+                                slidesPerView: 1.8,
+                                spaceBetween: 12,
+                            },
+                            374: {
+                                slidesPerView: 2.2,
                                 spaceBetween: 12,
                             },
                             640: {
@@ -170,12 +174,12 @@ export default function ArticlesSlider() {
                                 spaceBetween: 20,
                             },
                         }}
-                        className="articles-swiper !pb-16 !pt-12"
+                        className="articles-swiper !pb-16 !pt-8"
                     >
                         {articles.map((article) => (
                             <SwiperSlide key={article.id}>
                                 <div className="group cursor-grab">
-                                    <div className="relative h-[446px] rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
+                                    <div className="relative w-[166px] h-[173px] md:w-[230px] md:h-[300px] lg:w-auto lg:h-[446px] xl:w-auto xl:h-[446px] rounded-[10px] lg:rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
                                         {/* Background Image */}
                                         <div className="absolute inset-0">
                                             <img
@@ -184,15 +188,18 @@ export default function ArticlesSlider() {
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
-
-                                        {/* Gradient Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                                        {/* Content */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-8">
+                                        {/* Gradient Overlay - hidden on mobile, visible on larger screens */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent hidden lg:block" />
+                                        {/* Content - positioned absolutely on larger screens, hidden on mobile */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-8 hidden lg:block">
                                             <h3 className="text-white font-bold text-base md:text-xl lg:text-2xl xl:text-3xl mb-3 text-center leading-tight">{article.title}</h3>
                                             <p className="text-[#CFCFCF] text-xs md:text-sm lg:text-base xl:text-xl text-center leading-5">{article.description}</p>
                                         </div>
+                                    </div>
+                                    {/* Mobile Content - outside image, visible only on mobile */}
+                                    <div className="block lg:hidden mt-4 px-2">
+                                        <h3 className="text-black font-bold text-base md:text-xl lg:text-2xl mb-0 text-left leading-tight">{article.title}</h3>
+                                        <p className="text-[#A5A5A5] text-xs md:text-sm lg:text-base text-left leading-5">{article.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
