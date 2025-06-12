@@ -26,7 +26,7 @@ export default function UnderstandingSection() {
                         <div className="lg:col-span-1 order-1 lg:order-2">
                             {/* Right - Content */}
                             <div className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6">
-                                <h1 className="text-black text-2xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-[64px] mb-2 2xl:mb-5 lg:mb-10 pr-20 tracking-[0.025em] leading-12 xl:leading-14 2xl:leading-[70px] text-start text-wrap font-bold">
+                                <h1 className="text-black text-2xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-[64px] mb-2 2xl:mb-5 lg:mb-10 pr-20 tracking-[0.025em] md:leading-12 xl:leading-14 2xl:leading-[70px] text-start text-wrap font-bold">
                                     Do you have
                                     complete <span className="text-[#FDC0C5]">understanding</span> of what you need?</h1>
                                 <p className="text-[#969696] text-base lg:text-2xl 2xl:text-[28px] font-medium lg:text-justify leading-tight lg:leading-relaxed mb-5 text-start pr-10">
