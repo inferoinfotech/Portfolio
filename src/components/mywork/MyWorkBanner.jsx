@@ -69,7 +69,7 @@ export default function MyWorkBanner() {
                                         .map((img, i) => (
                                             <div
                                                 key={i}
-                                                className="rounded-2xl w-full max-w-[248px] h-[270px] overflow-hidden"
+                                                className="rounded-[30px] w-full max-w-[248px] h-[270px] overflow-hidden"
                                             >
                                                 <img
                                                     src={img.src || "/placeholder.svg"}
