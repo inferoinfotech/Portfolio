@@ -49,7 +49,7 @@ const benefits = [
 
 export default function KeyBenefitsSection() {
     return (
-        <section className="py-14 lg:py-16 xl:py-24 px-4 lg:px-8 bg-white">
+        <section className="py-10 md:py-14 lg:py-16 xl:py-24 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -71,7 +71,7 @@ export default function KeyBenefitsSection() {
                             <div key={benefit.id} className="text-center lg:text-left">
                                 {/* Icon */}
                                 <div className="flex justify-center lg:justify-start mb-6">
-                                    <div className="w-12 h-12 md:h-13 xl:w-14 md:w-13 xl:h-14 bg-[#D9D9D966] rounded-2xl flex items-center justify-center">
+                                    <div className="w-12 h-12 md:h-13 xl:w-14  md:w-13 xl:h-14 bg-[#D9D9D966] rounded-[5px] lg:rounded-2xl flex items-center justify-center">
                                         <IconComponent className="w-6 h-6 2xl:w-7 2xl:h-7 text-gray-700" />
                                     </div>
                                 </div>

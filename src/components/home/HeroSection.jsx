@@ -13,9 +13,9 @@ import {
 
 export default function HeroSection() {
     return (
-        <div className="min-h-screen w-full bg-black flex items-center justify-center pb-16 xl:py-4 p-3">
+        <div className="xl:min-h-screen w-full bg-black flex items-center justify-center pb-16 xl:py-4 p-3">
             <motion.div
-                className="relative flex items-center container xl:mb-20 min-h-[920px]"
+                className="relative flex items-center container xl:mb-20 min-h-screen md:min-h-[920px]"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -90,7 +90,7 @@ export default function HeroSection() {
                 <div className="relative z-10 flex flex-col justify-center h-full md:px-16 lg:px-20">
                     <div className="container">
                         <motion.h1
-                            className="text-5xl mt-20 xl:mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-16 xl:leading-[70px] mb-6 text-center md:text-left"
+                            className="text-5xl mt-20 xl:mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-11 md:leading-16 xl:leading-[70px] mb-6 text-center md:text-left"
                             variants={fadeUp}
                         >
                             Reach your
@@ -100,7 +100,7 @@ export default function HeroSection() {
                             strategies
                         </motion.h1>
                         <motion.p
-                            className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-5xl leading-8 xl:leading-12 text-center md:text-left"
+                            className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-5xl leading-7 md:leading-8 xl:leading-12 text-center md:text-left"
                             variants={fadeUp}
                             transition={{ delay: 0.1 }}
                         >
