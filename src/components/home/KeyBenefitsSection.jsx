@@ -49,7 +49,7 @@ const benefits = [
 
 export default function KeyBenefitsSection() {
     return (
-        <section className="py-16 px-4 lg:px-8 bg-white">
+        <section className="py-24 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">

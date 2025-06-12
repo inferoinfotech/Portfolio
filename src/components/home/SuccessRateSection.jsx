@@ -9,7 +9,7 @@ export default function SuccessRateSection() {
                     {/* Left Column */}
                     <div className="flex-shrink-0">
                         <h2 className="text-5xl xl:text-7xl font-bold text-black mb-8">My Success Rate</h2>
-                        <button className="bg-[#FDC0C5] hover:cursor-pointer hover:bg-[#FDC0C5]/80 text-black font-medium px-16 py-8 rounded-full text-2xl transition-colors">
+                        <button className="bg-[#FDC0C5] hover:cursor-pointer hover:bg-[#FDC0C5]/80 text-black font-medium px-[70px] py-10 rounded-full text-2xl transition-colors">
                             Visit Portfolio
                         </button>
                     </div>

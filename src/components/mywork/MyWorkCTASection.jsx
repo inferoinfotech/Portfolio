@@ -4,24 +4,22 @@ const MyWorkCTASection = () => {
     return (
         <section className="relative w-full h-[50vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image - Placed at lower z-index */}
-            <div className="absolute inset-0 z-0">
-                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+            <div className="absolute inset-0 z-0 rounded-t-[30px]">
+                <video autoPlay muted loop playsInline className="w-full h-full object-cover rounded-t-[30px]">
                     <source src="/videos/home-cta-video.mp4" type="video/mp4" />
                 </video>
             </div>
 
             {/* Linear Gradient Overlay - Higher z-index */}
             <div
-                className="absolute inset-0 z-10"
+                className="absolute inset-0 z-10 rounded-t-3xl"
                 style={{
                     background: `linear-gradient(180deg, 
-                        rgba(82, 77, 77, 0.8) 0%, 
-                        rgba(11, 11, 11, 0.9) 52.14%, 
+                        rgba(82, 77, 77, 0.3) 10%, 
+                        rgba(11, 11, 11, 0.9) 75.14%, 
                         rgba(0, 0, 0, 1) 86%)`,
                 }}
             ></div>
-
-            {/* Content - Highest z-index */}
             <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
                 {/* Main Heading */}
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold mb-8 lg:mb-12">

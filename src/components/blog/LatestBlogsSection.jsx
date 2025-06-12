@@ -56,7 +56,7 @@ export default function LatestBlogsSection() {
                                 <div className="flex">
                                     {/* Image */}
                                     <div className="w-1/2">
-                                        <div className="relative h-[480px] rounded-[30px] overflow-hidden">
+                                        <div className="relative h-full rounded-[30px] overflow-hidden">
                                             <img
                                                 src={featuredBlog?.image || "/placeholder.svg"}
                                                 alt={featuredBlog?.title}
