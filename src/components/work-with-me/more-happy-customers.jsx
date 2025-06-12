@@ -171,24 +171,20 @@ export default function MoreHappyCustomers() {
           </div>
         )}
 
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center mt-28 mb-5">
           {/* Hire Me Button */}
           <button
             onClick={() => setActiveButton("hire")}
-            className={`px-8 md:px-16 py-3 md:py-5 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px]transition-colors
-          ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
-        `}
-          >
+            className={`px-8 md:px-24 py-3 md:py-7 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px] transition-colors
+          ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"} `}>
             Hire me now
           </button>
 
           {/* Free Call Button */}
           <button
             onClick={() => setActiveButton("call")}
-            className={`px-6 md:px-16 py-3 md:py-5 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px]transition-colors
-          ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}
-        `}
-          >
+            className={`px-6 md:px-24 py-3 md:py-7 rounded-full font-medium shadow-[0_4px_4px_0_#00000040] w-full md:w-auto cursor-pointer text-[22px] transition-colors
+          ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}`}>
             Let's have a free call
           </button>
         </div>
