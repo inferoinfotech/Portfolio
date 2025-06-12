@@ -11,21 +11,21 @@ export default function FreelancerTestimonials() {
       name: "Justian Joe",
       title: "Founder@Media.co",
       image: "../images/work-customer-11.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. ",
       rating: 4,
     },
     {
       name: "Sarah Wilson",
-      title: "CEO@TechStart",
+      title: "Founder@Media.co",
       image: "../images/work-customer-10.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain.",
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. .",
       rating: 5,
     },
     {
       name: "Mike Johnson",
-      title: "Founder@GrowthCo",
+      title: "Founder@Media.co",
       image: "../images/work-customer-9.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. ",
       rating: 5,
     },
   ]
@@ -74,19 +74,19 @@ export default function FreelancerTestimonials() {
   }
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-20">
+      <div className="container mx-auto p-6 sm:px-6">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-tight mb-3 md:mb-4 lg:mb-6">
+          <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-3 md:mb-4 lg:mb-6">
             Work with a freelancer from the
             <br className="hidden sm:block" />
             #1 ranked global platform
           </h2>
-          <p className="text-black/70 font-medium text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] leading-tight">
+          <p className="text-black/70 font-medium text-[20px] sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center">
             See what my clients from upwork and freelancer have to say
           </p>
         </div>
-
+  
         {/* Mobile Slider */}
         {isMobile ? (
           <div className="relative">
@@ -96,20 +96,22 @@ export default function FreelancerTestimonials() {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2 rounded-lg bg-[#F8F8F8]">
-                    <div className=" p-4  ">
+                  <div key={index} className="w-full flex-shrink-0 rounded-[30px] bg-[#F8F8F8]">
+                    <div className=" p-8  ">
                       <div className="flex items-center mb-4">
                         <img
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-3 flex-shrink-0"
+                          className="w-12 h-12 rounded-full mr-3"
                         />
                         <div className="min-w-0">
-                          <h4 className="font-medium text-lg leading-tight mb-1 truncate">{testimonial.name}</h4>
-                          <p className="text-gray-600 text-sm leading-tight truncate">{testimonial.title}</p>
+                          <h4 className="text-black font-medium text-[20px] leading-[100%] 
+                          tracking-[-0.01em] mb-1">{testimonial.name}</h4>
+                          <p className="text-black/70 text-[16px] font-medium leading-[100%] 
+                          tracking-[-0.01em]">{testimonial.title}</p>
                         </div>
                       </div>
-                      <p className="text-gray-700 font-medium text-sm leading-relaxed mb-4">{testimonial.text}</p>
+                      <p className="text-black font-medium text-[16px] leading-relaxed mb-3">{testimonial.text}</p>
                       <StarRating rating={testimonial.rating} className="text-2xl" />
                     </div>
                   </div>
@@ -131,9 +133,9 @@ export default function FreelancerTestimonials() {
           </div>
         ) : (
           /* Desktop Grid */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-32">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-4 sm:p-6 rounded-lg  ">
+              <div key={index} className="bg-[#FDFDFD] rounded-[30px] p-4 sm:p-0">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <img
                     src={testimonial.image || "/placeholder.svg"}
@@ -141,15 +143,16 @@ export default function FreelancerTestimonials() {
                     className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full mr-3 sm:mr-4 flex-shrink-0"
                   />
                   <div className="min-w-0">
-                    <h4 className="font-medium text-lg sm:text-xl md:text-2xl leading-tight mb-1 sm:mb-2 truncate">
+                    <h4 className="font-medium text-lg sm:text-xl md:text-3xl leading-tight truncate">
                       {testimonial.name}
                     </h4>
-                    <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-tight truncate">
+                    <p className="text-black/70 font-medium text-sm sm:text-base md:text-[16px] leading-tight truncate">
                       {testimonial.title}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-700 font-medium text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+                <p className="text-black font-medium text-base md:text-[20px] leading-[100%] 
+                tracking-[-0.02em] mb-6 sm:mb-8">
                   {testimonial.text}
                 </p>
                 <StarRating rating={testimonial.rating} />
@@ -159,7 +162,7 @@ export default function FreelancerTestimonials() {
         )}
 
         <div className="text-center mt-8 md:mt-12">
-          <button className="bg-black cursor-pointer text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium shadow-md shadow-black/25  text-sm sm:text-base w-full md:w-auto">
+          <button className="bg-black cursor-pointer text-white px-20 py-6  rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] text-sm md:text-[22px] w-full md:w-auto">
             Hire me now
           </button>
         </div>
