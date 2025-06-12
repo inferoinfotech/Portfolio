@@ -4,9 +4,9 @@ import { Play } from "lucide-react"
 export default function HungerSection() {
     return (
         <section className="w-full py-12 md:py-24 lg:py-32">
-            <div className="container px-4 md:px-2 xl:px-6 mx-auto">
+            <div className="container px-4 md:px-2 xl:px-0 mx-auto">
                 {/* Top Section */}
-                <h1 className="text-black text-2xl md:text-4xl xl:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl tracking-[0.025em] leading-tight text-start font-bold">Do you have a hunger
+                <h1 className="text-black text-2xl md:text-4xl xl:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl leading-tight text-start font-bold">Do you have a hunger
                     to increase the
                     quality of your life?</h1>
                 <div className="relative">
@@ -41,7 +41,7 @@ export default function HungerSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute hidden lg:block lg:right-[22.5%] lg:bottom-[26.5%] xl:right-[24.5%] xl:bottom-[26%]  2xl:right-[26%] 2xl:bottom-[26%] z-20 ">
+                    <div className="absolute hidden lg:block lg:right-[22.5%] lg:bottom-[26.5%] xl:right-[24.5%] xl:bottom-[26%]  2xl:right-[26.3%] 2xl:bottom-[26%] z-20 ">
                         <img src="/images/Joiner.png" alt="vector" />
                     </div>
 

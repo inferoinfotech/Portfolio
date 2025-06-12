@@ -32,7 +32,7 @@ export default function ServicesSection() {
 
     return (
         <>
-            <section className="lg:min-h-screen lg:py-10 xl:py-14 bg-black text-white flex flex-col">
+            <section className="lg:min-h-screen lg:py-10 xl:py-16 bg-black text-white flex flex-col">
                 {/* Header */}
                 <div className="flex justify-center pt-12 lg:pb-8">
                     <div className="flex items-center gap-6">

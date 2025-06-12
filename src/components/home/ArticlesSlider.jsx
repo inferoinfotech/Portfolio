@@ -4,13 +4,6 @@ import { useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { motion } from "framer-motion"
-import {
-    fadeUp,
-    fadeIn,
-    staggerContainer,
-    scaleUp
-} from '@/lib/framer-animations';
 
 // Import Swiper styles
 import "swiper/css"
@@ -96,58 +89,49 @@ export default function ArticlesSlider() {
     const swiperRef = useRef()
 
     return (
-        <motion.section
-            className="w-full py-6 lg:py-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeIn}
-        >
+        <section className="w-full py-6 lg:py-16">
             <div className="w-full">
                 {/* Header */}
-                <motion.div
-                    className="flex container mx-auto items-center justify-between ps-5 lg:mb-8"
-                    variants={staggerContainer}
-                >
-                    <motion.div className="flex" variants={fadeUp}>
+                <div className="flex container mx-auto items-center justify-between">
+                    <div className="flex ml-5 xl:ml-0">
                         <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium text-black">My Top Articles</h2>
-                        <motion.button
-                            className="flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
-                            whileHover={{ x: 5 }}
-                            variants={fadeUp}
-                        >
+                        <button className="flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors">
                             <span className="text-sm font-medium hover:border-b border-b-black transition-all">See all</span>
                             <ChevronRight className="w-3 h-3" />
-                        </motion.button>
-                    </motion.div>
-                    {/* Navigation arrows */}
-                    <motion.div className="hidden px-5 lg:flex gap-3" variants={fadeUp}>
-                        <motion.button
-                            onClick={() => swiperRef.current?.slidePrev()}
-                            className="w-12 h-12 rounded-full bg-black hover:cursor-pointer text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <ChevronLeft className="w-5 h-5" />
-                        </motion.button>
-                        <motion.button
-                            onClick={() => swiperRef.current?.slideNext()}
-                            className="w-12 h-12 rounded-full bg-black text-white hover:cursor-pointer flex items-center justify-center hover:bg-gray-800 transition-colors"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <ChevronRight className="w-5 h-5" />
-                        </motion.button>
-                    </motion.div>
-                </motion.div>
+                        </button>
+                    </div>
+                    {/* Actions */}
+                    <div className="flex items-center gap-6">
+                        {/* See all button */}
+
+
+                        {/* Navigation arrows */}
+                        <div className="hidden px-5 lg:flex gap-3">
+                            <button
+                                onClick={() => swiperRef.current?.slidePrev()}
+                                className="w-12 h-12 rounded-full bg-black hover:cursor-pointer text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+                            <button
+                                onClick={() => swiperRef.current?.slideNext()}
+                                className="w-12 h-12 rounded-full bg-black text-white hover:cursor-pointer flex items-center justify-center hover:bg-gray-800 transition-colors"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Swiper Slider */}
-                <motion.div className="relative" variants={fadeUp}>
+                <div className="relative">
                     <Swiper
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper
                         }}
-                        slidesOffsetBefore={typeof window !== "undefined" && window.innerWidth >= 1024 ? 175 : 20}
+                        slidesOffsetBefore={
+                            typeof window !== "undefined" ? window.innerWidth > 1440 ? 190 : window.innerWidth >= 1024 ? 70 : window.innerWidth >= 768 ? 70 : 20 : 20
+                        }
                         modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={12}
                         slidesPerView={typeof window !== "undefined" && window.innerWidth >= 1024 ? 1 : 1.8}
@@ -188,58 +172,34 @@ export default function ArticlesSlider() {
                         }}
                         className="articles-swiper !pb-16 !pt-12"
                     >
-                        {articles.map((article, index) => (
+                        {articles.map((article) => (
                             <SwiperSlide key={article.id}>
-                                <motion.div
-                                    className="group cursor-grab"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-50px" }}
-                                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                                >
-                                    <div className="rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
-                                        {/* Image Section */}
-                                        <motion.div
-                                            className="relative h-[230px] lg:h-[340px] w-[230px] lg:w-auto rounded-[30px]"
-                                            whileHover={{ scale: 1.02 }}
-                                        >
+                                <div className="group cursor-grab">
+                                    <div className="relative h-[446px] rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
+                                        {/* Background Image */}
+                                        <div className="absolute inset-0">
                                             <img
                                                 src={article.image || "/placeholder.svg"}
                                                 alt={article.title}
-                                                className="w-full h-full rounded-[30px] object-cover"
+                                                className="w-full h-full object-cover"
                                             />
-                                            {/* Arrow Icon - Only element on the image */}
-                                            <motion.div
-                                                className="absolute bottom-2 right-2 w-10 h-[46px] bg-black rounded-tr-lg rounded-bl-lg rounded-tl-lg rounded-br-3xl flex items-center justify-center backdrop-blur-sm"
-                                                whileHover={{ scale: 1.1 }}
-                                                whileTap={{ scale: 0.9 }}
-                                            >
-                                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M7 17L17 7M17 7H7M17 7V17"
-                                                    />
-                                                </svg>
-                                            </motion.div>
-                                        </motion.div>
+                                        </div>
 
-                                        {/* Content Section - Below the image */}
-                                        <motion.div
-                                            className="p-4"
-                                            whileHover={{ x: 5 }}
-                                        >
-                                            <h3 className="text-black font-medium text-base sm:text-lg md:text-xl mb-2 leading-tight">{article.title}</h3>
-                                            <p className="text-[#00000080] text-sm sm:text-base md:text-[15px] leading-4">{article.description}</p>
-                                        </motion.div>
+                                        {/* Gradient Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                                        {/* Content */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-8">
+                                            <h3 className="text-white font-bold text-base md:text-xl lg:text-2xl xl:text-3xl mb-3 text-center leading-tight">{article.title}</h3>
+                                            <p className="text-[#CFCFCF] text-xs md:text-sm lg:text-base xl:text-xl text-center leading-5">{article.description}</p>
+                                        </div>
                                     </div>
-                                </motion.div>
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </motion.div>
+                </div>
             </div>
-        </motion.section>
+        </section>
     )
 }

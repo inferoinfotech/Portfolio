@@ -2,19 +2,23 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-3 md:px-5 lg:border-t border-[#292929]">
-      <div className="container mx-auto py-12 lg:py-10">
+    <footer className="bg-black text-white px-3 md:px-5 2xl:px-0 lg:border-t border-[#292929]">
+      <div className="container mx-auto py-12 lg:pt-12 lg:pb-5">
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16">
+        <div className="hidden lg:flex justify-between lg:gap-16">
           {/* Left Column - Brand & Social */}
-          <div className="max-w-xl">
+          <div className="flex-1 max-w-xl">
             {/* Logo */}
-            <div className="mb-8">
+            <div className="mb-9">
               <h2 className="text-4xl font-bold">SB</h2>
             </div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold mb-5 text-[#FDC0C5]">Work Less. Earn More. Enjoy Life</h3>
+
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold mb-5 text-[#FDC0C5]">
+              Work Less. Earn More. Enjoy Life
+            </h3>
+
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] text-[#979797] mb-8 leading-9">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] font-normal text-[#979797] mb-8 leading-9">
               I dive deep into human potential, lifestyle design, and one person businesses to give you a unique,
               digestible way of improving your life.
             </p>
@@ -57,9 +61,9 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Newsletter */}
-          <div className="max-w-2xl">
+          <div className="flex-1 max-w-2xl xl:px-3">
             <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-4">Become an Expert now</h3>
-            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-6">
+            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-4 text-justify leading-[1.5]">
               Sign up for exclusive content, emails & things Saleh doesn't share anywhere else
             </p>
 
@@ -68,12 +72,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="w-full text-2xl px-4 py-7 bg-[#D9D9D9] text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FDC0C5]"
+                className="w-full text-2xl px-4 py-[26px] bg-[#D9D9D9] text-black placeholder-[#919191] focus:outline-none focus:ring-2 focus:ring-[#FDC0C5]"
                 required
               />
               <button
                 type="submit"
-                className="w-full bg-[#FDC0C5] text-2xl hover:cursor-pointer hover:bg-[#FDC0C5]/90 text-black font-bold py-6 rounded-full transition-colors"
+                className="w-full bg-[#FDC0C5] text-xl 2xl:text-[25px] tracking-[2] hover:cursor-pointer hover:bg-[#FDC0C5]/90 text-black font-bold py-6 rounded-full transition-colors"
               >
                 LET'S DO IT
               </button>
@@ -165,8 +169,10 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="lg:mt-12 lg:pt-8 text-center hidden lg:block">
-          <p className="text-white text-2xl">© All Right Reserved</p>
+        <div className="lg:mt-12 lg:pt-4 pb-2 text-center hidden lg:block">
+          <p className="text-white font-normal text-2xl tracking-[1] flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-copyright-icon me-2 lucide-copyright"><circle cx="12" cy="12" r="10" /><path d="M14.83 14.83a4 4 0 1 1 0-5.66" /></svg>
+            All Right Reserved</p>
         </div>
       </div>
     </footer>

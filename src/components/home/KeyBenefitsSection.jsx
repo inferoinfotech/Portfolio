@@ -49,7 +49,7 @@ const benefits = [
 
 export default function KeyBenefitsSection() {
     return (
-        <section className="py-24 px-4 lg:px-8 bg-white">
+        <section className="py-14 lg:py-16 xl:py-24 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -64,23 +64,23 @@ export default function KeyBenefitsSection() {
                 </div>
 
                 {/* Benefits Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-12">
                     {benefits.map((benefit) => {
                         const IconComponent = benefit.icon
                         return (
                             <div key={benefit.id} className="text-center lg:text-left">
                                 {/* Icon */}
                                 <div className="flex justify-center lg:justify-start mb-6">
-                                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-[#D9D9D966] rounded-2xl flex items-center justify-center">
-                                        <IconComponent className="w-6 h-6 lg:w-7 lg:h-7 text-gray-700" />
+                                    <div className="w-12 h-12 md:h-13 xl:w-14 md:w-13 xl:h-14 bg-[#D9D9D966] rounded-2xl flex items-center justify-center">
+                                        <IconComponent className="w-6 h-6 2xl:w-7 2xl:h-7 text-gray-700" />
                                     </div>
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-2xl lg:text-[28px] font-medium text-black mb-4 leading-tight">{benefit.title}</h3>
+                                <h3 className="text-2xl md:text-[26px] xl:text-[28px] font-medium text-black mb-4 leading-tight">{benefit.title}</h3>
 
                                 {/* Description */}
-                                <p className="text-black/70 text-base leading-5 px-14 lg:px-0 font-normal lg:leading-7 lg:text-[26px] lg:max-w-10/12">{benefit.description}</p>
+                                <p className="text-black/70 text-base md:text-xl xl:text-[26px] leading-5 px-14 lg:px-0 font-normal lg:leading-7 lg:max-w-11/12 xl:max-w-10/12">{benefit.description}</p>
                             </div>
                         )
                     })}

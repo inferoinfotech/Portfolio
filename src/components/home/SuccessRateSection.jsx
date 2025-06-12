@@ -2,7 +2,7 @@
 
 export default function SuccessRateSection() {
     return (
-        <section className="py-16 px-4 lg:px-8 bg-white">
+        <section className="py-16 2xl:pb-40 px-4 lg:px-8 bg-white">
             <div className="container mx-auto">
                 {/* Desktop Layout */}
                 <div className="hidden lg:flex lg:items-start lg:justify-between lg:gap-16">
@@ -16,7 +16,7 @@ export default function SuccessRateSection() {
 
                     {/* Right Column */}
                     <div className="flex-1 max-w-xl lg:px-4">
-                        <p className="text-[#969696] text-[28px] font-medium leading-relaxed mb-12">
+                        <p className="text-[#969696] text-[28px] text-justify font-medium leading-relaxed mb-12">
                             We believe progress equals happiness. And no matter where you're looking to excel, we're here to help you
                             forge your pathway to power. Meet the man who's spent over 45
                         </p>
