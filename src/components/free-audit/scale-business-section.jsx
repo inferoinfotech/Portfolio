@@ -28,13 +28,10 @@ export default function ScaleBusinessSection() {
       <div className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl1440:h-[70vh] xl1920:h-[64vh]">
         {/* Left Content - Full width on mobile and laptop */}
         <div className="flex items-center justify-center bg-white py-16 xl:py-0">
-          <div className="w-full max-w-3xl mx-auto px-6">
+          <div className="w-full max-w-2xl mx-auto px-6">
             {/* Responsive heading */}
-            <h1 className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-tight mb-6 xl:mb-8">
+            <h1 className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-16 lg:leading-tight mb-6 xl:mb-8 tracking-tight">
               Can't figure out How to scale your business{" "}
-              <span className="hidden sm:inline">
-                <br />
-              </span>
               and convert leads?
             </h1>
 
@@ -43,7 +40,7 @@ export default function ScaleBusinessSection() {
 
             {/* CTA Button */}
             <div className="flex justify-center md:justify-start">
-              <button className="md:bg-black cursor-pointer md:text-white px-6 py-3 md:px-7 md:py-4 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition text-black text-center">
+              <button className="md:bg-black cursor-pointer md:text-white text-sm md:text-base xl:text-[22px] px-6 py-3 md:px-12 md:py-7 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition text-black text-center">
                 Let's have a free call
               </button>
             </div>
@@ -69,7 +66,7 @@ export default function ScaleBusinessSection() {
                   <img
                     src={img.src || "/placeholder.svg"}
                     alt={img.alt}
-                    className="w-full h-[150px] md:h-[180px] xl:h-[200px] object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-[150px] md:h-[180px] xl:h-[246px] object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               )
