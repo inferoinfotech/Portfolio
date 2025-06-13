@@ -6,7 +6,7 @@ export default function HeroBusinessSection() {
   const [active, setActive] = useState("work");
   const [activeMobile, setActiveMobile] = useState("hire")
   return (
-    <section className="relative w-full min-h-screen bg-black py-6 px-4 lg:px-0 md:py-12">
+    <section className="relative w-full min-h-screen bg-black py-6 px-4 md:px-8 2xl:px-0 md:py-12">
       <div className="container mx-auto relative px-4 md:px-6">
         {/* Background Image */}
         <div

@@ -74,10 +74,10 @@ export default function FreelancerTestimonials() {
   }
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-20">
+    <section className="w-full bg-white py-8 md:py-12 xl:py-16">
       <div className="container mx-auto p-6 sm:px-6">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-12">
+          <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10">
             Work with a freelancer from the
             <br className="hidden sm:block" />
             #1 ranked global platform
