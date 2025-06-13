@@ -1,9 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, Pagination } from "swiper/modules"
+import { Star } from "lucide-react"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/autoplay"
 
 export default function FreelancerTestimonials() {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
   const testimonials = [
@@ -11,34 +18,24 @@ export default function FreelancerTestimonials() {
       name: "Justian Joe",
       title: "Founder@Media.co",
       image: "../images/work-customer-11.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. ",
-      rating: 4,
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
       image: "../images/work-customer-10.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. .",
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
       rating: 5,
     },
     {
       name: "Justian Joe",
       title: "Founder@Media.co",
       image: "../images/work-customer-9.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp. ",
+      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
       rating: 5,
     },
   ]
-
-  useEffect(() => {
-    if (!isMobile) return
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-    }, 5000) // Auto-slide every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [isMobile, testimonials.length])
 
   useEffect(() => {
     const checkMobile = () => {
@@ -50,32 +47,9 @@ export default function FreelancerTestimonials() {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  const StarRating = ({ rating }) => {
-    return (
-      <div className="flex ml-2 lg:ml-6">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <span
-            key={star}
-            className={`text-2xl  lg:text-3xl ${star <= rating ? "text-orange-400" : "text-gray-300"}`}
-          >
-            ★
-          </span>
-        ))}
-      </div>
-    )
-  }
-
   return (
     <section className="w-full bg-white py-8 md:py-12 xl:py-16">
-      <div className="container mx-auto p-6 sm:px-6">
+      <div className="container mx-auto p-6 2xl:px-0">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10">
             Work with a freelancer from the
@@ -87,84 +61,69 @@ export default function FreelancerTestimonials() {
           </p>
         </div>
 
-        {/* Mobile Slider */}
-        {isMobile ? (
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full p-8 rounded-[30px] bg-[#F8F8F8]">
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.image || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full mr-3 object-cover"
-                      />
-                      <div className="min-w-0">
-                        <h4 className="text-black font-medium text-[20px] leading-[100%] 
-                          tracking-[-0.01em] mb-1">{testimonial.name}</h4>
-                        <p className="text-black/70 text-[16px] font-medium leading-[100%] 
-                          tracking-[-0.01em]">{testimonial.title}</p>
-                      </div>
-                    </div>
-                    <p className="text-black font-medium text-[16px] leading-relaxed mb-3">{testimonial.text}</p>
-                    <StarRating rating={testimonial.rating} className="text-2xl" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Dots indicator */}
-            <div className="flex justify-center mt-6 gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${index === currentSlide ? "bg-[#FDC0C5]" : "bg-gray-300"
-                    }`}
-                />
-              ))}
-            </div>
-          </div>
-        ) : (
-          /* Desktop Grid */
-          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Mobile Slider with Swiper */}
+        <div className="md:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              bulletClass: "swiper-pagination-bullet custom-bullet",
+              bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
+            }}
+            className="testimonial-swiper articles-swiper !pb-14 !pt-4"
+          >
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-[#FDFDFD] rounded-[30px] p-14">
-                <div className="flex items-center mb-6 sm:mb-8">
-                  <img
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.name}
-                    className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full mr-3 sm:mr-4 flex-shrink-0 object-cover"
-                  />
-                  <div className="min-w-0">
-                    <h4 className="font-medium text-lg sm:text-xl md:text-3xl leading-tight truncate">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-black/70 font-medium text-sm sm:text-base md:text-[16px] leading-tight truncate">
-                      {testimonial.title}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-black font-medium text-base md:text-[20px] leading-6 
-                tracking-[-0.01em] mb-6 sm:mb-8 ml-2 lg:ml-6">
-                  {testimonial.text}
-                </p>
-                <StarRating rating={testimonial.rating} />
-              </div>
+              <SwiperSlide key={index}>
+                <TestimonialCard testimonial={testimonial} />
+              </SwiperSlide>
             ))}
-          </div>
-        )}
+          </Swiper>
+        </div>
 
-        <div className="text-center mt-8 md:mt-36">
-          <button className="bg-black cursor-pointer text-white px-20 py-6  rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] text-sm md:text-[22px] w-full md:w-auto">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial} />
+          ))}
+        </div>
+
+        <div className="text-center mt-5 md:mt-8 lg:mt-36">
+          <button className="bg-black cursor-pointer text-white px-20 py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] text-sm md:text-[22px] w-full md:w-auto">
             Hire me now
           </button>
         </div>
       </div>
     </section>
+  )
+}
+
+function TestimonialCard({ testimonial }) {
+  return (
+    <div className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10">
+      <div className="flex items-center mb-6">
+        <img
+          src={testimonial.image || "/placeholder.svg"}
+          alt={testimonial.name}
+          className="w-12 h-12 lg:w-20 lg:h-20 rounded-full mr-4 object-cover flex-shrink-0"
+        />
+        <div>
+          <h4 className="font-medium text-base md:text-xl xl:text-2xl text-black">{testimonial.name}</h4>
+          <p className="text-black/70 text-sm font-medium tracking-tight lg:text-base">{testimonial.title}</p>
+        </div>
+      </div>
+      <p className="text-black text-sm lg:text-base font-medium leading-6 tracking-tight xl:text-xl mb-6">{testimonial.text}</p>
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`${star <= testimonial.rating ? "text-[#ecb476] fill-[#ecb476]" : "text-gray-300"}`}
+            size={20}
+          />
+        ))}
+      </div>
+    </div>
   )
 }

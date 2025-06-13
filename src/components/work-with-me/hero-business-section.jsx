@@ -7,7 +7,7 @@ export default function HeroBusinessSection() {
   const [activeMobile, setActiveMobile] = useState("hire")
   return (
     <section className="relative w-full min-h-screen bg-black py-6 px-4 md:px-8 2xl:px-0 md:py-12">
-      <div className="container mx-auto relative px-4 md:px-6">
+      <div className="container mx-auto relative px-4 md:px-0">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-center bg-cover md:bg-right bg-no-repeat overflow-hidden rounded-[30px] md:rounded-[30px]"
@@ -59,7 +59,6 @@ export default function HeroBusinessSection() {
                 Schedule a free call
               </button>
             </div>
-
           </div>
         </div>
       </div>
