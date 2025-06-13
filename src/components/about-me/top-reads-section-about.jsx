@@ -1,3 +1,15 @@
+"use client"
+
+import { motion } from "framer-motion";
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    scaleUp,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations';
+
 export default function TopReadsSectionAbout() {
   // Book data
   const books = [
@@ -52,44 +64,68 @@ export default function TopReadsSectionAbout() {
   ]
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+    <motion.section 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer}
+      className="w-full bg-white py-8 md:py-12 lg:py-16"
+    >
       <div className="container mx-auto px-4 2xl:px-0">
         {/* Section title */}
-        <div className="text-center md:mb-4 mb-2">
-          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px]  ">
+        <motion.div 
+          variants={fadeUp}
+          className="text-center md:mb-4 mb-2"
+        >
+          <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px]">
             My Top Reads
           </h2>
-        </div>
+        </motion.div>
 
         {/* Section subtitle */}
-        <div className="max-w-lg mx-auto mb-8 xl:mb-10">
+        <motion.div 
+          variants={fadeUp}
+          transition={{ delay: 0.1 }}
+          className="max-w-lg mx-auto mb-8 xl:mb-10"
+        >
           <p className="font-medium text-base md:text-lg lg:text-[20px] tracking-[0] text-center">
             Reading books has always given me a competitive edge as my creativity gets nourished and focused
           </p>
-        </div>
+        </motion.div>
 
         {/* Reading image */}
-        <div className="rounded-[40px] hidden md:block overflow-hidden mb-12 md:mb-16 lg:mb-28">
+        <motion.div 
+          variants={scaleUp}
+          className="rounded-[40px] hidden md:block overflow-hidden mb-12 md:mb-16 lg:mb-28"
+        >
           <img
             src="../images/Top-read-Banner.png"
             alt="Saleh reading a book"
             className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[789px] object-cover"
           />
-        </div>
+        </motion.div>
 
         {/* Book grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8 md:px-4 lg:px-0">
+        <motion.div 
+          variants={staggerContainer}
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8 md:px-4 lg:px-0"
+        >
           {books.map((book, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <motion.div 
+              key={index} 
+              variants={fadeUp}
+              transition={{ delay: index * 0.1 }}
+              className="flex flex-col items-center"
+            >
               <div
                 className={`overflow-hidden w-full max-w-[150px] h-[230px] hover:cursor-pointer hover:scale-105 transition-all sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color}`}
               >
                 <img src={book.cover || "/placeholder.svg"} alt={book.title} className="w-full h-full object-cover" />
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }

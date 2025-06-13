@@ -1,3 +1,14 @@
+"use client"
+
+import { motion } from "framer-motion";
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations';
+
 const experiences = [
   {
     title: "How it all started",
@@ -30,49 +41,82 @@ const experiences = [
 
 export default function ExperienceSectionAbout() {
   return (
-    <section className="w-full bg-white">
+    <motion.section 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer}
+      className="w-full bg-white"
+    >
       <div className="container mx-auto md:px-6 2xl:px-3 py-4">
         {/* Section title */}
-        <div className="flex justify-center mb-8 md:mb-12 lg:mb-20">
+        <motion.div 
+          variants={fadeUp}
+          className="flex justify-center mb-8 md:mb-12 lg:mb-20"
+        >
           <div className="flex items-center space-x-5">
             <div className="md:w-3 md:h-3 h-1.5 w-1.5  bg-black rounded-full"></div>
             <p className="text-sm md:text-base lg:text-[20px] font-medium tracking-[0.4em] text-center uppercase">
               MY EXPERIENCE
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Dynamic Experience Items */}
         <div className="space-y-12 md:space-y-16 lg:space-y-24">
           {experiences.map((item, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center mb-8">
+            <motion.div 
+              key={index} 
+              variants={fadeUp}
+              className="flex flex-col lg:flex-row items-center mb-8"
+            >
               {/* Text Content */}
-              <div className="w-full lg:w-1/2 order-2 md:mt-10 lg:mt-0 lg:order-1">
-                <h2 className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-5xl xl:text-[64px] leading-tight xl:leading-[70px] font-medium mb-5 md:mb-8 2xl:mb-[78px]">
+              <motion.div 
+                variants={index % 2 === 0 ? slideInLeft : slideInRight}
+                className="w-full lg:w-1/2 order-2 md:mt-10 lg:mt-0 lg:order-1"
+              >
+                <motion.h2 
+                  variants={fadeUp}
+                  className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-5xl xl:text-[64px] leading-tight xl:leading-[70px] font-medium mb-5 md:mb-8 2xl:mb-[78px]"
+                >
                   {item.title}
-                </h2> 
-                <div className="space-y-4 md:space-y-6 px-10 md:px-0">
+                </motion.h2> 
+                <motion.div 
+                  variants={staggerContainer}
+                  className="space-y-4 md:space-y-6 px-10 md:px-0"
+                >
                   {item.paragraphs.map((para, idx) => (
-                    <p
+                    <motion.p
+                      variants={fadeUp}
                       className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-8 xl:leading-[45px] tracking-tight text-black/70 text-opacity-70 text-center md:text-justify mb-8 xl:mb-12"
                       key={idx}
                     >
                       {para}
-                    </p>
+                    </motion.p>
                   ))}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
               {/* Image Content */}
-              <div className="w-full lg:w-1/2 justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex">
-                <div className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] xl:max-w-[480px] h-[300px] md:h-[400px] lg:h-[480px]">
-                  <img src={item.image || "/placeholder.svg"} alt={item.alt} className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </div>
+              <motion.div 
+                variants={index % 2 === 0 ? slideInRight : slideInLeft}
+                className="w-full lg:w-1/2 justify-center lg:justify-end items-center order-1 lg:order-2 hidden md:flex"
+              >
+                <motion.div 
+                  variants={fadeIn}
+                  className="rounded-2xl md:rounded-[32px] overflow-hidden w-full max-w-[400px] xl:max-w-[480px] h-[300px] md:h-[400px] lg:h-[480px]"
+                >
+                  <img 
+                    src={item.image || "/placeholder.svg"} 
+                    alt={item.alt} 
+                    className="w-full h-full object-cover" 
+                  />
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
