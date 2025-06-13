@@ -19,7 +19,7 @@ export default function HeroBusinessSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex items-center min-h-screen px-4">
+        <div className="relative z-10 flex items-center min-h-screen px-2 lg:px-10">
           <div className="max-w-full md:max-w-4xl">
             <h1 className="text-white font-bold text-[36px] md:text-[48px] lg:text-[64px] leading-[110%] md:leading-[100%] mb-4 md:mb-[30px]">
               Turning your <br className="bloack md:hidden" /> business into

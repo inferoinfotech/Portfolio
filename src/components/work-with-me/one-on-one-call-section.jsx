@@ -36,7 +36,7 @@ export default function OneOnOneCallSection() {
 
   return (
     <section className="w-full bg-black py-12 md:py-16 lg:py-20 xl:py-24">
-      <div className="container mx-auto px-4 md:px-8 xl:px-0">
+      <div className="container mx-auto px-4 md:px-8 2xl:px-0">
         {/* Section Title */}
         <div className="text-center mb-2 sm:mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-white font-bold text-4xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight sm:leading-tight md:leading-[110%] lg:leading-[100%] tracking-tight md:tracking-[-1%] lg:tracking-[-2%] text-center ">
@@ -72,7 +72,7 @@ export default function OneOnOneCallSection() {
                   </h3>
 
                   {/* Points */}
-                  <ul className="space-y-3 mb-6 sm:mb-7 md:mb-8 list-disc list-outside text-white text-justify">
+                  <ul className="space-y-3 mb-6 sm:mb-7 md:mb-8 list-disc list-outside text-white text-justify lg:pl-5">
                     {item.points.map((point, pointIndex) => (
                       <li
                         key={pointIndex}
@@ -84,7 +84,10 @@ export default function OneOnOneCallSection() {
                   </ul>
                 </div>
                 {/* CTA Button */}
-                <button className="bg-white text-black sm:bg-[#FDC0C5] sm:hover:bg-[#f8a8b0] sm:text-black cursor-pointer px-7 py-4  md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-[20px] md:rounded-[50px] font-medium text-[20px] md:text-lg lg:text-xl xl:text-[22px] tracking-tight transition-colors duration-300 mt-2 lg:mt-10">
+                <button className="bg-white text-black hidden sm:block sm:bg-[#FDC0C5] sm:hover:bg-[#f8a8b0] sm:text-black cursor-pointer px-7 py-4  md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-[20px] md:rounded-[50px] font-medium text-[20px] md:text-lg lg:text-xl xl:text-[22px] tracking-tight transition-colors duration-300 mt-2 lg:mt-10">
+                  Book a free call
+                </button>
+                <button className="bg-white w-full sm:hidden text-black sm:bg-[#FDC0C5] sm:hover:bg-[#f8a8b0] sm:text-black cursor-pointer px-7 py-4  md:px-8 md:py-4 lg:px-10 lg:py-4 xl:px-12 xl:py-5 rounded-[20px] md:rounded-[50px] font-medium text-[20px] md:text-lg lg:text-xl xl:text-[22px] tracking-tight transition-colors duration-300 mt-2 lg:mt-10">
                   Book a free call
                 </button>
               </div>

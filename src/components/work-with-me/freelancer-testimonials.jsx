@@ -10,6 +10,22 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/autoplay"
 
+const StarRating = ({ rating }) => {
+  return (
+    <div className="flex gap-0">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <span
+          key={star}
+          className={`text-2xl  lg:text-3xl ${star <= rating ? "text-[#ecb476]" : "text-gray-300"}`}
+        >
+          ★
+        </span>
+      ))}
+    </div>
+  )
+}
+
+
 export default function FreelancerTestimonials() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -49,7 +65,7 @@ export default function FreelancerTestimonials() {
 
   return (
     <section className="w-full bg-white py-8 md:py-12 xl:py-16">
-      <div className="container mx-auto p-6 2xl:px-0">
+      <div className="max-w-[1440px] mx-auto p-6 2xl:px-0">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10">
             Work with a freelancer from the
@@ -115,15 +131,7 @@ function TestimonialCard({ testimonial }) {
         </div>
       </div>
       <p className="text-black text-sm lg:text-base font-medium leading-6 tracking-tight xl:text-xl mb-6">{testimonial.text}</p>
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`${star <= testimonial.rating ? "text-[#ecb476] fill-[#ecb476]" : "text-gray-300"}`}
-            size={20}
-          />
-        ))}
-      </div>
+      <StarRating rating={testimonial.rating} />
     </div>
   )
 }

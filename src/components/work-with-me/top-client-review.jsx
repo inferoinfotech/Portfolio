@@ -3,17 +3,17 @@ import { SquareCheckBig } from "lucide-react"
 export default function TopClientReview() {
   return (
     <section className="w-full bg-white py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-8 xl:px-0">
+      <div className="container mx-auto px-4 md:px-8 2xl:px-0">
         <div className="flex items-center justify-center mb-8 md:mb-20 xl:mb-32">
           <div className="flex items-center space-x-3">
             <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 bg-black rounded-full"></div>
-            <span className="text-[10px] md:text-[20px] font-medium tracking-[0.2em] uppercase">TOP CLIENT REVIEW</span>
+            <span className="text-[10px] md:text-[20px] font-medium tracking-[8] uppercase">TOP CLIENT REVIEW</span>
           </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left side - Quote section */}
-          <div className="lg:col-span-7 mt-7 p-5">
+          <div className="lg:col-span-7 lg:mt-7 p-5">
             <blockquote className="text-xl md:text-3xl xl:text-5xl font-bold mb-6 md:mb-8 lg:mb-12 md:leading-10 xl:leading-14 tracking-tight">
               "It's one thing to have 650,000 followers, it's another to have 650,000 loyal fans."
             </blockquote>
@@ -39,7 +39,7 @@ export default function TopClientReview() {
           {/* Right side - CTA section */}
           <div className="lg:col-span-5 flex items-center">
             <div className="w-full bg-[linear-gradient(359.36deg,_#000000_31.78%,_#666666_130.09%)] rounded-[30px] p-6 md:p-12 text-white h-full">
-              <h3 className="font-bold text-4xl md:text-[30px] xl:text-[40px] leading-tight tracking-tight text-center mb-8 md:mb-10">
+              <h3 className="font-bold text-4xl md:text-[30px] xl:text-[40px] leading-tight tracking-tight max-w-md mx-auto text-center mb-8 md:mb-10">
                 Have your business queries sorted
               </h3>
 
