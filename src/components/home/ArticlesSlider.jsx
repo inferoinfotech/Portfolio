@@ -117,7 +117,7 @@ export default function ArticlesSlider() {
                     >
                         <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium text-black">My Top Articles</h2>
                         <button className="flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors">
-                            <span className="text-sm font-medium hover:border-b border-b-black transition-all">See all</span>
+                            <span className="text-[12px] font-medium hover:border-b border-b-black transition-all">See all</span>
                             <ChevronRight className="w-3 h-3" />
                         </button>
                     </motion.div>
