@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase"
+                        className="text-[10px] md:text-base lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase"
                     >
                         Testimonials
                     </motion.h2>

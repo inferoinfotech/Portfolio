@@ -85,7 +85,7 @@ export default function WhyWorkWithMeSection() {
 
                 {/* CTA Buttons - Desktop */}
                 <div className="hidden lg:flex lg:justify-end lg:mt-8">
-                    <div className="flex flex-col gap-4 w-full max-w-[737px]">
+                    <div className="flex flex-col gap-4 w-full ps-6 max-w-1/2">
                         <button className="w-full hover:cursor-pointer bg-black text-white py-4 rounded-[20px] text-[25px] font-medium hover:bg-gray-800 transition-colors">
                             Hire me
                         </button>

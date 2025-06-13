@@ -67,7 +67,7 @@ const MyWorkCTASection = () => {
                     transition={{ delay: 0.2 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white hover:cursor-pointer hover:bg-[#f8a8b0] text-black text-[10px] lg:text-[22px] font-medium px-8 py-4 lg:px-24 lg:py-6 rounded-full text-base lg:text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="bg-white hover:cursor-pointer hover:bg-[#f8a8b0] text-black text-[10px] md:text-base lg:text-[22px] font-medium px-8 py-4 lg:px-24 lg:py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                     Schedule a Free Consultation
                 </motion.button>
