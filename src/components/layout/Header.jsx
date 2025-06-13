@@ -73,10 +73,10 @@ export default function Header() {
 
           {/* Right Section */}
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 hover:text-[#FDC0C5] transition-colors duration-300 cursor-pointer">
+            {/* <div className="flex items-center space-x-2 hover:text-[#FDC0C5] transition-colors duration-300 cursor-pointer">
               <Search className="lg:w-5 lg:h-5 w-3 h-3" />
               <span className="text-[14px] lg:text-base font-medium">Services</span>
-            </div>
+            </div> */}
 
             {/* Desktop only Free Audit button */}
             <Link
