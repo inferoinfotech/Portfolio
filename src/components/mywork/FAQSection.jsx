@@ -76,7 +76,7 @@ export default function FAQSection() {
                         <motion.span 
                             variants={fadeUp}
                             transition={{ delay: 0.1 }}
-                            className="text-[10px] lg:text-xl font-medium tracking-[0.4em] uppercase text-black"
+                            className="text-[10px] md:text-base lg:text-xl font-medium tracking-[0.4em] uppercase text-black"
                         >
                             Frequently Asked Questions
                         </motion.span>

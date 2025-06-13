@@ -96,8 +96,7 @@ export default function TopArticlesSection() {
                 >
                     {featuredArticle && (
                         <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block">
-                            <motion.div 
-                                whileHover={{ scale: 1.02 }}
+                            <div 
                                 className="relative h-[660px] lg:h-[790px] rounded-[30px] overflow-hidden"
                             >
                                 <video
@@ -139,7 +138,7 @@ export default function TopArticlesSection() {
                                         {featuredArticle?.date}
                                     </motion.p>
                                 </motion.div>
-                            </motion.div>
+                            </div>
                         </Link>
                     )}
                 </motion.div>
@@ -159,8 +158,7 @@ export default function TopArticlesSection() {
                             transition={{ delay: index * 0.1 }}
                         >
                             <Link href={`/blog/${article.id}`} className="group cursor-pointer block">
-                                <motion.div 
-                                    whileHover={{ scale: 1.05 }}
+                                <div 
                                     className="relative h-[425px] rounded-[30px] overflow-hidden"
                                 >
                                     <img
@@ -188,7 +186,7 @@ export default function TopArticlesSection() {
                                             {article.date}
                                         </p>
                                     </div>
-                                </motion.div>
+                                </div>
                             </Link>
                         </motion.div>
                     ))}
