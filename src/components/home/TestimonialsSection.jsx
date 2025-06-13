@@ -90,15 +90,24 @@ export default function TestimonialsSection() {
             {/* Header */}
             <motion.div
                 variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="flex justify-center mb-16"
             >
                 <div className="flex items-center gap-3">
                     <motion.div
                         variants={scaleUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="h-1.5 lg:w-3 w-1.5 lg:h-3 bg-white rounded-full"
                     ></motion.div>
                     <motion.h2
                         variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase"
                     >
                         Testimonials
@@ -111,19 +120,31 @@ export default function TestimonialsSection() {
                 {/* Main Quote */}
                 <motion.div
                     variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                     className="container mx-auto text-center mb-20"
                 >
                     <motion.blockquote
                         variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto"
                     >
                         <motion.span
                             variants={scaleUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
                         >"</motion.span>
                         {testimonials[0].text}
                         <motion.span
                             variants={scaleUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
                         >"</motion.span>
                     </motion.blockquote>
@@ -133,17 +154,26 @@ export default function TestimonialsSection() {
             </div>
             <motion.div
                 variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="hidden lg:flex justify-evenly items-center gap-8 lg:gap-12"
             >
                 {testimonials.map((testimonial, index) => (
                     <motion.div
                         key={testimonial.id}
                         variants={scaleUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         whileHover={{ scale: 1.05 }}
                         className="text-center"
                     >
                         <motion.div
                             variants={fadeUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                             className="w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700"
                         >
                             <img
@@ -154,12 +184,18 @@ export default function TestimonialsSection() {
                         </motion.div>
                         <motion.h3
                             variants={fadeUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                             className="text-white font-medium text-sm lg:text-2xl mb-1"
                         >
                             {testimonial.author}
                         </motion.h3>
                         <motion.p
                             variants={fadeUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
                             className="text-[#A2A2A2] text-sm lg:text-2xl"
                         >
                             {testimonial.position}
@@ -171,6 +207,9 @@ export default function TestimonialsSection() {
             {/* Mobile Layout - Slider */}
             <motion.div
                 variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="lg:hidden"
             >
                 <div
@@ -197,6 +236,9 @@ export default function TestimonialsSection() {
                                     {/* Testimonial Text */}
                                     <motion.blockquote
                                         variants={fadeUp}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
                                         className="text-2xl leading-8 mb-12 max-w-sm mx-auto"
                                     >
                                         {testimonial.text}
@@ -205,10 +247,16 @@ export default function TestimonialsSection() {
                                     {/* Author Info */}
                                     <motion.div
                                         variants={staggerContainer}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
                                         className="flex flex-col items-center"
                                     >
                                         <motion.div
                                             variants={scaleUp}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
                                             className="w-16 h-16 rounded-full overflow-hidden mb-4 bg-gray-700"
                                         >
                                             <img
@@ -219,12 +267,18 @@ export default function TestimonialsSection() {
                                         </motion.div>
                                         <motion.h3
                                             variants={fadeUp}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
                                             className="text-white font-medium text-lg mb-1"
                                         >
                                             {testimonial.author}
                                         </motion.h3>
                                         <motion.p
                                             variants={fadeUp}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
                                             className="text-gray-400 text-sm"
                                         >
                                             {testimonial.position}
