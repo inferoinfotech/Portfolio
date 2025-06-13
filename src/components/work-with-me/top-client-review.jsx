@@ -46,7 +46,7 @@ export default function TopClientReview() {
               <div className="space-y-3 md:space-y-4 mb-6 md:mb-10">
                 {["1-on-1 session", "Free of cost", "30 min", "Discounted rates"].map((text, i) => (
                   <div key={i} className="flex items-center">
-                    <SquareCheckBig className="w-6 h-6 md:w-8 md:h-8 xl:w-[36px] xl:h-[36px] md:w-[28px] md:h-[28px] text-white/80 mr-3 md:mr-4 lg:mr-6 md:mb-[20px] xl:mb-[30px] flex-shrink-0" />
+                    <SquareCheckBig className="w-6 h-6 md:w-8 md:h-8 xl:w-[36px] xl:h-[36px] text-white/80 mr-3 md:mr-4 lg:mr-6 md:mb-[20px] xl:mb-[30px] flex-shrink-0" />
                     <span className=" text-white/80 text-xl md:text-2xl xl:text-[32px] md:mb-[20px] xl:mb-[30px] font-normal">{text}</span>
                   </div>
                 ))}
