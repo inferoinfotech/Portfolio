@@ -90,7 +90,7 @@ export default function FreelancerTestimonials() {
           ))}
         </div>
 
-        <div className="text-center mt-5 md:mt-8 lg:mt-36">
+        <div className="text-center mt-5 md:mt-8 lg:mt-20">
           <button className="bg-black cursor-pointer text-white px-20 py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] text-sm md:text-[22px] w-full md:w-auto">
             Hire me now
           </button>
