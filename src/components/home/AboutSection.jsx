@@ -52,7 +52,7 @@ export default function AboutSection() {
                 </motion.div>
 
                 {/* Main Content */}
-                <div className="grid lg:grid-cols-3 lg:gap-32 items-start">
+                <div className="grid lg:grid-cols-3 gap-8 xl:gap-32 items-start">
                     {/* First Column - Image and Social Icons (occupies 1 column) */}
                     <motion.div
                         variants={slideInLeft}

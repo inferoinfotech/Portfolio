@@ -113,13 +113,13 @@ export default function HeroSection() {
                             variants={fadeUp}
                             transition={{ delay: 0.2 }}
                         >
-                            <motion.button
+                            <motion.a href='/workwithme'
                                 className="border border-white text-white px-4 py-4 md:px-16 md:py-8 text-[10px] lg:text-[15px] tracking-[2] hover:bg-white hover:cursor-pointer hover:text-black transition-all duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 HIRE AN EXPERT
-                            </motion.button>
+                            </motion.a>
                             <motion.a
                                 href="https://www.youtube.com/shorts/GuNAShUVSz4"
                                 target="_blank"
