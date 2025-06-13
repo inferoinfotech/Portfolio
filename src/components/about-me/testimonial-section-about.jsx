@@ -101,13 +101,13 @@ export default function TestimonialSectionAbout() {
 
         {/* Achievements */}
         <div className="max-w-5xl px-10 md:px-0 mx-auto">
-          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 xl:mb-16">
+          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 md:mb-4 xl:mb-16">
             He's been named in the top 50 of Worth Magazine's 100 most powerful people in global finance for three
             consecutive years, honored by Harvard Business Press as one of the "Top 200 Business Gurus", and by American
             Express as one of the "Top Six Business Leaders in the World" to coach its entrepreneurial clients.
           </p>
 
-          <p className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 xl:mb-16">
+          <p className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 md:mb-4 xl:mb-16">
             Fortune's cover article named him the "CEO Whisperer."
           </p>
 
