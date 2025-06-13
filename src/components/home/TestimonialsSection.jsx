@@ -1,6 +1,15 @@
 "use client"
 
 import { useState } from "react"
+import { motion } from "framer-motion"
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    scaleUp,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations'
 
 // Sample testimonials data
 const testimonials = [
@@ -71,82 +80,162 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <section className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:min-h-screen flex flex-col justify-between">
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:min-h-screen flex flex-col justify-between"
+        >
             {/* Header */}
-            <div className="flex justify-center mb-16">
+            <motion.div
+                variants={fadeUp}
+                className="flex justify-center mb-16"
+            >
                 <div className="flex items-center gap-3">
-                    <div className="h-1.5 lg:w-3 w-1.5 lg:h-3 bg-white rounded-full"></div>
-                    <h2 className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase">Testimonials</h2>
+                    <motion.div
+                        variants={scaleUp}
+                        className="h-1.5 lg:w-3 w-1.5 lg:h-3 bg-white rounded-full"
+                    ></motion.div>
+                    <motion.h2
+                        variants={fadeUp}
+                        className="text-[10px] lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase"
+                    >
+                        Testimonials
+                    </motion.h2>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Desktop Layout */}
             <div className="hidden container mx-auto lg:block">
                 {/* Main Quote */}
-                <div className="container mx-auto text-center mb-20">
-                    <blockquote className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto ">
-                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">"</span>
+                <motion.div
+                    variants={fadeUp}
+                    className="container mx-auto text-center mb-20"
+                >
+                    <motion.blockquote
+                        variants={fadeUp}
+                        className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto"
+                    >
+                        <motion.span
+                            variants={scaleUp}
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+                        >"</motion.span>
                         {testimonials[0].text}
-                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">"</span>
-                    </blockquote>
-                </div>
+                        <motion.span
+                            variants={scaleUp}
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+                        >"</motion.span>
+                    </motion.blockquote>
+                </motion.div>
 
                 {/* Client Avatars */}
             </div>
-            <div className="hidden lg:flex justify-evenly items-center gap-8 lg:gap-12">
+            <motion.div
+                variants={staggerContainer}
+                className="hidden lg:flex justify-evenly items-center gap-8 lg:gap-12"
+            >
                 {testimonials.map((testimonial, index) => (
-                    <div key={testimonial.id} className="text-center">
-                        <div className="w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700">
+                    <motion.div
+                        key={testimonial.id}
+                        variants={scaleUp}
+                        whileHover={{ scale: 1.05 }}
+                        className="text-center"
+                    >
+                        <motion.div
+                            variants={fadeUp}
+                            className="w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700"
+                        >
                             <img
                                 src={testimonial.image || "/placeholder.svg"}
                                 alt={testimonial.author}
                                 className="w-full h-full object-cover"
                             />
-                        </div>
-                        <h3 className="text-white font-medium text-sm lg:text-2xl mb-1">{testimonial.author}</h3>
-                        <p className="text-[#A2A2A2] text-sm lg:text-2xl">{testimonial.position}</p>
-                    </div>
+                        </motion.div>
+                        <motion.h3
+                            variants={fadeUp}
+                            className="text-white font-medium text-sm lg:text-2xl mb-1"
+                        >
+                            {testimonial.author}
+                        </motion.h3>
+                        <motion.p
+                            variants={fadeUp}
+                            className="text-[#A2A2A2] text-sm lg:text-2xl"
+                        >
+                            {testimonial.position}
+                        </motion.p>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
 
             {/* Mobile Layout - Slider */}
-            <div className="lg:hidden">
+            <motion.div
+                variants={fadeUp}
+                className="lg:hidden"
+            >
                 <div
                     className="relative overflow-hidden"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div
+                    <motion.div
                         className="flex transition-transform duration-300 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                        animate={{ x: `-${currentSlide * 100}%` }}
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
                         {testimonials.map((testimonial, index) => (
-                            <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
+                            <motion.div
+                                key={testimonial.id}
+                                className="w-full flex-shrink-0 px-4"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: currentSlide === index ? 1 : 0.5 }}
+                                transition={{ duration: 0.5 }}
+                            >
                                 <div className="text-center">
                                     {/* Testimonial Text */}
-                                    <blockquote className="text-2xl leading-8 mb-12 max-w-sm mx-auto">
+                                    <motion.blockquote
+                                        variants={fadeUp}
+                                        className="text-2xl leading-8 mb-12 max-w-sm mx-auto"
+                                    >
                                         {testimonial.text}
-                                    </blockquote>
+                                    </motion.blockquote>
 
                                     {/* Author Info */}
-                                    <div className="flex flex-col items-center">
-                                        <div className="w-16 h-16 rounded-full overflow-hidden mb-4 bg-gray-700">
+                                    <motion.div
+                                        variants={staggerContainer}
+                                        className="flex flex-col items-center"
+                                    >
+                                        <motion.div
+                                            variants={scaleUp}
+                                            className="w-16 h-16 rounded-full overflow-hidden mb-4 bg-gray-700"
+                                        >
                                             <img
                                                 src={testimonial.image || "/placeholder.svg"}
                                                 alt={testimonial.author}
                                                 className="w-full h-full object-cover"
                                             />
-                                        </div>
-                                        <h3 className="text-white font-medium text-lg mb-1">{testimonial.author}</h3>
-                                        <p className="text-gray-400 text-sm">{testimonial.position}</p>
-                                    </div>
+                                        </motion.div>
+                                        <motion.h3
+                                            variants={fadeUp}
+                                            className="text-white font-medium text-lg mb-1"
+                                        >
+                                            {testimonial.author}
+                                        </motion.h3>
+                                        <motion.p
+                                            variants={fadeUp}
+                                            className="text-gray-400 text-sm"
+                                        >
+                                            {testimonial.position}
+                                        </motion.p>
+                                    </motion.div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 }

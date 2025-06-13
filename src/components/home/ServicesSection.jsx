@@ -41,7 +41,7 @@ export default function ServicesSection() {
 
     return (
         <>
-            <motion.section 
+            <motion.section
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -49,12 +49,12 @@ export default function ServicesSection() {
                 className="lg:min-h-screen lg:py-10 xl:py-16 bg-black text-white flex flex-col"
             >
                 {/* Header */}
-                <motion.div 
+                <motion.div
                     variants={fadeUp}
                     className="flex justify-center pt-12 lg:pb-8"
                 >
                     <div className="flex items-center gap-6">
-                        <motion.div 
+                        <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.2 }}
@@ -65,12 +65,12 @@ export default function ServicesSection() {
                 </motion.div>
 
                 {/* Main Content */}
-                <motion.div 
+                <motion.div
                     variants={staggerContainer}
                     className="grid grid-cols-1 lg:grid-cols-2 container mx-auto xl:mt-20 py-10"
                 >
                     {/* Left Side - Services List */}
-                    <motion.div 
+                    <motion.div
                         variants={slideInLeft}
                         className="flex flex-col justify-center px-6 lg:px-0"
                     >
@@ -100,32 +100,26 @@ export default function ServicesSection() {
                                     >
                                         {service}
                                     </motion.h3>
-                                    <motion.button
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{
-                                            opacity: hoveredService === index ? 1 : 0,
-                                            x: hoveredService === index ? 0 : -20
-                                        }}
-                                        transition={{ type: "spring", stiffness: 300 }}
+                                    <button
                                         onClick={() => handleSeeMore(service)}
                                         className={`bg-[#FDC0C5] hover:cursor-pointer hidden xl:flex items-center text-black px-4 py-1 lg:px-6 lg:py-2 rounded-full text-sm lg:text-base font-normal transition-all duration-300 ${hoveredService === index
-                                            ? "opacity-100 translate-x-0 ml-2 lg:ml-4"
-                                            : "opacity-0 -translate-x-4 pointer-events-none absolute right-1/6"
+                                            ? "opacity-100 ml-2 lg:ml-4"
+                                            : "opacity-0"
                                             }`}
                                     >
                                         See more <ChevronRight className="w-3 h-3 lg:w-4 lg:h-4 ms-1 lg:ms-2" />
-                                    </motion.button>
+                                    </button>
                                 </motion.div>
                             ))}
                         </div>
                     </motion.div>
 
                     {/* Right Side - Static Image (hidden on mobile) */}
-                    <motion.div 
+                    <motion.div
                         variants={slideInRight}
                         className="hidden lg:flex items-center justify-center"
                     >
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}

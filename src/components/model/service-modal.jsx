@@ -95,24 +95,24 @@ export default function ServiceModal({ isOpen, onClose, service }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-8 ">
       <div
-        className="relative bg-[#111111] border border-gray-800 rounded-4xl w-fit max-w-6xl h-fit overflow-y-auto"
+        className="relative bg-[#111111] rounded-[40px] w-fit max-w-6xl h-fit overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 text-gray-400 hover:text-white transition-colors"
+          className="absolute right-10 hover:cursor-pointer top-6 z-10 text-gray-400 hover:text-white transition-colors"
         >
           <X size={24} />
         </button>
 
         {/* Modal content */}
-        <div className="p-6 md:p-8 lg:p-10">
+        <div className="p-6 md:p-8 lg:p-14">
           {/* Title */}
-          <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold text-white mb-2 md:mb-3 leading-[60px]">{data.title}</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-6xl 2xl:[64px] font-bold text-white mb-2 md:mb-3 leading-[60px]">{data.title}</h2>
 
           {/* Subtitle */}
-          <p className="text-base md:text-lg lg:text-3xl text-white mb-6 md:mb-8">{data.subtitle}</p>
+          <p className="text-base md:text-lg lg:text-[32px] text-white mb-6 md:mb-8">{data.subtitle}</p>
 
           {/* Content paragraphs */}
           <div className="space-y-4 md:space-y-6 mb-8 md:mb-10">
@@ -124,9 +124,9 @@ export default function ServiceModal({ isOpen, onClose, service }) {
           </div>
 
           {/* Visit Portfolio button */}
-          <button className="bg-[#FDC0C5] text-black px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-sm md:text-base lg:text-xl hover:bg-[#f8a8b0] transition-colors">
+          <a href="/about" className="bg-[#FDC0C5] hover:cursor-pointer text-black px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-sm md:text-base lg:text-xl hover:bg-[#f8a8b0] transition-colors">
             Visit Portfolio
-          </button>
+          </a>
         </div>
       </div>
     </div>
