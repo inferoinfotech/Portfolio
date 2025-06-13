@@ -229,14 +229,12 @@ export default function ArticlesSlider() {
                                         {/* Gradient Overlay - hidden on mobile, visible on larger screens */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent hidden lg:block" />
                                         {/* Content - positioned absolutely on larger screens, hidden on mobile */}
-                                        <motion.div
-                                            initial={{ opacity: 0, y: 20 }}
-                                            whileHover={{ opacity: 1, y: 0 }}
+                                        <div
                                             className="absolute bottom-0 left-0 right-0 p-8 hidden lg:block"
                                         >
                                             <h3 className="text-white font-bold text-base md:text-xl lg:text-2xl xl:text-3xl mb-3 text-center leading-tight">{article.title}</h3>
                                             <p className="text-[#CFCFCF] text-xs md:text-sm lg:text-base xl:text-xl text-center leading-5">{article.description}</p>
-                                        </motion.div>
+                                        </div>
                                     </motion.div>
                                     {/* Mobile Content - outside image, visible only on mobile */}
                                     <motion.div
