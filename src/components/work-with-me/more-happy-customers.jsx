@@ -1,9 +1,18 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
 import { Star } from "lucide-react"
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    scaleUp,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations';
 
 // Import Swiper styles
 import "swiper/css"
@@ -16,12 +25,39 @@ const StarRating = ({ rating }) => {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={`text-2xl  lg:text-3xl ${star <= rating ? "text-[#ecb476]" : "text-gray-300"}`}
+          className={`text-2xl lg:text-3xl ${star <= rating ? "text-[#ecb476]" : "text-gray-300"}`}
         >
           ★
         </span>
       ))}
     </div>
+  )
+}
+
+function TestimonialCard({ customer }) {
+  return (
+    <motion.div 
+      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10"
+      variants={scaleUp}
+      whileHover={{ y: -5 }}
+    >
+      <div className="flex items-center mb-6">
+        <motion.img
+          src={customer.image || "/placeholder.svg"}
+          alt={customer.name}
+          className="w-12 h-12 lg:w-20 lg:h-20 rounded-full mr-4 object-cover flex-shrink-0"
+          whileHover={{ scale: 1.05 }}
+        />
+        <div>
+          <h4 className="font-medium text-base md:text-xl xl:text-2xl text-black">{customer.name}</h4>
+          <p className="text-black/70 text-sm font-medium tracking-tight lg:text-base">{customer.title}</p>
+        </div>
+      </div>
+      <p className="text-black text-sm lg:text-base font-medium leading-6 tracking-tight xl:text-xl mb-4">
+        {customer.text}
+      </p>
+      <StarRating rating={customer.rating} />
+    </motion.div>
   )
 }
 
@@ -85,16 +121,37 @@ export default function MoreHappyCustomers() {
   }, [])
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 xl:py-16">
+    <motion.section 
+      className="w-full bg-white py-8 md:py-12 xl:py-16"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
+    >
       <div className="max-w-[1440px] mx-auto p-6 2xl:px-0">
-        <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-12 lg:mb-16"
+        >
+          <motion.h2
+            className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10"
+            variants={fadeUp}
+          >
             More Happy Customers
-          </h2>
-        </div>
+          </motion.h2>
+        </motion.div>
 
         {/* Mobile Slider with Swiper */}
-        <div className="md:hidden">
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:hidden"
+        >
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={20}
@@ -113,63 +170,61 @@ export default function MoreHappyCustomers() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
-        {/* Desktop Grid */}
         {/* Desktop Masonry Layout */}
-        <div className="hidden md:block">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="hidden md:block"
+        >
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {customers.map((customer, index) => (
-              <div key={index} className="break-inside-avoid">
+              <motion.div 
+                key={index} 
+                className="break-inside-avoid"
+                variants={fadeUp}
+                custom={index}
+              >
                 <TestimonialCard customer={customer} />
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center mt-8 md:mt-20">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center mt-8 md:mt-20"
+        >
           {/* Hire Me Button */}
-          <button
+          <motion.button
             onClick={() => setActiveButton("hire")}
             className={`px-8 md:px-20 py-3 md:py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] w-full md:w-auto cursor-pointer text-sm md:text-[22px] transition-colors
             ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Hire me now
-          </button>
+          </motion.button>
 
           {/* Free Call Button */}
-          <button
+          <motion.button
             onClick={() => setActiveButton("call")}
             className={`px-6 md:px-13 py-3 md:py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] w-full md:w-auto cursor-pointer text-sm md:text-[22px] transition-colors
             ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Let's have a free call
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
-    </section>
-  )
-}
-
-function TestimonialCard({ customer }) {
-  return (
-    <div className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10">
-      <div className="flex items-center mb-6">
-        <img
-          src={customer.image || "/placeholder.svg"}
-          alt={customer.name}
-          className="w-12 h-12 lg:w-20 lg:h-20 rounded-full mr-4 object-cover flex-shrink-0"
-        />
-        <div>
-          <h4 className="font-medium text-base md:text-xl xl:text-2xl text-black">{customer.name}</h4>
-          <p className="text-black/70 text-sm font-medium tracking-tight lg:text-base">{customer.title}</p>
-        </div>
-      </div>
-      <p className="text-black text-sm lg:text-base font-medium leading-6 tracking-tight xl:text-xl mb-4">
-        {customer.text}
-      </p>
-      <StarRating rating={customer.rating} />
-    </div>
+    </motion.section>
   )
 }
