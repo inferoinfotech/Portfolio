@@ -1,3 +1,15 @@
+"use client"
+
+import { motion } from "framer-motion";
+import {
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  scaleUp,
+  slideInLeft,
+  slideInRight
+} from '@/lib/framer-animations';
+
 export default function ScaleBusinessSection() {
   // Array of images with different widths for horizontal masonry effect
   const images = [
@@ -23,35 +35,64 @@ export default function ScaleBusinessSection() {
   ]
 
   return (
-    <div className="w-full overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="w-full overflow-hidden"
+    >
       {/* Stack on mobile and laptop, grid only on extra large screens */}
-      <div className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl1440:h-[70vh] xl1920:h-[64vh]">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl1440:h-[70vh] xl1920:h-[64vh]"
+      >
         {/* Left Content - Full width on mobile and laptop */}
-        <div className="flex items-center justify-center bg-white py-16 xl:py-0">
+        <motion.div
+          variants={slideInLeft}
+          className="flex items-center justify-center bg-white py-16 xl:py-0"
+        >
           <div className="w-full max-w-2xl mx-auto px-6">
             {/* Responsive heading */}
-            <h1 className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-16 lg:leading-tight mb-6 xl:mb-8 tracking-tight">
+            <motion.h1
+              variants={fadeUp}
+              className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-16 lg:leading-tight mb-6 xl:mb-8 tracking-tight"
+            >
               Can't figure out How to scale your business{" "}
               and convert leads?
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p className="text-black/50 text-[24px] text-center md:text-2xl md:text-left font-normal mb-8 xl:mb-12">Let me sort it out for you</p>
+            <motion.p
+              variants={fadeUp}
+              transition={{ delay: 0.1 }}
+              className="text-black/50 text-[24px] text-center md:text-2xl md:text-left font-normal mb-8 xl:mb-12"
+            >
+              Let me sort it out for you
+            </motion.p>
 
             {/* CTA Button */}
-            <div className="flex justify-center md:justify-start">
-              <button className="md:bg-black cursor-pointer md:text-white text-sm md:text-base xl:text-[22px] px-6 py-3 md:px-12 md:py-7 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition text-black text-center">
+            <motion.div
+              variants={fadeUp}
+              transition={{ delay: 0.2 }}
+              className="flex justify-center md:justify-start"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="md:bg-black cursor-pointer md:text-white text-sm md:text-base xl:text-[22px] px-6 py-3 md:px-12 md:py-7 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] hover:bg-gray-900 transition text-black text-center"
+              >
                 Let's have a free call
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Images - Grid - Hidden on mobile, tablet, and laptop (up to 1279px) */}
         <div className="hidden xl:block bg-black min-h-[60vh] xl:h-full overflow-hidden">
           <div className="grid grid-cols-6 gap-4">
             {images.map((img, index) => {
-              // Create rows of exactly 3 images each
               const rowIndex = Math.floor(index / 3)
               const isNewRow = index % 3 === 0
 
@@ -73,7 +114,7 @@ export default function ScaleBusinessSection() {
             })}
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
