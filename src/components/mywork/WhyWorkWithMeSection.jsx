@@ -86,12 +86,16 @@ export default function WhyWorkWithMeSection() {
                 {/* CTA Buttons - Desktop */}
                 <div className="hidden lg:flex lg:justify-end lg:mt-8">
                     <div className="flex flex-col gap-4 w-full ps-6 max-w-1/2">
-                        <button className="w-full hover:cursor-pointer bg-black text-white py-4 rounded-[20px] text-[25px] font-medium hover:bg-gray-800 transition-colors">
-                            Hire me
-                        </button>
-                        <button className="w-full hover:cursor-pointer bg-[#EDEDEDB2] text-black py-4 rounded-[20px] text-[25px] font-medium hover:bg-gray-200 transition-colors">
-                            Schedule a free call
-                        </button>
+                        <a href="/workwithme">
+                            <button className="w-full hover:cursor-pointer bg-black text-white py-4 rounded-[20px] text-[25px] font-medium hover:bg-gray-800 transition-colors">
+                                Hire me
+                            </button>
+                        </a>
+                        <a href="/workwithme">
+                            <button className="w-full hover:cursor-pointer bg-[#EDEDEDB2] text-black py-4 rounded-[20px] text-[25px] font-medium hover:bg-gray-200 transition-colors">
+                                Schedule a free call
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

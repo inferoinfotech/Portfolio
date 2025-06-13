@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
+import PortfolioModal from '../model/portfolio-modal';
 import {
     fadeUp,
     fadeIn,
@@ -9,8 +10,10 @@ import {
     slideInLeft,
     slideInRight
 } from '@/lib/framer-animations';
+import { useState } from "react";
 
 export default function SuccessRateSection() {
+    const [isPortfolioModalOpen, setIsPortfolioModalOpen] = useState(false);
     return (
         <motion.section
             initial="hidden"
@@ -40,6 +43,7 @@ export default function SuccessRateSection() {
                             variants={fadeUp}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => setIsPortfolioModalOpen(true)} // Add this line
                             className="bg-[#FDC0C5] hover:cursor-pointer hover:bg-[#FDC0C5]/80 text-black font-medium px-[70px] py-10 rounded-full text-2xl transition-colors"
                         >
                             Visit Portfolio
@@ -180,12 +184,18 @@ export default function SuccessRateSection() {
                         variants={fadeUp}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={() => setIsPortfolioModalOpen(true)}
                         className="bg-[#FDC0C5] hover:bg-[#FDC0C5]/80 text-black text-xs font-medium px-4 py-2 rounded-full transition-colors"
                     >
                         Visit Portfolio
                     </motion.button>
                 </motion.div>
             </div>
+            <PortfolioModal
+                isOpen={isPortfolioModalOpen}
+                onClose={() => setIsPortfolioModalOpen(false)}
+            />
         </motion.section>
+
     )
 }

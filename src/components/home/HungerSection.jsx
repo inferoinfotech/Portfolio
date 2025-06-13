@@ -10,6 +10,7 @@ import {
     slideInLeft,
     slideInRight
 } from '@/lib/framer-animations';
+import Link from "next/link";
 
 export default function HungerSection() {
     return (
@@ -74,14 +75,16 @@ export default function HungerSection() {
                                     transforming lives.
                                 </motion.p>
 
-                                <motion.button
-                                    variants={fadeUp}
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="bg-[#F5F5F5] w-max xl:w-2xs hover:cursor-pointer hover:bg-[#F5F5F5]/80 text-black font-bold px-5 py-3 md:py-5 xl:px-5 xl:py-8 rounded-full text-[10px] md:text-base xl:text-[25px] transition-colors"
-                                >
-                                    Meet Saleh Bilal
-                                </motion.button>
+                                <a href="/about">
+                                    <motion.button
+                                        variants={fadeUp}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="bg-[#F5F5F5] w-max xl:w-2xs hover:cursor-pointer hover:bg-[#F5F5F5]/80 text-black font-bold px-5 py-3 md:py-5 xl:px-5 xl:py-8 rounded-full text-[10px] md:text-base xl:text-[25px] transition-colors"
+                                    >
+                                        Meet Saleh Bilal
+                                    </motion.button>
+                                </a>
                             </motion.div>
                         </motion.div>
                     </motion.div>
