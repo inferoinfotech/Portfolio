@@ -4,6 +4,15 @@ import { useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion } from "framer-motion"
+import {
+    fadeUp,
+    fadeIn,
+    staggerContainer,
+    scaleUp,
+    slideInLeft,
+    slideInRight
+} from '@/lib/framer-animations'
 
 // Import Swiper styles
 import "swiper/css"
@@ -89,42 +98,61 @@ export default function ArticlesSlider() {
     const swiperRef = useRef()
 
     return (
-        <section className="w-full py-6 lg:py-16">
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="w-full py-6 lg:py-16"
+        >
             <div className="w-full">
                 {/* Header */}
-                <div className="flex container mx-auto items-center justify-between">
-                    <div className="flex ml-5 xl:ml-0">
+                <motion.div
+                    variants={staggerContainer}
+                    className="flex container mx-auto items-center justify-between"
+                >
+                    <motion.div
+                        variants={fadeUp}
+                        className="flex ml-5 xl:ml-0"
+                    >
                         <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[40px] font-medium text-black">My Top Articles</h2>
                         <button className="flex items-center gap-2 ms-4 hover:cursor-pointer text-gray-600 hover:text-gray-900 transition-colors">
                             <span className="text-sm font-medium hover:border-b border-b-black transition-all">See all</span>
                             <ChevronRight className="w-3 h-3" />
                         </button>
-                    </div>
+                    </motion.div>
                     {/* Actions */}
-                    <div className="flex items-center gap-6">
-                        {/* See all button */}
-
-
+                    <motion.div
+                        variants={fadeUp}
+                        className="flex items-center gap-6"
+                    >
                         {/* Navigation arrows */}
                         <div className="hidden px-5 lg:flex gap-3">
-                            <button
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 onClick={() => swiperRef.current?.slidePrev()}
                                 className="w-12 h-12 rounded-full bg-black hover:cursor-pointer text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
                             >
                                 <ChevronLeft className="w-5 h-5" />
-                            </button>
-                            <button
+                            </motion.button>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 onClick={() => swiperRef.current?.slideNext()}
                                 className="w-12 h-12 rounded-full bg-black text-white hover:cursor-pointer flex items-center justify-center hover:bg-gray-800 transition-colors"
                             >
                                 <ChevronRight className="w-5 h-5" />
-                            </button>
+                            </motion.button>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
                 {/* Swiper Slider */}
-                <div className="relative">
+                <motion.div
+                    variants={fadeUp}
+                    className="relative"
+                >
                     <Swiper
                         onBeforeInit={(swiper) => {
                             swiperRef.current = swiper
@@ -176,10 +204,20 @@ export default function ArticlesSlider() {
                         }}
                         className="articles-swiper !pb-16 !pt-8"
                     >
-                        {articles.map((article) => (
+                        {articles.map((article, index) => (
                             <SwiperSlide key={article.id}>
-                                <div className="group cursor-grab">
-                                    <div className="relative w-[166px] h-[173px] md:w-[230px] md:h-[300px] lg:w-auto lg:h-[446px] xl:w-auto xl:h-[446px] rounded-[10px] lg:rounded-[30px] overflow-hidden transform transition-all duration-300 hover:scale-105">
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    variants={fadeUp}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="group cursor-grab"
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.03 }}
+                                        className="relative w-[166px] h-[173px] md:w-[230px] md:h-[300px] lg:w-auto lg:h-[446px] xl:w-auto xl:h-[446px] rounded-[10px] lg:rounded-[30px] overflow-hidden transform transition-all duration-300"
+                                    >
                                         {/* Background Image */}
                                         <div className="absolute inset-0">
                                             <img
@@ -191,22 +229,32 @@ export default function ArticlesSlider() {
                                         {/* Gradient Overlay - hidden on mobile, visible on larger screens */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent hidden lg:block" />
                                         {/* Content - positioned absolutely on larger screens, hidden on mobile */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-8 hidden lg:block">
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileHover={{ opacity: 1, y: 0 }}
+                                            className="absolute bottom-0 left-0 right-0 p-8 hidden lg:block"
+                                        >
                                             <h3 className="text-white font-bold text-base md:text-xl lg:text-2xl xl:text-3xl mb-3 text-center leading-tight">{article.title}</h3>
                                             <p className="text-[#CFCFCF] text-xs md:text-sm lg:text-base xl:text-xl text-center leading-5">{article.description}</p>
-                                        </div>
-                                    </div>
+                                        </motion.div>
+                                    </motion.div>
                                     {/* Mobile Content - outside image, visible only on mobile */}
-                                    <div className="block lg:hidden mt-4 px-2">
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 + 0.2 }}
+                                        className="block lg:hidden mt-4 px-2"
+                                    >
                                         <h3 className="text-black font-bold text-base md:text-xl lg:text-2xl mb-0 text-left leading-tight">{article.title}</h3>
                                         <p className="text-[#A5A5A5] text-xs md:text-sm lg:text-base text-left leading-5">{article.description}</p>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }
