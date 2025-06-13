@@ -53,7 +53,7 @@ export default function TopReadsSectionAbout() {
 
   return (
     <section className="w-full bg-white py-8 md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 md:px-0">
+      <div className="container mx-auto px-4 2xl:px-0">
         {/* Section title */}
         <div className="text-center md:mb-4 mb-2">
           <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[48px]  ">
@@ -62,7 +62,7 @@ export default function TopReadsSectionAbout() {
         </div>
 
         {/* Section subtitle */}
-        <div className="max-w-lg mx-auto mb-8 md:mb-12">
+        <div className="max-w-lg mx-auto mb-8 xl:mb-10">
           <p className="font-medium text-base md:text-lg lg:text-[20px] tracking-[0] text-center">
             Reading books has always given me a competitive edge as my creativity gets nourished and focused
           </p>
@@ -82,7 +82,7 @@ export default function TopReadsSectionAbout() {
           {books.map((book, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
-                className={`overflow-hidden w-full max-w-[150px] h-[230px] sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color}`}
+                className={`overflow-hidden w-full max-w-[150px] h-[230px] hover:cursor-pointer hover:scale-105 transition-all sm:max-w-[180px] sm:h-[280px] md:max-w-[200px] md:h-[310px] lg:max-w-[221px] lg:h-[340px] mb-3 ${book.color}`}
               >
                 <img src={book.cover || "/placeholder.svg"} alt={book.title} className="w-full h-full object-cover" />
               </div>

@@ -2,8 +2,8 @@
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-black text-white relative max-h-screen py-0 md:py-[75px] lg:py-0 xl:py-0">
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
+    <section className="w-full bg-black text-white relative max-h-screen py-0 md:py-[75px] lg:py-0 xl:py-0 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 relative z-20 pt-3 lg:pt-0">
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center text-center">
           {/* Content */}
@@ -23,10 +23,10 @@ export default function AboutSection() {
           </div>
 
           {/* Image with Pink Background */}
-          <div className="relative w-full max-w-sm mx-auto">
+          <div className="relative w-full max-w-sm mx-auto overflow-hidden">
             {/* Pink Background */}
-            <div className="bg-[#FDC0C5] rounded-t-3xl md:rounded-[40px] md:p-6 h-[350px] sm:h-[500px] md:h-[550px] -z-10">
-              <div className="relative w-full h-[350px] sm:h-[500px] md:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden -mb-8 md:-mb-12">
+            <div className="bg-[#FDC0C5] rounded-t-3xl md:rounded-[40px] md:p-6 h-[350px] sm:h-[500px] md:h-[470px] lg::h-[550px] -z-10">
+              <div className="relative w-full h-[350px] sm:h-[500px] md:h-[420px] lg:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden -mb-8 md:-mb-12">
                 <img
                   src="../images/About-banner-img.png"
                   alt="Saleh Bilal"

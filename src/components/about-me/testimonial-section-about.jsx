@@ -23,18 +23,18 @@ export default function TestimonialSectionAbout() {
   ]
 
   return (
-    <section className="w-full bg-black py-8 md:py-12 lg:pt-28">
+    <section className="w-full bg-black py-8 md:py-12 xl:pt-28">
       <div className="w-full px-4 md:px-6">
         {/* Quote */}
-        <div className="mb-8 md:mb-20 text-center px-10 md:px-0">
-          <h2 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[96px] leading-[50px]  md:leading-[90px] font-medium tracking-[-0.03em] text-center text-white container mx-auto">
+        <div className="mb-8 md:mb-12 xl:mb-20 text-center px-10 md:px-0">
+          <h2 className="text-5xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[96px] leading-[50px] lg:leading-16 2xl:leading-[90px] font-medium tracking-[-0.03em] text-center text-white container mx-auto">
             " Pirate ipsum arrgh bounty warp jack. Shrouds grog{" "}
             <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red gabion sloop black crow's"
           </h2>
         </div>
 
         {/* Author */}
-        <div className="flex items-center justify-center mb-8 md:mb-12 lg:mb-28">
+        <div className="flex items-center justify-center mb-8 md:mb-12 xl:mb-28">
           <div className="flex items-center space-x-3 md:space-x-4">
             {/* Profile Image with pink background */}
             <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDC0C5] rounded-full p-1">
@@ -52,7 +52,7 @@ export default function TestimonialSectionAbout() {
         </div>
 
         {/* Image gallery */}
-        <div className="mb-8 md:mb-32">
+        <div className="mb-8 md:mb-16 xl:mb-32">
           {/* Desktop: 5 columns with minimal gap */}
           <div className="hidden md:grid md:grid-cols-5 gap-2 lg:gap-3">
             {images.map((image, index) => (
@@ -66,11 +66,11 @@ export default function TestimonialSectionAbout() {
           <div className="md:hidden">
             <div className="flex items-center justify-center">
               <div className="w-full max-w-sm">
-                <img  src="../images/MY EXPERIENCE About-1.jpg"
+                <img src="../images/MY EXPERIENCE About-1.jpg"
                   alt="Person working with laptop in modern workspace"
                   width={400}
                   height={600}
-                  className="w-full h-[500px] rounded-[35px] object-cover "/>
+                  className="w-full h-[500px] rounded-[35px] object-cover " />
               </div>
             </div>
           </div>
@@ -101,17 +101,17 @@ export default function TestimonialSectionAbout() {
 
         {/* Achievements */}
         <div className="max-w-5xl px-10 md:px-0 mx-auto">
-          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-[60px] tracking-[-0.03em] text-white mb-6 md:mb-20">
+          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 xl:mb-16">
             He's been named in the top 50 of Worth Magazine's 100 most powerful people in global finance for three
             consecutive years, honored by Harvard Business Press as one of the "Top 200 Business Gurus", and by American
             Express as one of the "Top Six Business Leaders in the World" to coach its entrepreneurial clients.
           </p>
 
-          <p className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-[60px] tracking-[-0.03em] mb-6 md:mb-20">
+          <p className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 xl:mb-16">
             Fortune's cover article named him the "CEO Whisperer."
           </p>
 
-          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-[60px] tracking-[-0.03em] text-white md:mb-6">
+          <p className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] text-white md:mb-6">
             And it's why leaders call upon him to help them lead.
           </p>
         </div>

@@ -86,7 +86,7 @@ export default function FreelancerTestimonials() {
             See what my clients from upwork and freelancer have to say
           </p>
         </div>
-  
+
         {/* Mobile Slider */}
         {isMobile ? (
           <div className="relative">
@@ -96,24 +96,22 @@ export default function FreelancerTestimonials() {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 rounded-[30px] bg-[#F8F8F8]">
-                    <div className=" p-8  ">
-                      <div className="flex items-center mb-4">
-                        <img
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-3 object-cover"
-                        />
-                        <div className="min-w-0">
-                          <h4 className="text-black font-medium text-[20px] leading-[100%] 
+                  <div key={index} className="w-full p-8 rounded-[30px] bg-[#F8F8F8]">
+                    <div className="flex items-center mb-4">
+                      <img
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.name}
+                        className="w-12 h-12 rounded-full mr-3 object-cover"
+                      />
+                      <div className="min-w-0">
+                        <h4 className="text-black font-medium text-[20px] leading-[100%] 
                           tracking-[-0.01em] mb-1">{testimonial.name}</h4>
-                          <p className="text-black/70 text-[16px] font-medium leading-[100%] 
+                        <p className="text-black/70 text-[16px] font-medium leading-[100%] 
                           tracking-[-0.01em]">{testimonial.title}</p>
-                        </div>
                       </div>
-                      <p className="text-black font-medium text-[16px] leading-relaxed mb-3">{testimonial.text}</p>
-                      <StarRating rating={testimonial.rating} className="text-2xl" />
                     </div>
+                    <p className="text-black font-medium text-[16px] leading-relaxed mb-3">{testimonial.text}</p>
+                    <StarRating rating={testimonial.rating} className="text-2xl" />
                   </div>
                 ))}
               </div>
@@ -133,9 +131,9 @@ export default function FreelancerTestimonials() {
           </div>
         ) : (
           /* Desktop Grid */
-          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20 xl:gap-32">
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-[#FDFDFD] rounded-[30px] p-4 sm:p-0">
+              <div key={index} className="bg-[#FDFDFD] rounded-[30px] p-14">
                 <div className="flex items-center mb-6 sm:mb-8">
                   <img
                     src={testimonial.image || "/placeholder.svg"}
