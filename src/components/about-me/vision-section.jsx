@@ -48,13 +48,13 @@ export default function VisionSection() {
           <motion.div 
             variants={fadeUp}
             transition={{ delay: 0.1 }}
-            className="container mx-auto mb-8 md:mb-12 lg:mb-16"
+            className="max-w-container mx-auto mb-8 md:mb-12 lg:mb-16"
           >
-            <div className="max-w-7xl text-center mx-auto">
+            <div className="max-w-6xl text-center mx-auto">
               <motion.p 
                 variants={fadeUp}
                 transition={{ delay: 0.2 }}
-                className="text-4xl md:text-4xl lg:text-5xl xl:text-[64px] leading-10 lg:leading-12 xl:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0"
+                className="text-4xl md:text-4xl lg:text-5xl xl:text-[54px] leading-10 lg:leading-12 xl:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0"
               >
                 Pirate ipsum arrgh bounty warp jack. Or lass landlubbr spanker dead league coast. Pirate ipsum arrgh
                 bounty warp jack. Or lass landlubbr spanker dead league coast.

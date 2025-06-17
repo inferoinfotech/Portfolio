@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="bg-black text-white py-8 lg:py-20 px-4 lg:px-8 lg:min-h-screen flex flex-col justify-between"
+            className="bg-black text-white py-8 lg:py-12 px-4 lg:px-8 lg:min-h-screen flex flex-col justify-between"
         >
             {/* Header */}
             <motion.div
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex justify-center mb-16"
+                className="flex justify-center mb-4 xl:mb-0"
             >
                 <div className="flex items-center gap-3">
                     <motion.div
@@ -116,21 +116,21 @@ export default function TestimonialsSection() {
             </motion.div>
 
             {/* Desktop Layout */}
-            <div className="hidden container mx-auto lg:block">
+            <div className="hidden max-w-3xl mx-auto lg:block">
                 {/* Main Quote */}
                 <motion.div
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="container mx-auto text-center mb-20"
+                    className="max-w-3xl mx-auto text-center mb-20"
                 >
                     <motion.blockquote
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-20 max-w-6xl text-center font-medium mx-auto"
+                        className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-20 max-w-3xl text-center font-medium mx-auto"
                     >
                         <motion.span
                             variants={scaleUp}

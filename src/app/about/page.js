@@ -14,12 +14,12 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <AboutSection />
-      <VisionSection />
-      <ExperienceSectionAbout />
+      {/* <AboutSection /> */}
+     <VisionSection />
+        {/*<ExperienceSectionAbout />
       <TestimonialSectionAbout />
       <TopReadsSectionAbout />
-      <HeroCTASectionAbout />
+      <HeroCTASectionAbout /> */}
     </>
   );
 };

@@ -63,9 +63,9 @@ export default function KeyBenefitsSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="py-10 md:py-14 lg:py-16 xl:py-24 px-4 lg:px-8 bg-white"
+            className="py-8 md:py-8 lg:py-12 xl:py-12 px-4 lg:px-8 bg-white"
         >
-            <div className="container mx-auto">
+            <div className="max-w-container mx-auto">
                 {/* Header */}
                 <motion.div
                     variants={fadeUp}
@@ -90,7 +90,7 @@ export default function KeyBenefitsSection() {
                     <motion.h1
                         variants={fadeUp}
                         transition={{ delay: 0.1 }}
-                        className="text-[40px] lg:text-5xl xl:text-8xl font-medium text-black leading-tight"
+                        className="text-[40px] lg:text-5xl xl:text-7xl font-medium text-black leading-tight"
                     >
                         Create a competitive edge
                     </motion.h1>
@@ -115,7 +115,7 @@ export default function KeyBenefitsSection() {
                                 >
                                     <motion.div
                                         whileHover={{ scale: 1.05 }}
-                                        className="w-12 h-12 md:h-13 xl:w-14 md:w-13 xl:h-14 bg-[#D9D9D966] rounded-[5px] lg:rounded-2xl flex items-center justify-center"
+                                        className="w-12 h-12 md:h-13 xl:w-14 md:w-13 xl:h-14 cursor-pointer bg-[#D9D9D966] rounded-[5px] lg:rounded-2xl flex items-center justify-center"
                                     >
                                         <IconComponent className="w-6 h-6 2xl:w-7 2xl:h-7 text-gray-700" />
                                     </motion.div>

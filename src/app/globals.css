@@ -175,3 +175,7 @@ body {
 .masonry-grid-item {
   margin-bottom: 16px;
 }
+
+.max-w-container{
+  max-width: 1400px !important;
+}

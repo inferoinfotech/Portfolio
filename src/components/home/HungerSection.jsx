@@ -19,13 +19,13 @@ export default function HungerSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="w-full py-5 sm:py-12 md:py-24 lg:py-32"
+            className="w-full py-4 sm:py-8 md:py-12 lg:py-16"
         >
-            <div className="container px-4 md:px-2 xl:px-0 mx-auto">
+            <div className="max-w-container px-4 md:px-2 xl:px-0 mx-auto">
                 {/* Top Section */}
                 <motion.h1
                     variants={fadeUp}
-                    className="text-black text-2xl md:text-4xl xl:text-[64px] mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl leading-tight text-start font-bold"
+                    className="text-black text-2xl md:text-4xl xl:text-6xl mb-5 lg:mb-10 pr-20 lg:pr-0 lg:max-w-2xl leading-tight text-start font-bold"
                 >
                     Do you have a hunger to increase the quality of your life?
                 </motion.h1>

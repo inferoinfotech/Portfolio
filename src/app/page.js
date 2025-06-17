@@ -18,10 +18,10 @@ export default function Home() {
       <ArticlesSlider />
       <PressSection />
       <ServicesSection />
-      <HungerSection />
+      {/* <HungerSection /> */}
       <SuccessRateSection />
       <TestimonialsSection />
-      <KeyBenefitsSection />
+       <KeyBenefitsSection />
       <HeroCTASection />
     </main>
   );

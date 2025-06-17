@@ -13,19 +13,19 @@ import {
 
 export default function AboutSection() {
     return (
-        <section className="py-16 px-4 bg-white">
-            <div className="container mx-auto">
+        <section className="lg:py-12 py-8 lg:px-8 px-4 bg-white">
+            <div className="max-w-container mx-auto">
                 {/* Header */}
                 <motion.div
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="text-center mb-8 lg:mb-16"
+                    className="text-center mb-8 lg:mb-12"
                 >
-                    <div className="flex items-center justify-center mb-3 lg:mb-6">
+                    <div className="flex items-center justify-center mb-3 lg:mb-4">
                         <div className="lg:w-3 lg:h-3 w-1.5 h-1.5 bg-black rounded-full mr-4"></div>
-                        <h2 className="text-xs sm:text-sm md:text-base lg:text-xl font-medium tracking-[5] lg:tracking-[10] uppercase text-black">ABOUT ME</h2>
+                        <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-medium tracking-[5] lg:tracking-[10] uppercase text-black">ABOUT ME</h2>
                     </div>
 
                     <motion.h1
@@ -34,7 +34,7 @@ export default function AboutSection() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] xl:text-[70px] font-bold text-black mb-4 xl:mt-20"
+                        className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] xl:text-[55px] 2xl:text-[60px] font-bold text-black mb-4 xl:mt-12"
                     >
                         Who Is <span className="text-[#FDC0C5]">Saleh Bilal?</span>
                     </motion.h1>
@@ -45,7 +45,7 @@ export default function AboutSection() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-[#1E1E1E] font-normal text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl -mt-2"
+                        className="text-[#1E1E1E] font-normal text-xs sm:text-sm md:text-base lg:text-xl xl:text-xl -mt-2"
                     >
                         Words That Drive Success.
                     </motion.p>
@@ -62,7 +62,7 @@ export default function AboutSection() {
                         className="flex flex-col items-center lg:items-center"
                     >
                         {/* Profile Image Placeholder */}
-                        <motion.div variants={scaleUp} className="w-40 h-40 md:w-80 md:h-80 lg:w-80 lg:h-80 xl:w-[420px] xl:h-[420px] 2xl:w-[480px] 2xl:h-[480px]  rounded-full mb-8 flex items-center justify-center shrink-0">
+                        <motion.div variants={scaleUp} className="w-60 h-60 md:w-80 md:h-80 lg:w-80 lg:h-80 xl:w-[350px] xl:h-[350px] 2xl:w-[350px] 2xl:h-[350px]  rounded-full mb-8 flex items-center justify-center shrink-0">
                             <img
                                 src="/images/Profileimage.jpg"
                                 alt="Saleh Bilal"
@@ -119,7 +119,7 @@ export default function AboutSection() {
                             whileInView="visible"
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl lg:text-4xl xl:text-[40px] font-bold text-black mb-8"
+                            className="text-3xl lg:text-4xl xl:text-3xl font-bold text-black mb-6"
                         >
                             Hey, I'm Saleh
                         </motion.h3>
@@ -129,7 +129,7 @@ export default function AboutSection() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="space-y-6 text-black px-10 lg:px-0 tracking-normal text-base md:text-xl 2xl:text-2xl font-medium leading-5 lg:leading-relaxed"
+                            className="space-y-6 text-black lg:px-0 tracking-normal text-base md:text-xl 2xl:text-xl font-medium leading-5 lg:leading-relaxed"
                         >
                             <motion.p variants={fadeUp}>
                                 I'm a dynamic content writer and digital marketer, passionate about crafting compelling narratives that

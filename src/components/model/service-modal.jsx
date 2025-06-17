@@ -109,15 +109,15 @@ export default function ServiceModal({ isOpen, onClose, service }) {
         {/* Modal content */}
         <div className="p-6 md:p-8 lg:p-14">
           {/* Title */}
-          <h2 className="text-2xl md:text-3xl lg:text-6xl 2xl:[64px] font-bold text-white mb-2 md:mb-3 leading-[60px]">{data.title}</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl 2xl:[54px] font-bold text-white mb-2 md:mb-3 leading-[60px]">{data.title}</h2>
 
           {/* Subtitle */}
-          <p className="text-base md:text-lg lg:text-[32px] text-white mb-6 md:mb-8">{data.subtitle}</p>
+          <p className="text-base md:text-lg lg:text-2xl text-white mb-6 md:mb-8">{data.subtitle}</p>
 
           {/* Content paragraphs */}
           <div className="space-y-4 md:space-y-6 mb-8 md:mb-10">
             {data.content.map((paragraph, index) => (
-              <p key={index} className="text-sm md:text-base lg:text-[24px] font-normal text-justify tracking-[-0.03em] text-white/70">
+              <p key={index} className="text-sm md:text-base lg:text-xl font-normal text-justify tracking-[-0.03em] text-white/70">
                 {paragraph}
               </p>
             ))}
