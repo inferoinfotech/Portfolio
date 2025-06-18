@@ -56,7 +56,7 @@ export default function SearchSection() {
     const [searchQuery, setSearchQuery] = useState("")
 
     return (
-        <section className="py-16 relative px-4 lg:px-8 bg-gray-50">
+        <section className="py-16 relative bg-gray-50">
             {/* Linear Gradient Overlay - Higher z-index */}
             <div
                 className="absolute inset-0 z-10"
@@ -68,7 +68,7 @@ export default function SearchSection() {
                 }}
             ></div>
 
-            <div className="container mx-auto">
+            <div className="max-w-container w-full mx-auto px-4">
                 {/* Header and Search */}
                 <div className="mb-12">
                     {/* Title */}

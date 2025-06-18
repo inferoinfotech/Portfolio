@@ -50,13 +50,13 @@ const gridBlogs = [
 
 export default function BlogGridSection() {
     return (
-        <section className="py-10 lg:py-16 px-4 lg:px-8">
-            <div className="container mx-auto">
+        <section className="py-10 lg:py-16 ">
+            <div className="max-w-container w-full px-4 mx-auto">
                 {/* Desktop Layout - 6 blogs in 3x2 grid */}
                 <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8">
                     {gridBlogs.map((blog) => (
                         <div key={blog.id} className="group cursor-pointer">
-                            <div className="relative h-[400px] rounded-[30px] overflow-hidden">
+                            <div className="relative h-[350px] rounded-[30px] overflow-hidden">
                                 <img
                                     src={blog.image || "/placeholder.svg"}
                                     alt={blog.title}

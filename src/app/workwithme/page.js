@@ -18,7 +18,7 @@ const WorkWithMePage = () => {
         <>
         <HeroBusinessSection />
         <FreelancerTestimonials/>
-        <LinkedInStrategySection />
+         <LinkedInStrategySection />
         <OneOnOneCallSection />
         <TopClientReview />
         <MoreHappyCustomers />

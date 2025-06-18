@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination } from "swiper/modules"
-import { Star } from "lucide-react"
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Star } from "lucide-react";
 import {
-    fadeUp,
-    fadeIn,
-    staggerContainer,
-    scaleUp,
-    slideInLeft,
-    slideInRight
-} from '@/lib/framer-animations';
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  scaleUp,
+  slideInLeft,
+  slideInRight,
+} from "@/lib/framer-animations";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/autoplay"
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const StarRating = ({ rating }) => {
   return (
@@ -25,19 +25,21 @@ const StarRating = ({ rating }) => {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={`text-2xl lg:text-3xl ${star <= rating ? "text-[#ecb476]" : "text-gray-300"}`}
+          className={`text-2xl lg:text-3xl ${
+            star <= rating ? "text-[#ecb476]" : "text-gray-300"
+          }`}
         >
           ★
         </span>
       ))}
     </div>
-  )
-}
+  );
+};
 
 function TestimonialCard({ customer }) {
   return (
-    <motion.div 
-      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10"
+    <motion.div
+      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-5 2xl:p-10"
       variants={scaleUp}
       whileHover={{ y: -5 }}
     >
@@ -49,8 +51,12 @@ function TestimonialCard({ customer }) {
           whileHover={{ scale: 1.05 }}
         />
         <div>
-          <h4 className="font-medium text-base md:text-xl xl:text-2xl text-black">{customer.name}</h4>
-          <p className="text-black/70 text-sm font-medium tracking-tight lg:text-base">{customer.title}</p>
+          <h4 className="font-medium text-base md:text-xl xl:text-2xl text-black">
+            {customer.name}
+          </h4>
+          <p className="text-black/70 text-sm font-medium tracking-tight lg:text-base">
+            {customer.title}
+          </p>
         </div>
       </div>
       <p className="text-black text-sm lg:text-base font-medium leading-6 tracking-tight xl:text-xl mb-4">
@@ -58,12 +64,12 @@ function TestimonialCard({ customer }) {
       </p>
       <StarRating rating={customer.rating} />
     </motion.div>
-  )
+  );
 }
 
 export default function MoreHappyCustomers() {
-  const [isMobile, setIsMobile] = useState(false)
-  const [activeButton, setActiveButton] = useState("hire")
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeButton, setActiveButton] = useState("hire");
 
   const customers = [
     {
@@ -108,27 +114,27 @@ export default function MoreHappyCustomers() {
       text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
       rating: 5,
     },
-  ]
+  ];
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+      setIsMobile(window.innerWidth < 768);
+    };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
-    <motion.section 
-      className="w-full bg-white py-8 md:py-12 xl:py-16"
+    <motion.section
+      className="w-full bg-white py-8 md:py-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
     >
-      <div className="max-w-[1440px] mx-auto p-6 2xl:px-0">
+      <div className="max-w-container w-full mx-auto px-4 2xl:px-0">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -137,7 +143,7 @@ export default function MoreHappyCustomers() {
           className="text-center mb-8 md:mb-12 lg:mb-16"
         >
           <motion.h2
-            className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10"
+            className="font-bold text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 md:mb-5 xl:mb-10"
             variants={fadeUp}
           >
             More Happy Customers
@@ -160,7 +166,8 @@ export default function MoreHappyCustomers() {
             pagination={{
               clickable: true,
               bulletClass: "swiper-pagination-bullet custom-bullet",
-              bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active custom-bullet-active",
             }}
             className="testimonial-swiper articles-swiper !pb-14 !pt-4"
           >
@@ -180,10 +187,10 @@ export default function MoreHappyCustomers() {
           viewport={{ once: true }}
           className="hidden md:block"
         >
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 lg:gap-8 gap-2 space-y-6">
             {customers.map((customer, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="break-inside-avoid"
                 variants={fadeUp}
                 custom={index}
@@ -206,7 +213,11 @@ export default function MoreHappyCustomers() {
           <motion.button
             onClick={() => setActiveButton("hire")}
             className={`px-8 md:px-20 py-3 md:py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] w-full md:w-auto cursor-pointer text-sm md:text-[22px] transition-colors
-            ${activeButton === "hire" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}`}
+            ${
+              activeButton === "hire"
+                ? "bg-black text-white"
+                : "border-2 border-black text-black bg-transparent"
+            }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -217,7 +228,11 @@ export default function MoreHappyCustomers() {
           <motion.button
             onClick={() => setActiveButton("call")}
             className={`px-6 md:px-13 py-3 md:py-6 rounded-full font-medium shadow-[0px_4px_4px_0px_#00000040] w-full md:w-auto cursor-pointer text-sm md:text-[22px] transition-colors
-            ${activeButton === "call" ? "bg-black text-white" : "border-2 border-black text-black bg-transparent"}`}
+            ${
+              activeButton === "call"
+                ? "bg-black text-white"
+                : "border-2 border-black text-black bg-transparent"
+            }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -226,5 +241,5 @@ export default function MoreHappyCustomers() {
         </motion.div>
       </div>
     </motion.section>
-  )
+  );
 }

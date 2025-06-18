@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import { Clock } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { Clock } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
-    fadeUp,
-    fadeIn,
-    staggerContainer,
-    scaleUp,
-    slideInLeft,
-    slideInRight
-} from '@/lib/framer-animations';
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  scaleUp,
+  slideInLeft,
+  slideInRight,
+} from "@/lib/framer-animations";
 
 const topArticles = [
   {
     id: 1,
-    title: "Be someone that everyone just thinks to be. Not someone who doesn't know himself",
+    title:
+      "Be someone that everyone just thinks to be. Not someone who doesn't know himself",
     category: "Social media",
     categoryColor: "bg-[#FDC0C5]",
     image: "/videos/articlevideo.mp4",
@@ -24,7 +25,8 @@ const topArticles = [
   },
   {
     id: 2,
-    title: "Be someone that everyone just thinks to be. Not someone who doesn't know himself",
+    title:
+      "Be someone that everyone just thinks to be. Not someone who doesn't know himself",
     category: "Social media",
     categoryColor: "bg-[#DD8100]",
     image: "/images/article7.jpg",
@@ -49,18 +51,18 @@ const topArticles = [
     date: "5h 5min ago",
     featured: false,
   },
-]
+];
 
 export default function FinalCTASection() {
-  const featuredArticle = topArticles.find((article) => article.featured)
-  const regularArticles = topArticles.filter((article) => !article.featured)
-  
+  const featuredArticle = topArticles.find((article) => article.featured);
+  const regularArticles = topArticles.filter((article) => !article.featured);
+
   return (
     <>
-      <section className="w-full bg-black py-8 md:py-16 hidden md:block">
-        <div className="container mx-auto md:px-6">
+      <section className="w-full bg-black py-8 md:py-16">
+        <div className="max-w-container mx-auto px-4 md:px-6">
           {/* Main CTA */}
-          <motion.div 
+          <motion.div
             variants={scaleUp}
             initial="hidden"
             whileInView="visible"
@@ -79,23 +81,27 @@ export default function FinalCTASection() {
               </video>
 
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <motion.div 
+                <motion.div
                   variants={fadeIn}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   className="text-center z-10 px-4"
                 >
-                  <motion.h2 
+                  <motion.h2
                     variants={fadeUp}
                     className="text-white text-2xl cursor-pointer md:text-4xl lg:text-5xl xl:text-[64px] font-bold mb-6 md:mb-8"
                   >
                     Let's build something together
                   </motion.h2>
-                  <motion.button 
+                  <motion.button
                     variants={fadeUp}
                     transition={{ delay: 0.1 }}
-                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,_255,_255,_0.4)_89.2%)] text-white px-6 md:px-11 py-7 rounded-full font-normal text-sm md:text-[25px] hover:opacity-90 transition-opacity"
+                    whileHover={{
+                      scale: 1.05, // Zoom in by 5%
+                      transition: { duration: 0.2 }, // Smooth transition for the zoom
+                    }}
+                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,_255,_255,_0.4)_89.2%)] text-white px-6 md:px-11 py-4 lg:py-7 rounded-full font-normal text-sm lg:text-[25px] hover:opacity-90 transition-opacity"
                   >
                     Let's have a Free call
                   </motion.button>
@@ -105,7 +111,7 @@ export default function FinalCTASection() {
           </motion.div>
 
           {/* Bottom CTAs - Stack on mobile */}
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -120,14 +126,27 @@ export default function FinalCTASection() {
             >
               <div className="absolute inset-0 bg-black/50 flex items-center px-6 md:px-10">
                 <motion.div variants={fadeIn}>
-                  <motion.h3 variants={fadeUp} className="text-white text-2xl md:text-3xl lg:text-[40px] font-bold mb-2">Change the system</motion.h3>
-                  <motion.p variants={fadeUp} transition={{ delay: 0.1 }} className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal">
+                  <motion.h3
+                    variants={fadeUp}
+                    className="text-white text-2xl md:text-3xl lg:text-[40px] font-bold mb-2"
+                  >
+                    Change the system
+                  </motion.h3>
+                  <motion.p
+                    variants={fadeUp}
+                    transition={{ delay: 0.1 }}
+                    className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal"
+                  >
                     Giving best services across the globe
                   </motion.p>
-                  <motion.button 
+                  <motion.button
                     variants={fadeUp}
                     transition={{ delay: 0.2 }}
-                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-10 py-6 rounded-full font-normal text-[20px] hover:opacity-90 transition-opacity"
+                    whileHover={{
+                      scale: 1.05, // Zoom in by 5%
+                      transition: { duration: 0.2 }, // Smooth transition for the zoom
+                    }}
+                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-10 py-4 lg:py-7 rounded-full font-normal text-sm lg:text-[25px] hover:opacity-90 transition-opacity"
                   >
                     Meet Saleh Bilal
                   </motion.button>
@@ -143,14 +162,27 @@ export default function FinalCTASection() {
             >
               <div className="absolute inset-0 bg-black/50 flex items-center px-6 md:px-10">
                 <motion.div variants={fadeIn}>
-                  <motion.h3 variants={fadeUp} className="text-white text-2xl md:text-3xl lg:text-[40px] font-bold mb-2">Time to level up</motion.h3>
-                  <motion.p variants={fadeUp} transition={{ delay: 0.1 }} className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal">
+                  <motion.h3
+                    variants={fadeUp}
+                    className="text-white text-2xl md:text-3xl lg:text-[40px] font-bold mb-2"
+                  >
+                    Time to level up
+                  </motion.h3>
+                  <motion.p
+                    variants={fadeUp}
+                    transition={{ delay: 0.1 }}
+                    className="text-white/70 mb-4 md:mb-6 text-base md:text-lg lg:text-[20px] font-normal"
+                  >
                     Giving best services across the globe
                   </motion.p>
-                  <motion.button 
+                  <motion.button
                     variants={fadeUp}
                     transition={{ delay: 0.2 }}
-                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-12 py-6 rounded-full font-normal text-[20px] hover:opacity-90 transition-opacity"
+                    whileHover={{
+                      scale: 1.05, // Zoom in by 5%
+                      transition: { duration: 0.2 }, // Smooth transition for the zoom
+                    }}
+                    className="backdrop-blur-[40px] cursor-pointer bg-[linear-gradient(95.6deg,_#FDC0C5_-50.24%,_rgba(255,255,255,0.4)_89.2%)] text-white px-6 md:px-12 py-4 lg:py-7 rounded-full font-normal text-sm lg:text-[25px] hover:opacity-90 transition-opacity"
                   >
                     Visit portfolio
                   </motion.button>
@@ -162,161 +194,6 @@ export default function FinalCTASection() {
       </section>
       {/* Desktop screen visible */}
 
-      {/* Mobile screen visible  */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 px-4 lg:px-8 bg-black text-white md:hidden lg:hidden"
-      >
-        <div className="container mx-auto">
-          {/* Header */}
-          <motion.div 
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl lg:text-5xl font-bold mb-4">Top blogs</motion.h2>
-            <motion.p variants={fadeUp} transition={{ delay: 0.1 }} className="text-white text-sm lg:text-xl max-w-sm mx-auto">
-              Read by over 200+ readers globally as I help them for a successful career
-            </motion.p>
-          </motion.div>
-
-          {/* Featured Article */}
-          <motion.div 
-            variants={scaleUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-8 lg:mb-12"
-          >
-            {featuredArticle && (
-              <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block">
-                <div className="relative h-[660px] lg:h-[790px] rounded-[30px] overflow-hidden">
-                  <video
-                    src={featuredArticle?.image || "/placeholder.mp4"}
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                  {/* Content Overlay */}
-                  <motion.div 
-                    variants={fadeIn}
-                    className="absolute bottom-0 left-0 right-0 p-6 lg:p-20"
-                  >
-                    <motion.div variants={fadeUp} className="mb-4">
-                      <span
-                        className={`${featuredArticle?.categoryColor} text-white px-4 py-2 rounded-full text-xs lg:text-2xl font-normal`}
-                      >
-                        {featuredArticle?.category}
-                      </span>
-                    </motion.div>
-                    <motion.h3 variants={fadeUp} transition={{ delay: 0.1 }} className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-12">
-                      {featuredArticle?.title}
-                    </motion.h3>
-                    <motion.p variants={fadeUp} transition={{ delay: 0.2 }} className="text-[#DFDFDF] text-md lg:text-xl">{featuredArticle?.date}</motion.p>
-                  </motion.div>
-                </div>
-              </Link>
-            )}
-          </motion.div>
-
-          {/* Desktop Layout - 3 articles in a row */}
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:mb-12"
-          >
-            {regularArticles.map((article, index) => (
-              <motion.div key={article.id} variants={fadeUp}>
-                <Link href={`/blog/${article.id}`} className="group cursor-pointer block">
-                  <div className="relative h-[425px] rounded-[30px] overflow-hidden">
-                    <img
-                      src={article.image || "/placeholder.svg"}
-                      alt={article.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                    {/* Content Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="mb-4">
-                        <span className={`${article.categoryColor} text-white px-3 py-1 rounded-full text-base font-normal`}>
-                          {article.category}
-                        </span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-3 ">{article.title}</h3>
-                      <p className="text-gray-300 text-sm flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {article.date}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Mobile Layout - 3 articles stacked vertically */}
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="lg:hidden space-y-6 mb-8"
-          >
-            {regularArticles.map((article, index) => (
-              <motion.div 
-                key={article.id}
-                variants={fadeUp}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link href={`/blog/${article.id}`} className="group cursor-pointer block">
-                  <div className="relative h-[660px] rounded-[30px] overflow-hidden">
-                    <img
-                      src={article.image || "/placeholder.svg"}
-                      alt={article.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                    {/* Content Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="mb-3">
-                        <span className={`${article.categoryColor} text-white px-3 py-1 rounded-full text-xs lg:text-sm font-medium`}>
-                          {article.category}
-                        </span>
-                      </div>
-                      <h3 className="text-3xl font-bold text-white mb-2 leading-tight">{article.title}</h3>
-                      <p className="text-gray-300 text-sm">{article.date}</p>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* View All Button */}
-          <motion.div 
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <button className="bg-white text-black lg:px-8 lg:py-3 px-20 py-6 text-[22px] lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors">
-              View all
-            </button>
-          </motion.div>
-        </div>
-      </motion.section>
     </>
-  )
+  );
 }

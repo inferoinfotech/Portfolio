@@ -37,7 +37,7 @@ const StarRating = ({ rating }) => {
 function TestimonialCard({ testimonial }) {
   return (
     <motion.div 
-      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10"
+      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-5 2xl:p-10"
       variants={scaleUp}
       whileHover={{ y: -5 }}
     >
@@ -98,22 +98,22 @@ export default function FreelancerTestimonials() {
 
   return (
     <motion.section 
-      className="w-full bg-white py-8 md:py-12 xl:py-16"
+      className="w-full bg-white py-8 md:py-12 xl:py-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
     >
-      <div className="max-w-[1440px] mx-auto p-6 2xl:px-0">
+      <div className="max-w-container mx-auto p-4 2xl:px-0">
         <motion.div 
-          className="text-center mb-8 md:mb-12 lg:mb-16"
+          className="text-center mb-8 md:mb-6 lg:mb-8 2xl:mb-12"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10"
+            className="font-bold text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 md:mb-5 xl:mb-10"
             variants={fadeUp}
           >
             Work with a freelancer from the
@@ -121,7 +121,7 @@ export default function FreelancerTestimonials() {
             #1 ranked global platform
           </motion.h2>
           <motion.p 
-            className="text-black/70 font-medium text-[20px] sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"
+            className="text-black/70 font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"
             variants={fadeUp}
             transition={{ delay: 0.1 }}
           >
@@ -147,7 +147,7 @@ export default function FreelancerTestimonials() {
               bulletClass: "swiper-pagination-bullet custom-bullet",
               bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
             }}
-            className="testimonial-swiper articles-swiper !pb-14 !pt-4"
+            className="testimonial-swiper articles-swiper !pb-14 !pt-4 cursor-pointer"
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
@@ -159,7 +159,7 @@ export default function FreelancerTestimonials() {
 
         {/* Desktop Grid */}
         <motion.div 
-          className="hidden md:grid md:grid-cols-3 gap-8"
+          className="hidden md:grid md:grid-cols-3 lg:gap-8 gap-2"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -170,6 +170,7 @@ export default function FreelancerTestimonials() {
               key={index}
               variants={fadeUp}
               custom={index}
+              className="cursor-pointer"
             >
               <TestimonialCard testimonial={testimonial} />
             </motion.div>
@@ -177,7 +178,7 @@ export default function FreelancerTestimonials() {
         </motion.div>
 
         <motion.div 
-          className="text-center mt-5 md:mt-8 lg:mt-20"
+          className="text-center mt-5 md:mt-8 lg:mt-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

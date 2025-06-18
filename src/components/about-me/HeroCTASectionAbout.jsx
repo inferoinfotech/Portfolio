@@ -63,7 +63,7 @@ export default function HeroCTASectionAbout() {
             transition={{ delay: 0.2 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-[#FDC0C5] via-white/40 to-white/40 backdrop-blur-2xl text-white cursor-pointer font-medium text-lg md:text-xl lg:text-2xl tracking-wider capitalize px-6 xl:px-12 py-7 xl:py-9 rounded-full shadow-lg hover:opacity-90 transition"
+            className="bg-gradient-to-r from-[#FDC0C5] via-white/40 to-white/40 backdrop-blur-2xl text-white cursor-pointer font-medium text-lg md:text-lg lg:text-2xl tracking-wider capitalize px-6 xl:px-12 py-4 xl:py-9 rounded-full shadow-lg hover:opacity-90 transition"
           >
             Meet Saleh Bilal
           </motion.button>

@@ -17,13 +17,13 @@ export default function HeroBusinessSection() {
 
   return (
     <motion.section
-      className="relative w-full min-h-screen bg-black py-6 px-4 md:px-8 2xl:px-0 md:py-12"
+      className="relative w-full bg-black py-6 px-4 md:px-8 2xl:px-0 md:py-12"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
     >
-      <div className="container mx-auto relative px-4 md:px-0">
+      <div className="max-w-container mx-auto relative px-4 md:px-0">
         {/* Background Image */}
         <motion.div
           className="absolute inset-0 bg-center bg-cover md:bg-right bg-no-repeat overflow-hidden rounded-[30px] md:rounded-[30px]"
@@ -36,7 +36,7 @@ export default function HeroBusinessSection() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative z-10 flex items-center min-h-screen px-2 lg:px-10">
+        <div className="relative z-10 flex items-center py-12 lg:pb-0 lg:min-h-[80vh] px-4 lg:px-10">
           <motion.div
             className="max-w-full md:max-w-4xl"
             variants={staggerContainer}
@@ -77,7 +77,7 @@ export default function HeroBusinessSection() {
               {/* Let's work together button */}
               <motion.button
                 onClick={() => setActive("work")}
-                className={`px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[18px] lg:text-[22px] tracking-[-1%] md:tracking-[-3%] w-full md:w-auto transition-colors text-center cursor-pointer
+                className={`px-6 md:px-12 py-3 md:py-4 rounded-full font-medium text-[16px] md:text-[18px] lg:text-[22px] tracking-[-1%] md:tracking-[-3%] w-full md:w-auto transition-colors text-center cursor-pointer
                   ${active === "work"
                     ? "bg-white text-black hover:bg-gray-100"
                     : "bg-transparent text-white border-2 border-white hover:bg-white hover:text-black"
@@ -93,7 +93,7 @@ export default function HeroBusinessSection() {
               {/* Schedule a free call button */}
               <motion.button
                 onClick={() => setActive("call")}
-                className={`px-6 md:px-12 py-3 md:py-6 rounded-full font-medium text-[16px] md:text-[22px] w-full md:w-auto transition-colors cursor-pointer
+                className={`px-6 md:px-12 py-3 lg:py-6 rounded-full font-medium text-[16px] md:text-[22px] w-full md:w-auto transition-colors cursor-pointer
                   ${active === "call"
                     ? "bg-white text-black border-2 border-transparent hover:bg-gray-100"
                     : "border-2 border-white text-white hover:bg-white hover:text-black"

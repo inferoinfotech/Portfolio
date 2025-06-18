@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
 import {
-    fadeUp,
-    fadeIn,
-    staggerContainer,
-    scaleUp,
-    slideInLeft,
-    slideInRight
-} from '@/lib/framer-animations';
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  scaleUp,
+  slideInLeft,
+  slideInRight,
+} from "@/lib/framer-animations";
 
 export default function TestimonialSectionAbout() {
   const images = [
@@ -32,10 +32,10 @@ export default function TestimonialSectionAbout() {
       src: "../images/experience-img-5.jpg",
       alt: "Team meeting",
     },
-  ]
+  ];
 
   return (
-    <motion.section 
+    <motion.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -45,90 +45,98 @@ export default function TestimonialSectionAbout() {
         {/* Quote */}
         <motion.div
           variants={fadeUp}
-          className="mb-8 md:mb-12 xl:mb-20 text-center px-10 md:px-0"
+          className="mb-8 md:mb-12 xl:mb-20 text-center px-4 md:px-0"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeUp}
-            className="text-5xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[96px] leading-[50px] lg:leading-16 2xl:leading-[90px] font-medium tracking-[-0.03em] text-center text-white container mx-auto"
+            className="text-5xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[86px] leading-[50px] lg:leading-16 2xl:leading-[90px] font-medium tracking-[-0.03em] text-center text-white max-w-xl xl:max-w-5xl mx-auto"
           >
             " Pirate ipsum arrgh bounty warp jack. Shrouds grog{" "}
-            <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red gabion sloop black crow's"
+            <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red
+            gabion sloop black crow's"
           </motion.h2>
         </motion.div>
 
         {/* Author */}
-        <motion.div 
+        <motion.div
           variants={fadeIn}
           className="flex items-center justify-center mb-8 md:mb-12 xl:mb-28"
         >
-          <div className="flex items-center space-x-3 md:space-x-4">
+          <div className="flex items-center space-x-3 md:space-x-4 cursor-pointer hover:scale-110 active:scale-105 transition-transform duration-300 ease-in-out">
+            {" "}
             {/* Profile Image with pink background */}
-            <motion.div 
+            <motion.div
               variants={scaleUp}
               className="w-12 h-12 md:w-16 md:h-16 bg-[#FDC0C5] rounded-full p-1"
             >
               <div className="w-full h-full rounded-[30px] overflow-hidden">
-                <img src="../images/Profileimage.jpg" alt="Saleh Bilal" className="w-full h-full object-cover" />
+                <img
+                  src="../images/Profileimage.jpg"
+                  alt="Saleh Bilal"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
-
             {/* Text Content */}
-            <motion.div 
-              variants={fadeUp}
-              className="flex flex-col"
-            >
-              <h3 className="text-white text-base md:text-lg font-normal tracking-[-0.03em]">Saleh Bilal</h3>
+            <motion.div variants={fadeUp} className="flex flex-col">
+              <h3 className="text-white text-base md:text-lg font-normal tracking-[-0.03em]">
+                Saleh Bilal
+              </h3>
               <p className="text-gray-400 text-sm">Founder @ DGTL Network</p>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Image gallery */}
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
-          className="mb-8 md:mb-16 xl:mb-32"
+          className="mb-8 md:mb-16 xl:mb-32 max-w-container w-full mx-auto px-4"
         >
           {/* Desktop: 5 columns with minimal gap */}
-          <motion.div 
+          <motion.div
             variants={fadeIn}
-            className="hidden md:grid md:grid-cols-5 gap-2 lg:gap-3"
+            className="hidden md:grid md:grid-cols-5 gap-2 lg:gap-6"
           >
             {images.map((image, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 variants={fadeUp}
                 custom={index}
-                className="rounded-[30px] overflow-hidden aspect-square"
+                className="rounded-[30px] overflow-hidden aspect-square group cursor-pointer"
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.3 },
+                }}
               >
-                <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+                <img
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  className="w-full h-full object-cover group-hover:brightness-90 transition-all duration-300"
+                />
               </motion.div>
             ))}
           </motion.div>
 
           {/* Mobile: horizontal scroll */}
-          <motion.div
-            variants={slideInLeft}
-            className="md:hidden"
-          >
+          <motion.div variants={slideInLeft} className="md:hidden ">
             <div className="flex items-center justify-center">
               <div className="w-full max-w-sm">
-                <img src="../images/MY EXPERIENCE About-1.jpg"
+                <img
+                  src="../images/MY EXPERIENCE About-1.jpg"
                   alt="Person working with laptop in modern workspace"
                   width={400}
                   height={600}
-                  className="w-full h-[500px] rounded-[35px] object-cover " />
+                  className="w-full h-[500px] rounded-[35px] object-cover "
+                />
               </div>
             </div>
           </motion.div>
         </motion.div>
 
         {/* Client counter */}
-        <motion.div 
-          variants={fadeIn}
-          className="hidden md:block"
-        >
+        <motion.div variants={fadeIn} className="hidden md:block cursor-pointer hover:scale-110 active:scale-105 transition-transform duration-300 ease-in-out ">
           <div className=" flex justify-center mb-8 md:mb-12 lg:mb-20">
-            <motion.div 
+            <motion.div
               variants={scaleUp}
               className="bg-black border-2 border-white rounded-[20px] px-3 md:px-4 py-2 flex items-center space-x-2"
             >
@@ -141,50 +149,58 @@ export default function TestimonialSectionAbout() {
                   "../images/avtar-about-2.jpg",
                   "../images/avtar-about-3.jpg",
                 ].map((src, index) => (
-                  <motion.div 
-                    key={index} 
+                  <motion.div
+                    key={index}
                     variants={fadeUp}
                     custom={index}
                     className="w-5 h-5 md:w-6 md:h-6 rounded-full overflow-hidden border-2 border-black"
                   >
-                    <img src={src || "/placeholder.svg"} alt="Client" className="w-full h-full object-cover" />
+                    <img
+                      src={src || "/placeholder.svg"}
+                      alt="Client"
+                      className="w-full h-full object-cover"
+                    />
                   </motion.div>
                 ))}
               </div>
-              <span className="text-xs text-[#FFFF] font-medium">Trusted by over 500+ clients globally</span>
+              <span className="text-xs text-[#FFFF] font-medium">
+                Trusted by over 500+ clients globally
+              </span>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Achievements */}
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
-          className="max-w-5xl px-10 md:px-0 mx-auto"
+          className="max-w-5xl px-4 md:px-0 mx-auto"
         >
-          <motion.p 
+          <motion.p
             variants={fadeUp}
-            className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 md:mb-4 xl:mb-16"
+            className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 md:mb-4 xl:mb-16"
           >
-            He's been named in the top 50 of Worth Magazine's 100 most powerful people in global finance for three
-            consecutive years, honored by Harvard Business Press as one of the "Top 200 Business Gurus", and by American
-            Express as one of the "Top Six Business Leaders in the World" to coach its entrepreneurial clients.
+            He's been named in the top 50 of Worth Magazine's 100 most powerful
+            people in global finance for three consecutive years, honored by
+            Harvard Business Press as one of the "Top 200 Business Gurus", and
+            by American Express as one of the "Top Six Business Leaders in the
+            World" to coach its entrepreneurial clients.
           </motion.p>
 
-          <motion.p 
+          <motion.p
             variants={fadeUp}
-            className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 md:mb-4 xl:mb-16"
+            className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 md:mb-4 xl:mb-16"
           >
             Fortune's cover article named him the "CEO Whisperer."
           </motion.p>
 
-          <motion.p 
+          <motion.p
             variants={fadeUp}
-            className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] text-white md:mb-6"
+            className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] text-white md:mb-6"
           >
             And it's why leaders call upon him to help them lead.
           </motion.p>
         </motion.div>
       </div>
     </motion.section>
-  )
+  );
 }

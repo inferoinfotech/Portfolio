@@ -1,23 +1,23 @@
-import BookCallSection from '@/components/free-audit/book-call-section';
-import HeroCallSection from '@/components/free-audit/hero-call-section';
-import ScaleBusinessSection from '@/components/free-audit/scale-business-section';
-import UnderstandingSection from '@/components/free-audit/UnderstandingSection';
-import React from 'react'
+import BookCallSection from "@/components/free-audit/book-call-section";
+import HeroCallSection from "@/components/free-audit/hero-call-section";
+import ScaleBusinessSection from "@/components/free-audit/scale-business-section";
+import UnderstandingSection from "@/components/free-audit/UnderstandingSection";
+import React from "react";
 
 export const metadata = {
-    title: "Free Audit",
-    description: "Get a free audit of your website's performance and SEO.",
+  title: "Free Audit",
+  description: "Get a free audit of your website's performance and SEO.",
 };
 
 const FreeAuditPage = () => {
-    return (
-        <>
-            <ScaleBusinessSection />
-            <BookCallSection />
-            <HeroCallSection />
-            <UnderstandingSection />
-        </>
-    )
-}
+  return (
+    <>
+      {/* <ScaleBusinessSection /> */}
+      <BookCallSection />
+      <HeroCallSection />
+      {/*<UnderstandingSection /> */}
+    </>
+  );
+};
 
-export default FreeAuditPage
+export default FreeAuditPage;

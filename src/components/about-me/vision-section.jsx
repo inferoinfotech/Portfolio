@@ -54,7 +54,7 @@ export default function VisionSection() {
               <motion.p 
                 variants={fadeUp}
                 transition={{ delay: 0.2 }}
-                className="text-4xl md:text-4xl lg:text-5xl xl:text-[54px] leading-10 lg:leading-12 xl:leading-[70px] font-medium tracking-[-0.03em] text-center px-10 md:px-0"
+                className="text-4xl md:text-4xl lg:text-5xl xl:text-[54px] leading-10 lg:leading-12 xl:leading-[70px] font-medium tracking-[-0.03em] text-center px-4 md:px-0"
               >
                 Pirate ipsum arrgh bounty warp jack. Or lass landlubbr spanker dead league coast. Pirate ipsum arrgh
                 bounty warp jack. Or lass landlubbr spanker dead league coast.

@@ -65,7 +65,7 @@ export default function FAQSection() {
             variants={fadeIn}
             className="py-4 lg::py-16 px-4"
         >
-            <div className="container mx-auto">
+            <div className="max-w-container mx-auto ">
                 {/* Header */}
                 <motion.div 
                     variants={fadeUp}

@@ -15,11 +15,11 @@ const About = () => {
   return (
     <>
       {/* <AboutSection /> */}
-     <VisionSection />
-        {/*<ExperienceSectionAbout />
+      <VisionSection />
+      <ExperienceSectionAbout />
       <TestimonialSectionAbout />
       <TopReadsSectionAbout />
-      <HeroCTASectionAbout /> */}
+      <HeroCTASectionAbout />
     </>
   );
 };

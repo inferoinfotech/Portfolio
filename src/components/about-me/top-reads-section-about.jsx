@@ -71,7 +71,7 @@ export default function TopReadsSectionAbout() {
       variants={staggerContainer}
       className="w-full bg-white py-8 md:py-12 lg:py-16"
     >
-      <div className="container mx-auto px-4 2xl:px-0">
+      <div className="max-w-container w-full mx-auto px-4 2xl:px-0">
         {/* Section title */}
         <motion.div 
           variants={fadeUp}

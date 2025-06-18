@@ -16,7 +16,7 @@ const MyWorkCTASection = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="relative w-full h-[50vh] lg:min-h-screen flex items-center justify-center overflow-hidden"
+            className="relative w-full h-[60vh] lg:min-h-screen flex items-center justify-center overflow-hidden"
         >
             {/* Background Image - Placed at lower z-index */}
             <motion.div 

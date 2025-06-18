@@ -112,13 +112,13 @@ export default function BlogBannerSection() {
 
     return (
         <section className="lg:min-h-screen 2xl:min-h-screen bg-black text-white flex flex-col">
-            <div className="flex-1 px-4 lg:px-8 py-8 lg:py-12 lg:pt-28">
-                <div className="container mx-auto h-full flex flex-col">
+            <div className="flex-1 px-4 py-8 lg:py-12 lg:pt-20">
+                <div className="max-w-container w-full mx-auto h-full flex flex-col px-4">
                     {/* Header Section */}
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8 lg:mb-12">
                         {/* Title */}
                         <div className="mb-6 lg:mb-0">
-                            <h1 className="text-4xl lg:text-5xl xl:text-[100px] text-center lg:text-start font-medium leading-none">
+                            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl text-center lg:text-start font-medium leading-none">
                                 Creativity at
                                 <br />
                                 your <span className="text-[#FDC0C5]">disposal</span>

@@ -60,9 +60,9 @@ export default function TopArticlesSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="py:16 pt-16 pb-32 px-4 lg:px-8 bg-black text-white"
+            className="py:16 py-16 px-4 lg:px-8 bg-black text-white"
         >
-            <div className="container mx-auto">
+            <div className="max-w-container mx-auto">
                 {/* Header */}
                 <motion.div
                     variants={fadeUp}
@@ -97,7 +97,7 @@ export default function TopArticlesSection() {
                     {featuredArticle && (
                         <Link href={`/blog/${featuredArticle.id}`} className="group cursor-pointer block">
                             <div 
-                                className="relative h-[660px] lg:h-[790px] rounded-[30px] overflow-hidden"
+                                className="relative h-[460px] lg:h-[550px] rounded-[30px] overflow-hidden"
                             >
                                 <video
                                     src={featuredArticle?.image || "/placeholder.mp4"}
@@ -159,7 +159,7 @@ export default function TopArticlesSection() {
                         >
                             <Link href={`/blog/${article.id}`} className="group cursor-pointer block">
                                 <div 
-                                    className="relative h-[425px] rounded-[30px] overflow-hidden"
+                                    className="relative h-[325px] rounded-[30px] overflow-hidden"
                                 >
                                     <img
                                         src={article.image || "/placeholder.svg"}
@@ -209,7 +209,7 @@ export default function TopArticlesSection() {
                             <Link href={`/blog/${article.id}`} className="group cursor-pointer block">
                                 <motion.div 
                                     whileHover={{ scale: 1.03 }}
-                                    className="relative h-[660px] rounded-[30px] overflow-hidden"
+                                    className="relative h-[320px] rounded-[30px] overflow-hidden"
                                 >
                                     <img
                                         src={article.image || "/placeholder.svg"}
@@ -237,23 +237,6 @@ export default function TopArticlesSection() {
                             </Link>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* View All Button */}
-                <motion.div 
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="text-center"
-                >
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-white text-black px-6 py-3 lg:px-7 lg:py-2 text-base lg:text-xl rounded-full font-medium hover:bg-gray-200 hover:cursor-pointer transition-colors"
-                    >
-                        View all
-                    </motion.button>
                 </motion.div>
             </div> 
         </motion.section>

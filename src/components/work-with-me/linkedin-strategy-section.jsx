@@ -37,7 +37,7 @@ const StarRating = ({ rating }) => {
 function TestimonialCard({ testimonial }) {
   return (
     <motion.div 
-      className="bg-[#FDFDFD] rounded-[30px] p-6 lg:p-10"
+      className="bg-[#FDFDFD] rounded-[30px] lg:p-5 2xl:p-10"
       variants={scaleUp}
       whileHover={{ y: -5 }}
     >
@@ -115,14 +115,14 @@ export default function LinkedInStrategySection() {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="font-bold text-black text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-tight mb-4 md:mb-5 xl:mb-10"
+            className="font-bold text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 md:mb-5 xl:mb-10"
             variants={fadeUp}
           >
             I will be telling you the exact strategy
             <br className="hidden sm:block" /> I used to grow my LinkedIn audience
           </motion.h2>
           <motion.p 
-            className="text-black/70 font-medium text-[20px] sm:text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"
+            className="text-black/70 font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"
             variants={fadeUp}
             transition={{ delay: 0.1 }}
           >
@@ -160,7 +160,7 @@ export default function LinkedInStrategySection() {
 
         {/* Desktop Grid */}
         <motion.div 
-          className="hidden md:grid md:grid-cols-3 gap-8"
+          className="hidden md:grid md:grid-cols-3 lg:gap-8 gap-2"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -178,7 +178,7 @@ export default function LinkedInStrategySection() {
         </motion.div>
 
         <motion.div 
-          className="text-center mt-5 md:mt-8 lg:mt-20"
+          className="text-center mt-5 md:mt-8 lg:mt-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

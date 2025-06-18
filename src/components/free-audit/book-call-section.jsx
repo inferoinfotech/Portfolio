@@ -17,9 +17,9 @@ export default function BookCallSection() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="w-full bg-black py-8 sm:py-12 md:py-16 lg:py-20"
+      className="w-full bg-black py-8 sm:py-12 md:py-16 lg:py-16"
     >
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center">
+      <div className="max-w-container w-full mx-auto px-16 sm:px-12 md:px-8 text-center">
         {/* Badge Pills - Responsive layout */}
         <motion.div
           variants={staggerContainer}
@@ -63,7 +63,7 @@ export default function BookCallSection() {
         >
           <motion.h2 
             variants={fadeUp}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold text-white leading-tight sm:leading-tight md:leading-tight lg:leading-[60px] xl:leading-[60px]"
+            className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold text-white leading-tight sm:leading-tight md:leading-tight lg:leading-[60px] xl:leading-[60px]"
           >
             Feel free to book <br /> <span className="text-[#FDC0C5]">one-to-one </span>call anytime
             <br className="hidden sm:block" />

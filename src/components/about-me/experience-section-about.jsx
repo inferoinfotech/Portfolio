@@ -48,7 +48,7 @@ export default function ExperienceSectionAbout() {
       variants={staggerContainer}
       className="w-full bg-white"
     >
-      <div className="container mx-auto md:px-6 2xl:px-3 py-4">
+      <div className="max-w-container w-full mx-auto md:px-4 2xl:px-3 py-4">
         {/* Section title */}
         <motion.div 
           variants={fadeUp}
@@ -56,7 +56,7 @@ export default function ExperienceSectionAbout() {
         >
           <div className="flex items-center space-x-5">
             <div className="md:w-3 md:h-3 h-1.5 w-1.5  bg-black rounded-full"></div>
-            <p className="text-sm md:text-base lg:text-[20px] font-medium tracking-[0.4em] text-center uppercase">
+            <p className="text-sm md:text-base lg:text-xl font-medium tracking-[0.4em] text-center uppercase">
               MY EXPERIENCE
             </p>
           </div>
@@ -77,18 +77,18 @@ export default function ExperienceSectionAbout() {
               >
                 <motion.h2 
                   variants={fadeUp}
-                  className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-5xl xl:text-[64px] leading-tight xl:leading-[70px] font-medium mb-5 md:mb-8 2xl:mb-[78px]"
+                  className="text-4xl text-center md:text-left sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl leading-tight xl:leading-[70px] font-medium mb-5 md:mb-8 2xl:mb-[78px]"
                 >
                   {item.title}
                 </motion.h2> 
                 <motion.div 
                   variants={staggerContainer}
-                  className="space-y-4 md:space-y-6 px-10 md:px-0"
+                  className="space-y-4 md:space-y-6 px-4 md:px-0"
                 >
                   {item.paragraphs.map((para, idx) => (
                     <motion.p
                       variants={fadeUp}
-                      className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-8 xl:leading-[45px] tracking-tight text-black/70 text-opacity-70 text-center md:text-justify mb-8 xl:mb-12"
+                      className="font-normal text-[20px] md:text-lg lg:text-xl xl:text-2xl leading-8 xl:leading-[40px] tracking-tight text-black/70 text-opacity-70 text-center md:text-justify mb-8 xl:mb-12"
                       key={idx}
                     >
                       {para}

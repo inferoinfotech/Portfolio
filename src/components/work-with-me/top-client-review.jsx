@@ -20,13 +20,13 @@ export default function TopClientReview() {
       viewport={{ once: true }}
       variants={fadeIn}
     >
-      <div className="container mx-auto px-4 md:px-8 2xl:px-0">
+      <div className="max-w-container w-full mx-auto px-4 md:px-8 2xl:px-0">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex items-center justify-center mb-8 md:mb-20 xl:mb-32"
+          className="flex items-center justify-center mb-8 md:mb-16 xl:mb-24"
         >
           <div className="flex items-center space-x-3">
             <motion.div 
@@ -34,7 +34,7 @@ export default function TopClientReview() {
               variants={scaleUp}
             ></motion.div>
             <motion.span 
-              className="text-[10px] md:text-[20px] font-medium tracking-[8] uppercase"
+              className="text-[10px] md:text-lg font-medium tracking-[8] uppercase"
               variants={fadeUp}
             >
               TOP CLIENT REVIEW
@@ -55,14 +55,14 @@ export default function TopClientReview() {
             className="lg:col-span-7 lg:mt-7 p-5"
           >
             <motion.blockquote 
-              className="text-xl md:text-3xl xl:text-5xl font-bold mb-6 md:mb-8 lg:mb-12 md:leading-10 xl:leading-14 tracking-tight"
+              className="text-xl md:text-3xl xl:text-[40px] font-bold mb-6 md:mb-8 lg:mb-12 md:leading-10 xl:leading-14 tracking-tight"
               variants={fadeUp}
             >
               "It's one thing to have 650,000 followers, it's another to have 650,000 loyal fans."
             </motion.blockquote>
 
             <motion.blockquote 
-              className="text-xl md:text-3xl xl:text-5xl font-bold mb-8 md:mb-12 lg:mb-20 md:leading-10 xl:leading-14"
+              className="text-xl md:text-3xl xl:text-[40px] font-bold mb-8 md:mb-12 lg:mb-20 md:leading-10 xl:leading-14"
               variants={fadeUp}
               transition={{ delay: 0.1 }}
             >
@@ -80,9 +80,9 @@ export default function TopClientReview() {
                 className="w-12 h-12 md:w-16 md:h-16 rounded-full mr-3 md:mr-4"
                 whileHover={{ scale: 1.05 }}
               />
-              <div>
-                <h4 className="text-[16px] md:text-3xl xl:text-4xl font-medium">Austin Belcak</h4>
-                <p className="text-black/50 text-[13px] lg:text-xl font-bold leading-3">
+              <div className="cursor-pointer">
+                <h4 className="text-[16px] md:text-3xl xl:text-3xl mb-1 font-medium">Austin Belcak</h4>
+                <p className="text-black/50 text-[13px] lg:text-lg font-bold leading-3">
                   Founder of Cultivated Culture
                 </p>
               </div>
@@ -99,14 +99,14 @@ export default function TopClientReview() {
               variants={scaleUp}
             >
               <motion.h3 
-                className="font-bold text-4xl md:text-[30px] xl:text-[40px] leading-tight tracking-tight max-w-md mx-auto text-center mb-8 md:mb-10"
+                className="font-bold text-4xl md:text-[30px] xl:text-4xl xl:px-16 leading-tight tracking-tight max-w-md mx-auto text-center mb-8 md:mb-10"
                 variants={fadeUp}
               >
                 Have your business queries sorted
               </motion.h3>
 
               <motion.div 
-                className="space-y-3 md:space-y-4 mb-6 md:mb-10"
+                className="mb-6 md:mb-8"
                 variants={staggerContainer}
               >
                 {["1-on-1 session", "Free of cost", "30 min", "Discounted rates"].map((text, i) => (
@@ -115,8 +115,8 @@ export default function TopClientReview() {
                     className="flex items-center"
                     variants={fadeUp}
                   >
-                    <SquareCheckBig className="w-6 h-6 md:w-8 md:h-8 xl:w-[36px] xl:h-[36px] text-white/80 mr-3 md:mr-4 lg:mr-6 md:mb-[20px] xl:mb-[30px] flex-shrink-0" />
-                    <span className="text-white/80 text-xl md:text-2xl xl:text-[32px] md:mb-[20px] xl:mb-[30px] font-normal">{text}</span>
+                    <SquareCheckBig className="w-6 h-6 md:w-8 md:h-8 xl:w-[32px] xl:h-[32px] text-white/80 mr-3 md:mr-4 lg:mr-6 md:mb-[20px] xl:mb-[30px] flex-shrink-0" />
+                    <span className="text-white/80 text-xl md:text-2xl xl:text-3xl md:mb-[20px] xl:mb-[30px] font-normal">{text}</span>
                   </motion.div>
                 ))}
               </motion.div>

@@ -35,8 +35,8 @@ export default function LatestBlogsSection() {
     const regularBlogs = latestBlogs.filter((blog) => !blog.featured)
 
     return (
-        <section className="pt-14 pb-0 lg:pt-24 lg:pb-5 px-4 lg:px-8">
-            <div className="container mx-auto">
+        <section className="pt-14 pb-0 lg:pt-24 lg:pb-5 ">
+            <div className="max-w-container mx-auto w-full px-4">
                 {/* Header */}
                 <div className="flex justify-center mb-12 xl:mb-20">
                     <div className="flex items-center gap-3">
