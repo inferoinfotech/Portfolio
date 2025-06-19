@@ -14,7 +14,7 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      {/* <AboutSection /> */}
+      <AboutSection />
       <VisionSection />
       <ExperienceSectionAbout />
       <TestimonialSectionAbout />

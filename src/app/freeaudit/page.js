@@ -12,10 +12,10 @@ export const metadata = {
 const FreeAuditPage = () => {
   return (
     <>
-      {/* <ScaleBusinessSection /> */}
+      <ScaleBusinessSection />
       <BookCallSection />
       <HeroCallSection />
-      {/*<UnderstandingSection /> */}
+      <UnderstandingSection />
     </>
   );
 };

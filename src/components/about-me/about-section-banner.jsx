@@ -17,7 +17,7 @@ export default function AboutSection() {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
-      className="w-full bg-black text-white relative max-h-screen py-0 md:py-[75px] lg:py-0 xl:py-0 overflow-hidden"
+      className="w-full bg-black text-white relative min-h-[90vh]  py-0 md:py-[75px] lg:py-0 xl:py-0 overflow-hidden"
     >
       <div className="max-w-container w-full mx-auto px-4 md:px-6 relative z-20 pt-3 lg:pt-0">
         {/* Mobile Layout */}
@@ -159,7 +159,7 @@ export default function AboutSection() {
         transition={{ delay: 0.5 }}
         className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
       >
-        <div className="bg-[#FDC0C5] h-[450px] w-[400px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[700px] 2xl:h-[525px] 2xl:w-[790px] rounded-tl-4xl rounded-bl-4xl"></div>
+        <div className="bg-[#FDC0C5] h-[450px] w-[400px] lg:h-[490px] lg:w-[500px] 2xl:h-[600px] xl:w-[700px] 2xl:w-[900px] rounded-tl-4xl rounded-bl-4xl"></div>
       </motion.div>
     </motion.section>
   );

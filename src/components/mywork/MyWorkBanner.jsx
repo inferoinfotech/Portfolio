@@ -54,7 +54,7 @@ export default function MyWorkBanner() {
         {/* Right Images - Masonry Grid */}
         <div className="bg-white min-h-[60vh] hidden lg:block lg:h-[114vh] overflow-x-auto scrollbar-hide overflow-y-hidden relative">
           <div className="h-full p-6 overflow-visible">
-            <div className="grid grid-cols-4 gap-12 xl:gap-5 h-full min-w-[1024px]">
+            <div className="grid grid-cols-4 lg:gap-6 xl:gap-5 h-full min-w-[1024px]">
               {[0, 1, 2, 3].map((colIndex) => (
                 <div
                   key={colIndex}

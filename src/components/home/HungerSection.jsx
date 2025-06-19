@@ -21,7 +21,7 @@ export default function HungerSection() {
             variants={fadeIn}
             className="w-full py-4 sm:py-8 md:py-12 lg:py-16"
         >
-            <div className="max-w-container px-4 md:px-2 xl:px-0 mx-auto">
+            <div className="max-w-container px-4  mx-auto">
                 {/* Top Section */}
                 <motion.h1
                     variants={fadeUp}
@@ -33,7 +33,7 @@ export default function HungerSection() {
                 <div className="relative">
                     <motion.div
                         variants={staggerContainer}
-                        className="grid lg:grid-cols-3 gap-8 mb-3 lg:mb-2"
+                        className="grid lg:grid-cols-3 gap-2 xl:gap-8 mb-3 lg:mb-2"
                     >
                         <div
 
@@ -41,13 +41,11 @@ export default function HungerSection() {
                         >
                             <div className="flex justify-center lg:justify-start">
                                 <div
-                                    className="relative w-full max-h-[686px] rounded-3xl overflow-hidden"
+                                    className="relative w-full max-h-[520px] xl:max-h-[686px] rounded-3xl overflow-hidden"
                                 >
                                     <img
                                         src="/images/Profileimage.jpg"
                                         alt="Portrait of Saleh Bilal"
-                                        width={320}
-                                        height={400}
                                         className="w-full h-full object-cover rounded-3xl"
                                     />
                                     <div className="absolute lg:hidden inset-0"
@@ -59,16 +57,16 @@ export default function HungerSection() {
 
                         <motion.div
                             variants={slideInRight}
-                            className="lg:col-span-1 order-1 lg:order-2"
+                            className="lg:col-span-1 order-1 lg:order-2 mb-4 lg:mb-0"
                         >
                             {/* Right - Content */}
                             <motion.div
                                 variants={fadeUp}
-                                className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6 xl:ms-10 lg:p-5"
+                                className="flex flex-col lg:justify-center justify-start space-y-2 lg:space-y-6 xl:ms-10 px-0 lg:px-4 xl:px-0 xl:p-5"
                             >
                                 <motion.p
                                     variants={fadeUp}
-                                    className="text-[#969696] text-base lg:text-[28px] font-medium leading-tight lg:leading-relaxed mb-5 lg:mb-10"
+                                    className="text-[#969696] text-base md:text-xl xl:text-[28px] font-medium leading-tight lg:leading-relaxed mb-5 lg:mb-10"
                                 >
                                     We believe progress equals happiness. And no matter where you're looking to excel, we're here to help you
                                     forge your pathway to power. Meet the man who's spent over 45 years creating breakthroughs and
@@ -90,9 +88,9 @@ export default function HungerSection() {
                     </motion.div>
 
                     <div
-                        className="absolute hidden lg:block lg:right-[22.5%] lg:bottom-[26.5%] xl:right-[24.8%] xl:bottom-[26%]  2xl:right-[26.3%] 2xl:bottom-[26%] z-20"
+                        className="absolute hidden lg:block lg:right-[25.5%] lg:bottom-[25.8%] xl:right-[25.5%] xl:bottom-[26%]  2xl:right-[25.5%] 2xl:bottom-[26%] z-20 "
                     >
-                        <img src="/images/Joiner.png" alt="vector" />
+                        <img src="/images/Joiner.png" alt="vector" className="xl:h-auto h-[120px]"/>
                     </div>
 
                     {/* Bottom Section */}
@@ -171,9 +169,9 @@ export default function HungerSection() {
                         <div
                             className="lg:col-span-1"
                         >
-                            <div className="flex justify-center lg:justify-end">
+                            <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
                                 <div
-                                    className="relative min-h-[200px] lg:w-[555px] lg:h-[371px] rounded-[40px] overflow-hidden cursor-pointer group"
+                                    className="relative min-h-[200px] lg:h-[271px] lg:w-[555px] xl:h-[371px] rounded-[40px] overflow-hidden cursor-pointer group"
                                 >
                                     {/* Video Element */}
                                     <video autoPlay muted loop playsInline className="w-full h-full object-cover">

@@ -1,12 +1,12 @@
 export default function UnderstandingSection() {
     return (
         <section className="w-full py-12 md:py-24 lg:py-32">
-            <div className="container px-4 md:px-6 mx-auto">
+            <div className="max-w-container px-4 md:px-6 mx-auto">
                 <div className="relative">
                     <div className="grid lg:grid-cols-3 gap-8">
                         <div className="lg:col-span-2 order-2 lg:order-1">
                             <div className="flex justify-center lg:justify-start">
-                                <div className="relative max-w-[640px] max-h-[450px] lg:max-w-[600px] lg:max-h-[450px] xl:max-w-[750px] xl:max-h-[450px] 2xl:max-w-[850px] 2xl:max-h-[550px] rounded-[40px] overflow-hidden">
+                                <div className="relative max-w-[640px] max-h-[450px] lg:max-w-[600px] lg:max-h-[450px] xl:max-w-[818px] xl:max-h-[590px] rounded-[40px] overflow-hidden">
                                     <img
                                         src="/images/work-call-1.jpg"
                                         alt="Portrait of Saleh Bilal"
@@ -36,7 +36,7 @@ export default function UnderstandingSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute hidden lg:block lg:right-[33.4%] lg:bottom-[27.5%] xl:right-[34.4%] xl:bottom-[27.5%] 2xl:right-[38.4%] 2xl:bottom-[31%] z-20 ">
+                    <div className="absolute hidden lg:block lg:right-[32.4%] lg:bottom-[27.2%]  xl:right-[34.4%] xl:bottom-[22.2%] 2xl:right-[34.4%] 2xl:bottom-[30.2%]  z-20 ">
                         <img src="/images/Vector.png" alt="vector" />
                     </div>
                     {/* Bottom Section */}
@@ -56,7 +56,7 @@ export default function UnderstandingSection() {
                         </div>
                         <div className="lg:col-span-1">
                             <div className="flex justify-center lg:justify-end">
-                                <div className="relative min-h-[200px] max-h-[450px] max-w-[640px] lg:w-[390px] lg:h-[280px] xl:w-[490px] xl:h-[280px] 2xl:w-[642px] 2xl:h-[373px] rounded-[40px] overflow-hidden cursor-pointer group">
+                                <div className="relative min-h-[200px] max-h-[450px] max-w-[640px] lg:w-[390px] lg:h-[280px] xl:w-[529px] xl:h-[280px]  2xl:h-[373px] rounded-[40px] overflow-hidden cursor-pointer group">
                                     {/* Video Element */}
                                     <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                                         <source src="/videos/Work-Home-Video.mp4" type="video/mp4" />
