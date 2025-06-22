@@ -13,9 +13,9 @@ import {
 
 export default function HeroSection() {
     return (
-        <div className="lg:min-h-screen w-full bg-black flex items-center justify-center pb-16 lg:py-4 p-3">
+        <div className="w-full bg-black flex items-center justify-center pb-16 lg:py-4 p-3">
             <motion.div
-                className="relative flex items-center max-w-container w-full mx-auto px-4 lg:mb-20 min-h-screen md:min-h-[920px]"
+                className="relative flex items-center max-w-container w-full mx-auto px-4 lg:h-screen py-16 lg:py-0"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function HeroSection() {
                 >
                     {/* LG+ version with clipPath */}
                     <svg
-                        viewBox="0 0 1280 767"
+                        viewBox="0 0 1280 867"
                         preserveAspectRatio="none"
                         className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden"
                     >
@@ -90,7 +90,7 @@ export default function HeroSection() {
                 <div className="relative z-10 flex flex-col justify-center h-full md:px-4 xl:px-20">
                     <div className="container">
                         <motion.h1
-                            className="text-5xl mt-20 lg:mt-20 max-w-lg md:text-5xl lg:text-6xl 2xl:text-[80px] font-medium text-white leading-11 md:leading-16 lg:leading-[70px] mb-6 text-center md:text-left"
+                            className="text-5xl  max-w-lg md:text-5xl lg:text-6xl 2xl:text-[70px] font-medium text-white leading-11 md:leading-16 lg:leading-[70px] mb-6 text-center md:text-left"
                             variants={fadeUp}
                         >
                             Reach your
@@ -100,7 +100,7 @@ export default function HeroSection() {
                             strategies
                         </motion.h1>
                         <motion.p
-                            className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-5xl leading-7 md:leading-8 lg:leading-12 text-center md:text-left"
+                            className="text-[#FFFFFF]/80 text-2xl lg:text-3xl xl:text-3xl font-medium mb-24 max-w-5xl leading-7 md:leading-8 lg:leading-12 text-center md:text-left"
                             variants={fadeUp}
                             transition={{ delay: 0.1 }}
                         >
@@ -109,7 +109,7 @@ export default function HeroSection() {
                         </motion.p>
 
                         <motion.div
-                            className="flex flex-row items-center lg:items-center sm:items-center mt-20 lg:mt-56 2xl:mt-44 gap-4 sm:gap-6 xl:gap-12 justify-center lg:justify-start mb-0"
+                            className="flex flex-row items-center lg:items-center sm:items-center  gap-4 sm:gap-6 xl:gap-12 justify-center lg:justify-start mb-0"
                             variants={fadeUp}
                             transition={{ delay: 0.2 }}
                         >

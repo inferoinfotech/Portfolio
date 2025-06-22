@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
-      className="bg-black text-white py-0 lg:py-16 px-4 lg:px-8 pb-16   flex flex-col justify-between gap-4 lg:gap-12 2xl:gap-24"
+      className="bg-black text-white py-10 lg:py-16 px-4 lg:px-8  lg:h-screen  flex flex-col justify-center gap-4 lg:gap-12 2xl:gap-24"
     >
       <div className="max-w-container mx-auto w-full">
         {/* Header */}
@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex justify-center mb-4 xl:mb-0"
+          className="flex justify-center mb-4 xl:mb-10"
         >
           <div className="flex items-center gap-3">
             <motion.div

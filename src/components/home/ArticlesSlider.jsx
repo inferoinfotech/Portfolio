@@ -193,7 +193,7 @@ export default function ArticlesSlider() {
                 >
                   <motion.div
                     whileHover={{ scale: 1.03 }}
-                    className="relative w-[220px] h-[300px] rounded-2xl overflow-hidden transform transition-all duration-300"
+                    className="relative w-[230px] h-[350px] rounded-2xl overflow-hidden transform transition-all duration-300"
                   >
                     {/* Background Image */}
                     <div className="absolute inset-0">
@@ -208,7 +208,7 @@ export default function ArticlesSlider() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                     {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="absolute bottom-0 text-center left-0 right-0 p-6">
                       <h3 className="text-white font-bold text-lg mb-2 leading-tight">{article.title}</h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{article.description}</p>
                     </div>

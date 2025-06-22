@@ -13,7 +13,7 @@ import {
 
 export default function AboutSection() {
     return (
-        <section className="lg:py-12 py-8 lg:px-8 px-4 bg-white">
+        <section className="lg:py-12 py-8 lg:px-8 px-4 bg-white h-screen flex flex-col items-center justify-center">
             <div className="max-w-container mx-auto">
                 {/* Header */}
                 <motion.div
