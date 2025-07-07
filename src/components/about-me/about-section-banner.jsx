@@ -59,10 +59,7 @@ export default function AboutSection() {
               transition={{ delay: 0.4 }}
               className="font-normal text-base sm:text-lg md:text-xl leading-relaxed tracking-[0] text-white max-w-md mx-auto"
             >
-              Pirate ipsum arrgh bounty warp jack. Sails ensign cup ballast
-              spyglass execution lateen nipperkin american. Man spot line prey
-              schooner no shiver brace weigh. Fer fleet yard chandler roger
-              coxswain swab rig boatswain yarr.
+              I’m a copywriter, strategist, and the trusted partner behind hundreds of successful projects. With over a decade of experience, I help brands grow through sharp writing, smart social strategies, and content that actually works.
             </motion.p>
           </motion.div>
 
@@ -128,10 +125,7 @@ export default function AboutSection() {
               transition={{ delay: 0.4 }}
               className="font-normal text-lg lg:text-xl xl:text-2xl 2xl:text-2xl lg:pr-16 leading-relaxed lg:leading-[1.4] xl:leading-[45px] tracking-[0] text-white/80"
             >
-              Pirate ipsum arrgh bounty warp jack. Sails ensign cup ballast
-              spyglass execution lateen nipperkin american. Man spot line prey
-              schooner no shiver brace weigh. Fer fleet yard chandler roger
-              coxswain swab rig boatswain yarr.
+             I’m a copywriter, strategist, and the trusted partner behind hundreds of successful projects. With over a decade of experience, I help brands grow through sharp writing, smart social strategies, and content that actually works.
             </motion.p>
           </motion.div>
 

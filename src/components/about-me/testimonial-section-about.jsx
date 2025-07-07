@@ -51,9 +51,9 @@ export default function TestimonialSectionAbout() {
             variants={fadeUp}
             className="text-5xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[86px] leading-[50px] lg:leading-16 2xl:leading-[90px] font-medium tracking-[-0.03em] text-center text-white max-w-xl xl:max-w-5xl mx-auto"
           >
-            " Pirate ipsum arrgh bounty warp jack. Shrouds grog{" "}
-            <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red
-            gabion sloop black crow's"
+            " I never thought I’d get paid to write … From reading my stories to my mom to now{" "}
+            <span className="text-[rgba(253,192,197,1)]">helping brands</span> red
+            tell their stories."
           </motion.h2>
         </motion.div>
 
@@ -164,7 +164,7 @@ export default function TestimonialSectionAbout() {
                 ))}
               </div>
               <span className="text-xs text-[#FFFF] font-medium">
-                Trusted by over 500+ clients globally
+                Trusted by 500+ clients globally
               </span>
             </motion.div>
           </div>
@@ -179,25 +179,21 @@ export default function TestimonialSectionAbout() {
             variants={fadeUp}
             className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14  xl:leading-[60px] tracking-[-0.03em] text-white mb-6 md:mb-4 xl:mb-16"
           >
-            He's been named in the top 50 of Worth Magazine's 100 most powerful
-            people in global finance for three consecutive years, honored by
-            Harvard Business Press as one of the "Top 200 Business Gurus", and
-            by American Express as one of the "Top Six Business Leaders in the
-            World" to coach its entrepreneurial clients.
+            He’s been ranked #1 in Writing on Freelancer with over 600 completed projects, consistently delivering high-impact content for brands worldwide. He’s built an audience of more than 14,000 followers on LinkedIn, sharing writing strategies, insights, and real-world lessons with a growing community of professionals
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="text-[#FDC0C5]  font-bold text-xl  text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] mb-6 md:mb-4 xl:mb-16"
           >
-            Fortune's cover article named him the "CEO Whisperer."
+            He’s been recognized as a Top Rated Plus freelancer on Upwork, trusted by businesses across industries to craft sharp copy and social strategies that drive growth. His work has helped clients increase visibility, engagement, and measurable results."
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="font-bold text-xl text-center md:text-left sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tight md:leading-14 xl:leading-[60px] tracking-[-0.03em] text-white md:mb-6"
           >
-            And it's why leaders call upon him to help them lead.
+            And that’s why brands, founders, and leaders come to him when they’re ready to grow and when they need words that work.
           </motion.p>
         </motion.div>
       </div>

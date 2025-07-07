@@ -11,12 +11,12 @@ import {
 
 const experiences = [
   {
-    title: "How it all started",
+    title: "How It All Began",
     image: "../images/MY EXPERIENCE About-1.jpg",
     alt: "Working on laptop",
     paragraphs: [
-      "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits parrel ballast. On cup gold tales execution ketch her. Hogshead hail-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot piracy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+      "Back in mid-2018, I stumbled into digital marketing almost by accident. I was casually browsing YouTube when I came across videos about social media, content creation, and digital growth. That curiosity quickly turned into a passion. I started experimenting with writing, design, and strategy, teaching myself from scratch.",
+      "Not long after, someone reached out and asked if I could help with their content. That first freelance project became the spark. It wasn’t perfect, but it opened the door to something bigger. I realized I could turn this into a real career, helping brands grow through writing and social media strategy.",
     ],
   },
   {
@@ -24,8 +24,8 @@ const experiences = [
     image: "../images/MY EXPERIENCE About-2.jpg",
     alt: "Reading a book",
     paragraphs: [
-      "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits panel ballast. On cup gold tales execution ketch her. Hogshead haul-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+      "When I look back, the secret to success wasn’t a single breakthrough moment, it was showing up consistently. Every project, every client, every post added up. I didn’t rely on luck. I built my reputation by delivering real results, meeting deadlines, and focusing on what actually helps brands grow. That discipline turned into momentum.",
+      "It’s easy to chase quick wins, but sustainable growth comes from doing great work over and over again. That’s how I’ve completed over 600+ projects, earned the #1 writing rank on Freelancer, and connected with 14,000+ professionals on LinkedIn. ",
     ],
   },
   {
@@ -33,8 +33,8 @@ const experiences = [
     image: "../images/MY EXPERIENCE About-3.png",
     alt: "Working at desk",
     paragraphs: [
-      "Pirate ipsum arrgh bounty warp jack. Spanish prey spirits panel ballast. On cup gold tales execution ketch her. Hogshead haul-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.",
-      "Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
+      "Freelancing didn’t just give me work, it gave me freedom. It taught me how to build something on my own terms. I’ve worked with brands across industries like tech, finance, real estate, travel, e-commerce. I learned how to listen, adapt, and write content that not only sounds good but drives results.",
+      "But the best part? Freelancing connected me to people. Real stories, real businesses, real growth. It’s not just about the words, it’s about helping brands find their voice, hit their goals, and build something that matters.Road sheet spanker ketch red. Overhaul bounty lanyard blossom spot pincy. Scourge brethren deck aye ensign schooner gunwalls no lanyard pirate. Maroon black boat jib man. The mizzen tender aye aye spirits davy ketch measured. Pink furl belaying hempen brethren smartly hempen.",
     ],
   },
 ]

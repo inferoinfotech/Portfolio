@@ -89,7 +89,7 @@ export default function TopReadsSectionAbout() {
           className="max-w-lg mx-auto mb-8 xl:mb-10"
         >
           <p className="font-medium text-base md:text-lg lg:text-[20px] tracking-[0] text-center">
-            Reading books has always given me a competitive edge as my creativity gets nourished and focused
+            Reading has always been my edge, it sharpens my thinking, fuels my creativity, and keeps my ideas fresh and focused.
           </p>
         </motion.div>
 
