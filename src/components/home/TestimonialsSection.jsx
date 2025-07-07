@@ -1,59 +1,86 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   fadeUp,
   fadeIn,
   staggerContainer,
   scaleUp,
 } from "@/lib/framer-animations";
+import { useSwipeable } from "react-swipeable";
 
 // Sample testimonials data
 const testimonials = [
   {
     id: 1,
-    text: " Crafted a user-friendly design that boosted customer satisfaction ",
-    author: "Lara Acosta",
-    position: "Top 20 Marketer",
-    image: "/images/client1.jpg",
+    text: '" Great working with him. He was patient with my demands. "',
+    author: "Steve K.",
+    position: "Published Author",
+    image: "/images/testi-Steve.png",
   },
   {
     id: 2,
-    text: " Delivered exceptional results that exceeded our expectations and transformed our business approach ",
-    author: "Lara Acosta",
-    position: "Adventures CEO",
-    image: "/images/client2.jpg",
+    text: '" He exceeded all my expectations. My project became much more valuable with his insight. Moreover, his writing was top notch and I would highly recommend him. "',
+    author: "Rick S.",
+    position: "Founder Sandoval Firm",
+    image: "/images/testi-Rick.jpg",
   },
   {
     id: 3,
-    text: " Professional service with outstanding attention to detail and creative solutions ",
-    author: "Lara Acosta",
-    position: "Pragma Studios",
-    image: "/images/client3.jpg",
+    text: '" Quality work, good communication, and very easy to work with. I am happy with the outcome, and grateful for Saleh\'s efforts. "',
+    author: "Adam G.",
+    position: "CEO Almeda Post",
+    image: "/images/testi-Adam.png",
   },
   {
     id: 4,
-    text: " Innovative approach that brought fresh perspectives to our creative projects ",
-    author: "Lara Acosta",
-    position: "CEO @ Art&Craft",
-    image: "/images/client4.jpg",
+    text: '" The other editors are good. Greatness is rare. His drive is immense. Will we use him again? HELL YES "',
+    author: "Dr. James Schaller",
+    position: "Psychiatrist, Author, Publisher",
+    image: "/images/testi-James.png",
   },
   {
     id: 5,
-    text: " Strategic insights and execution that elevated our brand presence significantly ",
-    author: "Lara Acosta",
-    position: "Top LinkedIn Voice",
-    image: "/images/client5.jpg",
+    text: '" He was very efficient with getting the project done on time "',
+    author: "Nick Theriot",
+    position: "6-Figure Agency Owner",
+    image: "/images/testi-Nick.jpg",
   },
 ];
 
 export default function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(-1); // -1: left, 1: right
+
+  // Desktop swipe handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < testimonials.length - 1) {
+        setSlideDirection(-1);
+        setCurrentSlide((prev) => prev + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setSlideDirection(1);
+        setCurrentSlide((prev) => prev - 1);
+      }
+    },
+    trackMouse: true,
+  });
+
+  // Avatar click with direction
+  const handleAvatarClick = (index) => {
+    if (index === currentSlide) return;
+    setSlideDirection(index > currentSlide ? -1 : 1);
+    setCurrentSlide(index);
+  };
+
+  // Mobile state/handlers (unchanged)
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  // Handle touch events for mobile swipe
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -115,99 +142,114 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Desktop Layout */}
-        <div className="hidden max-w-3xl mx-auto lg:block">
-          {/* Main Quote */}
+        <div className="hidden lg:block">
+          {/* Fixed height & horizontally centered review box */}
+          <div
+            className="relative max-w-6xl mx-auto mb-20 flex items-center justify-center"
+            style={{
+              minHeight: "320px",
+              height: "320px",
+              maxWidth: "100%",
+            }}
+          >
+            <div
+              {...handlers}
+              className="w-full flex items-center justify-center select-none cursor-grab h-full"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.blockquote
+                  key={testimonials[currentSlide].id}
+                  initial={{
+                    opacity: 0,
+                    x: slideDirection === -1 ? 120 : -120,
+                    position: "absolute",
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    position: "relative",
+                  }}
+                  exit={{
+                    opacity: 0,
+                    x: slideDirection === -1 ? -120 : 120,
+                    position: "absolute",
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="w-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl max-w-6xl text-center font-medium mx-auto h-full flex items-center justify-center"
+                  style={{
+                    minHeight: "120px",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {testimonials[currentSlide].text}
+                </motion.blockquote>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Client Avatars (Static, Highlight Active, Clickable) */}
           <motion.div
-            variants={fadeUp}
+            variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center mb-20"
+            className="flex justify-evenly items-center gap-8 lg:gap-12"
           >
-            <motion.blockquote
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-20 max-w-3xl text-center font-medium mx-auto"
-            >
-              <motion.span
-                variants={scaleUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
-              >
-                "
-              </motion.span>
-              {testimonials[0].text}
-              <motion.span
-                variants={scaleUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
-              >
-                "
-              </motion.span>
-            </motion.blockquote>
-          </motion.div>
-
-          {/* Client Avatars */}
-        </div>
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="hidden lg:flex justify-evenly items-center gap-8 lg:gap-12"
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              variants={scaleUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="text-center"
-            >
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                variants={fadeUp}
+                key={testimonial.id}
+                variants={scaleUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700"
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer"
+                onClick={() => handleAvatarClick(index)}
               >
-                <img
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.author}
-                  className="w-full h-full object-cover"
-                />
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className={`w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700 border-4 transition-all ${
+                    index === currentSlide
+                      ? "border-primary shadow-xl scale-110"
+                      : "border-transparent"
+                  }`}
+                >
+                  <img
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.author}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+                <motion.h3
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="text-white font-medium text-sm lg:text-xl 2xl:text-2xl mb-1"
+                >
+                  {testimonial.author}
+                </motion.h3>
+                <motion.p
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="text-[#A2A2A2] text-sm lg:text-xl 2xl:text-2xl"
+                >
+                  {testimonial.position}
+                </motion.p>
               </motion.div>
-              <motion.h3
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-white font-medium text-sm lg:text-xl 2xl:text-2xl mb-1"
-              >
-                {testimonial.author}
-              </motion.h3>
-              <motion.p
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-[#A2A2A2] text-sm lg:text-xl 2xl:text-2xl"
-              >
-                {testimonial.position}
-              </motion.p>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
 
-        {/* Mobile Layout - Slider */}
+        {/* Mobile Layout - Slider (unchanged) */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
