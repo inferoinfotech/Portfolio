@@ -12,43 +12,44 @@ import {
 } from '@/lib/framer-animations'
 
 const faqData = [
-    {
-        id: 1,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
-    {
-        id: 2,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
-    {
-        id: 3,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
-    {
-        id: 4,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
-    {
-        id: 5,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
-    {
-        id: 6,
-        question: "Pirate ipsum arrgh bounty warp jack bounty warp jack?",
-        answer:
-            "Pirate ipsum arrgh bounty warp jack. Tender overhaul pirate belay cutlass. Nipperkin rum gangway hempen spanker ketch. Crow's chase sheet black seas. Guns pin sail ahoy mutiny shiver log. To nipper hail-shot splice cat crack scurvy. Ballast hands rig hail-shot.",
-    },
+  {
+    id: 1,
+    question: "What services does Saleh Bilal offer?",
+    answer:
+      "I offer professional copywriting, content strategy, and social media marketing services focused on helping brands grow. Whether you need high-converting web copy, social media content, or a full content plan, I deliver writing that’s clear, engaging, and results-driven.",
+  },
+  {
+    id: 2,
+    question: "How does working with Saleh Bilal improve my brand?",
+    answer:
+      "I help brands grow by crafting content that connects with their audience, builds trust, and drives measurable action. My writing is tailored to your goals, whether it's boosting engagement, improving conversions, or increasing brand visibility on digital platforms.",
+  },
+  {
+    id: 3,
+    question: "What industries do you specialize in?",
+    answer:
+      "I’ve worked with clients across multiple industries including tech, finance, real estate, e-commerce, and travel. My writing approach is adaptable and always focused on creating content that speaks directly to your target audience, regardless of your niche.",
+  },
+  {
+    id: 4,
+    question: "How long does it take to complete a project?",
+    answer:
+      "Turnaround times vary depending on the project scope, but most copywriting and content strategy projects are completed within 3 to 7 business days. I always prioritize quality and timely delivery to meet your deadlines and ensure the best possible results.",
+  },
+  {
+    id: 5,
+    question: "Why should I hire Saleh Bilal over other copywriters?",
+    answer:
+      "With over 600 completed projects, a #1 Writing rank on Freelancer, and thousands of satisfied clients, I bring proven expertise, attention to detail, and a deep understanding of what makes content perform. I focus on delivering writing that works, not just words that fill space.",
+  },
+  {
+    id: 6,
+    question: "How can I get started working with you?",
+    answer:
+      "Getting started is simple, just reach out via the contact form, LinkedIn, or freelancer platforms where I’m active. We’ll discuss your project, your goals, and how I can help you craft content that drives growth. I respond quickly and am ready to help you move forward.",
+  },
 ]
+
 
 export default function FAQSection() {
     const [openItem, setOpenItem] = useState(null)

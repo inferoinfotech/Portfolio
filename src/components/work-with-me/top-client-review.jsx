@@ -58,7 +58,7 @@ export default function TopClientReview() {
               className="text-xl md:text-3xl xl:text-[40px] font-bold mb-6 md:mb-8 lg:mb-12 md:leading-10 xl:leading-14 tracking-tight"
               variants={fadeUp}
             >
-              "It's one thing to have 650,000 followers, it's another to have 650,000 loyal fans."
+              "It's one thing to have 350,000 followers, it's another to have 350,000 loyal fans."
             </motion.blockquote>
 
             <motion.blockquote 
@@ -66,7 +66,7 @@ export default function TopClientReview() {
               variants={fadeUp}
               transition={{ delay: 0.1 }}
             >
-              "If my LinkedIn profile was deleted today and I had to start over from scratch, Justin is the first person I would call."
+              "If my LinkedIn profile was deleted today and I had to start over from scratch, Saleh is the first person I would call."
             </motion.blockquote>
 
             <motion.div 
@@ -81,9 +81,9 @@ export default function TopClientReview() {
                 whileHover={{ scale: 1.05 }}
               />
               <div className="cursor-pointer">
-                <h4 className="text-[16px] md:text-3xl xl:text-3xl mb-1 font-medium">Austin Belcak</h4>
+                <h4 className="text-[16px] md:text-3xl xl:text-3xl mb-1 font-medium">Thomas Holt</h4>
                 <p className="text-black/50 text-[13px] lg:text-lg font-bold leading-3">
-                  Founder of Cultivated Culture
+                  | CEO Novolo AI
                 </p>
               </div>
             </motion.div>

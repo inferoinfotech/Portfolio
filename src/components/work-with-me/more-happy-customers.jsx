@@ -71,50 +71,52 @@ export default function MoreHappyCustomers() {
   const [isMobile, setIsMobile] = useState(false);
   const [activeButton, setActiveButton] = useState("hire");
 
-  const customers = [
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-1.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. ",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-4.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-2.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-5.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain.",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-3.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. ",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customers-6.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six.",
-      rating: 5,
-    },
-  ];
+ const customers = [
+  {
+    name: "Justian Joe",
+    title: "Founder @ Media.co",
+    image: "../images/work-customers-1.jpg",
+    text: "Saleh helped us completely refresh our brand voice across all platforms. His writing was not only engaging but strategically aligned with our business goals. Our website and social media now truly reflect who we are.",
+    rating: 5,
+  },
+  {
+    name: "Maya Reynolds",
+    title: "Head of Marketing @ Orion Labs",
+    image: "../images/work-customers-4.jpg",
+    text: "Saleh’s copy transformed our product pages and email campaigns. We saw a noticeable lift in conversions within weeks. He understands how to write in a way that drives action, not just attention.",
+    rating: 5,
+  },
+  {
+    name: "Daniel Foster",
+    title: "Co-Founder @ GrowthHive Agency",
+    image: "../images/work-customers-2.jpg",
+    text: "We worked with Saleh to develop content for our multi-channel campaigns. His ability to adapt his writing across email, web, and social was impressive—and he consistently delivered quality under tight deadlines.",
+    rating: 5,
+  },
+  {
+    name: "Priya Kapoor",
+    title: "Brand Manager @ VistaCore Solutions",
+    image: "../images/work-customers-5.jpg",
+    text: "Saleh is the kind of writer who just ‘gets it.’ He helped us build a blog content system that not only ranks but also genuinely resonates with our audience. His SEO-driven approach made a real difference.",
+    rating: 5,
+  },
+  {
+    name: "Liam Carter",
+    title: "Director of Strategy @ Elevate Digital",
+    image: "../images/work-customers-3.jpg",
+    text: "We needed a content strategist who could help us scale fast—and Saleh delivered. From social media to lead generation assets, his work was sharp, clear, and always focused on growth.",
+    rating: 5,
+  },
+  {
+    name: "Elena Morales",
+    title: "Content Lead @ NovaSphere Tech",
+    image: "../images/work-customers-6.jpg",
+    text: "Saleh’s writing made our service offerings stand out. His attention to detail, quick communication, and ability to turn ideas into clean, effective copy made working with him a real advantage for our team.",
+    rating: 5,
+  },
+]
+
+
 
   useEffect(() => {
     const checkMobile = () => {

@@ -12,9 +12,10 @@ export default function WhyWorkWithMeSection() {
             {/* Text Content */}
             <div className="text-center lg:text-left">
               <p className="text-[#000000B2] text-xl lg:text-2xl leading-relaxed lg:leading-10 mb-8 lg:text-justify">
-                Pirate ipsum arrgh bounty warp jack. Spanish prey spirits parrel ballast. On cup gold tales execution
-                ketch her. Hogshead hail-shot hang jennys starboard. Arr bilge timbers prey gangway spanish fleet. Man
-                keelhaul jib red killick just clipper. Brethren chandler a pink chain cutlass.
+                I’m committed to delivering high-quality work, sharp writing, and strategies that actually drive results. Clients trust me because I bring consistency, clarity, and a focus on what moves their brand forward.
+              </p>
+              <p className="text-[#000000B2] text-xl lg:text-2xl leading-relaxed lg:leading-10 mb-5 lg:text-justify">
+                I’ve built a proven track record across platforms:
               </p>
             </div>
 
@@ -22,7 +23,7 @@ export default function WhyWorkWithMeSection() {
             <div className="flex items-start justify-center lg:justify-start gap-12 lg:gap-28 mb-8">
               {/* Upwork Stat */}
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-[64px] font-bold text-black mb-2 lg:mb-7">98%</div>
+                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7">100% Job Success on Upwork</div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <img src="/images/upworkicon.png" alt="Upwork Icon" className="w-5 h-5 lg:w-7 lg:h-7" />
                   <span className="text-[#969696] text-base lg:text-3xl">Upwork</span>
@@ -31,7 +32,7 @@ export default function WhyWorkWithMeSection() {
 
               {/* Freelancer Stat */}
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-[64px] font-bold text-black mb-2 lg:mb-7">99.7%</div>
+                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7"> 5.0 Rating on Freelancer </div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <img
                     src="/images/freelancericon.png"

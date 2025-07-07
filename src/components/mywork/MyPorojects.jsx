@@ -19,6 +19,7 @@ const articles = [
     description: "Craft compelling stories that seal the deal",
     image: "/images/article1.jpg",
     category: "Landing pages",
+     link: "https://drive.google.com/drive/folders/1j0n0miLs100TfIp8evlJH4UnrfwmbMkb?usp=drive_link",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const articles = [
     description: "Powerful copy that makes investors say yes",
     image: "/images/article2.jpg",
     category: "Pitch decks",
+     link: "https://drive.google.com/drive/folders/1FooMzukka3xbxnUTsL9Z4ZYfMm5lcszo?usp=drive_link",
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const articles = [
     description: "Pitch decks that turn heads and open wallets",
     image: "/images/article3.jpg",
     category: "Ads",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const articles = [
     description: "Sharp, persuasive copy for high-stake pitches",
     image: "/images/article4.jpg",
     category: "VSLs",
+      link: "/projects/pitch-deck-1",
   },
   {
     id: 5,
@@ -47,6 +51,7 @@ const articles = [
     description: "Clear, concise, and investor-ready messaging",
     image: "/images/article5.jpg",
     category: "Product",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ const articles = [
     description: "Craft compelling stories that seal the deal",
     image: "/images/article6.jpg",
     category: "Books",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const articles = [
     description: "Sharp, persuasive copy for high-stake pitches",
     image: "/images/article4.jpg",
     category: "Speeches",
+    link: "/projects/pitch-deck-1",
   },
 ]
 
@@ -71,6 +78,7 @@ const socialMediaContent = [
     description: "Build your professional network and authority",
     image: "/images/social1.jpg",
     category: "LinkedIn",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 2,
@@ -78,6 +86,7 @@ const socialMediaContent = [
     description: "Create engaging visual content that converts",
     image: "/images/social2.jpg",
     category: "Instagram",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 3,
@@ -85,6 +94,7 @@ const socialMediaContent = [
     description: "Drive traffic and sales with targeted ads",
     image: "/images/social3.jpg",
     category: "Facebook",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 4,
@@ -92,6 +102,7 @@ const socialMediaContent = [
     description: "Build community and drive conversations",
     image: "/images/social4.jpg",
     category: "Twitter",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 5,
@@ -99,6 +110,7 @@ const socialMediaContent = [
     description: "Organize and plan your content strategy",
     image: "/images/social5.jpg",
     category: "Documentation",
+    link: "/projects/pitch-deck-1",
   },
   {
     id: 6,
@@ -106,6 +118,7 @@ const socialMediaContent = [
     description: "Track performance and optimize results",
     image: "/images/social6.jpg",
     category: "LinkedIn",
+    link: "/projects/pitch-deck-1",
   },
 ]
 
@@ -116,6 +129,7 @@ const copywritingContent = [
     description: "Write emails that get opened and clicked",
     image: "/images/marketing1.jpg",
     category: "Email",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 2,
@@ -123,6 +137,7 @@ const copywritingContent = [
     description: "Convert visitors into paying customers",
     image: "/images/marketing2.jpg",
     category: "Sales Pages",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 3,
@@ -130,6 +145,7 @@ const copywritingContent = [
     description: "Clear messaging that drives action",
     image: "/images/marketing3.jpg",
     category: "Website",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 4,
@@ -137,6 +153,7 @@ const copywritingContent = [
     description: "Compelling copy that sells products",
     image: "/images/marketing4.jpg",
     category: "Product",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 5,
@@ -144,6 +161,7 @@ const copywritingContent = [
     description: "Engaging articles that build authority",
     image: "/images/marketing5.jpg",
     category: "Blog",
+     link: "/projects/pitch-deck-1",
   },
   {
     id: 6,
@@ -151,6 +169,7 @@ const copywritingContent = [
     description: "Consistent voice across all channels",
     image: "/images/marketing6.jpg",
     category: "Branding",
+     link: "/projects/pitch-deck-1",
   },
 ]
 
@@ -215,11 +234,10 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`px-6 py-2 rounded-full text-[10px] lg:text-sm hover:cursor-pointer font-medium transition-all duration-300 ${
-                  activeFilter === category
+                className={`px-6 py-2 rounded-full text-[10px] lg:text-sm hover:cursor-pointer font-medium transition-all duration-300 ${activeFilter === category
                     ? "bg-[#FDC0C5] text-black"
                     : "bg-white text-gray-600 hover:bg-gray-100 border border-[#00000033]"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -292,14 +310,17 @@ function ProjectSlider({ title, articles, filterCategories, defaultFilter = "All
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         className="absolute bottom-2 right-2 w-10 h-[46px] bg-black rounded-tr-lg rounded-bl-lg rounded-tl-lg rounded-br-3xl flex items-center justify-center backdrop-blur-sm"
+                        onClick={() => article.link && (window.location.href = article.link)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" && article.link) {
+                            window.location.href = article.link
+                          }
+                        }}
                       >
                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M7 17L17 7M17 7H7M17 7V17"
-                          />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                         </svg>
                       </motion.div>
                     </div>

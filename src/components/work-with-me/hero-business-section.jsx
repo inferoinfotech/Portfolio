@@ -65,8 +65,8 @@ export default function HeroBusinessSection() {
               variants={fadeUp}
               transition={{ delay: 0.1 }}
             >
-              Pirate ipsum arrgh bounty warp jack. Spanish prey spirits parrel ballast.
-              On cup gold tales execution ketch her. Hogshead hail-shot hang jennys starboard.
+              Struggling to get noticed? Tired of content that doesn’t convert? <br />
+               Hire me to write copy that drives clicks, builds trust, and grows your brand.
             </motion.p>
 
             <motion.div

@@ -28,9 +28,8 @@ export default function MyWorkQuoteSection() {
             variants={fadeUp}
             className="text-5xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[86px] leading-[50px] lg:leading-16 2xl:leading-[90px] font-medium tracking-[-0.03em] text-center text-white max-w-xl xl:max-w-5xl mx-auto"
           >
-            " Pirate ipsum arrgh bounty warp jack. Shrouds grog{" "}
-            <span className="text-[rgba(253,192,197,1)]">lubber bow</span> red
-            gabion sloop black crow's"
+            " Writing isn’t about filling space, it’s about making space for the{" "}
+            <span className="text-[rgba(253,192,197,1)]">right ideas</span> to land."
           </motion.h2>
         </motion.div>
 

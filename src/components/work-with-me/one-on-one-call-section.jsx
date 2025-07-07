@@ -13,37 +13,38 @@ import {
 
 export default function OneOnOneCallSection() {
   const callItems = [
-    {
-      number: "01",
-      label: "Getting started",
-      title: "I will be telling you the exact strategy",
-      points: [
-        "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain",
-        "Salmagundi maroon coast spanker aye gangway hail-shot chain.",
-      ],
-      image: "../images/MY EXPERIENCE About-3.png",
-    },
-    {
-      number: "02",
-      label: "Getting started",
-      title: "I will be telling you the exact strategy",
-      points: [
-        "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain",
-        "salmagundi maroon coast spanker aye gangway hail-shot chain.",
-      ],
-      image: "../images/work-call-2.png",
-    },
-    {
-      number: "03",
-      label: "Getting started",
-      title: "I will be telling you the exact strategy",
-      points: [
-        "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain",
-        "salmagundi maroon coast spanker aye gangway hail-shot chain.",
-      ],
-      image: "../images/work-call-1.jpg",
-    },
-  ]
+  {
+    number: "01",
+    label: "Clear Growth Strategy",
+    title: "We’ll map out exactly where you are and where you want to go",
+    points: [
+      "Whether it’s growing on LinkedIn, building your brand, or scaling your business.",
+      "I’ll share a custom, step-by-step strategy tailored to your goals.",
+    ],
+    image: "../images/MY EXPERIENCE About-3.png", // You can update this path if needed
+  },
+  {
+    number: "02",
+    label: "Actionable Business Insights",
+    title: "You’ll get real, practical advice you can use immediately",
+    points: [
+      "No vague theories, just specific steps that help you grow your audience.",
+      "Attract better clients, and build momentum across your platforms.",
+    ],
+    image: "../images/work-call-2.png",
+  },
+  {
+    number: "03",
+    label: "Personalized Q&A",
+    title: "This is your time to ask me anything",
+    points: [
+      "About LinkedIn, content, offers, growth, or your overall business direction.",
+      "I’ll give you honest, direct answers and personalized recommendations you can put into action right away.",
+    ],
+    image: "../images/work-call-1.jpg",
+  },
+]
+
 
   return (
     <motion.section 
@@ -66,7 +67,7 @@ export default function OneOnOneCallSection() {
             className="text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight sm:leading-tight md:leading-[110%] lg:leading-[100%] tracking-tight md:tracking-[-1%] lg:tracking-[-2%] text-center"
             variants={fadeUp}
           >
-            What you get on 1-on-1 call?
+            What You Get on a 1-on-1 Call
           </motion.h2>
         </motion.div>
 

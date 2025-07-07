@@ -65,28 +65,29 @@ export default function LinkedInStrategySection() {
   const [isMobile, setIsMobile] = useState(false)
 
   const testimonials = [
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customer-8.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-client.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
-      rating: 5,
-    },
-    {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
-      image: "../images/work-customer-7.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
-      rating: 5,
-    },
-  ]
+  {
+    name: "Dario Ferraro",
+    title: "CEO and Founder, Cielo Gems",
+    image: "../images/work-customer-8.jpg", // Replace with actual image if needed
+    text: "Working with Saleh on our LinkedIn strategy was a game-changer. He crafted content that consistently captured attention and drove real engagement. His understanding of what works on LinkedIn is unmatched. We quickly saw growth in reach, followers, and meaningful conversations.",
+    rating: 5,
+  },
+  {
+    name: "Karol Jay",
+    title: "Founder, WickedList",
+    image: "../images/work-client.jpg", // Replace with actual image if needed
+    text: "Saleh helped us completely transform our LinkedIn presence. His strategic approach and content recommendations significantly boosted our visibility and positioned us as thought leaders in our industry. His work directly contributed to lead generation through LinkedIn.",
+    rating: 5,
+  },
+  {
+    name: "Amira Hassan",
+    title: "Content Lead, Sky Ventures",
+    image: "../images/work-customer-7.jpg", // Replace with actual image if needed
+    text: "If you need someone who truly understands LinkedIn, Saleh is that person. His strategies helped us consistently grow our audience and attract the right kind of attention. The content he developed aligned perfectly with our brand voice and goals. Highly recommended.",
+    rating: 5,
+  },
+]
+
 
   useEffect(() => {
     const checkMobile = () => {
@@ -118,8 +119,7 @@ export default function LinkedInStrategySection() {
             className="font-bold text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 md:mb-5 xl:mb-10"
             variants={fadeUp}
           >
-            I will be telling you the exact strategy
-            <br className="hidden sm:block" /> I used to grow my LinkedIn audience
+            I used to grow my LinkedIn audience
           </motion.h2>
           <motion.p 
             className="text-black/70 font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"

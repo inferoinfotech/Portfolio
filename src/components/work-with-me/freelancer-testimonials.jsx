@@ -64,24 +64,24 @@ export default function FreelancerTestimonials() {
 
   const testimonials = [
     {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
+      name: "Charity Holland ",
+      title: " Entrepreneur, Founder, Educator",
       image: "../images/work-customer-11.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      text: "It was excellent working with Saleh. He was responsive, professional, and brought real clarity to the project. I'm glad we worked together, he made the process smooth from start to finish, and I’m really happy with the final result. I’d absolutely work with him again.",
       rating: 5,
     },
     {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
+      name: "Adam Z",
+      title: "Civil Engineering Specialist",
       image: "../images/work-customer-10.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      text: "Working with Saleh was a pleasure. He is very professional and well-rounded. He communicates exceptionally and makes sure he delivers exactly what was requested. I would definitely work with Saleh again ",
       rating: 5,
     },
     {
-      name: "Justian Joe",
-      title: "Founder@Media.co",
+      name: "Bonnie S",
+      title: "Tech Writer, Author",
       image: "../images/work-customer-9.jpg",
-      text: "Pirate ipsum arrgh bounty warp jack. Blimey crimp starboard jennys or six. Anchor boatswain salmagundi maroon coast spanker aye gangway hail-shot chain. Fleet spot lee anchor log log privateer yard chain. Gunwalls seven o'nine cat league man warp.",
+      text: "Nice job on everything I asked for. He paid attention to detail and made suggestions that were helpful and creative. I definitely recommend him.",
       rating: 5,
     },
   ]
@@ -116,16 +116,16 @@ export default function FreelancerTestimonials() {
             className="font-bold text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4 md:mb-5 xl:mb-10"
             variants={fadeUp}
           >
-            Work with a freelancer from the
+            Work with a top-rated freelancer from t
             <br className="hidden sm:block" />
-            #1 ranked global platform
+            the world’s leading platforms.
           </motion.h2>
           <motion.p 
             className="text-black/70 font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] leading-tight text-center"
             variants={fadeUp}
             transition={{ delay: 0.1 }}
           >
-            See what my clients from upwork and freelancer have to say
+            what clients on Upwork and Freelancer say about working with me
           </motion.p>
         </motion.div>
 
