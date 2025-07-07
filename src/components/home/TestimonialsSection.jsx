@@ -7,8 +7,6 @@ import {
   fadeIn,
   staggerContainer,
   scaleUp,
-  slideInLeft,
-  slideInRight,
 } from "@/lib/framer-animations";
 
 // Sample testimonials data
