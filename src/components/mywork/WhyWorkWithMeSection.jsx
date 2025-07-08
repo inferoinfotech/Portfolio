@@ -23,7 +23,7 @@ export default function WhyWorkWithMeSection() {
             <div className="flex items-start justify-center lg:justify-start gap-12 lg:gap-28 mb-8">
               {/* Upwork Stat */}
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7">100% Job Success on Upwork</div>
+                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7">100%</div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <img src="/images/upworkicon.png" alt="Upwork Icon" className="w-5 h-5 lg:w-7 lg:h-7" />
                   <span className="text-[#969696] text-base lg:text-3xl">Upwork</span>
@@ -32,7 +32,7 @@ export default function WhyWorkWithMeSection() {
 
               {/* Freelancer Stat */}
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7"> 5.0 Rating on Freelancer </div>
+                <div className="text-4xl lg:text-[40px] font-bold text-black mb-2 lg:mb-7"> 5.0 Rating</div>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <img
                     src="/images/freelancericon.png"

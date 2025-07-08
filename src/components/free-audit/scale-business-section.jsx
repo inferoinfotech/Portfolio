@@ -4,21 +4,21 @@ export default function ScaleBusinessSection() {
     // First row - 3 images with uneven widths
     { src: "/images/free-audit-1.jpg", alt: "People laughing", cols: "col-span-3" },
     { src: "/images/free-audit-2.jpg", alt: "Sunset reflection", cols: "col-span-4" },
-    { src: "/images/free-audit-3.jpg", alt: "Couple in nature", cols: "col-span-2" },
+    { src: "/images/free-audit-3.jpg", alt: "Couple in nature", cols: "col-span-4" },
 
     // Second row - 3 images with uneven widths
-    { src: "/images/free-audit-4.jpg", alt: "Bubble crowd", cols: "col-span-2" },
+    { src: "/images/free-audit-4.jpg", alt: "Bubble crowd", cols: "col-span-4" },
     { src: "/images/free-audit-5.jpg", alt: "Campfire group", cols: "col-span-4" },
     { src: "/images/free-audit-6.jpg", alt: "Beach side", cols: "col-span-3" },
 
     // Third row - 3 images with uneven widths
     { src: "/images/free-audit-7.jpg", alt: "Father and daughter", cols: "col-span-3" },
-    { src: "/images/free-audit-8.jpg", alt: "Studying together", cols: "col-span-2" },
+    { src: "/images/free-audit-8.jpg", alt: "Studying together", cols: "col-span-4" },
     { src: "/images/free-audit-9.jpg", alt: "People on pier", cols: "col-span-4" },
 
     // Fourth row - 3 images with uneven widths
-    { src: "/images/free-audit-10.jpg", alt: "Stairs and shadow", cols: "col-span-2" },
-    { src: "/images/free-audit-11.jpg", alt: "Building light", cols: "col-span-3" },
+    { src: "/images/free-audit-10.jpg", alt: "Stairs and shadow", cols: "col-span-3" },
+    { src: "/images/free-audit-11.jpg", alt: "Building light", cols: "col-span-4" },
     { src: "/images/free-audit-12.jpg", alt: "Wall & stairs", cols: "col-span-4" },
   ]
 
@@ -27,10 +27,10 @@ export default function ScaleBusinessSection() {
       {/* Stack on mobile and laptop, grid only on extra large screens */}
       <div className="flex flex-col xl:grid xl:grid-cols-2 h-fit xl:h-[100vh] ">
         {/* Left Content - Full width on mobile and laptop */}
-        <div className="flex items-center justify-center bg-white py-16 xl:py-0">
-          <div className="w-full max-w-2xl mx-auto px-6">
+        <div className="flex items-center justify-center bg-white py-16 lg:pe-10 xl:py-0">
+          <div className="w-full max-w-2xl ms-auto px-6">
             {/* Responsive heading */}
-            <h1 className="text-[64px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-16 lg:leading-tight mb-6 xl:mb-8 tracking-tight ">
+            <h1 className="text-[44px] md:text-5xl text-center md:text-left lg:text-6xl xl:text-[64px] font-bold leading-16 lg:leading-tight mb-6 xl:mb-8 tracking-tight ">
               Can't figure out How to scale your business{" "}
               and convert leads?
             </h1>
@@ -49,7 +49,7 @@ export default function ScaleBusinessSection() {
 
        
         {/* Right Images - Grid - Now visible on all screens */}
-        <div className="bg-black min-h-[50vh] lg:h-full overflow-hidden p-4">
+        <div className="bg-black min-h-[50vh] lg:h-full overflow-hidden p-4 lg:block hidden">
           <div className="grid grid-cols-6 gap-4 h-full">
             {images.map((img, index) => {
               // Create rows of exactly 3 images each
