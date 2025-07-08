@@ -73,7 +73,7 @@ export default function KeyBenefitsSection() {
                 >
                     <motion.div
                         variants={staggerContainer}
-                        className="flex justify-center items-center gap-3 mb-8"
+                        className="flex justify-center items-center gap-3 mb-4"
                     >
                         <motion.div
                             variants={scaleUp}
