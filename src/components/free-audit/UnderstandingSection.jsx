@@ -30,7 +30,8 @@ export default function UnderstandingSection() {
                                     Do you have
                                     complete <span className="text-[#FDC0C5]">understanding</span> of what you need?</h1>
                                 <p className="text-[#969696] text-base lg:text-2xl 2xl:text-[28px] font-medium lg:text-justify leading-tight lg:leading-relaxed mb-5 text-start pr-10">
-                                    We believe progress equals happiness.And no matter where you’re looking to excel,
+                                    I believe real growth comes from clarity and action. Whether you’re looking to sharpen your message, grow your audience, or scale your brand, getting the right strategy in place is where progress starts.
+
                                 </p>
 
                             </div>

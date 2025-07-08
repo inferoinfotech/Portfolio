@@ -35,22 +35,50 @@ export default function PressSection() {
 
           {/* Logos Grid */}
           <motion.div
-            variants={fadeUp}
-            transition={{ delay: 0.2 }}
-            className="w-full container mx-auto"
+            variants={staggerContainer}
+            className="w-full flex flex-wrap justify-between gap-6 items-center"
           >
-            <div className="flex justify-center">
-              <motion.img
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                src="../images/pressimage.png"
-                alt="press"
-                className="w-full cursor-pointer transition duration-300 transform hover:scale-105"
+            {/* Logo 1 */}
+            <motion.div variants={scaleUp} className="flex-1 flex justify-center">
+              <img
+                src="/images/mediumlogo.png"
+                alt="Company logo"
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain opacity-50 hover:opacity-100 transition duration-300"
               />
-            </div>
+            </motion.div>
+
+
+
+            {/* Logo 2 */}
+            <motion.div variants={scaleUp} className="flex-1 flex justify-center">
+              <img
+                src="/images/firebaselogo.png"
+                alt="Company logo"
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain filter grayscale hover:filter-none transition duration-300"
+              />
+            </motion.div>
+
+            {/* Logo 3 */}
+            <motion.div variants={scaleUp} className="flex-1 flex justify-center">
+              <img
+                src="/images/adobelogo.png"
+                alt="Adobe logo"
+                className="lg:w-32 lg:h-32 w-24 h-24 object-contain filter grayscale hover:filter-none transition duration-300"
+              />
+            </motion.div>
+
+            {/* Logo 4 */}
+            <motion.div variants={scaleUp} className="flex-1 flex justify-center">
+              <img
+                src="/images/stacklogo.png"
+                alt="Stack logo"
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain filter grayscale hover:filter-none transition duration-300"
+              />
+            </motion.div>
           </motion.div>
+
+
+
         </motion.div>
       </div>
     </motion.section>
