@@ -179,3 +179,9 @@ body {
 .max-w-container{
   max-width: 1400px !important;
 }
+
+@media (min-width: 1024px) and (max-width: 1193px) {
+  .upper-image {
+    aspect-ratio: 5/ 4;
+  }
+}
