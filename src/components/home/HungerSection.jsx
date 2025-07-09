@@ -33,11 +33,11 @@ export default function HungerSection() {
         <div className="relative">
           <motion.div
             variants={staggerContainer}
-            className="grid lg:grid-cols-3 gap-2 xl:gap-8 mb-3 lg:mb-2"
+            className="flex flex-wrap mb-3 lg:mb-0"
           >
-            <div className="lg:col-span-2 order-2 lg:order-1">
+            <div className="w-full lg:w-3/5 order-2 lg:order-1">
               <div className="flex justify-center lg:justify-start">
-                <div className="relative w-full max-h-[520px] xl:max-h-[686px] rounded-3xl overflow-hidden">
+                <div className="relative w-full lg:aspect-[8/6] rounded-3xl overflow-hidden">
                   <img
                     src="/images/Profileimage.jpg"
                     alt="Portrait of Saleh Bilal"
@@ -56,7 +56,7 @@ export default function HungerSection() {
 
             <motion.div
               variants={slideInRight}
-              className="lg:col-span-1 order-1 lg:order-2 mb-4 lg:mb-0"
+              className="w-full lg:w-2/5 order-1 lg:order-2 mb-4 lg:mb-0"
             >
               {/* Right - Content */}
               <motion.div
@@ -87,23 +87,23 @@ export default function HungerSection() {
             </motion.div>
           </motion.div>
 
-          <div className="absolute hidden lg:block lg:right-[25.5%] lg:bottom-[25.8%] xl:right-[25.5%] xl:bottom-[26%]  2xl:right-[25.5%] 2xl:bottom-[26%] z-20 ">
+          {/* <div className="absolute hidden lg:block lg:right-[25.5%] lg:bottom-[25.8%] xl:right-[25.5%] xl:bottom-[26%]  2xl:right-[25.5%] 2xl:bottom-[26%] z-20 ">
             <img
               src="/images/Joiner.png"
               alt="vector"
               className="xl:h-auto h-[120px]"
             />
-          </div>
+          </div> */}
 
           {/* Bottom Section */}
           <motion.div
             variants={staggerContainer}
-            className="grid lg:grid-cols-3 gap-5 items-center"
+            className="flex flex-wrap items-center"
           >
             {/* Left - Worked With */}
             <motion.div
               variants={slideInLeft}
-              className="lg:col-span-2 hidden lg:block"
+              className="w-full lg:w-3/5 hidden lg:block pr-0 lg:pr-5"
             >
               <div className="rounded-3xl">
                 <motion.h3
@@ -113,56 +113,56 @@ export default function HungerSection() {
                   You Might Have Seen Me On
                 </motion.h3>
 
-<motion.div
-  variants={staggerContainer}
-  className="w-full grid grid-cols-4 gap-10 items-center"
->
-  {/* Company Logo 1 */}
-  <motion.div variants={scaleUp} className="flex justify-center">
-    <img
-      src="/images/company-1.svg"
-      alt="Company logo"
-      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
-    />
-  </motion.div>
+                <motion.div
+                  variants={staggerContainer}
+                  className="w-full grid grid-cols-4 gap-10 items-center"
+                >
+                  {/* Company Logo 1 */}
+                  <motion.div variants={scaleUp} className="flex justify-center">
+                    <img
+                      src="/images/company-1.svg"
+                      alt="Company logo"
+                      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+                    />
+                  </motion.div>
 
-  {/* Company Logo 2 */}
-  <motion.div variants={scaleUp} className="flex justify-center">
-    <img
-      src="/images/company-2.svg"
-      alt="Company logo"
-      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
-    />
-  </motion.div>
+                  {/* Company Logo 2 */}
+                  <motion.div variants={scaleUp} className="flex justify-center">
+                    <img
+                      src="/images/company-2.svg"
+                      alt="Company logo"
+                      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+                    />
+                  </motion.div>
 
-  {/* Company Logo 3 */}
-  <motion.div variants={scaleUp} className="flex justify-center">
-    <img
-      src="/images/company-3.svg"
-      alt="Adobe logo"
-      className="lg:w-40 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
-    />
-  </motion.div>
+                  {/* Company Logo 3 */}
+                  <motion.div variants={scaleUp} className="flex justify-center">
+                    <img
+                      src="/images/company-3.svg"
+                      alt="Adobe logo"
+                      className="lg:w-40 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+                    />
+                  </motion.div>
 
-  {/* Company Logo 4 */}
-  <motion.div variants={scaleUp} className="flex justify-center">
-    <img
-      src="/images/company-4.svg"
-      alt="Figma logo"
-      className="lg:w-48 w-32 max-h-32 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
-    />
-  </motion.div>
-</motion.div>
-
-
-
-
+                  {/* Company Logo 4 */}
+                  <motion.div variants={scaleUp} className="flex justify-center">
+                    <img
+                      src="/images/company-4.svg"
+                      alt="Figma logo"
+                      className="lg:w-48 w-32 max-h-32 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+                    />
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.div>
 
-            <div className="lg:col-span-1">
+            <div className="w-full lg:w-2/5 relative">
+                <div className="absolute z-10 top-0 left-0 hidden lg:block h-20 w-20 -translate-x-1/2 -translate-y-1/2" style={{ background: "#FDC0C5" }}>
+                  <div className="absolute bg-white h-20 w-20 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                  <div className="absolute bg-white h-20 w-20 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+                </div>
               <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
-                <div className="relative min-h-[200px] lg:h-[271px] lg:w-[555px] xl:h-[371px] rounded-[40px] overflow-hidden cursor-pointer group">
+                <div className="relative aspect-video rounded-[40px] overflow-hidden cursor-pointer group">
                   {/* Video Element */}
                   <video
                     autoPlay
