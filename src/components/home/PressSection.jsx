@@ -30,7 +30,7 @@ export default function PressSection() {
             variants={fadeUp}
             className="text-base md:text-xl lg:text-[35px] font-medium text-black lg:mb-6 mb-4"
           >
-            You Might Have Seen Me On
+            Worked with
           </motion.h3>
 
           {/* Logos Grid */}

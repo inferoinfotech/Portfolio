@@ -110,61 +110,53 @@ export default function HungerSection() {
                   variants={fadeUp}
                   className="text-xl lg:text-[35px] font-normal text-[#383838] mb-6"
                 >
-                  Worked with
+                  You Might Have Seen Me On
                 </motion.h3>
 
-                <motion.div
-                  variants={staggerContainer}
-                  className="grid grid-cols-4 gap-10 items-center"
-                >
-                  {/* Company Logo 1 */}
-                  <motion.div
-                    variants={scaleUp}
-                    className="flex justify-center"
-                  >
-                    <img
-                      src="/images/mediumlogo.png"
-                      alt="Company logo"
-                      className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
-                    />
-                  </motion.div>
+<motion.div
+  variants={staggerContainer}
+  className="w-full grid grid-cols-4 gap-10 items-center"
+>
+  {/* Company Logo 1 */}
+  <motion.div variants={scaleUp} className="flex justify-center">
+    <img
+      src="/images/company-1.svg"
+      alt="Company logo"
+      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+    />
+  </motion.div>
 
-                  {/* Company Logo 2 */}
-                  <motion.div
-                    variants={scaleUp}
-                    className="flex justify-center"
-                  >
-                    <img
-                      src="/images/firebaselogo.png"
-                      alt="Company logo"
-                      className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
-                    />
-                  </motion.div>
+  {/* Company Logo 2 */}
+  <motion.div variants={scaleUp} className="flex justify-center">
+    <img
+      src="/images/company-2.svg"
+      alt="Company logo"
+      className="lg:w-48 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+    />
+  </motion.div>
 
-                  {/* Company Logo 3 */}
-                  <motion.div
-                    variants={scaleUp}
-                    className="flex justify-center"
-                  >
-                    <img
-                      src="/images/adobelogo.png"
-                      alt="Adobe logo"
-                      className="lg:w-32 w-24 lg:h-32 h-24 object-cover"
-                    />
-                  </motion.div>
+  {/* Company Logo 3 */}
+  <motion.div variants={scaleUp} className="flex justify-center">
+    <img
+      src="/images/company-3.svg"
+      alt="Adobe logo"
+      className="lg:w-40 w-32 max-h-28 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+    />
+  </motion.div>
 
-                  {/* Company Logo 4 */}
-                  <motion.div
-                    variants={scaleUp}
-                    className="flex justify-center"
-                  >
-                    <img
-                      src="/images/stacklogo.png"
-                      alt="Figma logo"
-                      className="lg:w-40 lg:h-40 w-28 h-28 object-cover"
-                    />
-                  </motion.div>
-                </motion.div>
+  {/* Company Logo 4 */}
+  <motion.div variants={scaleUp} className="flex justify-center">
+    <img
+      src="/images/company-4.svg"
+      alt="Figma logo"
+      className="lg:w-48 w-32 max-h-32 object-contain filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+    />
+  </motion.div>
+</motion.div>
+
+
+
+
               </div>
             </motion.div>
 
