@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   fadeUp,
@@ -52,6 +52,27 @@ const testimonials = [
 export default function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideDirection, setSlideDirection] = useState(-1); // -1: left, 1: right
+  const autoScrollRef = useRef(null);
+
+  const startAutoScroll = () => {
+    const AUTO_SCROLL_MS = 4000; 
+    
+    if (autoScrollRef.current) clearInterval(autoScrollRef.current);
+
+    autoScrollRef.current = setInterval(() => {
+      setSlideDirection(-1);
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    }, AUTO_SCROLL_MS);
+  };
+
+  useEffect(() => {
+    startAutoScroll(); // Start initially
+
+    return () => {
+      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
+    };
+  }, []);
+
 
   // Desktop swipe handlers
   const handlers = useSwipeable({
@@ -59,12 +80,14 @@ export default function TestimonialsSection() {
       if (currentSlide < testimonials.length - 1) {
         setSlideDirection(-1);
         setCurrentSlide((prev) => prev + 1);
+        startAutoScroll();
       }
     },
     onSwipedRight: () => {
       if (currentSlide > 0) {
         setSlideDirection(1);
         setCurrentSlide((prev) => prev - 1);
+        startAutoScroll();
       }
     },
     trackMouse: true,
@@ -75,6 +98,7 @@ export default function TestimonialsSection() {
     if (index === currentSlide) return;
     setSlideDirection(index > currentSlide ? -1 : 1);
     setCurrentSlide(index);
+    startAutoScroll(); // <-- reset interval
   };
 
   // Mobile state/handlers (unchanged)
@@ -98,24 +122,16 @@ export default function TestimonialsSection() {
 
     if (isLeftSwipe && currentSlide < testimonials.length - 1) {
       setCurrentSlide(currentSlide + 1);
+      startAutoScroll();
     }
     if (isRightSwipe && currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
+      startAutoScroll();
     }
   };
 
-  // --- Auto-scroll (desktop + mobile)
-  const AUTO_SCROLL_MS = 5000;
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      // always move “forward” (left → right)
-      setSlideDirection(-1);
-      setCurrentSlide(prev => (prev + 1) % testimonials.length);
-    }, AUTO_SCROLL_MS);
 
-    return () => clearInterval(id);
-  }, []);
 
 
   return (
