@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   fadeUp,
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     id: 2,
-    text: '" He exceeded all my expectations. My project became much more valuable with his insight. Moreover, his writing was top notch and I would highly recommend him. "',
+    text: '" He exceeded my expectations. His insight added great value to the project, and his writing was top-notch. Highly recommended. "',
     author: "Rick S.",
     position: "Founder Sandoval Firm",
     image: "/images/testi-Rick.jpg",
@@ -103,6 +103,20 @@ export default function TestimonialsSection() {
       setCurrentSlide(currentSlide - 1);
     }
   };
+
+  // --- Auto-scroll (desktop + mobile)
+  const AUTO_SCROLL_MS = 5000;
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      // always move “forward” (left → right)
+      setSlideDirection(-1);
+      setCurrentSlide(prev => (prev + 1) % testimonials.length);
+    }, AUTO_SCROLL_MS);
+
+    return () => clearInterval(id);
+  }, []);
+
 
   return (
     <motion.section
@@ -201,24 +215,23 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
-                variants={scaleUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0.5 }}
+                animate={{ opacity: index === currentSlide ? 1 : 0.5 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
                 className="text-center cursor-pointer"
                 onClick={() => handleAvatarClick(index)}
               >
+
                 <motion.div
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className={`w-16 h-16 lg:w-[85px] lg:h-[85px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700 border-4 transition-all ${
-                    index === currentSlide
-                      ? "border-primary shadow-xl scale-110"
-                      : "border-transparent"
-                  }`}
+                  className={`w-16 h-16 lg:w-[80px] lg:h-[80px] rounded-full overflow-hidden mb-4 mx-auto bg-gray-700  transition-all ${index === currentSlide
+                    ? "border-primary shadow-xl"
+                    : "border-transparent"
+                    }`}
                 >
                   <img
                     src={testimonial.image || "/placeholder.svg"}
